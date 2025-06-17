@@ -74,9 +74,35 @@ const groups = [
 
 const cat = ref(route.query.cat || 'all');
 
-const filteredGames = computed(()=>{
-  if(cat.value==='all') return games.value;
-  return games.value.filter(g=>g.category===cat.value);
+const filteredGames = computed(() => {
+  let filtered = games.value
+
+  // Category filter
+  if (route.query.category) {
+    filtered = filtered.filter(game => game.category === route.query.category)
+  }
+
+  // Popular filter
+  if (route.query.popular === 'true') {
+    filtered = filtered.sort((a, b) => (b.opens || 0) - (a.opens || 0))
+  }
+
+  // Collection filters
+  if (route.query.collection) {
+    switch (route.query.collection) {
+      case 'new':
+        filtered = filtered.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+        break
+      case 'trending':
+        filtered = filtered.sort((a, b) => (b.opens || 0) - (a.opens || 0))
+        break
+      case 'multiplayer':
+        filtered = filtered.filter(game => game.category === 'Action' || game.category === 'Strategy')
+        break
+    }
+  }
+
+  return filtered
 });
 
 const filteredPopular = computed(()=>{
