@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Splide custom styles */
+.splide__pagination__page {
+  @apply bg-gray-600;
+}
+
+.splide__pagination__page.is-active {
+  @apply bg-primary;
+}
+
+.splide__arrow {
+  @apply bg-black/50 hover:bg-black/70;
+}
+
+.splide__arrow svg {
+  @apply fill-white;
+}
+
+.splide__arrow--prev {
+  @apply left-2;
+}
+
+.splide__arrow--next {
+  @apply right-2;
+}
