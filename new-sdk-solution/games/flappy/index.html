@@ -11,8 +11,24 @@
 <body>
   <h2>Flappy Bird (placeholder demo)</h2>
   <canvas id="game" width="320" height="480"></canvas>
+  <div style="margin-top:10px;">
+    <button id="pay" style="margin-right:10px;">Buy skins ($1)</button>
+    <button id="share">Share</button>
+  </div>
   <p>Press space to flap. This is a stub – replace with your own implementation.</p>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/static/sdk.js"></script>
   <script src="flappy.js"></script>
+  <script>
+    document.getElementById('pay').addEventListener('click', async ()=>{
+      try{
+        const res = await wx.requestPayment({gameId:2,amount:1.00});
+        alert('Payment '+res.status);
+      }catch(e){alert('Payment failed');}
+    });
+    document.getElementById('share').addEventListener('click', ()=>{
+      wx.shareAppMessage({title:'My flappy score!',url:location.href});
+    });
+  </script>
 </body>
 </html> 

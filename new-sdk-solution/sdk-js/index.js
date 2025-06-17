@@ -1,5 +1,4 @@
 /* eslint-disable */
-import axios from 'axios';
 
 (function (global) {
   const BASE_URL = global.__SDK_BASE_URL__ || '';
@@ -45,12 +44,13 @@ import axios from 'axios';
     return resp.data;
   }
 
-  function shareAppMessage({ title, imageUrl, url }) {
+  async function shareAppMessage({ title, imageUrl, url }) {
     if (navigator.share) {
       navigator.share({ title, text: title, url: url || location.href });
     } else {
-      console.log('share', { title, imageUrl, url });
-      alert('Share: ' + (url || location.href));
+      navigator.clipboard.writeText(url || location.href)
+        .then(() => alert('Link copied to clipboard'))
+        .catch(() => alert('Share: ' + (url || location.href)));
     }
   }
 

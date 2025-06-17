@@ -13,7 +13,23 @@
   <h2>Tic Tac Toe</h2>
   <div class="board" id="board"></div>
   <p id="status"></p>
+  <div style="margin-top:10px;">
+    <button id="pay">Buy hint ($0.5)</button>
+    <button id="share">Share</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/static/sdk.js"></script>
   <script src="ttt.js"></script>
+  <script>
+    document.getElementById('pay').addEventListener('click', async ()=>{
+      try{
+        const res = await wx.requestPayment({gameId:3,amount:0.50});
+        alert('Payment '+res.status);
+      }catch(e){alert('Payment failed');}
+    });
+    document.getElementById('share').addEventListener('click', ()=>{
+      wx.shareAppMessage({title:'Tic Tac Toe!',url:location.href});
+    });
+  </script>
 </body>
 </html> 

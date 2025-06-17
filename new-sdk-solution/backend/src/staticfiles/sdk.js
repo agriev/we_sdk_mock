@@ -5,7 +5,6 @@
 // eslint-disable-next-line 
 
 /* eslint-disable */
-import axios from 'axios';
 
 (function (global) {
   const BASE_URL = global.__SDK_BASE_URL__ || '';

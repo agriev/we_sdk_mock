@@ -10,6 +10,13 @@ class Game(models.Model):
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    CATEGORY_CHOICES = [
+        ('action', 'Action'),
+        ('puzzle', 'Puzzle'),
+        ('casual', 'Casual'),
+        ('strategy', 'Strategy'),
+    ]
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='casual')
 
     class Meta:
         ordering = ['title']
