@@ -1,0 +1,94 @@
+.add-game-card
+  display flex
+  flex-direction column
+  width $column-width-1-1-1-desktop
+  height 172px
+  box-sizing border-box
+  padding 16px 24px 22px
+
+  border-radius 12px
+  background-color alpha($color-white, 0.1)
+  color alpha($color-white, 0.5)
+  transition all 0.3s
+  cursor pointer
+
+  $remove-link-style()
+
+  @media $bp.desktop
+    &:not(.add-game-card_disabled):hover
+      background-color $color-white
+      color $color-black
+      cursor pointer
+
+  @media $bp.phone
+    display flex
+    align-items center
+    padding 10px 20px
+    margin-bottom 16px
+
+    .add-game-card__icon
+      height 35px
+      margin-right 10px
+
+.add-game-card__icon
+  height 48%
+
+  font-size 40px
+  font-weight 300
+  line-height 0.7
+  flex 1 0 auto
+
+  .add-game-card_disabled &
+    display none
+
+.add-game-card__title
+  font-size 18px
+  font-weight 500
+
+  .add-game-card_disabled &
+    display none
+
+.add-game-card__disabled-content
+  display none
+
+  .add-game-card_disabled &
+    display flex
+    flex-direction column
+    align-items center
+    flex 1 1 auto
+    justify-content center
+    width 100%
+
+.add-game-card__disabled-content__smile
+  font-size 44px
+  margin-bottom 18px
+  color white
+
+.add-game-card__disabled-content__text
+  font-size 18px
+  color alpha(white, 40%)
+
+.add-game-card_wide
+  width 100%
+  height 116px
+  text-align left
+  color $color-white
+
+  @media $bp.phone
+    height 80px
+
+  .add-game-card__icon
+    height 58%
+    font-weight 300
+
+    @media $bp.desktop
+      font-size 48px
+
+  .add-game-card__title
+    font-weight normal
+
+    @media $bp.desktop
+      font-size 24px
+
+.add-game-card__count
+  opacity .4

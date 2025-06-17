@@ -1,0 +1,76 @@
+.chart
+  display flex
+  flex-grow 0
+  font-weight normal
+
+.chart__number
+  position relative
+  flex-grow 0
+  color alpha($color-white, 0.4)
+  &::after
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    content ''
+
+.chart_big .chart__number
+  height 78px
+  font-size 72px
+  color $color-white
+
+.chart_medium .chart__number
+  height 22px
+  font-size 18px
+
+.chart_small .chart__number
+  height 16px
+  font-size 12px
+
+.chart_up .chart__number::after
+.chart_down .chart__number::after
+  border-style solid
+
+.chart_up
+  .chart__number::after
+    border-color transparent transparent #4dd45d transparent
+
+  &.chart_big .chart__number::after
+    top -8px
+    border-width 0 9px 10px 9px
+
+  &.chart_medium .chart__number::after
+    top -8px
+    border-width 0 7px 8px 7px
+
+  &.chart_small .chart__number::after
+    top -8px
+    border-width 0 5.5px 6px 5.5px
+
+.chart_down
+  .chart__number::after
+    border-color #c3202b transparent transparent transparent
+
+  &.chart_big .chart__number::after
+    bottom -10px
+    border-width 10px 9px 0 9px
+
+  &.chart_medium .chart__number::after
+    bottom -6px
+    border-width 8px 7px 0 7px
+
+  &.chart_small .chart__number::after
+    bottom -6px
+    border-width 6px 5.5px 0 5.5px
+
+.chart_new
+  .chart__number::after
+    background-color #4687d6
+    border-radius 50%
+
+  &.chart_big
+  &.chart_medium
+  &.chart_small
+    .chart__number::after
+      bottom -.5em
+      width .55em
+      height .55em

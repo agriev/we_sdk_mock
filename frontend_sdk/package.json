@@ -1,0 +1,11 @@
+{
+  "name": "we-platform-frontend-sdk",
+  "version": "0.1.0",
+  "description": "Frontend SDK compatible with WeChat JS-SDK for We Platform.",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'no build step'"
+  },
+  "keywords": ["wechat", "js-sdk", "we-platform"],
+  "license": "MIT"
+} 

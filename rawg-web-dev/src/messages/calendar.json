@@ -1,0 +1,27 @@
+{
+  "ru": {
+    "title": "Даты выпуска игр (календарь) - {month} {year}",
+    "heading": "Календарь релизов - {month} {year}",
+    "sidebar-title": "Календарь релизов",
+    "popular": "Только популярное",
+    "all": "Все игры",
+    "platform": "Платформа",
+    "next_games": "позже",
+    "previous_games": "раньше",
+    "empty": "Нет игр за {year}.{month}",
+    "empty_platform": "Нет игр для {platform} за {year}.{month}"
+  },
+
+  "en": {
+    "title": "Video Game Release Dates (Calendar) - {month} {year}",
+    "heading": "Release calendar - {month} {year}",
+    "sidebar-title": "Release calendar",
+    "popular": "Popular only",
+    "all": "All games",
+    "platform": "Platform",
+    "next_games": "next",
+    "previous_games": "previous",
+    "empty": "No games in {year}.{month}",
+    "empty_platform": "No games for {platform} in {year}.{month}"
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AG Statistic</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css">
+    <style>
+        .earliest-date {
+            float: right;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'admin:index' %}">AG</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Users <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stat:users_activity' %}">Activity</a></li>
+                        <li><a href="{% url 'stat:users_registrations' %}">Registrations</a></li>
+                        <li><a href="{% url 'stat:users_visits' %}">Periodical visits</a></li>
+                        <li><a href="{% url 'stat:users_online' %}">Authorized users</a></li>
+                        <li><a href="{% url 'stat:users_retention_week' %}">Retention by Week</a></li>
+                        <li><a href="{% url 'stat:users_retention_month' %}">Retention by Month</a></li>
+                        <li><a href="{% url 'stat:users_retention_d1d7d30' %}">Retention D1/D7/D30</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Data <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stat:data_statuses' %}">Statuses</a></li>
+                        <li><a href="{% url 'stat:data_collections' %}">Collections</a></li>
+                        <li><a href="{% url 'stat:data_reviews' %}">Reviews</a></li>
+                        <li><a href="{% url 'stat:data_comments' %}">Comments</a></li>
+                        <li><a href="{% url 'stat:data_followings' %}">Followings</a></li>
+                        <li><a href="{% url 'stat:data_games' %}">Games</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Games <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stat:games_statuses' %}">Statuses</a></li>
+                        <li><a href="{% url 'stat:games_revisions' %}">Revisions</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Recommendations <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stat:recommendations_totals' %}">Totals</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">API <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stat:api_user' %}">By User</a></li>
+                        <li><a href="{% url 'stat:api_user_agent' %}">By User Agent</a></li>
+                        <li><a href="{% url 'stat:api_ip' %}">By IP</a></li>
+                        <li><a href="{% url 'stat:api_ip_and_user_agent' %}">By IP and User Agent</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,84 @@
+.game-selection
+  display flex
+  flex-direction column
+
+  margin 32px 0
+
+  @media $bp.phone
+    margin 12px 0
+    padding 0 10px
+
+.game-selection__title
+  font-size 24px
+  line-height 28px
+  font-weight bold
+
+.game-selection__subtitle
+  font-size 14px
+  line-height 24px
+  color #828282
+  margin-top 4px
+
+.game-selection__entries
+  margin 0
+  margin-top 16px
+
+  padding 0
+  list-style none
+
+.game-selection__entry
+  display flex
+  align-items center
+
+  padding-bottom 16px
+  border-bottom 1px solid rgba(254, 255, 255, 0.1)
+  background-image none
+
+  margin-bottom 16px
+  cursor pointer
+
+.game-selection__entry-image
+  width 91px
+  height 52px
+  border-radius 6px
+
+.game-selection__entry-body
+  display flex
+  flex-direction column
+  flex 1
+
+  padding-left 16px
+
+.game-selection__entry-header
+  display flex
+  align-items center
+  justify-content space-between
+
+.game-selection__entry-platforms .platforms__platform:not(:last-child)
+  margin-right 12px
+
+.game-selection__entry-title
+  margin-top 10px
+
+  font-size 16px
+  line-height 20px
+
+.game-selection__link
+  display inline-flex
+  align-items center
+  color white
+
+  background-image none
+  text-decoration underline
+
+  cursor pointer
+
+.game-selection__link path
+  transition fill 0.3s
+
+.game-selection__link span
+  margin-left 8px
+  transform translateY(1px)
+
+.game-selection__link:hover path
+  fill hsla(0,0%,100%,.4)

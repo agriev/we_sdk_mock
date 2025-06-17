@@ -1,0 +1,60 @@
+.search__input-search
+  margin-bottom 40px
+  @media $bp.phone
+    margin-bottom 28px
+
+    .input-search__input
+      font-size 20px
+
+.search__close-button
+  align-self flex-end
+  margin 25px 0
+
+  @media $bp.phone
+    margin-right 12px
+    margin-bottom 0
+
+.search__tabs
+  overflow visible
+
+.search__tabs > ul
+  margin-bottom 40px
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin-bottom 4px
+
+    & .tab
+      margin-top 12px
+
+    & .tab__name
+      font-size 16px
+      padding-bottom 2px
+
+    & .tab__counter
+      font-size 10px
+
+.search__search-results
+  margin-left 0
+  margin-right 0
+
+  .search-results__item:last-child
+    border-bottom none
+    // background-color red
+
+  @media $bp.phone
+    margin-left 10px
+    margin-right 10px
+
+.search__tabs > ul
+  margin-left 0
+  margin-right 0
+
+.search__no-results
+  margin 5px 0
+  @media $bp.phone
+    margin 5px 10px
+
+
+$search-black = alpha(black, 0.1)

@@ -1,0 +1,60 @@
+.person-header
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  align-content stretch
+  align-items flex-start
+
+  @media $bp.phone
+    flex-direction column
+    align-items center
+    width 100%
+
+.person-header__name-positions
+  @media $bp.phone
+    order 2
+    margin auto
+
+.person-header__name
+  margin 0 !important
+
+  @media $bp.desktop
+    white-space nowrap
+
+  @media $bp.phone
+    padding-top 14px
+    text-align center
+
+.person-header__positions
+  $font18-large()
+  color #ffffff
+  padding-top 12px
+
+  @media $bp.phone
+    text-align center
+    font-size 20px
+    padding-top 7px
+	  line-height 1.2
+
+.person-header__image
+  margin-left 16px
+  padding-top 6px
+  padding-right 9px
+  img
+    width 86px
+
+  @media $bp.phone
+    padding-right 0px
+    order 1
+    margin auto
+
+.person-header__follow
+  width: 262px
+
+  @media $bp.phone
+    order 3
+    height 0px
+    width 100%
+    text-align center
+    padding-top 0px
+    padding-bottom 24px

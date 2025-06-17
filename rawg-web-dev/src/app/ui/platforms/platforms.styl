@@ -1,0 +1,214 @@
+.platforms
+  display inline-flex
+  align-items center
+  justify-content center
+
+  &.platforms__selectable
+    .platforms__platform
+      opacity 0.4
+    .platforms__platform_selected
+      opacity 1
+
+.platforms__platform
+  line-height 0
+  transition opacity .3s
+
+  background-repeat no-repeat
+  background-position center
+  background-size contain
+
+  &_web
+    background-image url("~assets/icons/platforms-icons/web.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/web.svg?external")
+  &_web&_big
+    width 16px
+    height 16px
+  &_web&_medium
+    width 12px
+    height 13px
+  &_web&_small
+    width 10px
+    height 10px
+
+  &_pc
+    background-image url("~assets/icons/platforms-icons/pc.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/pc.svg?external")
+  &_pc&_big
+    width 16px
+    height 16px
+  &_pc&_medium
+    width 12px
+    height 13px
+  &_pc&_small
+    width 10px
+    height 10px
+
+  &_playstation
+    background-image url("~assets/icons/platforms-icons/playstation.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/playstation.svg?external")
+  &_playstation&_big
+    width 21px
+    height 16px
+  &_playstation&_medium
+    width 17px
+    height 13px
+  &_playstation&_small
+    width 13px
+    height 10px
+
+  &_xbox
+    background-image url("~assets/icons/platforms-icons/xbox.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/xbox.svg?external")
+  &_xbox&_big
+    width 16px
+    height 16px
+  &_xbox&_medium
+    width 13px
+    height 13px
+  &_xbox&_small
+    width 10px
+    height 10px
+
+  &_ios
+    background-image url("~assets/icons/platforms-icons/ios.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/ios.svg?external")
+  &_ios&_big
+    width 11px
+    height 18px
+  &_ios&_medium
+    width 10px
+    height 16px
+  &_ios&_small
+    width 7px
+    height 12px
+
+  &_android
+    background-image url("~assets/icons/platforms-icons/android.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/android.svg?external")
+  &_android&_big
+    width 16px
+    height 18px
+  &_android&_medium
+    width 12px
+    height 14px
+  &_android&_small
+    width 10px
+    height 12px
+
+  &_nintendo
+    background-image url("~assets/icons/platforms-icons/nintendo.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/nintendo.svg?external")
+  &_nintendo&_big
+    width 21px
+    height 16px
+  &_nintendo&_medium
+    width 17px
+    height 13px
+  &_nintendo&_small
+    width 13px
+    height 10px
+
+  &_mac
+    background-image url("~assets/icons/platforms-icons/mac.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/mac.svg?external")
+  &_mac&_big
+    width 15px
+    height 18px
+  &_mac&_medium
+    width 13px
+    height 14px
+  &_mac&_small
+    width 10px
+    height 12px
+
+  &_linux
+    background-image url("~assets/icons/platforms-icons/linux.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/linux.svg?external")
+  &_linux&_big
+    width 15px
+    height 18px
+  &_linux&_medium
+    width 12px
+    height 16px
+  &_linux&_small
+    width 10px
+    height 12px
+
+  &_3do
+    background-image url("~assets/icons/platforms-icons/3do.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/3do.svg?external")
+  &_3do&_big
+    width 8px
+    height 20px
+  &_3do&_medium
+    width 6px
+    height 16px
+  &_3do&_small
+    width 5px
+    height 13px
+
+  &_commodore-amiga
+    background-image url("~assets/icons/platforms-icons/commodore-amiga.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/commodore-amiga.svg?external")
+  &_commodore-amiga&_big
+    width 23px
+    height 16px
+  &_commodore-amiga&_medium
+    width 18px
+    height 13px
+  &_commodore-amiga&_small
+    width 15px
+    height 10px
+
+  &_atari
+    background-image url("~assets/icons/platforms-icons/atari.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/atari.svg?external")
+  &_atari&_big
+    width 20px
+    height 16px
+  &_atari&_medium
+    width 16px
+    height 13px
+  &_atari&_small
+    width 13px
+    height 10px
+
+  &_sega
+    background-image url("~assets/icons/platforms-icons/sega.svg?external")
+    .theme_light &
+      background-image url("~assets/icons/platforms-icons/black/sega.svg?external")
+  &_sega&_big
+    width 13px
+    height 16px
+  &_sega&_medium
+    width 10px
+    height 13px
+  &_sega&_small
+    width 8px
+    height 10px
+
+  &:not(:last-child)
+    margin-right 10px
+
+.platforms_medium .platforms__platform:not(:last-child)
+  margin-right 6px
+
+.platforms_small .platforms__platform:not(:last-child)
+  margin-right 5px
+
+.platforms__additional
+  $font-14-small()
+  color white
+  line-height 14px

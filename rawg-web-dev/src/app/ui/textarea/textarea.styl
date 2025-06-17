@@ -1,0 +1,39 @@
+.textarea
+  display block
+  width 100%
+  position relative
+
+.textarea__field
+  width 100%
+  max-width 100%
+  height 200px
+  min-height 100px
+  padding 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  @media $bp.desktop
+    min-width 300px
+
+  &.textarea__field_max-width
+    min-width 100%
+
+  background alpha($color-black, 0.3)
+  color $color-white
+  font-family inherit
+  font-size 18px
+
+.input_error .input__field
+  background-color alpha($error-color, 0.3)
+
+.textarea__counter
+  position absolute
+  bottom 10px
+  right 15px
+
+  font-size 10px
+  font-weight 500
+
+.textarea__counter_warning
+  color $error-color

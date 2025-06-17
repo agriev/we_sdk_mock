@@ -1,0 +1,30 @@
+.error
+  display block
+  font-size 16px
+  color alpha($error-color, 0.5)
+
+.error_field
+  margin-top 10px
+
+.error_form
+  width 100%
+  text-align center
+  margin-bottom 10px
+
+.error__icon
+ &::before
+  content '!'
+  display inline-flex
+  justify-content center
+  align-items center
+
+  width 18px
+  height 18px
+  
+  font-size 14px
+  font-weight bold
+  color $error
+  box-sizing border-box
+  border-radius 50%
+  border 2px solid $error
+  margin-right 8px

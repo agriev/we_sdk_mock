@@ -1,0 +1,145 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block content %}
+
+    <h1>{{title}}</h1>
+    
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="cycle">Cycle </label>
+            <select id="cycle" class="form-control" name="cycle">
+                {% for c in cycle_data %}
+                    <option value="{{ c.id }}"{% if cycle == c %} selected{% endif %}>{{ c.start|date:'d/m/Y' }} - {{c.end|date:'d/m/Y'}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-primary">Show</button>
+
+    </form>
+    
+    <br><br>
+    
+    <canvas id="chart"></canvas>
+    
+    <br><br>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Day</th>
+            <th>Achievements per day</th>
+            <th>Total achievements</th>
+            <th>Games per day</th>
+            <th>Total games</th>
+            <th>Achivied users per day</th>
+            <th>Total achivied users</th>
+            <th>Karma per day</th>
+            <th>Total karma</th>
+        </tr>
+        {% for date in date_labels %}
+            <tr>
+                <td>{{ date|date:'d/m/Y' }}</td>
+                <td>{{ achievement_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ total_achievement_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ games_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ total_games_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ achieved_user_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ total_achieved_user_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ karma_count_by_days|get:forloop.counter0 }}</td>
+                <td>{{ total_karma_count_by_days|get:forloop.counter0 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: [{% for date in date_labels %}'{{ date|date:'d/m/Y' }}'{% if not forloop.last %},{% endif %}{% endfor %}],
+                    datasets: [ 
+                    {
+                        label: 'Achieves by days',
+                        fill: false,
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        borderWidth: 3,
+                        data: [{% for count in achievement_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Total achieves per day',
+                        fill: false,
+                        backgroundColor: 'rgb(255, 0, 0)',
+                        borderColor: 'rgb(255, 0, 0)',
+                        borderWidth: 3,
+                        data: [{% for count in total_achievement_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Games by days',
+                        fill: false,
+                        backgroundColor: 'rgb(255, 159, 64)',
+                        borderColor: 'rgb(255, 159, 64)',
+                        borderWidth: 3,
+                        data: [{% for count in games_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Total games per day',
+                        fill: false,
+                        backgroundColor: 'rgb(255, 215, 0)',
+                        borderColor: 'rgb(255, 215, 0)',
+                        borderWidth: 3,
+                        data: [{% for count in total_games_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Achieved users by days',
+                        fill: false,
+                        backgroundColor: 'rgb(75, 192, 192)',
+                        borderColor: 'rgb(75, 192, 192)',
+                        borderWidth: 3,
+                        data: [{% for count in achieved_user_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Total achieved users per day',
+                        fill: false,
+                        backgroundColor: 'rgb(255, 0, 255)',
+                        borderColor: 'rgb(255, 0, 255)',
+                        borderWidth: 3,
+                        data: [{% for count in total_achieved_user_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Karma by days',
+                        fill: false,
+                        backgroundColor: 'rgb(54, 162, 235)',
+                        borderColor: 'rgb(54, 162, 235)',
+                        borderWidth: 3,
+                        data: [{% for count in karma_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    {
+                        label: 'Total karma per day',
+                        fill: false,
+                        backgroundColor: 'rgb(0, 128, 0)',
+                        borderColor: 'rgb(0, 128, 0)',
+                        borderWidth: 3,
+                        data: [{% for count in total_karma_count_by_days %}{{ count }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                    },
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+{% endblock %}

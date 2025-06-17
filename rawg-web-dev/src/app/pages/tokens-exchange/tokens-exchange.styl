@@ -1,0 +1,300 @@
+.tokens-exchange
+  position static
+
+  input
+    color white
+
+.tokens-exchange__title
+  display flex
+  margin 0
+
+  @media $bp.phone
+    flex-direction column
+
+  .tokens-exchange__title__text
+    align-items center
+    flex 1 1 auto
+
+    @media $bp.phone
+      text-align center
+
+
+  .tokens-exchange__title__coins
+    flex 0 0 auto
+    display flex
+    align-items center
+    @media $bp.phone
+      justify-content center
+      margin-top 8px
+
+    .tokens-exchange__title__coins-content
+      font-size 36px
+      line-height 40px
+      padding-right 42px
+      background url('~app/pages/tokens/assets/coin.png') no-repeat right center / 34px 38px
+      @media $bp.phone
+        background-size 17px 20px
+        padding-right 22px
+        font-size 20px
+        line-height 24px
+
+.tokens-exchange__desc
+  font-size 16px
+  line-height 22px
+  margin-top 16px
+  margin-bottom 24px
+  max-width 720px
+  @media $bp.phone
+    margin-top 24px
+    margin-bottom 32px
+    font-size 14px
+    line-height 18px
+    text-align center
+    padding 0 19px
+
+.tokens-exchange__get-tokens-container
+  display flex
+
+.tokens-exchange__get-tokens-content
+  box-sizing border-box
+  padding 24px 70px 24px 32px
+  background-color alpha($color-white, 6%)
+  border-radius 6px
+  flex 0 0 632px
+  @media $bp.phone
+    padding 24px
+    flex 1 1 auto
+    margin 0 10px
+
+.tokens-exchange__get-tokens-content__title
+  font-size 24px
+  line-height 28px
+  font-weight bold
+  margin-bottom 6px
+  @media $bp.phone
+    font-size 18px
+
+.tokens-exchange__get-tokens-content__desc
+  font-size 14px
+  line-height 18px
+  margin-bottom 13px
+
+.tokens-exchange__get-tokens-content__address-title
+  font-size 18px
+  line-height 28px
+  @media $bp.phone
+    font-size 16px
+
+.tokens-exchange__get-tokens-content__address-container
+  display flex
+  align-items center
+  cursor pointer
+  @media $bp.phone
+    max-width calc(100vw - 120px)
+
+  transition opacity .15s
+
+  &.copied
+    opacity .3
+
+.tokens-exchange__get-tokens-content__address-value
+  font-size 18px
+  line-height 20px
+  font-weight bold
+  padding-bottom 4px
+  display inline-block
+  border-bottom 1.5px solid alpha($color-white, 40%)
+  position relative
+
+  &:after
+    content ''
+    position absolute
+    transform translateX(3px) translateY(3px)
+    width 20px
+    height 20px
+    background url('~assets/icons/copy.svg?external') no-repeat right bottom / contain
+
+  @media $bp.phone
+    font-size 16px
+    overflow-wrap break-word
+    max-width calc(100vw - 120px)
+    display inline
+    text-decoration underline
+    border-bottom none
+
+.tokens-exchange__get-tokens-content__min-payment
+  margin-top 15px
+  fonts-size 13px
+  line-height 26px
+  font-style italic
+  opacity .4
+  @media $bp.phone
+    font-size 13px
+
+.tokens-exchange__get-tokens-help
+  margin-left 36px
+  display flex 1 1 auto
+  @media $bp.phone
+    display none
+
+.tokens-exchange__get-tokens-help__title
+  font-size 24px
+  line-height 28px
+  font-weight bold
+  margin-top 20px
+
+.tokens-exchange__get-tokens-help__text
+  font-size 14px
+  line-height 18px
+  margin-top 8px
+
+.tokens-exchange__send-tokens-container
+  display flex
+  margin-top 24px
+  @media $bp.phone
+    margin-left 10px
+    margin-right 10px
+
+.tokens-exchange__send-tokens-content
+  box-sizing border-box
+  padding 24px 32px
+  background-color alpha($color-white, 6%)
+  border-radius 6px
+  flex 0 0 632px
+  @media $bp.phone
+    flex 1 1 auto
+    padding 24px
+
+.tokens-exchange__send-tokens__title
+  font-size 24px
+  line-height 28px
+  letter-spacing 0
+  @media $bp.phone
+    font-size 18px
+    line-height 28px
+
+.tokens-exchange__send-tokens__desc
+  margin-top 6px
+  margin-bottom 24px
+  font-size 14px
+  line-height 18px
+
+.tokens-exchange__send-tokens__to
+  display flex
+  flex-direction column
+
+.tokens-exchange__send-tokens__to__title
+  font-size 16px
+  opacity .2
+  margin-bottom 8px
+
+.tokens-exchange__send-tokens__to__input
+  input
+    box-sizing border-box
+    padding 15px 20px
+    font-size 18px
+    width 100%
+    border-radius 4px
+    background-color alpha($color-black, 56%)
+    border none
+    margin-bottom 16px
+
+.tokens-exchange__send-tokens__amount
+  display flex
+  flex-direction column
+
+.tokens-exchange__send-tokens__amount__title
+  font-size 16px
+  opacity .2
+  margin-bottom 8px
+
+.tokens-exchange__send-tokens__amount__input
+  margin-bottom 24px
+  display flex
+  align-items center
+
+  @media $bp.phone
+    flex-direction column
+    margin-bottom 20px
+
+  input
+    box-sizing border-box
+    padding 15px 20px
+    font-size 18px
+    width 150px
+    border-radius 4px
+    background alpha($color-black, 56%) url('~app/pages/tokens/assets/coin.png') no-repeat calc(100% - 15px) center / 16px 20px
+    border none
+
+
+    @media $bp.phone
+      width 100%
+      margin-bottom 16px
+
+.tokens-exchange__send-tokens__amount_input__info
+  display flex
+  margin-left 24px
+  @media $bp.phone
+    margin-left 0
+
+.tokens-exchange__send-tokens__amount_send-all
+  font-size 14px
+  margin-right 16px
+  border-bottom 1px solid alpha($color-white, 40%)
+  cursor pointer
+  transition border-bottom-color .3s
+  &:hover
+    border-bottom 1px solid alpha($color-white, 0%)
+
+.tokens-exchange__send-tokens__amount_balance
+  font-size 14px
+  margin-right 16px
+  position relative
+  &::after
+    content ''
+    position absolute
+    right -19px
+    top -0.5px
+    width 13px
+    height 16px
+    background url('~app/pages/tokens/assets/coin.png') no-repeat right top / contain
+
+.tokens-exchange__send-tokens__password
+  display flex
+  flex-direction column
+
+.tokens-exchange__send-tokens__password-title
+  font-size 16px
+  margin-bottom 8px
+  opacity .2
+
+.tokens-exchange__send-tokens__password-input
+  margin-bottom 24px
+  input
+    box-sizing border-box
+    padding 15px 20px
+    font-size 18px
+    width 100%
+    border-radius 4px
+    background-color alpha($color-black, 56%)
+    border none
+
+.tokens-exchange__send-tokens__send-btn
+  width 100%
+
+.tokens-exchange__send-tokens-help
+  margin-left 36px
+  display flex 1 1 auto
+  @media $bp.phone
+    display none
+
+.tokens-exchange__send-tokens-help__title
+  font-size 24px
+  line-height 28px
+  font-weight bold
+  margin-top 20px
+
+.tokens-exchange__send-tokens-help__text
+  font-size 14px
+  line-height 18px
+  margin-top 8px

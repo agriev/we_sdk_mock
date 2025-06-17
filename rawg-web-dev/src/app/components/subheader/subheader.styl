@@ -1,0 +1,44 @@
+.subheader
+  position relative
+  display block
+  padding 4px 0 10px
+  background-color #242424
+  z-index 5
+
+.subheader__pointer
+  position absolute
+  top -8px
+  width 0
+  height 0
+  border-style solid
+  border-width 0 10px 8px 10px
+  border-color transparent transparent #242424 transparent
+
+.subheader__tabs
+  width 100%
+  max-width 1920px
+  box-sizing border-box
+  margin 0 auto
+
+  @media $bp.desktop
+    padding 0 40px
+
+    @media (max-width: 1000px) and (min-width: 979px)
+      padding 0 20px
+
+  .tabs__item:first-child .tab .tab__name
+    margin-left 0
+
+  .tabs__item:not(:last-child) .tab
+    margin-right 16px
+
+.subheader__tab
+  color alpha($color-white, 0.8)
+  .tab__name
+    $font14-small()
+    padding 6px 0 2px
+    border-width 1px
+  &.tab_active
+    .tab__name
+      font-weight bold
+      color white

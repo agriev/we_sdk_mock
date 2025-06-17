@@ -1,0 +1,36 @@
+.confirm-button
+  display flex
+
+.confirm-button__button
+  display flex
+  justify-content center
+  align-items center
+
+  width 30px
+  height 30px
+  border-radius 50%
+
+  font-size 10px
+  font-weight 500
+  cursor pointer
+
+  &:not(:last-child)
+    margin-right 20px
+
+.confirm-button__button_y
+  background-color $color-black
+  color $error-color
+  transition color 0.3s
+
+  @media $bp.desktop
+    &:hover
+      color $color-white
+
+.confirm-button__button_n
+  background-color alpha($color-black, 0.1)
+  color $color-white
+  transition color 0.3s
+
+  @media $bp.desktop
+    &:hover
+      color $color-black

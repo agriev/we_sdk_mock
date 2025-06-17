@@ -1,0 +1,105 @@
+.game-edit__esrb
+  position relative
+
+.game-edit__esrb__value
+  background alpha(white, 10%)
+  border-radius 24.5px
+  font-size 16px
+  color white
+  padding 15px 20px
+  cursor pointer
+  display flex
+  align-items center
+  box-sizing border-box
+
+.game-edit__esrb__value-icon
+  margin-right 8px
+
+.game-edit__esrb__form
+  opacity 0
+  pointer-events none
+  transition opacity .3s
+  padding 20px 24px
+  background white
+  border-radius 6px
+  top -30px
+  position absolute
+  box-sizing border-box
+  z-index 3
+  min-width 210px
+
+  @media $bp.phone
+    position fixed
+    right 10px
+    bottom 10px
+    top unset
+    width calc(100vw - 20px)
+
+  &.game-edit__esrb__form_opened
+    opacity 1
+    pointer-events auto
+
+.game-edit__esrb__form-overlay
+  @media $bp.desktop
+    display none
+
+  position fixed
+  left 0
+  top 0
+  width 100vw
+  height 100vh
+  background alpha(black, 0%)
+  z-index 2
+  pointer-events none
+
+  &.game-edit__esrb__form-overlay_opened
+    background alpha(black, 70%)
+    pointer-events auto
+
+.game-edit__esrb__form__header
+  display flex
+
+.game-edit__esrb__form__header-title
+  flex 1 1 auto
+  font-size 16px
+  color alpha(black, 50%)
+
+.game-edit__esrb__form__btns
+  margin-top 12px
+  display flex
+  flex-direction column
+
+.game-edit__esrb__form__btn
+  padding 8px 15px
+  background-color white
+  border-radius 4px
+  border-width 1px
+  border-style solid
+  border-color rgba(0, 0, 0, 0.1)
+  display flex
+  align-items center
+
+  transition border-color .3s
+  cursor pointer
+  &:hover
+    border-color rgba(0, 0, 0, 0.6)
+  &.game-edit__esrb__form__btn_active
+    border-color rgba(0, 0, 0, 1)
+
+  & + &
+    margin-top 8px
+
+.game-edit__esrb__form__btn-age
+  margin-right 8px
+  font-size 16px
+  font-weight bold
+  color alpha(#262626, 40%)
+
+  .game-edit__esrb__form__btn_active &
+    color alpha(#262626, 100%)
+
+.game-edit__esrb__form__btn-title
+  font-size 14px
+  color #262626
+  position relative
+  top 1px

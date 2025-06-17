@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="77px" viewBox="0 0 39 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="AQ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="embed" transform="translate(-779.000000, -303.000000)" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(798.000000, 337.500000) rotate(-270.000000) translate(-798.000000, -337.500000) translate(756.000000, 318.000000)">
+                <path d="M12,-3.55271368e-15 L80,-1.09558396e-15 L80,-1.77635684e-15 C82.209139,-2.18216909e-15 84,1.790861 84,4 L84,28 L84,28 C84,30.209139 82.209139,32 80,32 L56.0706528,32 L48.1480225,38.085468 L48.1480225,38.085468 C47.4425919,38.6273177 46.4640751,38.6381504 45.7468218,38.1120504 L37.4140163,32 L12,32 L12,32 C9.790861,32 8,30.209139 8,28 L8,4 L8,4 C8,1.790861 9.790861,-3.14690143e-15 12,-3.55271368e-15 Z" id="Rectangle-15"></path>
+            </g>
+        </g>
+    </g>
+</svg>

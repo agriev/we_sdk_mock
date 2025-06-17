@@ -1,0 +1,73 @@
+.slider-arrow
+  position absolute
+  top 50%
+  display flex
+  flex 0 1 auto
+  justify-content center
+  align-items center
+  width 50px
+  height 50px
+  transform translateY(-50%)
+  cursor pointer
+  z-index 1
+  transition all 0.3s
+
+  .arrow path
+    transition all 0.3s
+    fill alpha($color-white, 0.15)
+
+  &_prev
+    left -78px
+
+  &_next
+    right -78px
+
+  &_disabled
+    opacity 0.2
+    cursor default
+
+  &:not(.slider-arrow_disabled):hover
+    .arrow path
+      fill $color-white
+
+  @media $bp.phone
+    display none
+
+.slider-arrow
+  @media screen and (min-width: 979px) and (max-width: 1200px)
+    background-color rgba($color-black, 0.3)
+    border-radius 50%
+
+    .arrow svg
+      width 10px
+      height 18px
+
+    .arrow path
+      fill $color-white
+
+    &_prev
+      transform translate(-50%, -50%)
+
+    &_next
+      transform translate(50%, -50%)
+
+    &:not(.slider-arrow_disabled):hover
+      background-color $color-white
+      transition all 0.3s
+
+      .arrow path
+        fill $color-black
+
+  @media screen and (min-width: 979px) and (max-width: 1023px)
+    &_prev
+      left 16px
+
+    &_next
+      right 16px
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px)
+    &_prev
+      left 0
+
+    &_next
+      right 0

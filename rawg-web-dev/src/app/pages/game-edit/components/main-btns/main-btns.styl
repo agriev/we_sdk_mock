@@ -1,0 +1,131 @@
+.game-edit__main-btns
+  position sticky
+  bottom 0
+  padding 20px 32px
+  overflow visible
+  z-index 1
+
+  @media $bp.phone
+    padding 20px 24px
+
+  .game-edit__control-group-content
+    display flex
+    margin-bottom 0
+
+.game-edit__save-btn
+  font-size 16px
+  padding 14px 82px
+  background white
+  cursor pointer
+  color black
+  border-radius 4px
+
+  transition background-color .3s, color .3s
+
+  @media $bp.desktop
+    &.button_loading, &:hover
+      background-color alpha(white, 60%)
+
+.game-edit__cancel-btn-wrapper
+  position relative
+
+  @media $bp.desktop
+    margin-left 20px
+
+  @media $bp.phone
+    margin-left 12px
+
+.game-edit__cancel-btn
+  font-size 16px
+  padding 14px 82px
+  cursor pointer
+  background-color alpha(white, 10%)
+  color white
+  border-radius 4px
+  width 100%
+
+  @media $bp.desktop
+    &:hover
+      background-color alpha(white, 100%)
+      color black
+
+  transition background-color .3s, color .3s
+
+.game-edit__save-btn
+.game-edit__cancel-btn
+  @media $bp.phone
+    padding 12px 10px
+
+.game-edit__save-btn
+.game-edit__cancel-btn-wrapper
+  @media $bp.phone
+    width calc(50% - 6px)
+
+.game-edit__cancel-btn__close-popup
+  width 300px
+  position absolute
+  // left calc((300px - 100%) / -2)
+  right 0
+  bottom calc(100% + 20px)
+  background black
+  border 2px solid #333333
+  padding 18px 24px
+  cursor auto
+  box-sizing border-box
+
+  transition opacity .3s
+  opacity 0
+  pointer-events none
+  z-index 5
+
+  &.game-edit__cancel-btn__close-popup_opened
+    opacity 1
+    pointer-events auto
+
+  &::before
+    position absolute
+    right 40px
+    bottom -8px
+    content ""
+    width 13px
+    height 13px
+
+    border-left 2px solid #333333
+    border-top 2px solid #333333
+    border-radius 4px 0 0 0
+
+    transform rotate(225deg)
+    background linear-gradient(-45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) calc(50% + 1px), black 50%, rgba(0,0,0,.56) 100%)
+
+.game-edit__cancel-btn__close-popup__btns
+  display flex
+  margin-top 16px
+
+.game-edit__cancel-btn__close-popup__yes
+.game-edit__cancel-btn__close-popup__no
+  padding 9px 19px
+  background-color alpha(white, 10%)
+  border-radius 4px
+  cursor pointer
+  font-size 12px
+  display flex
+  align-items center
+  color white
+
+  transition background-color .3s, color .3s
+
+  &:hover
+    background-color white
+    color black
+
+  svg
+    width 12px
+    height 12px
+    margin-right 8px
+
+.game-edit__cancel-btn__close-popup__yes
+  margin-right 12px
+
+.game-edit__cancel-btn__close-popup__no
+  svg path
+    fill #e94a30

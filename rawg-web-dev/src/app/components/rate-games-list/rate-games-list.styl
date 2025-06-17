@@ -1,0 +1,65 @@
+.slick-slider.rate-games-list__slider
+  .slick-list
+    @media $bp.desktop
+      margin 0
+      padding 0
+
+  .slick-slide
+    opacity 0.3
+
+  .slick-current
+    opacity 1
+
+  .slick-disabled
+    border-radius 50%
+    .arrow__icon-svg
+      visibility hidden
+
+  .slider-arrow
+    top 180px
+
+    &:not(.slick-disabled)
+      border-radius 50%
+      background-color $color-white
+      margin 0 40px
+
+      &:hover
+        .arrow__icon-svg
+          path
+            fill $color-black
+
+    .arrow__icon-svg
+      width 11px
+      height 18px
+
+      path
+        fill #10222f
+
+  .slider-arrow_prev
+    left 0
+    .arrow__icon-svg
+      margin-left 4px
+
+  .slider-arrow_next
+    right 0
+
+
+.rate-games-list__content-slider
+  margin-top 216px
+
+  @media $bp.phone
+    margin-top 170px
+
+.rate-games-list__card
+  margin 0 11px
+
+.rate-games-list__card_alone
+  margin 0 auto
+
+.rate-games-list__percent
+  margin 16px auto
+
+.rate-games-list__slide-removed
+  .slic-track
+    transition 0.1s
+    transform translateX(-768px) !important

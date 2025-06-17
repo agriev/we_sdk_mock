@@ -1,0 +1,80 @@
+[
+  {
+    "model": "common.list",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "content_type": [
+        "credits",
+        "person"
+      ],
+      "name": "Persons",
+      "description": ""
+    }
+  },
+  {
+    "model": "common.list",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "content_type": [
+        "games",
+        "developer"
+      ],
+      "name": "Developers",
+      "description": ""
+    }
+  },
+  {
+    "model": "common.list",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "content_type": [
+        "games",
+        "publisher"
+      ],
+      "name": "Publishers",
+      "description": ""
+    }
+  },
+  {
+    "model": "common.list",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "content_type": [
+        "games",
+        "genre"
+      ],
+      "name": "Genres",
+      "description": ""
+    }
+  },
+  {
+    "model": "common.list",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "content_type": [
+        "games",
+        "tag"
+      ],
+      "name": "Tags",
+      "description": ""
+    }
+  },
+  {
+    "model": "common.list",
+    "pk": 7,
+    "fields": {
+      "order": 7,
+      "content_type": [
+        "games",
+        "platform"
+      ],
+      "name": "Platforms",
+      "description": ""
+    }
+  }
+]

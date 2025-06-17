@@ -1,0 +1,58 @@
+.suggestions-section
+  @media $bp.desktop
+    margin-bottom 40px
+
+  @media $bp.phone
+    padding 0 10px
+
+  .view-all_l
+    margin 0
+
+    .view-all__block
+      height 140px
+
+    .view-all__message
+      margin 0
+
+  .view-all_xs
+    position relative
+    width 100%
+
+    &::before
+      content ''
+      position absolute
+      top -13px
+      left 0
+      right 0
+      display block
+      width 100%
+      height 1px
+      background-color alpha(white, 0.1)
+
+.suggestions-section__slider
+  .slider-arrow
+    top 95px
+
+  .slick-list
+    @media $bp.desktop
+      margin -10px
+      padding 10px
+
+  .game-card-medium
+    @media $bp.desktop
+      width 304px
+    // Пока решено не использовать ширину в 1170px
+    // @media $bp.desktop
+    //   width 374px
+
+.suggestions-section__group
+  @media $bp.phone
+    width 222px
+
+.suggestions-section__add-game
+  .SVGInline-svg g
+    transition fill .3s
+
+  &:hover
+    .SVGInline-svg g
+      fill black

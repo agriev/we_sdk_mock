@@ -1,0 +1,135 @@
+.content-stats
+  margin-bottom 48px
+
+  @media $bp.desktop
+    display flex
+
+  @media $bp.phone
+    margin-top 16px
+    margin-bottom 32px
+    padding-bottom 16px
+
+    .slick-dots
+      bottom -16px
+
+.content-stats__stat
+  @media $bp.desktop
+    width $column-width-1-1-1-desktop
+    padding 0 44px
+
+    &:first-child
+      padding-left 0
+      border-right 1px solid alpha($color-white, 0.1)
+
+    &:last-child
+      padding-right 0
+      border-left 1px solid alpha($color-white, 0.1)
+
+  @media $bp.phone
+    width 264px !important
+
+.content-stats__slider
+  .slick-slide
+    padding 0 8px
+    &:first-child
+      padding-left 10px
+
+.content-stats__count
+  $remove-link-style()
+  font-size 24px
+  text-decoration none
+  color white
+
+  @media $bp.phone
+    font-size 18px
+
+.content-stats__count-number
+  $heading1()
+
+.content-stats__items
+  display flex
+
+.content-stats__column
+  display flex
+  flex-direction column
+
+  a
+    $remove-link-style()
+
+.content-stats__column_grow
+  flex-grow 1
+
+.content-stats__line
+  display flex
+  align-items center
+  height 40px
+
+.content-stats__item-name-wrapper
+  display flex
+  align-items center
+
+  .collection-icon
+    margin-right 8px
+
+.content-stats__item-name
+  $font14-small()
+  justify-content flex-end
+  max-width 200px
+  padding-right 8px
+  color $color-white
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+
+a.content-stats__item-name
+  padding-right 8px
+
+.content-stats__item-count
+  width 2ch
+  padding-left 8px
+  text-align left
+  text-decoration none
+  color $color-white
+
+.content-stats__item-percent-tiny
+  flex-grow 1
+  height 11px
+  border-bottom 1px solid alpha($color-white, 0.1)
+
+.content-stats__item-percent-wrapper
+  width 100%
+
+.content-stats__item-percent-full
+  position relative
+  width 100%
+  height 6px
+  border-radius 3px
+  background-color alpha($color-white, 0.3)
+
+.content-stats__item-percent
+  position relative
+  height 6px
+  margin-top -6px
+  border-radius 3px
+  background-color $color-white
+
+.content-stats__item-emoji
+  width 28px
+  height 28px
+
+.content-stats__chart
+  margin-bottom 8px
+
+.content-stats__empty
+  margin-top 19px
+  font-size 14px
+
+.content-stats__collection-icon
+  width 20px
+  height 12px
+  border-radius 2px
+  border solid 0.9px $color-white
+  margin-left 10px
+
+.content-stats__item-link
+  border none

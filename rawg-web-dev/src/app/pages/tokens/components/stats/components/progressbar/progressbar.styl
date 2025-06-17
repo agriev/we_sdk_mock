@@ -1,0 +1,292 @@
+.tokens__stats__progress-container
+  margin 10px 34px 0px 34px
+  padding-bottom 46px
+
+  @media $bp.phone
+    margin 10px 30px 0px 16px
+
+.tokens__stats__progress
+  display flex
+  flex-direction column
+  position relative
+
+  @media $bp.phone
+    min-height 40px
+
+.tokens__stats__progress__line
+  border-radius 20px
+  height 12px
+  background-color alpha($color-white, 40%)
+
+.tokens__stats__progress__line__meter
+  border-radius 20px
+  height 12px
+  position relative
+
+  .tokens__stats-container_active &
+    background-image linear-gradient(to bottom, #fad961, #f76b1c)
+
+  .tokens__stats-container_completed &
+    background-image linear-gradient(to bottom, #b4ec51, #429321)
+
+  .tokens__stats-container_failure &
+    background-image linear-gradient(to bottom, #fad961, #f76b1c)
+
+.tokens__stats__progress__line__popup
+  width 230px
+  position absolute
+  right -112px
+  top 27px
+  z-index 3
+  background #2c2c2c
+  border-radius 6px
+
+  pointer-events none
+  opacity 0
+  transition opacity .3s
+
+  &.tokens__stats__progress__line__popup_opened
+    pointer-events auto
+    opacity 1
+
+  &::before
+    content ''
+    position absolute
+    left calc(50% - 11px)
+    top -6px
+    width 22px
+    height 22px
+    border-radius 4px
+    background #202223
+    transform rotate(45deg)
+
+
+.tokens__stats__progress__line__popup__head
+  display flex
+  background alpha(#080d11, 30%)
+  padding 8px
+  align-items center
+  border-top-left-radius 6px
+  border-top-right-radius 6px
+
+.tokens__stats__progress__line__popup__head__avatar
+  flex 0 0 auto
+  width 24px
+  height 24px
+
+.tokens__stats__progress__line__popup__head__name
+  font-size 11px
+  margin-left 8px
+
+.tokens__stats__progress__line__popup__head__time
+  flex 1 1 auto
+  font-size 11px
+  opacity .4
+  margin-left 5px
+
+.tokens__stats__progress__line__popup__head__close
+  width 20px
+  height 20px
+  background alpha(white, 10%) url('~assets/icons/close.svg?external') no-repeat center / 8px
+  border-radius 50%
+  cursor pointer
+
+.tokens__stats__progress__line__popup__content
+  border-bottom-left-radius 6px
+  border-bottom-right-radius 6px
+  padding 8px 16px 16px
+  display flex
+  align-items flex-start
+
+.tokens__stats__progress__line__popup__content__achievement-image
+  width 22.5px
+  height 23.6px
+  margin-right 10px
+  background-repeat no-repeat
+  background-position center
+  background-size contain
+  border-radius 5px
+
+.tokens__stats__progress__line__popup__content__info
+  display flex
+  flex-direction column
+  margin-top 0px
+  align-items flex-start
+
+.tokens__stats__progress__line__popup__content__info__name
+  font-size 13px
+
+.tokens__stats__progress__line__popup__content__info__game
+  font-size 12px
+  opacity .4
+
+.tokens__stats__progress__line__popup__content__info__award
+  position relative
+  text-align center
+  font-size 16px
+  padding 0 16px
+  margin-right 10px
+  margin-top 10px
+  @media $bp.phone
+    padding 0 14px
+
+  &::before
+  &::after
+    content ''
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    top 0px
+    width 11px
+    height 18px
+    position absolute
+
+    [data-type="bronze"]&
+      background-image url('~app/pages/tokens/assets/wreath-bronze.svg?external')
+
+    [data-type="silver"]&
+      background-image url('~app/pages/tokens/assets/wreath-silver.svg?external')
+
+    [data-type="gold"]&
+      background-image url('~app/pages/tokens/assets/wreath-gold.svg?external')
+
+    @media $bp.phone
+      width 10px
+      height 18px
+      top 0
+
+  &::before
+    left 0
+
+  &::after
+    right 0
+    transform rotateY(180deg)
+
+.tokens__stats__progress__goals_title
+  margin-top 21px
+
+  @media $bp.phone
+    margin-top 16px
+    font-size 14px
+    display none
+
+.tokens__stats__progress__goals
+  position absolute
+  top -10px
+  left 0
+  width 100%
+  font-size 18px
+
+  .tokens__stats__progress__goal
+    position absolute
+    top 0
+    display flex
+    flex-direction column
+    align-items center
+    transform translateX(-40px)
+    width 80px
+
+    @media $bp.phone
+      top 4px
+
+    &.tokens__stats__progress__goal_last
+      align-items flex-end
+      transform translateX(-60px)
+      &.tokens__stats__progress__goal_achieved
+        position relative
+        top -12px
+        @media $bp.phone
+          top -2px
+        .tokens__stats__progress__goal__circle
+          width 45.5px
+          height 45.5px
+          margin-bottom 1px
+          @media $bp.phone
+            width 30px
+            height 30px
+            margin-bottom 5px
+          .SVGInline svg
+            width 28px
+            height 21px
+            top 3px
+            @media $bp.phone
+              width 21px
+              height 15px
+              top 0px
+
+    &.tokens__stats__progress__goal_achieved
+      .tokens__stats__progress__goal__circle
+        display flex
+        align-items center
+        justify-content center
+
+        .tokens__stats-container_active &
+          background linear-gradient(to bottom, #fad961, #f76b1c)
+
+        .tokens__stats-container_completed &
+          background linear-gradient(to bottom, #b4ec51, #429321)
+
+        .tokens__stats-container_failure &
+          background linear-gradient(to bottom, #fad961, #f76b1c)
+
+        .SVGInline
+          display block
+          svg
+            width 13px
+            position relative
+            top 1px
+            path
+              stroke transparent
+              fill white
+
+    .tokens__stats__progress__goal__circle
+      width 24px
+      height 24px
+      margin-bottom 11px
+      border-radius 50%
+      background-color #72c6b6
+      border-width 4px
+      border-style solid
+
+      @media $bp.phone
+        width 18px
+        height 18px
+        border-width 3px
+
+      .tokens__stats-container_active &
+        border-color #14a783
+
+      .tokens__stats-container_completed &
+        border-color #f9ab44
+
+      .tokens__stats-container_failure &
+        border-color #c8283b
+
+      .SVGInline
+        display none
+
+    .tokens__stats__progress__goal__texts
+      display flex
+      flex-direction column
+      align-items center
+
+      .tokens__stats__progress__goal__target
+        font-size 18px
+        white-space nowrap
+        @media $bp.phone
+          font-size 14px
+
+      .tokens__stats__progress__goal__reward
+        font-size 12px
+        opacity .4
+        white-space nowrap
+        align-self flex-end
+        margin-top 5px
+
+        padding-right 15px
+        background url('~app/pages/tokens/assets/coin.png') no-repeat right center / contain
+
+        transform translateX(-5px)
+
+        @media $bp.phone
+          font-size 11px

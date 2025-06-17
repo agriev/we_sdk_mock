@@ -1,0 +1,130 @@
+.meta-stats
+  margin-bottom 48px
+
+  @media $bp.desktop
+    display flex
+    justify-content space-between
+
+  @media $bp.phone
+    padding-bottom 16px
+
+    .slick-dots
+      bottom -16px
+
+.meta-stats__stat
+  @media $bp.desktop
+    width 50%
+
+    &:first-child
+      padding-right 12px
+
+    &:last-child
+      padding-left 12px
+
+  @media $bp.phone
+    width 264px
+    padding 0 8px
+
+    &:first-child
+      padding-left 10px
+
+.meta-stats__count
+  $font24-large()
+
+  @media $bp.phone
+    $font18-large()
+
+.meta-stats__count-number
+  $heading1()
+
+.meta-stats__line
+  display flex
+  align-items center
+  height 50px
+
+.meta-stats__line-info
+  position relative
+  margin-right 16px
+  display flex
+  align-items center
+  width 260px
+  height 100%
+
+.meta-stats__line:not(:last-child) .meta-stats__line-info
+  border-bottom 1px solid alpha($color-white, 0.1)
+
+.meta-stats__line-index
+  $font16-medium()
+  margin-right 10px
+  color alpha($color-white, 0.4)
+
+.meta-stats__line-title
+  $font16-medium()
+  flex-grow 1
+  margin-right 10px
+  text-overflow ellipsis
+  font-weight bold
+  overflow hidden
+  white-space nowrap
+
+.meta-stats__line-count
+  $font12-small()
+  flex-shrink 0
+  margin-top 4px
+  text-align right
+  color alpha($color-white, 0.4)
+
+.meta-stats__line-percent-wrapper
+  flex-grow 1
+
+.meta-stats__line-percent
+  margin-top 7px
+  height 8px
+  border-radius 4px
+
+.meta-stats__line.meta-stats__line_empty
+  .meta-stats__line-info
+    border-color alpha($color-white, 0.02)
+
+  .meta-stats__line-index
+    color alpha($color-white, 0.08)
+
+  .meta-stats__line-percent-wrapper
+    position absolute
+    top calc(50% - 4px)
+    margin-left 20px
+    height 8px
+    border-radius 4px
+    opacity 0.1
+
+  .meta-stats__line-percent
+    position absolute
+    top calc(50% - 4px)
+    margin-left 20px
+    margin-top 0
+    width 10px
+
+.meta-stats__line:not(.meta-stats__line_empty)
+  @media $bp.phone
+    flex-direction column
+    height auto
+    margin-bottom 15px
+
+    &:first-child
+      margin-top 16px
+
+    .meta-stats__line-info
+      border none
+
+    .meta-stats__line-info
+      height auto
+      margin-right 0
+      margin-bottom 10px
+      width 100%
+
+    .meta-stats__line-percent-wrapper
+      flex-grow 0
+      width 100%
+
+    .meta-stats__line-percent
+      margin-top 0

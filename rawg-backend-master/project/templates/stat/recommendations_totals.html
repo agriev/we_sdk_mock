@@ -1,0 +1,113 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block checkboxes %}
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="recommended_games_visits_main"{% if is_recommended_games_visits_main %} checked{% endif %}>
+                Recommended Games Visits &mdash; Only The Main Page &nbsp;&nbsp;&nbsp;
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="recommended_games_adding_main"{% if is_recommended_games_adding_main %} checked{% endif %}>
+                Recommended Games Adding &mdash; Only The Main Page &nbsp;&nbsp;&nbsp;
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="recommended_games_adding_wishlist"{% if is_recommended_games_adding_wishlist %} checked{% endif %}>
+                Recommended Games Adding &mdash; Only Wishlist &nbsp;&nbsp;&nbsp;
+            </label>
+        </div>
+    </div>
+{% endblock %}
+
+{% block common_checkboxes %}<div class="form-group"><br><br></div>{% endblock %}
+
+{% block table %}
+    <table class="table table-striped">
+        <tr>
+            <th>{{ period|capfirst }}</th>
+            <th>Unique Users</th>
+            <th>Recommendations Visits</th>
+            <th>Recommended Games Visits</th>
+            <th>Recommended Games Adding</th>
+            <th>Recommended Games Stores Visits</th>
+        </tr>
+        {% for label, point in points %}
+            <tr>
+                <td>{{ label }}</td>
+                <td>{{ point }}</td>
+                <td>{{ recommendations_visits_points|get:forloop.counter0 }}</td>
+                <td>{{ recommended_games_visits_points|get:forloop.counter0 }}</td>
+                <td>{{ recommended_games_adding_points|get:forloop.counter0 }}</td>
+                <td>{{ recommended_games_stores_visits_points|get:forloop.counter0 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: [{% for p, _ in points %}'{{ p }}'{% if not forloop.last %},{% endif %}{% endfor %}],
+                    datasets: [
+                        {
+                            label: 'Unique Users',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            borderWidth: 3,
+                            data: [{% for _, p in points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Recommendations Visits',
+                            fill: false,
+                            backgroundColor: 'rgb(75, 192, 192)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            borderWidth: 3,
+                            data: [{% for p in recommendations_visits_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Recommended Games Visits',
+                            fill: false,
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            borderWidth: 3,
+                            data: [{% for p in recommended_games_visits_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Recommended Games Adding',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 159, 64)',
+                            borderColor: 'rgb(255, 159, 64)',
+                            borderWidth: 3,
+                            data: [{% for p in recommended_games_adding_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Recommended Games Stores Visits',
+                            fill: false,
+                            backgroundColor: 'rgb(133, 99, 132)',
+                            borderColor: 'rgb(133, 99, 132)',
+                            borderWidth: 3,
+                            data: [{% for p in recommended_games_stores_visits_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+{% endblock %}

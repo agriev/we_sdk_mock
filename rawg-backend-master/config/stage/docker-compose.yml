@@ -1,0 +1,253 @@
+version: "3"
+
+volumes:
+  elastic:
+  celery-beat:
+  static-storage:
+
+services:
+  postgres:
+    container_name: rawg-postgres-stage
+    restart: always
+    image: postgres:10.5
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    env_file:
+      - env_web
+    networks:
+      - backend
+
+  memcached:
+    container_name: rawg-memcached-stage
+    restart: always
+    image: memcached
+    command: memcached -m 16m
+    networks:
+      - backend
+
+  mongo:
+    container_name: rawg-mongo-stage
+    restart: always
+    image: mongo:3.4
+    command: --setParameter cursorTimeoutMillis=259200000
+    volumes:
+      - ./data/mongo:/data/db
+    networks:
+      - backend
+
+  elastic:
+    container_name: rawg-elastic-stage
+    restart: always
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
+    volumes:
+      - elastic:/usr/share/elasticsearch/data
+    networks:
+      - backend
+    environment:
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+      - "indices.query.bool.max_clause_count=5000"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+
+  rabbit:
+    hostname: rabbit
+    container_name: rawg-rabbit-stage
+    restart: always
+    image: rabbitmq:3.7
+    volumes:
+      - ./data/rabbitmq:/var/lib/rabbitmq
+    networks:
+      - backend
+
+  celery:
+    container_name: rawg-celery-stage
+    restart: always
+    image: rawg-web-stage:latest
+    command: ["bash", "/app/config/wait-for-it.sh", "postgres:5432", "rabbit:5672", "memcached:11211", "--timeout=60",
+              "--", "celery", "worker", "-A", "apps", "-l", "info", "-Q",
+              "critical,high,normal,low,denormalize,stat,video", "--workdir", "project", "-n", "celery@celery",
+              "-c", "2"]
+    volumes:
+      - ./logs/celery/:/app/logs/
+    links:
+      - rabbit
+    env_file:
+      - env_web
+    networks:
+      - backend
+
+  celery-beat:
+    container_name: rawg-celery-beat-stage
+    restart: always
+    image: rawg-web-stage:latest
+    command: ["bash", "/app/config/wait-for-it.sh", "postgres:5432", "rabbit:5672", "memcached:11211", "--timeout=60",
+              "--", "celery", "beat", "-A", "apps", "-l", "info", "--workdir", "project",
+              "-s", "../data/celerybeat.db", "--pidfile="]
+    volumes:
+      - celery-beat:/app/data/
+      - ./logs/celery-beat/:/app/logs/
+    links:
+      - rabbit
+    env_file:
+      - env_web
+    networks:
+      - backend
+
+  poxa:
+    container_name: rawg-poxa-stage
+    restart: always
+    image: edgurgel/poxa-automated:v1.1.2
+    networks:
+      - backend
+      - proxy
+    expose:
+      - 8080
+    env_file:
+      - env_poxa
+    environment:
+      - VIRTUAL_HOST=devpoxa.ag.ru
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=devpoxa.ag.ru
+      - LETSENCRYPT_EMAIL=mikhailov@kanobu.ru
+      - WEB_HOOK=https://devapi.ag.ru/api/pusher/webhook
+
+  import:
+    container_name: rawg-web-import-stage
+    restart: always
+    image: rawg-web-stage:latest
+    command: ["bash", "/app/config/wait-for-it.sh", "memcached:11211", "postgres:5432", "--timeout=60", "--",
+              "bash", "/app/config/wait-for-postgres.sh", "postgres",
+              "python", "/app/project/manage.py", "import"]
+    volumes:
+      - ./logs/web/:/app/logs/
+    links:
+      - postgres
+      - memcached
+      - elastic
+      - celery
+      - poxa
+    env_file:
+      - env_web
+    networks:
+      - backend
+
+#  sync:
+#    container_name: rawg-web-sync-stage
+#    restart: always
+#    image: rawg-web-stage:latest
+#    command: ["bash", "/app/config/wait-for-it.sh", "memcached:11211", "postgres:5432", "--timeout=60", "--",
+#              "bash", "/app/config/wait-for-postgres.sh", "postgres",
+#              "python", "/app/project/manage.py", "import", "--sync"]
+#    volumes:
+#      - ./logs/web/:/app/logs/
+#    links:
+#      - postgres
+#      - memcached
+#      - elastic
+#      - celery
+#      - poxa
+#    env_file:
+#      - env_web
+#    networks:
+#      - backend
+
+  feed:
+    container_name: rawg-web-feed-stage
+    restart: always
+    image: rawg-web-stage:latest
+    command: ["bash", "/app/config/wait-for-it.sh", "memcached:11211", "postgres:5432", "--timeout=60", "--",
+              "bash", "/app/config/wait-for-postgres.sh", "postgres",
+              "python", "/app/project/manage.py", "feed"]
+    volumes:
+      - ./logs/web/:/app/logs/
+    links:
+      - postgres
+    env_file:
+      - env_web
+    networks:
+      - backend
+
+  web:
+    hostname: agblue
+    container_name: rawg-web-stage
+    restart: always
+    image: rawg-web-stage:blue
+    entrypoint: ["bash", "/app/config/wait-for-it.sh", "memcached:11211", "postgres:5432", "--timeout=60", "--",
+                 "bash", "/app/config/wait-for-postgres.sh", "postgres",
+                 "bash", "/app/config/web.sh"]
+    volumes:
+      - static-storage:/app/static/
+      - ./logs/web/:/app/logs/
+    links:
+      - postgres
+      - memcached
+      - celery
+      - celery-beat
+      - elastic
+      - poxa
+    env_file:
+      - env_web
+    environment:
+      - SERVICE_8000_NAME=blue
+      - SERVICE_8000_TAGS=backends
+    networks:
+      - backend
+      - consul
+    sysctls:
+      - net.core.somaxconn=4096
+
+  web-temp:
+    hostname: aggreen
+    container_name: rawg-web-stage-temp
+    image: rawg-web-stage:green
+    entrypoint: ["bash", "/app/config/wait-for-it.sh", "memcached:11211", "postgres:5432", "--timeout=60", "--",
+                 "bash", "/app/config/wait-for-postgres.sh", "postgres",
+                 "bash", "/app/config/web.sh"]
+    volumes:
+      - static-storage:/app/static/
+      - ./logs/web/:/app/logs/
+    links:
+      - postgres
+      - memcached
+      - elastic
+    env_file:
+      - env_web
+    environment:
+      - SERVICE_8000_NAME=green
+      - SERVICE_8000_TAGS=backends
+    networks:
+      - backend
+      - consul
+    sysctls:
+      - net.core.somaxconn=4096
+
+  nginx:
+    container_name: rawg-nginx-stage
+    restart: always
+    image: rawgio/rawg-nginx:stage
+    volumes:
+      - static-storage:/app/static/
+      - ./logs/nginx/:/logs/
+    networks:
+      - backend
+      - proxy
+      - consul
+    environment:
+      - VIRTUAL_HOST=featureapi.ag.ru,devapi.ag.ru,resize.ag.ru
+      - LETSENCRYPT_HOST=featureapi.ag.ru,devapi.ag.ru,resize.ag.ru
+      - LETSENCRYPT_EMAIL=mikhailov@kanobu.ru
+
+networks:
+  backend:
+  proxy:
+    external:
+      name: nginxproxy
+  consul:
+    external:
+      name: consul

@@ -1,0 +1,145 @@
+{
+  "ru": {
+    "hide_button": "Спрятать",
+    "head_title_community": "Сообщество",
+    "head_title_notifications": "Уведомления",
+    "tab_you": "Я",
+    "tab_following": "Подписки",
+    "tab_community": "Сообщество",
+    "empty_notifications": "Уведомлений пока нет.",
+    "you_empty": "Здесь пока нет событий.",
+    "following_empty": "Пусто? Подписывайтесь на людей, которые играют в те же игры, что и вы.",
+    "community_empty": "Здесь пока нет событий.",
+    "only_reviews": "Показать только рецензии и комментарии",
+    "banner_import_title": "Подключите свои игровые аккаунты и получите персонализованную ленту",
+    "banner_import_button": "Импорт игр",
+    "similar_list_games": "Играет в {list}",
+    "feed_action_people_count": "{count} {count, plural, one {человек} few {человека} many {человек}}",
+    "feed_action_popular_games": "Самые популярные игры этой недели для {platform}",
+    "feed_action_popular_games_stats": "{users_count} {users_count, plural, one {пользователь добавил} few {пользователя добавили} many {пользователей добавили}} {games_count} {games_count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_most_rated_games": "Самые популярные игры на этой неделе",
+    "feed_action_most_rated_games_stats": "{users_count} {users_count, plural, one {пользователь оценил} few {пользователя оценили} many {пользователей оценили}} {games_count} {games_count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_marked_game": "{user} отмечает {count} {count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_marked_game_toplay": "{user} хочет поиграть в {count} {count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_marked_game_beaten": "{user} заканчивает {count} {count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_marked_game_playing": "{user} начинает играть в {count} {count, plural, one {игру} few {игры} many {игр}}",
+    "feed_action_followed_user_community": "{usersCount} теперь следят за обновлениями {count} {count, plural, one {пользователя} few {пользователей} many {пользователей}}",
+    "feed_action_followed_user": "{user} теперь следит за обновлениями {count} {count, plural, one {пользователя} few {пользователей} many {пользователей}}",
+    "feed_action_followed_user_personal": "{user} теперь следит за вашими обновлениями",
+    "feed_action_like_collection_personal":
+      "{user} дал {count, plural, one {} other {#}} {count, plural, one {вашей коллекции} few {вашим коллекциям} many {вашим коллекциям}} {collections} {likes_count} {likes_count, plural, one {торт} few {торта} many {тортов}}",
+    "feed_action_followed_collection": "{user} подписывается на {count} {count, plural, one {коллекцию} few {коллекции} many {коллекций}}",
+    "feed_action_followed_collection_personal": "{user} подписывается на {count, plural, one {} other {#}} {count, plural, one {вашу коллекцию} few {ваши коллекции} many {ваших коллекций}} {collections}",
+    "feed_action_created_collection": "{user} создаёт {count} {count, plural, one {коллекцию} few {коллекции} many {коллекций}}",
+    "feed_action_offer_rate_game": "Отлично! После прохождения вы можете оценить {game}.",
+    "feed_action_added_game_to_collection": "{user} добавляет {count} {count, plural, one {игра} few {игры} many {игр}} в коллекцию {collection}",
+    "feed_action_added_feed_to_collection": "{user} добавляет игру в коллекцию {collection}",
+    "feed_action_suggested_game_to_collection": "{user} предлагает добавить {count, plural, one {} other {#}} {count, plural, one {игре} few {игры} в коллекцию {collection}",
+    "feed_action_suggested_game_to_collection_personal": "{user} предлагает добавить {count, plural, one {} other {#}} {count, plural, one {игре} few {игры} many {игр}} в вашу коллекцию {collection}",
+    "feed_action_still_playing": "Все еще играете в {game}?",
+    "feed_action_added_review": "{user} публикует {рецензию} на {game}",
+    "feed_action_added_discussion": "{user} публикует {comment} об {game}",
+    "feed_action_added_discussion_link": "комментарий",
+    "feed_action_favorite_comment_review_personal": "{user} нравится ваш {comment} к рецензии на {game}",
+    "feed_action_favorite_comment_post_personal": "{user} нравится ваш {comment} к комментарию о {game}",
+    "feed_action_favorite_comment_collection_personal": "{user} нравится ваш {comment} для {game} в коллекции {collection}",
+    "feed_action_added_comment_review": "{user} добавляет {comment} в рецензии на {game}",
+    "feed_action_added_comment_review_personal": "{user} добавляет {comment} на вашу рецензию на {game}",
+    "feed_action_added_comment_review_reply": "{user} добавляет {reply} на ваш {comment} к рецензии на {game}",
+    "feed_action_added_comment_review_reply_personal": "{user} добавляет {reply} на ваш {comment} к вашей рецензии на {game}",
+    "feed_action_added_comment_post": "{user} добавляет {comment} к {post} об {game}",
+    "feed_action_added_comment_post_personal": "{user} добавляет {comment} к вашему {post} о {game}",
+    "feed_action_added_comment_post_reply": "{user} добавляет {reply} на ваш коментарий в {post} об {game}",
+    "feed_action_added_comment_post_reply_personal": "{user} добавляет {reply} на ваш {comment} в {post} о {game}",
+    "feed_action_added_comment_collection": "{user} добавляет {comment} к {game} в коллекции {collection}",
+    "feed_action_added_comment_collection_personal": "{user} добавляет {comment} к {game} в вашей коллекции {collection}",
+    "feed_action_added_comment_collection_reply": "{user} добавляет {reply} на ваш {comment} к {game} в коллекции {collection}",
+    "feed_action_added_comment_collection_reply_personal": "{user} добавляет {reply} на ваш {comment} к {game} в вашей коллекции {collection}",
+    "feed_action_user_followed": "{count} человек следят за 1 пользователем",
+    "feed_action_game_is_released": "Игра из вашего списка желаний уже вышла"
+  },
+
+  "en": {
+    "hide_button": "Hide",
+    "head_title_community": "Community",
+    "head_title_notifications": "Notifications",
+    "tab_you": "You",
+    "tab_following": "Following",
+    "tab_community": "Community",
+    "empty_notifications": "No notifications yet.",
+    "you_empty": "No events here yet.",
+    "following_empty": "Nothing here? Start following people who dig the same games as you.",
+    "community_empty": "No events here yet.",
+    "only_reviews": "Show only reviews and comments",
+    "banner_import_title": "Connect your gaming accounts and get events tailored for you",
+    "banner_import_button": "Import games",
+    "similar_list_games": "Played {list}",
+    "feed_action_people_count": "{count} people",
+    "feed_action_popular_games": "This week's most popular games for {platform}",
+    "feed_action_popular_games_stats": "{users_count} users added {games_count} games",
+    "feed_action_most_rated_games": "This week's most often rated games",
+    "feed_action_most_rated_games_stats": "{users_count} users rated {games_count} games",
+    "feed_action_marked_game": "{user} marked {count} {count, plural, one {game} other {games}}",
+    "feed_action_marked_game_toplay":
+      "{user} wants to play {count} {count, plural, one {game} other {games}}",
+    "feed_action_marked_game_beaten":
+      "{user} completed {count} {count, plural, one {game} other {games}}",
+    "feed_action_marked_game_playing":
+      "{user} started playing {count} {count, plural, one {game} other {games}}",
+    "feed_action_followed_user_community":
+      "{usersCount} people followed {count} {count, plural, one {user} other {users}}",
+    "feed_action_followed_user":
+      "{user} followed {count} {count, plural, one {user} other {users}}",
+    "feed_action_followed_user_personal": "{user} followed you",
+    "feed_action_like_collection_personal":
+      "{user} gave your {count, plural, one {collection} other {collections}} {collections} {likes_count} {likes_count, plural, one {cake} other {cakes}}",
+    "feed_action_followed_collection":
+      "{user} followed {count} {count, plural, one {collection} other {collections}}",
+    "feed_action_followed_collection_personal":
+      "{user} followed {count, plural, one {} other {#}} your {count, plural, one {collection} other {collections}} {collections}",
+    "feed_action_created_collection":
+      "{user} created {count} {count, plural, one {collection} other {collections}}",
+    "feed_action_offer_rate_game": "Looking good! You have beaten {game}.",
+    "feed_action_added_game_to_collection":
+      "{user} added {count} {count, plural, one {game} other {games}} to collection {collection}",
+    "feed_action_added_feed_to_collection": "{user} added game to collection {collection}",
+    "feed_action_suggested_game_to_collection":
+      "{user} suggested {count, plural, one {} other {#}} {count, plural, one {game} other {games}} to collection {collection}",
+    "feed_action_suggested_game_to_collection_personal":
+      "{user} suggested {count, plural, one {} other {#}} {count, plural, one {game} other {games}} to your collection {collection}",
+    "feed_action_still_playing": "Still playing {game}?",
+    "feed_action_added_review": "{user} added a {review} of {game}",
+    "feed_action_added_discussion": "{user} published a {post} about {game}",
+    "feed_action_added_discussion_link": "comment",
+    "feed_action_favorite_comment_review_personal":
+      "{user} likes your {comment} to the review of {game}",
+    "feed_action_favorite_comment_post_personal":
+      "{user} likes your {comment} to the post about {game}",
+    "feed_action_favorite_comment_collection_personal":
+      "{user} likes your {comment} to {game} in collection {collection}",
+    "feed_action_added_comment_review": "{user} added a {comment} to the {review} of {game}",
+    "feed_action_added_comment_review_personal":
+      "{user} added a {comment} to your {review} of {game}",
+    "feed_action_added_comment_review_reply":
+      "{user} added a {reply} to your {comment} to the {review} of {game}",
+    "feed_action_added_comment_review_reply_personal":
+      "{user} added a {reply} to your {comment} of your {review} of {game}",
+    "feed_action_added_comment_post": "{user} added a {comment} to the {post} about {game}",
+    "feed_action_added_comment_post_personal":
+      "{user} added a {comment} to your {post} about {game}",
+    "feed_action_added_comment_post_reply":
+      "{user} added a {reply} to your {comment} to the {post} about {game}",
+    "feed_action_added_comment_post_reply_personal":
+      "{user} added a {reply} to your {comment} to your {post} about {game}",
+    "feed_action_added_comment_collection":
+      "{user} added a {comment} to {game} in collection {collection}",
+    "feed_action_added_comment_collection_personal":
+      "{user} added a {comment} to {game} in your collection {collection}",
+    "feed_action_added_comment_collection_reply":
+      "{user} added a {reply} to your {comment} to {game} in collection {collection}",
+    "feed_action_added_comment_collection_reply_personal":
+      "{user} added a {reply} to your {comment} to {game} in your collection {collection}",
+    "feed_action_user_followed": "{count} people followed 1 user",
+    "feed_action_game_is_released": "The game from your wishlist is out now"
+  }
+}

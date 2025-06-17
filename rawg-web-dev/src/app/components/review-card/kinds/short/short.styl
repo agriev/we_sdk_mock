@@ -1,0 +1,37 @@
+.review-card.review-card_short
+  $font12-small()
+  display flex
+  align-items center
+  padding 11px 15px
+  min-height unset
+  color #767676
+  background #202223
+  border-radius 8px
+
+  a
+    color $color-white
+    transition opacity .3s
+
+    &:hover
+      opacity .5
+
+  .rating_emoji
+    width 17px
+    height 17px
+    margin-left 2px
+    background-color transparent
+    position relative
+    top 3px
+    cursor auto
+
+.review-card_short__user-avatar-link
+  $remove-link-style()
+
+.review-card_short__text
+  margin-left 9px
+
+  a
+    $remove-link-style()
+
+.review-card_short__text-subtitle
+  position static

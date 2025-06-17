@@ -1,0 +1,95 @@
+.filter
+  display flex
+  justify-content space-between
+  align-items center
+  height 50px
+  padding 0 12px
+
+  border-radius 4px
+  background-color alpha($color-white, 0.04)
+  box-shadow 0 0 1px 0 alpha($color-black, 0.2)
+
+  @media $bp.phone
+    justify-content flex-start
+    overflow-x auto
+    border-radius 0
+
+.filter__group
+  display flex
+  justify-content space-between
+  align-items center
+
+  height 100%
+
+.filter__select
+  display flex
+  justify-content center
+  align-items center
+  height 100%
+  margin 0 4px
+
+.filter-button
+  width auto
+
+  font-size 14px
+  color white
+
+.filter-button .select-button__title
+  margin-right 6px
+
+.filter-button .select-button__icon_arrow
+  margin-top 3px
+
+.filter-button .select-button__icon_check
+  width 10px
+  height 7px
+
+.filter-button .select-button__icon_arrow
+  width 4px
+  height 7px
+  margin-right 6px
+
+.filter__select .dropdown__container
+  @media $bp.desktop
+    top 10px
+    padding 0 5px
+
+.filter-content
+  box-sizing border-box
+  overflow visible
+
+  @media $bp.desktop
+    padding 0 10px 10px
+
+.filter-content .select-content__title
+  @media $bp.desktop
+    height 30px
+    font-size 14px
+
+.filter-content .select-content__item
+  @media $bp.desktop
+    height 20px
+    margin 5px 0
+    font-size 12px
+
+.filter-content .select-content__item a,
+.filter-content .select-content__item__childs a
+  $remove-link-style()
+  color black
+  width 100%
+
+
+.filter_disabled .filter__group_disabled
+  position relative
+  opacity 0.4
+
+  &::after
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+    background transparent
+    cursor not-allowed
+    content ''

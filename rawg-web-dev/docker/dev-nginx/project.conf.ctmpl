@@ -1,0 +1,80 @@
+upstream blue {
+    {{ range service "dev-frontends.bluefront" }}
+        server {{ .Address }}:{{ .Port }};
+    {{ else }}
+        {{ range service "dev-frontends.greenfront" }}
+            server {{ .Address }}:{{ .Port }};
+        {{ else }}
+            server 127.0.0.1:12345;
+        {{ end }}
+    {{ end }}
+}
+
+upstream green {
+    {{ range service "dev-frontends.greenfront" }}
+        server {{ .Address }}:{{ .Port }};
+    {{ else }}
+        {{ range service "dev-frontends.bluefront" }}
+            server {{ .Address }}:{{ .Port }};
+        {{ else }}
+            server 127.0.0.1:12345;
+        {{ end }}
+    {{ end }}
+}
+
+server {
+    listen                  80 default_server;
+    server_name             dev.rawg.io;
+    server_tokens           off;
+    keepalive_timeout       30;
+    client_max_body_size    5m;
+    client_body_buffer_size 5m;
+    root /app/build/;
+
+    rewrite ^/(.*)/$ /$1 permanent;
+
+    location ~* \.(eot|ttf|otf|woff)$ {
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    location /assets {
+        expires 30d;
+        add_header Pragma public;
+        add_header Cache-Control "public";
+        access_log /logs/assets.log project buffer=32k flush=10s;
+    }
+
+    location / {
+        try_files /pub/$uri @web;
+        access_log /logs/pub.log project buffer=32k flush=10s;
+    }
+
+    location @web {
+        auth_basic "Restricted Content";
+        auth_basic_user_file /etc/nginx/htpasswd;
+
+        {{ with $key_value := keyOrDefault "deploy/frontend-dev" "blue" }}
+            {{ if or (eq $key_value "blue") (eq $key_value "green") }}
+                proxy_pass http://{{ $key_value }};
+            {{ else }}
+                proxy_pass http://blue;
+            {{ end }}
+        {{ end }}
+        proxy_http_version 1.1;
+        proxy_intercept_errors on;
+        proxy_redirect off;
+        proxy_buffering off;
+        proxy_request_buffering off;
+        proxy_connect_timeout 30s;
+        proxy_read_timeout 30s;
+        proxy_send_timeout 30s;
+        proxy_set_header Host $http_host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        access_log /logs/web.log project buffer=32k flush=10s;
+    }
+}

@@ -1,0 +1,89 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block content %}
+
+    <h1>{{title}}</h1>
+    
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="cycle">Cycle </label>
+            <select id="cycle" class="form-control" name="cycle">
+                {% for c in cycle_data %}
+                    <option value="{{ c.id }}"{% if cycle == c %} selected{% endif %}>{{ c.start|date:'d/m/Y' }} - {{c.end|date:'d/m/Y'}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="count">Count</label>
+            <input type="text" class="form-control" id="count" name="count" value="{{ count_limit }}">
+        </div>
+
+        <button class="btn btn-primary">Show</button>
+
+    </form>
+
+    <br><br>
+
+    <canvas id="chart"></canvas>
+
+    <br><br>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Username</th>
+                <th>Karma</th>
+                <th>Achievements</th>
+                <th>Achievements Gold</th>
+                <th>Achievements Silver</th>
+                <th>Achievements Bronze</th>
+
+            </tr>
+            {% for username, karma, achievement, gold, silver, bronze in users_data %}
+                <tr>
+                    <td>{{ username }}</td>
+                    <td>{{ karma }}</td>
+                    <td>{{ achievement }}</td>
+                    <td>{{ gold }}</td>
+                    <td>{{ silver }}</td>
+                    <td>{{ bronze }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: [{% for username, _, _, _, _, _ in users_data %}'{{ username }}'{% if not forloop.last %},{% endif %}{%endfor%}],
+                    datasets: [
+                        {
+                            label: 'Karma',
+                            fill: false,
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            borderWidth: 3,
+                            data: [{% for _, karma, _, _, _, _ in users_data %}{{ karma }}{% if not forloop.last %},{% endif %}{%endfor%}]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,20 @@
+.review-card__reactions
+  position relative
+  display flex
+  flex-wrap wrap
+  margin-bottom 8px
+  margin-left -4px
+
+.review-card__reaction
+  $font10-small()
+  height 26px
+  margin-bottom 4px
+  padding 0 12px
+  border-radius 13px
+
+  .theme_light &
+    background-color alpha(#0e0e0e, 4%)
+    font-weight bold
+
+  &:not(:last-child)
+    margin-right 10px

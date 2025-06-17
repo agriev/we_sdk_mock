@@ -1,0 +1,11 @@
+{
+  "ru": {
+    "text": "Ой!<br/> Мы не нашли такую страницу.",
+    "link": "Вернуться на главную"
+  },
+
+  "en": {
+    "text": "Whoops!<br/> We couldn't find that page.",
+    "link": "Main page"
+  }
+}

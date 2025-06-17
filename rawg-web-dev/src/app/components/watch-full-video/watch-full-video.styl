@@ -1,0 +1,37 @@
+.watch-full-video
+  position fixed
+  width 100vw
+  height 100vh
+  left 0
+  top 0
+  z-index 10
+  background #181818
+
+  @media $bp.phone
+    display flex
+    flex-direction column
+    align-items flex-end
+
+  iframe
+    border none
+    border-radius 5.6px
+    display block
+    @media $bp.desktop
+      position absolute
+      left 10vw
+      top 10vh
+      width 70vw
+      height 40vw
+    @media $bp.phone
+      width 100vw
+      height 56.5vw
+
+.watch-full-video__close-button
+  flex 0 0 auto
+
+  @media $bp.desktop
+    position absolute
+    left 83vw
+    top 8vh
+  @media $bp.phone
+    margin 20px

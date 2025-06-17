@@ -1,0 +1,33 @@
+{
+  "ru": {
+    "desktop_search": "Искать среди {countStr} {count, plural, one {игры} few {игр} many {игр}}",
+    "phone_search": "Поиск",
+    "phone_guest_search": "Поиск игр",
+    "more": "Больше",
+    "profile": "Профиль",
+    "add": "Добавить",
+    "settings": "Настройки",
+    "community": "Сообщество",
+    "feedback": "Обратная связь",
+    "notifications": "Уведомления",
+    "log_out": "Выход",
+    "log_in": "Вход",
+    "sign_up": "Регистрация"
+  },
+
+  "en": {
+    "desktop_search": "Search {countStr} games",
+    "phone_search": "Search",
+    "phone_guest_search": "Search for games",
+    "more": "More",
+    "profile": "Profile",
+    "add": "Add",
+    "settings": "Settings",
+    "community": "Community",
+    "feedback": "Feedback",
+    "notifications": "Notifications",
+    "log_out": "Log out",
+    "log_in": "Log in",
+    "sign_up": "Sign up"
+  }
+}

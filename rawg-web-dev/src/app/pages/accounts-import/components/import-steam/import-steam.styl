@@ -1,0 +1,78 @@
+.import-steam
+  display flex
+  margin-bottom 48px
+  align-items center
+  flex-wrap wrap
+
+  .button + .button
+    margin-left 16px
+
+.import-steam__button
+  width 275px
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  // width auto
+  // padding 0 32px
+  @media $bp.phone
+    width 100%
+
+.import-steam__button_disconnect
+  background none
+  color $color-white
+  box-sizing border-box
+  border 1px solid $color-white
+  box-shadow none
+  &:hover
+    box-shadow none
+    color $color-black
+
+.import-steam__icon-svg
+  display block
+  margin-left 8px
+  width 24px
+  height 24px
+  path
+    fill $color-black
+    opacity 1
+
+.import-steam__valve-message
+  margin-left 16px
+  width 200px
+  font-size 14px
+  line-height 1.29
+  letter-spacing 0.1px
+  color alpha($color-white, 0.4)
+  @media $bp.phone
+    margin-left 0
+    margin-top 8px
+    width 100%
+    text-align center
+
+.import-steam__error-wrap
+  flex-basis 100%
+
+.import-steam__auth-error
+
+
+.import-steam__error
+  display block
+  color #f9473a
+  margin-top 16px
+  position relative
+  width 415px
+  margin-bottom 0
+  text-align left
+
+.import-steam__error-arrow
+  &::before
+    position absolute
+    content ''
+    width 52px
+    height 93px
+    left -62px
+    top 11px
+    background url('~assets/icons/error-arrow.svg?external') center / contain no-repeat
+    @media $bp.phone
+      visibility hidden

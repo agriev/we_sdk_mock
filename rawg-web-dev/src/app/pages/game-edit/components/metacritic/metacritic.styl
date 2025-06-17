@@ -1,0 +1,106 @@
+.game-edit__metacritic
+  @media $bp.desktop
+    position relative
+
+.game-edit__metacritic__value
+  background alpha(white, 10%)
+  border-radius 24.5px
+  font-size 16px
+  color white
+  padding 15px 20px
+  cursor pointer
+  max-width 130px
+  display flex
+  align-items center
+  box-sizing border-box
+
+.game-edit__metacritic__value-icon
+  margin-right 8px
+
+.game-edit__metacritic__form
+  opacity 0
+  pointer-events none
+  transition opacity .3s
+  padding 20px 24px
+  background white
+  border-radius 6px
+  top -30px
+  position absolute
+  box-sizing border-box
+  z-index 3
+
+  @media $bp.phone
+    position fixed
+    right 10px
+    bottom 10px
+    top unset
+    width calc(100vw - 20px)
+
+  &.game-edit__metacritic__form_opened
+    opacity 1
+    pointer-events auto
+
+.game-edit__metacritic__form-overlay
+  @media $bp.desktop
+    display none
+
+  position fixed
+  left 0
+  top 0
+  width 100vw
+  height 100vh
+  background alpha(black, 0%)
+  z-index 2
+  pointer-events none
+
+  &.game-edit__metacritic__form-overlay_opened
+    background alpha(black, 70%)
+    pointer-events auto
+
+.game-edit__metacritic__form__header
+  display flex
+
+.game-edit__metacritic__form__header-title
+  flex 1 1 auto
+  font-size 16px
+  color alpha(black, 50%)
+
+.game-edit__metacritic__form__header-save
+  flex 0 0 auto
+  margin-left 10px
+  text-decoration underline
+  color alpha(black, 50%)
+  cursor default
+
+  opacity .5
+  transition opacity .3s
+  &.game-edit__metacritic__form__header-save_enabled
+    cursor pointer
+    opacity 1
+
+.game-edit__metacritic__form__input
+  margin-top 12px
+  input
+    padding 9px 12px
+    font-size 16px
+    color alpha(#262626, 40%)
+    border-radius 4px
+    border 1px solid rgba(0, 0, 0, 0.1)
+    box-sizing border-box
+
+    @media $bp.phone
+      width 100%
+
+.game-edit__metacritic__form__help
+  margin-top 12px
+  color alpha(black, 40%)
+  display flex
+  .SVGInline
+    position relative
+    top 2px
+    margin-right 8px
+    svg
+      width 18px
+      height 18px
+      g
+        fill rgba(21, 21, 21, 0.5)

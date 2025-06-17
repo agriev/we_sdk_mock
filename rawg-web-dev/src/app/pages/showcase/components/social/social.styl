@@ -1,0 +1,87 @@
+.showcase-social
+  max-width $page-width-desktop
+  margin-left auto
+  margin-right auto
+
+  $font16-medium()
+  display flex
+  align-items center
+  justify-content space-between
+  height 50px
+  margin-bottom 26px
+  border solid alpha($color-white, 0.1)
+  border-width 1px 0 1px 0
+
+  @media $bp.phone
+    flex-wrap wrap
+    justify-content center
+    height auto
+    margin 0 auto 24px
+    padding 24px 10px
+    box-sizing border-box
+    max-width $page-width-phone
+
+.showcase-social__public
+  display flex
+  flex-shrink 0
+  align-items center
+  max-width 100%
+  font-size 16px
+
+  @media $bp.desktop
+    margin-right 32px
+
+  @media $bp.phone
+    flex-wrap wrap
+
+.showcase-social__title
+  @media $bp.phone
+    margin-bottom 8px
+    width 100%
+    text-align center
+
+.showcase-social__links
+  display flex
+  align-items center
+
+  @media $bp.phone
+    margin-bottom 16px
+    width 100%
+    justify-content center
+
+.showcase-social__news
+  $remove-link-style()
+  $font14-paragraph()
+  display flex
+  align-items center
+  font-style italic
+  color $color-white
+  transition color 0.3s
+
+  &:hover
+    color alpha($color-white, 0.4)
+
+  @media $bp.phone
+    display inline-block
+    text-align center
+
+.showcase-social__news-icon
+  margin-right 8px
+  width 9px
+  height 9px
+  background-image linear-gradient(to bottom, #fbda61, #f76b1c)
+  border-radius 50%
+
+  @media $bp.phone
+    display inline-block
+
+.showcase-social__news-text
+  @media $bp.phone
+    display inline
+
+  & > span
+    $add-link-style()
+
+.showcase-social__news-date
+  margin-left 8px
+  color alpha($color-white, 0.4)

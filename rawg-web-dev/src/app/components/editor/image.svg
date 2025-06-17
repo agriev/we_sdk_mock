@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="AQ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="embed" transform="translate(-791.000000, -352.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="Group-2" transform="translate(798.000000, 341.500000) rotate(-270.000000) translate(-798.000000, -341.500000) translate(760.000000, 322.000000)">
+                <g id="picture-(2)" transform="translate(57.000000, 16.000000) rotate(-90.000000) translate(-57.000000, -16.000000) translate(47.000000, 8.000000)">
+                    <path d="M0,0 L0,16 L20,16 L20,0 L0,0 Z M18.75,14.7692308 L1.25,14.7692308 L1.25,1.23076923 L18.75,1.23076923 L18.75,14.7692308 Z M13.75,4.30769231 C13.75,5.32730769 14.5894531,6.15384615 15.625,6.15384615 C16.6605469,6.15384615 17.5,5.32730769 17.5,4.30769231 C17.5,3.28807692 16.6605469,2.46153846 15.625,2.46153846 C14.5894531,2.46153846 13.75,3.28807692 13.75,4.30769231 Z M17.5,13.5384615 L2.5,13.5384615 L6.25,3.69230769 L11.25,9.84615385 L13.75,8 L17.5,13.5384615 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,123 @@
+$badge-color-user = white
+$badge-color-top = white
+$badge-image-user = linear-gradient(to bottom, #f81d6b, #982ac5)
+$badge-image-top = linear-gradient(to top, #f71d6b, #ffad67)
+$badge-image-user-hover = linear-gradient(to top, #f81d6b, #982ac5)
+$badge-image-top-hover = linear-gradient(to bottom, #f71d6b, #ffad67)
+
+.badge-button
+  margin-top 4px
+
+  &.badge-button_bordered
+    border 1px solid #ccc
+    border-radius 4px
+
+  @media $bp.desktop
+    height 22px
+
+  @media $bp.phone
+    width auto
+    margin 0 0 6px
+    display inline-block
+
+.badge-button_tag
+  position relative
+  height 26px
+  box-sizing border-box
+  margin-top 0
+  margin-bottom 6px
+  z-index 3
+
+  .badge-button__link
+    $font14-small()
+    padding-right 8px
+    line-height 14px
+    z-index 1
+    overflow hidden
+
+  .badge-button__close
+    cursor pointer
+    display inline-flex
+    align-items center
+    justify-content center
+    vertical-align top
+    margin-left 1px
+    height 100%
+    width 22px
+    border-top-right-radius 4px
+    border-bottom-right-radius 4px
+
+    img
+      transition 0.3s
+
+    @media $bp.phone
+      display none
+
+    &:hover
+      img
+        opacity 0.4
+        transition 0.3s
+
+.badge-button_user
+  .badge-button__link
+  .badge-button__close
+    background-color $badge-color-user
+
+  &:hover
+    .badge-button__link
+    .badge-button__close
+      background-color $badge-color-user-hover
+
+.badge-button_top
+  .badge-button__link
+  .badge-button__close
+    background-color $badge-color-top
+
+  &:hover
+    .badge-button__link
+    .badge-button__close
+      background-color $badge-color-top-hover
+
+.badge-button__wrapper
+  font-size 0
+
+  @media $bp.desktop
+    white-space nowrap
+    height 100%
+
+.badge-button__link
+  $remove-link-style()
+  $font12-small()
+  display inline-flex
+  align-items center
+  vertical-align top
+  padding-right 10px
+  letter-spacing normal
+  color black
+  line-height 12px
+  border-radius 4px
+
+  &:hover
+    color black
+
+  @media $bp.desktop
+    white-space nowrap
+    height 100%
+
+  @media $bp.phone
+    $font18-large()
+    padding-right 14px
+    line-height 18px
+    border-radius 6px
+
+    .badge-button_bordered &
+      padding-right 10px
+
+.badge-button_tag.badge-button_authorised.badge-button_expanded
+  @media $bp.desktop
+    .badge-button__link
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+
+.badge-button__close
+  display none

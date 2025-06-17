@@ -1,0 +1,9 @@
+{{ object.name }}
+{% for o in object.tags.visible %}{{ o.name|default_if_none:'' }} {% endfor %}
+{% for o in object.genres.visible %}{{ o.name|default_if_none:'' }} {% endfor %}
+{% for o in object.developers.visible %}{{ o.name|default_if_none:'' }} {% endfor %}
+{% for o in object.publishers.visible %}{{ o.name|default_if_none:'' }} {% endfor %}
+{% for o in object.platforms.all %}{{ o.name|default_if_none:'' }} {% endfor %}
+{{ object.description|default_if_none:''|striptags }}
+{{ object.metacritic|default_if_none:'' }}
+{{ object.released|default_if_none:'' }}

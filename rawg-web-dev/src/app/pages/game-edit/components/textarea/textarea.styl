@@ -1,0 +1,42 @@
+.game-edit__textarea
+  position static
+
+.game-edit__textarea__preview-container
+  position relative
+
+.game-edit__textarea__preview
+  padding 16px 20px
+  font-size 18px
+  line-height 24px
+  background alpha(black, 40%)
+  border none
+  border-radius 4px
+  width 100%
+  max-width 100%
+  min-width 100%
+  min-height 240px
+  max-height 240px
+  overflow hidden
+  box-sizing border-box
+  font-family $font-family-system
+  cursor pointer
+
+  background-color alpha(black, 40%)
+
+  transition color .3s
+  color white
+  &:hover
+    color alpha(white, 70%)
+
+.game-edit__textarea__preview_placeholder
+ opacity .4
+
+.game-edit__textarea__preview-shadow
+  pointer-events none
+  z-index 1
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  left 0
+  background linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) calc(100% - 30px), rgb(21, 21, 21) calc(100% - 10px))

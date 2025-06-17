@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRIBUTES }}>
+<head>
+  {{ STYLES_PREFETCHES }}
+  {{ HEAD }}
+  {{ STYLES }}
+  {{ SCRIPTS_PREFETCHES }}
+</head>
+<body class="{{ BODY_CLASSES }}">
+  {{ BODY_START }}
+  <div id="portals"></div>
+  <div id="root">{{ APP_CONTENT }}</div>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script>{{ CLIENT_PARAMS }}</script>
+  {{ CSSHASH }}
+  {{ BODY_END }}
+</body>
+</html>

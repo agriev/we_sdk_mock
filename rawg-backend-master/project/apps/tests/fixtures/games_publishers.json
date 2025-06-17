@@ -1,0 +1,26 @@
+[
+  {
+    "model": "games.publisher",
+    "pk": 187,
+    "fields": {
+      "synonyms": "[\"rockstar games, inc.\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:05.646Z",
+      "slug": "rockstar-games-inc",
+      "name": "Rockstar Games, Inc."
+    }
+  },
+  {
+    "model": "games.publisher",
+    "pk": 2155,
+    "fields": {
+      "synonyms": "[\"rockstar games\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:05.646Z",
+      "slug": "rockstar-games",
+      "name": "Rockstar Games"
+    }
+  }
+]

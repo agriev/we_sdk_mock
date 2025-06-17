@@ -1,0 +1,17 @@
+{
+  "ru": {
+    "here": "здесь",
+    "purposes_of_processing": "Purposes of processing",
+    "terms": "Условия",
+    "head_title": "Документация API",
+    "title": "Документация API"
+  },
+
+  "en": {
+    "here": "here",
+    "purposes_of_processing": "Purposes of processing",
+    "terms": "Terms",
+    "head_title": "Explore RAWG Video Games Database API",
+    "title": "Api docs"
+  }
+}

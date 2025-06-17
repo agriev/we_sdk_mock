@@ -1,0 +1,42 @@
+.catalog-slider
+  .slick-slide
+    margin-left 24px
+
+  .slider__track
+    > .game-card-medium
+      @media $bp.phone
+        width 264px
+
+    > *
+      @media $bp.phone
+        margin-right 16px
+
+        &:first-child
+          margin-left 10px
+
+        &:last-child
+          margin-right 10px
+
+  @media $bp.phone
+    width calc(100% + 20px)
+    margin 0 -10px
+
+.catalog-slider__more-link
+  $remove-link-style()
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  background-color rgba($color-black, 0.2)
+  border-radius 6px
+
+  &:hover
+    .catalog-slider__more-button
+      $more-button-hover()
+
+.catalog-slider__more-button
+  $more-button()
+
+  @media $bp.phone
+    max-width 200px
+    margin-bottom 0

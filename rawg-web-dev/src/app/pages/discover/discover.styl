@@ -1,0 +1,97 @@
+.discover__game-heading
+  display flex
+  flex 0 1 auto
+  justify-content flex-start
+  align-items center
+  flex-wrap wrap
+
+  @media $bp.phone
+    flex-direction column
+    justify-content flex-start
+    align-items flex-start
+
+.discover__game-label
+  margin-bottom 8px
+
+  @media $bp.desktop
+    margin-right 24px
+
+.discover__game-name
+  $font18-large()
+  display flex
+  flex 0 1 auto
+  justify-content center
+  align-items center
+  padding 16px 18px
+  line-height 18px
+  font-weight bold
+  color white
+  background-color rgba(white, 0.08)
+  border-radius 6px
+
+.discover__game-button
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  width 24px
+  height 24px
+  margin-left 12px
+  padding 0
+  background-color rgba(white, 0.08)
+  border none
+  border-radius 50%
+  cursor pointer
+  transition all 0.3s
+  -webkit-font-smoothing antialiased
+
+  &:hover
+    background-color white
+
+    path
+      fill black
+
+  span
+    display block
+    width 10px
+    height 10px
+    font-size 0
+
+    svg
+      width 100%
+      height 100%
+    path
+      fill white
+
+.discover__subtitle
+  font-size 16px
+  margin 8px 0 0
+
+  @media $bp.phone
+    text-align center
+
+.discover-pre
+  display flex
+  flex-direction column
+  width 100%
+
+  @media $bp.desktop
+    display grid
+    grid-auto-flow row
+    margin-bottom 0
+
+  &__recent
+    padding 32px 12px 0 12px
+    border-bottom 0
+
+  &__title
+    font-size 32px
+    line-height 32px
+
+  @media $bp.phone
+    .header-menu__lastPlayed-slider
+      margin-top 28px
+
+      img
+        height 116px
+        border-radius 12px

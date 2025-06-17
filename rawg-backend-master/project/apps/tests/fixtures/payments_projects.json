@@ -1,0 +1,29 @@
+[
+  {
+    "model": "payments.PaymentProject",
+    "pk": 201583,
+    "fields": {
+      "secret_key": "tfb3HuZA8jdbL9C7jQIoi",
+      "game": 416,
+      "payment_system_name": "ukassa"
+    }
+  },
+  {
+    "model": "payments.PaymentProject",
+    "pk": 209321,
+    "fields": {
+      "secret_key": "yZACRhKb7wkR0ahP",
+      "game": 430,
+      "payment_system_name": "ukassa"
+    }
+  },
+  {
+    "model": "payments.PaymentProject",
+    "pk": 209324,
+    "fields": {
+      "secret_key": "ox80dqH5tI39d42y",
+      "game": 2908,
+      "payment_system_name": "ukassa"
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "ru": {
+    "head_title_create": "Написать комментарий",
+    "head_title_edit": "Написать комментарий",
+    "subhead_title": "Комментарий от {name}",
+    "suggestions_title": "Другие комментарии",
+    "form_placeholder": "Написать комментарий",
+    "form_title": "Написать комментарий о {title}",
+    "form_facebook": "Опубликовать в Фейсбуке",
+    "form_twitter": "Опубликовать в Твиттере",
+    "form_button": "Опубликовать"
+  },
+
+  "en": {
+    "head_title_create": "Write a comment",
+    "head_title_edit": "Write a comment",
+    "subhead_title": "Comment from {name}",
+    "suggestions_title": "Other comments",
+    "form_placeholder": "Write a comment",
+    "form_title": "Write a comment about {title}",
+    "form_facebook": "Publish on Facebook",
+    "form_twitter": "Publish on Twitter",
+    "form_button": "Publish"
+  }
+}

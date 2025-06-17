@@ -1,0 +1,15 @@
+.user-cards-list
+  display flex
+  justify-content flex-start
+  flex-wrap wrap
+
+  @media $bp.phone
+    justify-content center
+
+.user-cards-list > div
+  @media $bp.desktop
+    &:not(:nth-child(4n+4))
+      margin 0 $column-offset-1-1-1-1-desktop $column-offset-1-1-1-1-desktop 0
+
+  @media $bp.phone
+    margin-bottom 30px

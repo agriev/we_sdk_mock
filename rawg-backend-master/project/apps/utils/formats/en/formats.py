@@ -1,0 +1,4 @@
+DATETIME_FORMAT = 'd-m-Y H:i:s'
+DATE_FORMAT = 'd-m-Y'
+DATETIME_INPUT_FORMATS = ['%d-%m-%Y %H:%M:%S']
+DATE_INPUT_FORMATS = ['%d-%m-%Y']

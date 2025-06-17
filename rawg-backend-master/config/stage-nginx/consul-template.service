@@ -1,0 +1,5 @@
+#!/bin/sh
+
+exec consul-template \
+     -consul-addr consul:8500 \
+     -template "/etc/consul-templates/project.conf.ctmpl:/etc/nginx/sites-enabled/project.conf:sv hup nginx"

@@ -1,0 +1,133 @@
+.rating-chart
+  display flex
+
+  @media $bp.phone
+    margin-top 8px
+    padding 0 10px
+    justify-content center
+    flex-wrap wrap
+
+.rating-chart__chart
+  display flex
+  align-items flex-start
+  flex-shrink 0
+  min-height 60px
+
+  @media $bp.desktop
+    flex-direction column
+    &:not(:first-child)
+      padding-left 16px
+      border-left 1px solid alpha($color-white, 0.2)
+
+    &:not(:last-child)
+      margin-right 16px
+
+  @media $bp.phone
+    justify-content center
+    min-height auto
+
+    &:not(:first-child)
+      margin 0 8px
+
+.rating-chart__chart-games
+  @media $bp.phone
+    order 2
+
+.rating-chart__chart.rating-chart__chart_rating
+  @media $bp.phone
+    width 100%
+    flex-direction column
+    align-items center
+
+    .rating-chart__bottom
+      text-align center
+
+.rating-chart__number-icon
+  margin-right 6px
+  padding-top 4px
+  font-style italic
+
+  @media $bp.phone
+    margin-right 2px
+    padding-top 0
+    font-size 12px
+    font-weight bold
+    color $color-white
+
+.rating-chart__number
+  font-size 36px
+  font-weight bold
+  line-height 1
+
+  @media $bp.desktop
+    padding-bottom 9px
+
+  @media $bp.phone
+    margin-right 4px
+    font-size 12px
+    line-height 1.1
+    position relative
+    top 1px
+
+.rating-chart__chart:not(.rating-chart__chart_rating)
+  @media $bp.phone
+    margin-top 6px
+
+    > div:last-child
+      flex-direction row
+
+.rating-chart__bottom
+  max-width 135px
+  text-transform uppercase
+  font-size 12px
+  letter-spacing 3px
+
+  @media $bp.phone
+    max-width 100%
+
+.rating-chart__bottom-link
+  $add-link-style(0.24)
+  color alpha($color-white, 0.4)
+  cursor pointer
+
+  &:hover
+    color $color-white
+
+.rating-chart__rating
+  padding-bottom 2px
+
+  .rating__text
+    font-size 24px
+    font-weight bold
+    padding-bottom 8px
+    letter-spacing 1.2px
+
+  .rating__icon
+    margin-left 8px
+    width 32px
+    height 32px
+    margin-bottom 10px
+
+  @media $bp.phone
+    padding-top 0
+    height: 23px;
+
+    .rating__text
+      font-size 20px
+
+    .rating__icon
+      width 26px
+      height 26px
+
+.rating-chart__rating-empty
+  display flex
+  align-items center
+  padding-top 0px
+  font-size 24px
+  font-weight bold
+
+.rating-chart__rating-empty-icon
+  margin-left 8px
+  width 32px
+  height 32px
+  background url('~assets/icons/emoji/zzz.png') no-repeat center / cover

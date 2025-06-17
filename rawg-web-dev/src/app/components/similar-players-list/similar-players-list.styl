@@ -1,0 +1,14 @@
+.similar-players-list__header
+  display flex
+  justify-content space-between
+  align-items baseline
+
+  > span
+    $font24-large()
+
+.similar-players-list__header-counter
+  $font14-small()
+  color alpha($color-white, 0.4)
+
+.similar-players-list__item + .similar-players-list__item
+  border-top 1px solid alpha($color-white, 0.1)

@@ -1,0 +1,104 @@
+.pay
+  display flex
+  flex-direction column
+
+  min-height 100vh
+  box-sizing border-box
+
+  &__message
+    display flex
+    flex-direction column
+
+    max-width 400px
+    width 100%
+    margin 0 auto
+
+    &-body
+      display flex
+
+      font-size 16px
+      line-height 20px
+      color white
+
+      padding 16px
+      border-radius 12px
+
+      box-sizing border-box
+
+      background-color rgba(#cdf500, 0.07)
+      border 1px solid rgba(#cdf500, 0.3)
+
+      svg
+        color #cdf500
+
+    &-body > * + *
+      margin-left 16px
+
+    &-body + *
+      margin-top 20px
+
+    &-button
+      color #0d0d0d
+      background-color #cdf500
+      height 48px
+
+      font-size 16px
+      line-height 24px
+
+      border-radius 8px
+      cursor pointer
+
+      text-align center
+      box-sizing border-box
+      padding 12px 20px
+
+      transition background-color 0.3s, color 0.3s, opacity 0.3s
+      border none
+      outline none
+
+      font-family inherit
+
+      &:not(:disabled):hover
+        background-color white
+
+      &:disabled
+        cursor not-allowed
+        background-color rgba(#cdf500, 0.2)
+        color rgba(white, 0.4)
+
+    &--warning &-body
+      background-color rgba(#ffd400, 0.07)
+      border 1px solid rgba(#ffd400, 0.3)
+
+      svg
+        color #ffd400
+
+  &__body
+    display flex
+    flex 1
+    padding 32px 12px
+
+    .game-payment
+      height inherit
+
+    &-inner
+      display grid
+      grid-template-rows 1fr
+      grid-template-columns 1fr
+      justify-content center
+      gap 16px
+      width 100%
+
+    @media $bp.desktop
+      padding 32px
+
+  &__footer
+    box-sizing border-box
+    padding 12px
+
+    @media $bp.desktop
+      padding 16px 32px
+
+  .footer
+    width 100%
+    margin 0

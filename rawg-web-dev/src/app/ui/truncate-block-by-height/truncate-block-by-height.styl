@@ -1,0 +1,56 @@
+.truncate-block__wrapper
+  position relative
+
+  &.truncate-block__wrapper_desktop
+    @media $bp.desktop
+      overflow hidden
+      mask-image linear-gradient(rgba(0,0,0,1) calc(100% - 60px), rgba(0,0,0,0) calc(100% - 4px))
+
+  &.truncate-block__wrapper_phone
+    @media $bp.phone
+      overflow hidden
+      mask-image linear-gradient(rgba(0,0,0,1) calc(100% - 60px), rgba(0,0,0,0) calc(100% - 4px))
+
+  .truncate-block_expanded &
+    max-height initial !important
+    mask-image none
+
+.truncate-block__button
+  width 100%
+  height 30px
+  cursor pointer
+  transition all 0.3s
+
+  @media $bp.desktop
+    margin-bottom 8px
+
+  .truncate-block_expanded &
+    margin-top 8px
+
+  .truncate-block__wrapper_desktop &
+    @media $bp.desktop
+      display flex
+      align-items center
+
+  .truncate-block__wrapper_phone &
+    @media $bp.phone
+      display flex
+      align-items center
+      margin-top 0
+      margin-left 0
+
+  &.auto-height
+    height auto
+
+  &.disable-margin
+    margin-top 0
+
+  &:hover
+    transition all 0.3s
+    color alpha(white, 0.4)
+
+    .theme_light &
+      color black
+
+  & > span
+    $add-link-style()

@@ -1,0 +1,55 @@
+.select-platform
+  width 312px
+  color rgba(black, 0.4)
+  background white
+  border-radius 4px
+  overflow hidden
+
+  .select-platform__toggle
+    opacity 0.4
+
+.select-platform__header
+  $font16-medium()
+  display flex
+  flex 0 1 auto
+  justify-content space-between
+  align-items baseline
+  padding 24px 16px 16px
+
+.select-platform__skip
+  cursor pointer
+
+.select-platform__list
+  $font14-small()
+  display flex
+  flex 0 1 auto
+  flex-wrap wrap
+  align-items flex-start
+  justify-content flex-start
+  margin-bottom 24px
+  padding 0 12px
+  color #262626
+
+.select-platform__item
+  margin-bottom 8px
+  padding 6px 12px
+  border 1px solid #e5e5e5
+  border-radius 4px
+  white-space nowrap
+  cursor pointer
+
+  &:not(:last-child)
+    margin-right 8px
+
+.select-platform__footer
+  $font12-small()
+  display flex
+  padding 16px 16px 24px
+  color rgba(white, 0.4)
+  background-color #111111
+  background-image linear-gradient(105deg, #111111, #323232)
+
+.select-platform__footer-title
+  $font14-small()
+  margin-bottom 4px
+  color white

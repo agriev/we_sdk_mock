@@ -1,0 +1,157 @@
+.tokens__recommended__game
+  padding 24px
+  position relative
+  max-width 608px
+  background-size cover
+  margin-top 24px
+  border-radius 6px
+  box-sizing border-box
+
+  @media $bp.phone
+    max-width 100%
+    margin 16px 10px 0
+
+.tokens__recommended__game__head
+  display flex
+  align-items center
+
+  .tokens__recommended__game__title
+    font-size 24px
+    font-weight bold
+    flex 1 1 auto
+    border-bottom none
+    color white
+    transition opacity .3s
+    &:hover
+      opacity .4
+
+    .platforms
+      margin-left 8px
+
+  .tokens__recommended__game__icons
+    flex 0 0 auto
+    display flex
+    align-items center
+
+    .tokens__recommended__game__icon-achievements
+      font-size 16px
+      font-weight bold
+      display flex
+      align-items center
+
+    .tokens__recommended__game__icon-percent
+      font-size 16px
+      font-weight bold
+      margin-left 14px
+      display flex
+      align-items center
+
+      .round-progressbar
+        margin-right 4px
+
+.tokens__recommended__game__achievements
+  margin-top 16px
+
+  .tokens__recommended__game__achievements-head
+    display flex
+    font-size 12px
+    opacity .4
+    margin-bottom 8px
+
+    .tokens__recommended__game__achievements-head__item
+      &:first-child
+        flex 1 1 auto
+      &:last-child
+        flex 0 0 auto
+
+.tokens__recommended__game__achievement
+  display flex
+  padding 16px 0
+  border-top 1px solid alpha($color-white, 10%)
+
+.tokens__recommended__game__achievement__image
+  margin-left 8px
+  width 24px
+  height 24px
+  min-width 24px
+  min-height 24px
+  background-repeat no-repeat
+  background-size contain
+  background-position center
+  border-radius 4px
+
+  @media $bp.phone
+    margin-left 0
+
+.tokens__recommended__game__achievement__info
+  margin-left 16px
+  flex 1 1 auto
+  margin-right 10px
+
+.tokens__recommended__game__achievement__info__name
+  font-size 13px
+
+  .SVGInline
+    margin-left 6px
+    path
+      stroke white
+
+.tokens__recommended__game__achievement__info__date
+  font-size 12px
+  opacity .4
+  margin-left 4px
+
+.tokens__recommended__game__achievement__info__desc
+  font-size 12px
+  margin-top 4px
+  @media $bp.desktop
+    opacity .4
+
+.tokens__recommended__game__achievement__info__desc-date
+  font-size 12px
+  opacity .4
+  margin-top 4px
+
+.tokens__recommended__game__achievement__reward
+  font-size 14px
+  min-width 72px
+  text-align right
+
+  > span
+    position relative
+    text-align center
+    padding 0 16px
+    @media $bp.phone
+      padding 0 14px
+
+    &::before
+    &::after
+      content ''
+      background-repeat no-repeat
+      background-position center
+      background-size contain
+      top 0px
+      width 11px
+      height 18px
+      position absolute
+
+      .tokens__recommended__game__achievement__reward_bronze&
+        background-image url('~app/pages/tokens/assets/wreath-bronze.svg?external')
+
+      .tokens__recommended__game__achievement__reward_silver&
+        background-image url('~app/pages/tokens/assets/wreath-silver.svg?external')
+
+      .tokens__recommended__game__achievement__reward_gold&
+        background-image url('~app/pages/tokens/assets/wreath-gold.svg?external')
+
+      @media $bp.phone
+        width 10px
+        height 18px
+        top 0
+
+    &::before
+      left 0
+
+    &::after
+      right 0
+      transform rotateY(180deg)

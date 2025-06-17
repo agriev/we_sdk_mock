@@ -1,0 +1,33 @@
+.person-description
+    display block
+    margin 16px 0 0
+
+    div
+      $font14-small()
+      text-align left
+      color #ffffff
+      transition all 0.3s
+
+      p:not(:first-child)
+        padding-top 10px
+
+    .person-description-full-text
+      $font12-small()
+      height 15px
+      padding 0px 5px
+      color #161617
+      font-weight normal
+      font-style normal
+      border-radius 2px
+      background-color #ffffff
+      transition all 0.3s
+
+.person-description-expandable
+    cursor: pointer
+
+    &:hover
+      div
+        color: rgba(255,255,255,0.7)
+
+      .person-description-full-text
+        background-color rgba(255,255,255,0.7)

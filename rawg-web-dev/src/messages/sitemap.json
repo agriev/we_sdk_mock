@@ -1,0 +1,13 @@
+{
+  "ru": {
+    "seo_title": "Games Directory",
+    "seo_description": "Список игр по первой букве",
+    "heading": "Игры, начинающиеся на {letter}"
+  },
+
+  "en": {
+    "seo_title": "Games Directory",
+    "seo_description": "List with games by letters",
+    "heading": "Games starting with {letter}"
+  }
+}

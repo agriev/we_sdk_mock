@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tetris</title>
+  <style>
+    body { display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#111; }
+    canvas { border:1px solid #fff; background:#000; }
+    #controls { position:fixed; top:10px; left:10px; color:#fff; }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <button id="pay">Buy skins ($1)</button>
+    <button id="share">Share</button>
+  </div>
+  <canvas width="240" height="400" id="game"></canvas>
+  <script src="/static/sdk.js"></script>
+  <script src="tetris.js"></script>
+</body>
+</html> 

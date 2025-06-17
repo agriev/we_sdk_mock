@@ -1,0 +1,42 @@
+{
+  "ru": {
+    "title": "Это AG.ru",
+    "title_description": "AG.ru - это рекомендательный сервис видеоигр. Самая полная база данных, построенная на личном опыте геймеров.",
+    "title_user": "Отмечайте, во что играете",
+    "title_user_description": "Бесконечный размер библиотеки. Платформы, устройства и лончеры не имеют значения.",
+    "title_profile": "Листайте все свои игры в едином профиле",
+    "title_profile_description": "Чем полнее ваш профиль, тем лучше он отражает ваш вкус. Для начала отметьте игры, которые вы любили в детстве, и выберите те, в которые планируете поиграть в будущем. Вашу новую библиотеку легко просматривать и фильтровать.",
+    "title_collections": "Создавайте и делитесь коллекциями",
+    "title_collections_description": "Создайте и поделитесь коллекцией: организуйте игры по темам, составьте список игр для совместного прохождения, или игры с отличным сюжетом или саундтреком, или просто ваши любимые игры, да что угодно! Ваши друзья могут предложить в коллецию другие игры и посмотреть, во что они уже играли.",
+    "title_games": "Находите и сохраняйте новые игры на будущее",
+    "title_games_description": "Листайте подборки свежих и ещё не вышедших игр для каждой платформы на главной странице. Если вы войдёте в свой аккаунт, то увидите персональные рекомендации, основанные на вашем опыте с AG.ru. Ваша главная страница - это персональная витрина с видеоиграми. Видите что-то новое и интересное? Добавьте в свой профиль, чтобы не забыть!",
+    "title_invite": "Запросить приглашение",
+    "title_signup": "Регистрация",
+    "request_code": "Код заявки",
+    "login": "Уже есть аккаунт? Войти.",
+    "signup": "Регистрация"
+  },
+
+  "en": {
+    "title": "This is&nbsp;RAWG",
+    "title_description":
+      "RAWG is a video game discovery site. The most comprehensive database that is powered by personal player experiences.",
+    "title_user": "Track what you played",
+    "title_user_description":
+      "You can have infinite games in&nbsp;your favourites, doesn&rsquo;t matter which device or&nbsp;type of&nbsp;game.",
+    "title_profile": "Browse all your games in&nbsp;one unified profile",
+    "title_profile_description":
+      "The more complete your pofile, the better it&nbsp;reflects your taste. Start by&nbsp;marking the games you have beaten in&nbsp;the past and select the ones that you will play in&nbsp;the future. Easily search and filter among your library.",
+    "title_collections": "Create and share collections",
+    "title_collections_description":
+      "Compile and share collections: your personal goty titles, organize games by&nbsp;theme, make a&nbsp;list of&nbsp;great co-op games to&nbsp;play with friends, games with great writing, plot twists or&nbsp;whatever comes to&nbsp;your mind. You can get suggestions from other members and discover the games you missed.",
+    "title_games": "Find and save new games to&nbsp;play",
+    "title_games_description":
+      "Browse the selection of&nbsp;new and upcoming games for each platform on&nbsp;the main page. If&nbsp;you are signed&nbsp;in, you&rsquo;ll also see personal recommendations based on&nbsp;the games in&nbsp;your profile. Treat the main page as&nbsp;your personal video games showcase. Found something new and interesting? Add it&nbsp;to&nbsp;your profile to&nbsp;check back later.",
+    "title_invite": "Request an&nbsp;invitation",
+    "title_signup": "Sign Up",
+    "request_code": "Request code",
+    "login": "Already have an account? Log in.",
+    "signup": "Sign up"
+  }
+}

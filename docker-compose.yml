@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: we_backend
+    volumes:
+      - ./backend:/app
+      - ./uploads:/app/uploads
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=CHANGE_ME_SECRET_KEY
+    expose:
+      - "8000"
+
+  redis:
+    image: redis:7-alpine
+    container_name: we_redis
+    expose:
+      - "6379"
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: we_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static/test.html:/usr/share/nginx/html/test.html:ro
+      - ./frontend_sdk:/usr/share/nginx/html/frontend_sdk:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - backend 

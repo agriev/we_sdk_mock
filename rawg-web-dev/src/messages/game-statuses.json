@@ -1,0 +1,17 @@
+{
+  "ru": {
+    "add_to": "Добавить в",
+    "added_to": "Добавлено в",
+    "my_games": "Мои игры",
+    "wishlist": "Вишлист",
+    "wishlist-counter": "Вишлист {counter}"
+  },
+
+  "en": {
+    "add_to": "Add to",
+    "added_to": "Added to",
+    "my_games": "My games",
+    "wishlist": "Wishlist",
+    "wishlist-counter": "Wishlist {counter}"
+  }
+}

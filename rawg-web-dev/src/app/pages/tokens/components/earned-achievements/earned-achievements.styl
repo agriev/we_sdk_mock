@@ -1,0 +1,145 @@
+.tokens__earned-achievements-header-container
+  max-width 1000px
+  width 100%
+  margin 48px auto 0 auto
+  order 60
+
+  @media $bp.phone
+    margin 32px auto 0 auto
+
+  .tokens-header
+    @media $bp.desktop
+      width 600px
+
+  .tokens-header__position
+    @media $bp.desktop
+      left -32px
+
+  .tokens-header__position_icon
+    @media $bp.phone
+      top -35px
+
+.tokens__earned-achievements-container
+  max-width 1024px
+  width 100%
+  margin 0 auto 0 auto
+  display flex
+  align-items flex-start
+  order 61
+
+  @media $bp.desktop
+    position relative
+    left 26px
+
+  @media $bp.phone
+    flex-direction column
+
+.tokens__earned-achievements
+  width 608px
+  margin-right 37px
+
+  @media $bp.phone
+    margin-top 30px
+    position relative
+    width 100%
+
+.tokens__earned-achievements-wrap
+  display flex
+  flex-direction column
+
+  @media $bp.phone
+    margin 0 10px
+
+.tokens__earned-achievements__items
+  .tokens__earned-achievements__items__empty-icon
+    margin 0 auto 20px
+    width 140px
+    height 140px
+    background url("~assets/icons/emoji/zzz.png") no-repeat center
+    background-size cover
+  .tokens__earned-achievements__items__empty-text
+    margin 0 auto
+    max-width 200px
+    text-align center
+    color alpha($color-white, 0.5)
+
+    display flex
+    flex-direction column
+    align-items center
+
+.tokens__earned-achievements__wreaths
+  display inline-block
+
+  &::before
+  &::after
+    background url('~app/pages/tokens/assets/wreath-gold.svg?external') no-repeat center / contain
+    content ''
+    width 32px
+    height 36px
+    display inline-block
+    position relative
+    top 5px
+
+    @media $bp.phone
+      width 25px
+      height 24px
+      top 3px
+
+  &::after
+    transform rotateY(180deg)
+
+.tokens__earned-achievements__headings
+  font-size 12px
+  padding 16px 0
+  width 100%
+  display flex
+
+  @media $bp.phone
+    padding 8px 0
+
+  .tokens__earned-achievements__heading
+    opacity .4
+
+    &:nth-child(1)
+      text-align left
+      width 400px
+    &:nth-child(2)
+      width 260px
+      text-align right
+    &:nth-child(3)
+      width 90px
+      text-align right
+
+a.tokens__earned-achievements-discord
+  width 304px !important
+  height 140px !important
+  background url('~app/pages/tokens/assets/discordBg.svg?external') no-repeat center / contain
+  border-bottom none
+  padding 24px 50px 24px 24px
+  box-sizing border-box
+  font-size 18px
+  font-weight bold
+  line-height 22px
+  transition color .3s
+  color $color-white
+  &:hover
+    color alpha($color-white, 50%)
+
+  @media $bp.desktop
+    margin-top 24px
+
+  &.separated
+    margin 33px auto 0
+    display block
+    order 59
+
+  position relative
+
+  &::before
+    content ''
+    width 89px
+    height 64px
+    background url('~app/pages/tokens/assets/discordLogo.svg?external') no-repeat center / contain
+    position absolute
+    right 16px
+    top 16px

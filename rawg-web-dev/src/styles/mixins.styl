@@ -1,0 +1,244 @@
+//fonts
+$heading1()
+  font-size 72px
+  line-height 74px
+  font-weight bold
+
+  @media $bp.phone
+    font-size 36px
+    line-height 40px
+
+$heading2()
+  font-size 44px
+  line-height 48px
+  font-weight normal
+
+  @media $bp.phone
+    font-size 24px
+    line-height 28px
+
+$heading3()
+  font-size 36px
+  line-height 40px
+  font-weight normal
+
+  @media $bp.phone
+    font-size 20px
+    line-height 24px
+
+$heading4()
+  font-size 24px
+  line-height 28px
+  font-weight bold
+
+  @media $bp.phone
+    font-size 18px
+    line-height 22px
+    font-weight normal
+
+$heading5()
+  font-size 18px
+  line-height 22px
+  font-weight bold
+
+  @media $bp.phone
+    font-size 16px
+    line-height 20px
+    font-weight bold
+
+$heading-card()
+  font-size 36px
+  line-height 40px
+  font-weight bold
+
+  @media $bp.phone
+    font-size 18px
+    line-height 22px
+
+$font24-large()
+  font-size 24px
+  line-height 28px
+  font-weight normal
+
+  @media $bp.phone
+    font-size 18px
+    line-height 22px
+    font-weight normal
+
+$font24-large-desktop()
+  font-size 24px
+  line-height 28px
+  font-weight normal
+
+$font20-large()
+  font-size 20px
+  line-height normal
+  font-weight normal
+
+$font18-large()
+  font-size 18px
+  line-height normal
+  font-weight normal
+
+$font16-medium()
+  font-size 16px
+  line-height normal
+  font-weight normal
+
+$font16-paragraph()
+  font-size 16px
+  line-height 20px
+  font-weight normal
+
+$font14-small()
+  font-size 14px
+  line-height normal
+  font-weight normal
+
+$font14-paragraph()
+  font-size 14px
+  line-height 20px
+  font-weight normal
+
+$font12-small()
+  font-size 12px
+  line-height normal
+  font-weight normal
+
+$font10-small()
+  font-size 10px
+  line-height normal
+  font-weight normal
+
+$hover-overall-lighting(brightnessValue = 1.6)
+  @media $bp.desktop
+    position absolute
+    top 0
+    left 0
+
+    width 100%
+    height 100%
+    border-radius 6px
+
+    transition opacity 0.2s ease-in
+    opacity 0
+
+    background rgba(255,255,255,0.05) no-repeat center/cover;
+
+    filter brightness(brightnessValue)
+    mask-image linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 100%)
+
+$hover-overall-lighting-active()
+  @media $bp.desktop
+    opacity 1
+
+// Позволяет создать кастомную полоску под текстом нужной ширины и на нужном расстоянии от текста
+// через специальные CSS свойства background
+$custom-underline(color, height, offset, hoverEffect = false)
+  background-image linear-gradient(to top, alpha(color, 0) 0px+offset, color 0px+offset, color 0px+height+offset, alpha(color, 0) 0px+height+offset)
+  if (hoverEffect)
+    &:hover
+      background-image linear-gradient(to top, alpha(color, 0) 0px+offset, alpha(color, .4) 0px+offset, alpha(color, .4) 0px+height+offset, alpha(color, 0) 0px+height+offset)
+
+// Обрезает линию по высоте на определённое кол-во строк
+// Взято отсюда: https://stackoverflow.com/a/13924997/2035123
+$line-clamp(lines, height)
+  overflow hidden
+  text-overflow ellipsis
+  display -webkit-box
+  -webkit-box-orient vertical
+  -webkit-line-clamp lines
+  line-height height
+  max-height height*2
+
+$add-link-style(opacity = 0.4, color = $color-white)
+  $custom-underline(rgba(color, opacity), 1, 0)
+
+$remove-link-style()
+  background-image none
+
+$card-height-big()
+  height 430px
+
+  @media $bp.phone
+    height 354px
+
+$card-height-medium()
+   height 320px
+
+   @media $bp.phone
+     height 213px
+
+$card-height-small()
+   height 228px
+
+   @media $bp.phone
+     height 213px
+
+$more-button-hover()
+  background-color $color-white
+  color $color-black
+
+  .theme_light &
+    background-color rgba(#151515, 10%)
+    color rgba(#151515, 50%)
+
+$more-button()
+  $font16-medium()
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  width 200px
+  height 48px
+  background-color rgba($color-white, 0.1)
+  color rgba($color-white, 0.4)
+  border-radius 4px
+  cursor pointer
+  transition all 0.3s
+
+  .theme_light &
+    background-color rgba(#151515, 5%)
+    color rgba(#151515, 40%)
+
+  &:hover
+    @media $bp.desktop
+      $more-button-hover()
+
+  @media $bp.phone
+    width 100%
+    margin 0 10px 24px
+
+$three-columns-grid()
+  display grid
+  grid-template-columns repeat(3, 304px)
+  grid-gap 0 24px
+
+$image-wrapper()
+  position relative
+  width 100%
+  height 0
+  padding-bottom 56.25%
+  overflow hidden
+
+  & > *
+    object-fit cover
+    position absolute
+    width 100%
+    height 100%
+    top 0
+    left 0
+
+$user-content-styles()
+  $font16-paragraph()
+  line-height 22px
+  color alpha(white, 70%)
+
+  .theme_light &
+    color alpha(black, 90%)
+
+  > .editor__insertion
+    margin 16px 0
+
+  @media $bp.phone
+    $font14-paragraph()

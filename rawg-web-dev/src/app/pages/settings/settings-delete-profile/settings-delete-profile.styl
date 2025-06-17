@@ -1,0 +1,55 @@
+.settings-delete-profile
+
+  @media $bp.phone
+    margin 0 10px
+
+  .input
+    margin-bottom 16px
+
+.settings-delete-profile__delete-message
+  margin 16px 0
+  max-width 600px
+  font-size 16px
+
+.settings-delete-profile__password-mismatch-message
+  margin 16px 0
+
+.settings-delete-profile__password-and-button
+  display flex
+
+.settings-delete-profile__cancel-button
+  margin-left 10px
+  $remove-link-style()
+
+  > button
+    background-color alpha(white, 10%)
+    color white
+    border-radius 4px
+    box-shadow none
+
+    @media $bp.desktop
+      &:hover
+        box-shadow none
+        background-color alpha(white, 100%)
+        color black
+
+    transition background-color .3s, color .3s
+
+
+    @media $bp.desktop
+      width 200px
+    @media $bp.phone
+      width auto
+
+.settings-delete-profile__remove-profile-button
+  @media $bp.phone
+    flex 1 1 auto
+
+.settings-delete-profile__close-button
+  margin 24px 0
+  margin-left auto
+  background-color alpha($color-white, 0.1)
+
+  @media $bp.phone
+    margin 20px
+    margin-left auto

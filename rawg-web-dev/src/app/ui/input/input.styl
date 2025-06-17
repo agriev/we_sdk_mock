@@ -1,0 +1,54 @@
+.input
+  display block
+  position relative
+  width 100%
+
+.input__field
+  width 100%
+  height 50px
+  padding 0 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  background alpha($color-black, 0.3)
+  color $color-white
+  font-family inherit
+  font-size 18px
+
+  //&::placeholder
+    //color $color-white
+    //opacity 0.5 !important
+    //box-shadow none !important;
+
+  &:-webkit-autofill
+    -webkit-box-shadow 0 0 0 1000px alpha($color-black, 0.3) inset
+    -webkit-text-fill-color $color-white
+
+  &:invalid
+    box-shadow none
+
+  &:disabled
+    opacity 0.4
+    transition opacity 0.2s
+
+  // &:focus + .input__icon
+  //   @media $bp.desktop
+  //     opacity 1
+
+.input_error .input__field
+  background-color alpha($error-color, 0.3)
+
+.input__icon
+  display flex
+  position absolute
+  top 25px
+  right 0px
+  transform translate(-100%, -50%)
+  opacity .5
+  transition opacity .3s
+
+  &.clickable
+    cursor pointer
+    &:hover
+      opacity 1

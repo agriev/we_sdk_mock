@@ -1,0 +1,72 @@
+.tokens__head-container
+  display flex
+  position relative
+  justify-content center
+  order 0
+
+  @media $bp.phone
+    padding 0 10px
+
+.tokens__head
+  margin-top 50px
+  max-width $page-width-desktop
+
+  @media $bp.phone
+    margin-top 39px
+
+  .heading
+    margin 0 0 24px
+    text-align center
+    position relative
+    z-index 1
+
+  p.tokens__head__desc
+    margin 10px 0 0
+    text-align center
+    font-size 24px
+
+    @media $bp.phone
+      font-size 18px
+      line-height 22px
+
+.tokens__head__money__container
+  display none
+
+  .tokens__head-container_active &
+    position absolute
+    display flex
+    justify-content center
+    width 100%
+    left 0
+    top 73px
+    overflow hidden
+
+    @media $bp.phone
+      display none
+
+  .tokens__head__money
+    height 143px
+    width 1320px
+    min-width 1320px
+    position relative
+
+    &::before
+      content ''
+      display block
+      position absolute
+      left 0px
+      top -3px
+      width 284px
+      height 137px
+      background url('~app/pages/tokens/assets/money1.png') no-repeat center / contain
+
+    &::after
+      content ''
+      display block
+      position absolute
+      right 2px
+      top -10px
+      z-index 2
+      width 227px
+      height 143px
+      background url('~app/pages/tokens/assets/money2.png') no-repeat center / contain

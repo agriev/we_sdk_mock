@@ -1,0 +1,28 @@
+.page.person
+  @media $bp.phone
+    margin-bottom 80px
+    padding 0 10px
+
+  .heading_1
+    margin 0 !important
+
+    @media $bp.phone
+      width 100%
+
+  .load-more
+    margin 32px 0
+
+.person__follow-btn
+  height 50px
+  margin-right 8px
+
+  .button
+    &:hover
+      opacity 1
+      color black
+      background-color white
+
+  &.button-follow__wrapper_loading .button:hover
+    opacity .8
+    color white
+    background-color rgba(white, 0.1)

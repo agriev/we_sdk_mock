@@ -1,0 +1,23 @@
+{
+  "ru": {
+    "facebook": "Фейсбук",
+    "twitter": "Твиттер",
+    "vk": "VK",
+    "whatsapp": "WhatsApp",
+    "telegram": "Телеграм",
+    "reddit": "Реддит",
+    "copy": "Копировать ссылку",
+    "copied": "Скопировано!"
+  },
+
+  "en": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "vk": "VK",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "reddit": "Reddit",
+    "copy": "Copy the link",
+    "copied": "Copied!"
+  }
+}

@@ -1,0 +1,59 @@
+.persons-slider
+  margin-top 24px
+  overflow hidden
+
+  @media (min-width: 1280px) and (max-width: 1650px)
+    &.persons-slider_many
+      max-width calc(100% - 120px)
+      margin-left 60px
+
+  @media $bp.phone
+    width calc(100% + 20px)
+    margin 16px -10px 0
+    padding 0 0 28px
+
+  .slick-slider
+    @media (max-width: 1000px)
+      overflow hidden
+
+  .slick-slide
+    margin-right 24px
+
+  .slider__track > *
+    @media $bp.phone
+      margin-right 16px
+
+      &:first-child
+        margin-left 10px
+
+      &:last-child
+        margin-right 10px
+
+.perons-slider__empty-wrap
+  display flex
+
+.persons-slider__more-link
+  $remove-link-style()
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  width 304px
+  background-color rgba($color-black, 0.2)
+  border-radius 6px
+
+  @media $bp.phone
+    width 264px
+
+  $card-height-big()
+
+  &:hover
+    .persons-slider__more-button
+      $more-button-hover()
+
+.persons-slider__more-button
+  $more-button()
+
+  @media $bp.phone
+    max-width 200px
+    margin-bottom 0

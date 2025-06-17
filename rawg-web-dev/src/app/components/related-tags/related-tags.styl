@@ -1,0 +1,85 @@
+.related-tags
+  display flex
+  flex-wrap wrap
+  align-items center
+  margin-bottom 32px
+  margin-top -8px
+  font-size 0
+
+  @media $bp.phone
+    flex-wrap nowrap
+    overflow scroll
+
+.related-tags__title
+  $font16-medium()
+  margin-right 8px
+  margin-top 8px
+  line-height 32px
+  color rgba(white, 0.4)
+
+  @media $bp.phone
+    padding-left 10px
+    flex 0 0 auto
+
+.related-tags__item
+  $font14-small()
+  margin-right 8px
+  margin-top 8px
+  padding 8px 16px
+  color rgba(white, 0.4)
+  background-color rgba(white, 0.07)
+  border-radius 16px
+
+  @media $bp.desktop
+    &:hover
+      background-color rgba(white, 0.1)
+      color white
+
+  @media $bp.phone
+    flex 0 0 auto
+
+  $remove-link-style()
+
+.related-tags__rollup
+.related-tags__expand
+  $font14-small()
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  width 32px
+  height 32px
+  margin-top 8px
+  background-color rgba(white, 0.07)
+  border-radius 50%
+  cursor pointer
+  transition opacity .3s
+
+  &::after
+    content ''
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    display block
+    width 32px
+    height 32px
+    background-position center
+    background-repeat no-repeat
+    border-radius 50%
+    opacity 0.4
+
+  @media $bp.desktop
+    &:hover
+      opacity .5
+
+.related-tags__rollup
+  &::after
+    background-image url('~assets/icons/close.svg?external')
+    background-size 13px
+
+.related-tags__expand
+  &::after
+    background-image url('~assets/icons/more.svg?external')
+    background-size 17px

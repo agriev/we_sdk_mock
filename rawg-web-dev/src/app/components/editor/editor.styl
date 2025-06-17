@@ -1,0 +1,297 @@
+.editor
+  position relative
+  width 100%
+  background alpha($color-black, 0.8)
+  border-radius 6px
+  $user-content-styles()
+
+.editor__menu
+  position absolute
+  right -24px
+  top 0
+  margin-top -25px
+
+  display flex
+  flex-direction column
+  justify-content center
+  align-items flex-end
+  width 38px
+  height 76px
+  box-sizing border-box
+  padding-right 2px
+  background url("menu.svg?external") no-repeat center / contain
+
+  @media $bp.phone
+    right -18px
+
+.editor__menu_hidden
+  opacity 0
+  z-index -1
+
+.editor__menu-button
+  width 27px
+  height 38px
+  background no-repeat center / contain
+  cursor pointer
+  overflow hidden
+  transition opacity 0.2s
+
+  &:first-child
+    border-bottom 1px solid alpha($main-bg-color, 0.1)
+
+  &:hover
+    opacity 0.7
+
+.editor__menu-button_code
+  background-image url("play.svg?external")
+  background-size 23px auto
+
+.editor__menu-button_image
+  position relative
+  background-image url("image.svg?external")
+  background-size 21px auto
+  cursor pointer
+
+  input
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index 1
+    opacity 0
+    cursor pointer
+
+.editor__menu_hidden
+  opacity 0
+
+.editor div[contenteditable="true"]
+  display inline-block
+  padding 20px
+  width 100%
+  min-height 200px
+  box-sizing border-box
+  user-select text
+
+  > div.editor__insertion
+    margin 16px 0
+    max-width 680px
+    pointer-events none
+    user-select none
+    text-align left
+
+  > div.editor__insertion > div:not(.editor__loader-icon)
+    position relative
+    display inline-block
+    cursor pointer
+
+    &::after
+      position absolute
+      top -15px
+      right -15px
+      z-index 1
+
+      display block
+      width 30px
+      height 30px
+      border-radius 50%
+
+      content '×'
+      text-align center
+      font-size 24px
+      font-weight 500
+      line-height 27px
+      color $color-black
+      background $color-white
+      pointer-events auto
+      cursor pointer !important
+      transition opacity 0.2s
+
+    &:hover
+      &::after
+        opacity 0.9
+
+  iframe
+    padding-right 20px
+    padding-left 20px
+
+  iframe
+  embed
+  img
+    margin 0 auto
+    display block
+    max-width 100% !important
+    pointer-events none
+
+.editor__insertion
+  iframe
+  embed
+  img
+    max-width 100% !important
+    border-radius 4px
+
+.editor__popup
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 2
+
+  display flex
+  justify-content center
+  align-items center
+  background alpha($color-black, 0.5)
+
+.editor__popup-block
+  position relative
+  width 656px
+  padding 32px
+  box-sizing border-box
+  background #202020
+  border-radius 4px
+
+  @media $bp.phone
+    display flex
+    flex-direction column
+    width 100%
+    height 100%
+    padding 10px 10px 20px
+
+.editor__popup-header
+  display flex
+  justify-content space-between
+  align-items center
+
+  @media $bp.phone
+    margin-bottom 12px
+
+.editor__popup-close
+  background-color $color-white
+
+  svg.close-button__icon-svg path
+    fill black
+
+  &:hover
+    opacity 0.9
+
+  @media $bp.desktop
+    position absolute
+    top -20px
+    right -20px
+
+.editor__popup-title
+  margin-bottom 16px
+  font-size 36px
+
+  @media $bp.phone
+    margin 0
+    font-size 20px
+
+.editor__popup-body
+  display flex
+  flex-direction column
+  justify-content space-between
+
+  @media $bp.phone
+    flex-grow 1
+
+.editor__popup-textarea
+  width 100%
+  height 130px
+  padding 20px
+  box-sizing border-box
+  font-size 14px
+  color $color-white
+  background #0f0f0f
+  border-radius 4px
+  border none
+  resize none
+
+  @media $bp.phone
+    height 200px
+
+.editor__popup-controls
+  margin-top 30px
+  display flex
+  justify-content flex-end
+
+  button
+    box-shadow none
+
+  @media $bp.desktop
+    button
+      width auto
+      min-width 150px
+
+      &:not(:last-child)
+        margin-right 16px
+
+  @media $bp.phone
+    flex-direction column
+
+    button
+      width 100%
+
+      &:not(:last-child)
+        margin-bottom 10px
+
+.editor__iframe-wrapper
+  position relative
+  width 95%
+  height 0
+  padding-bottom 56.25%
+
+  embed
+  iframe
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    border none
+
+.editor__loader
+  display flex
+  justify-content center
+  align-items center
+  height 60px
+  background #282828
+  border-radius 6px
+
+  z-index 1
+  position fixed
+  left calc(50% - 200px)
+  // top calc(50% - 30px)
+  top 410px
+  width 400px
+
+  @media $bp.phone
+    top 330px
+
+  .SVGInline
+    margin-right 9px
+    position relative
+    top 2px
+
+.editor__loader-icon
+  width 30px
+  height 30px
+  background url("./loader.svg?external") no-repeat center / cover
+  animation-name spin
+  animation-duration 0.8s
+  animation-iteration-count infinite
+  animation-timing-function linear
+
+.editor__loader__error-link
+  text-decoration underline
+  position relative
+  input
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index 1
+    opacity 0
+    cursor pointer

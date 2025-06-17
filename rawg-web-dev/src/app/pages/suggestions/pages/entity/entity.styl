@@ -1,0 +1,70 @@
+// Пока решено не использовать ширину в 1170px
+// .suggestions-entity-page
+//   .page__content
+//     @media $bp.desktop
+//       max-width 1170px
+
+//   .games__filter
+//     @media $bp.desktop
+//       width 1170px
+
+.games__suggestions__seo-area
+  margin 0 0 32px
+
+  .games__suggestions__seo-area__title
+    margin 0 0 16px
+    font-size 72px
+    line-height 78px
+    font-weight bold
+    text-align left
+
+  @media $bp.phone
+    margin 0 10px 16px
+
+    .games__suggestions__seo-area__title
+      font-size 36px
+      line-height 45px
+      text-align center
+
+  & div.games__suggestions__seo-area__description
+    margin-top 16px
+
+  .games__suggestions__seo-area__text-more
+    display inline-block
+    height 14px
+    padding 1px 5px 0
+    border-radius 2px
+    background-color $color-white
+    font-size 12px
+    line-height 1
+    color $color-black
+    cursor pointer
+    transition background-color 0.3s
+
+    &:hover
+      background-color alpha($color-white, 0.5)
+
+
+.games__suggestions__filter
+  height 50px
+  position sticky
+  top -1px
+  z-index 5
+  margin-bottom 40px
+
+  .filter
+    background-color rgba($color-black, 30%)
+    transition background-color 0.3s
+
+  &_top
+    .filter
+      background-color rgba($color-black, 80%)
+      transition background-color 0.3s
+
+  @media $bp.desktop
+    width $page-width-desktop
+
+  @media $bp.phone
+    width 100%
+    max-width $page-width-phone
+    margin-bottom 16px

@@ -1,0 +1,127 @@
+.game-header
+  position fixed
+  top 0
+  left 0
+  right 0
+  width 100%
+  box-sizing border-box
+  background-color black
+  opacity 0
+  transform translateY(-100%)
+  z-index 6
+  transition transform 0.2s, opacity 0.3s
+
+  .game-card-compact
+    margin-left 36px
+
+  &_visible
+    transform translateY(0)
+    opacity 1
+
+.game-header__wrapper
+  display flex
+  flex 0 1 auto
+  justify-content space-between
+  align-items center
+  width 100%
+  box-sizing border-box
+  margin 0 auto
+  padding 12px 0
+
+  .game-header_subpage > &
+    max-width $header-width-desktop
+
+  @media $bp.phone
+    padding: 12px 16px
+
+  .game-card-compact
+    width auto
+    border none
+
+    @media $bp.phone
+      width 100%
+
+.game-header__right
+  display flex
+  flex 1 0 auto
+  justify-content flex-end
+  align-items center
+  margin 0 0 0 8px
+  padding 4px 0
+  list-style none
+
+  @media $bp.phone
+    display none
+
+.game-header__info-item
+  display flex
+  flex 0 1 auto
+  flex-direction column
+  justify-content center
+  height 100%
+
+  .game-header_subpage &
+    padding 0 24px
+
+    &:not(:last-child)
+      border-right: 1px solid alpha($color-white, 0.2)
+
+  .game-header_main &
+    padding-right 16px
+
+    @media (max-width: 1100px)
+      padding-right 8px
+
+.game-header__value
+  $font18-large()
+  line-height 1.2
+  font-weight bold
+
+.game-header__label
+  $font14-small()
+  cursor pointer
+
+  .game-header_subpage &
+    color alpha($color-white, 0.4)
+
+  & a, a&
+    $remove-link-style()
+    text-decoration underline alpha(white, .4)
+    text-underline-position under
+
+    .game-header_subpage &
+      color alpha($color-white, 0.4)
+      text-decoration-color alpha(white, 0.24)
+
+.game-header__game
+  display flex
+  flex 0 1 auto
+  justify-content flex-start
+  align-items flex-start
+  cursor pointer
+
+  .game-card-compact__heading,
+  .game-header__arrow-icon
+    transition all 0.3s
+
+  &:hover
+    transition all 0.3s
+
+    .game-card-compact__heading,
+    .game-header__arrow-icon
+      opacity 0.4
+      transition all 0.3s
+
+.game-header__arrow-icon
+  display block
+  width 24px
+  height 14px
+  margin-top 4px
+  margin-right 16px
+
+  &_top
+    transform rotate(90deg) translate(8%, -48%)
+
+  svg
+    width 100%
+    height 100%

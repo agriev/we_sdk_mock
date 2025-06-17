@@ -1,0 +1,99 @@
+.stories__info__watch-full-wrap
+  position absolute
+  box-sizing border-box
+  pointer-events none
+  margin auto
+  display flex
+
+  transition bottom .3s
+  z-index 4
+
+  @media $bp.desktop
+    flex-direction row-reverse
+    bottom 60px
+    max-width $page-width-desktop
+    width 100%
+    &.active
+      bottom 210px
+
+  @media (min-width: $page-width-desktop)
+    left calc(50% - 480px)
+    width $page-width-desktop
+
+  @media $bp.phone
+    right 16px
+    bottom 16px
+
+.stories__info__watch-full
+  position relative
+  pointer-events auto
+
+  padding 8px 16px
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  border-radius 4px
+  background-color alpha(black, 40%)
+  font-size 14px
+  color white
+  cursor pointer
+  border-width 1px
+  border-style solid
+  border-color alpha(white, 20%)
+  transition opacity .3s, border-color .3s, background-color .3s
+
+  @media $bp.desktop
+    display none
+
+  .embedded-stories &
+    display none
+
+  &:hover
+    border-color alpha(white, 100%)
+
+  .stories__content.first-play &
+    opacity 0
+    pointer-events none
+
+  .SVGInline
+    margin-right 6px
+    transform translateY(2px)
+
+.stories__info__watch-full__window
+  position fixed
+  width 100vw
+  height 100vh
+  left 0
+  top 0
+  z-index 10
+  background #181818
+
+  @media $bp.phone
+    display flex
+    flex-direction column
+    align-items flex-end
+
+  iframe
+    border none
+    border-radius 5.6px
+    display block
+    @media $bp.desktop
+      position absolute
+      left 10vw
+      top 10vh
+      width 70vw
+      height 40vw
+    @media $bp.phone
+      width 100vw
+      height 56.5vw
+
+.stories__info__watch-full__close-button
+  flex 0 0 auto
+
+  @media $bp.desktop
+    position absolute
+    left 83vw
+    top 8vh
+  @media $bp.phone
+    margin 20px

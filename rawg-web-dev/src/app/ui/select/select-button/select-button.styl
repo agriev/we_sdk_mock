@@ -1,0 +1,43 @@
+.select-button__content
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  height 100%
+
+  &:hover
+    .select-button__title, .select-button__icon
+      opacity 0.4
+
+      button.button.select-button.active > &
+        opacity 1
+
+.select-button__title
+  white-space nowrap
+  transition opacity .3s
+
+.select-button__additional
+  margin-left 5px
+  font-size 14px
+  color alpha($color-black, 0.3)
+
+.select-button__icon
+  opacity 0.4
+  transition opacity .3s
+
+.select-button__icon_check
+  width 18px
+  height 13px
+
+.select-button__icon_arrow
+  width 9px
+  height 15px
+  margin-left 4px
+  transform rotate(90deg)
+
+  .select-button_fill &
+    filter brightness(0%)
+
+button.button.select-button.active
+  background white
+  color black

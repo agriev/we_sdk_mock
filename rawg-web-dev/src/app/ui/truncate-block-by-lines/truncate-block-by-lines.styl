@@ -1,0 +1,28 @@
+.truncate-text-2__less
+.truncate-text-2__more
+  $font12-small()
+  display inline-block
+  height 14px
+  padding 0px 5px 1px
+  color $color-black
+  border-radius 2px
+  background-color $color-white
+  cursor pointer
+  transition background-color 0.3s
+  display inline-flex
+  align-items center
+  $remove-link-style()
+
+  .theme_light &
+    background-color #606061
+    color white
+
+  &:hover
+    background-color alpha($color-white, 0.5)
+    color $color-black
+    .theme_light &
+      background-color alpha(#606061, 80%)
+      color white
+
+.truncate-text-2__less
+  margin-top 8px

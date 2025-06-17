@@ -1,0 +1,21 @@
+{
+  "ru": {
+    "seo_title": "{title} (скачать, программа, software, download) на AG.ru",
+    "h1_title": "Программа {title}",
+    "info_title": "Информация",
+    "files_title": "Информация о файлах",
+    "files_date": "Файл добавлен",
+    "files_download": "Скачать файл",
+    "files_description": "Описание"
+  },
+
+  "en": {
+    "seo_title": "Program {title}",
+    "h1_title": "Program {title}",
+    "info_title": "Information",
+    "files_title": "Files",
+    "files_date": "File added",
+    "files_download": "Download file",
+    "files_description": "Description"
+  }
+}

@@ -1,0 +1,48 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+{{#if connectedComponent}}
+import { connect } from 'react-redux';
+{{/if}}
+{{#if injectReactIntl}}
+import { injectIntl, FormattedMessage } from 'react-intl';
+{{/if}}
+
+import './{{ dashCase name }}.styl';
+
+const componentPropTypes = {
+  className: PropTypes.string,
+};
+
+const defaultProps = {
+  className: '',
+};
+
+{{#if injectReactIntl}}
+@injectIntl
+{{/if}}
+{{#if connectedComponent}}
+@connect(state => ({
+  app: state.app,
+}))
+{{/if}}
+class {{ properCase name }} extends Component {
+  static propTypes = componentPropTypes;
+
+  constructor(props) { 
+    super(props);
+
+    this.state = {};
+  }
+
+  render() {
+    const { className } = this.props;
+    return (
+      <div className={['{{ dashCase name }}', className].join(' ')}>
+      </div>
+    );
+  }
+}
+
+{{ properCase name }}.defaultProps = defaultProps;
+
+export default {{ properCase name }};

@@ -1,0 +1,65 @@
+.game-edit__select-creators__modal__form
+  display flex
+  align-items center
+
+  @media $bp.phone
+    flex-direction column
+    align-items stretch
+
+.game-edit__select-creators__modal__input
+  flex-grow 2
+
+  @media $bp.phone
+    margin-bottom 24px
+
+  input
+    display block
+    width 100%
+    box-sizing border-box
+    padding 15px 20px
+    font-size 18px
+    line-height 24px
+    color white
+    background alpha(black, 40%)
+    border-radius 4px
+    border none
+
+.game-edit__select-creators__modal__add-btn
+  flex 0 0 auto
+  height 100%
+  box-sizing border-box
+  margin-left 24px
+  padding 15px 57px
+  font-size 16px
+  color #1a1a1a
+  background-color white
+  border-radius 4px
+  cursor pointer
+
+  transition background-color .3s, color .3s
+
+  &[disabled]
+    background-color alpha(white, 5%)
+    color alpha(white, 20%)
+    cursor not-allowed
+
+  @media $bp.phone
+    margin-left 0
+
+.game-edit__select-creators__modal__items-title
+  font-size 16px
+  color alpha(white, 40%)
+  margin-top 24px
+  margin-bottom 12px
+
+.game-edit__select-creators__modal__items
+  display flex
+  flex-wrap wrap
+  margin-top -12px
+  align-items flex-start
+  align-content flex-start
+  flex 1 0 auto
+
+.game-edit__select-creators__modal__error
+  margin-bottom 24px
+  color #e94a30

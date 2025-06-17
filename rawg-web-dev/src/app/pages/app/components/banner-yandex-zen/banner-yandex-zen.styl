@@ -1,0 +1,299 @@
+$yandexZenBannerPhone = 'screen and (max-width: 549px)'
+$yandexZenBannerDesktop = 'screen and (min-width: 550px)'
+
+.banner-yandex-zen
+  width 100%
+  background-image linear-gradient(to bottom, #B1305C, #FC857D)
+  position relative
+
+  display flex
+
+  .SVGInline.close-btn
+    position absolute
+    right 20px
+    top 20px
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+    z-index 2
+
+    @media $yandexZenBannerPhone
+      right 15px
+      top 15px
+
+.banner-yandex-zen__left-imgs
+  flex 0 0 auto
+  position relative
+  overflow hidden
+
+  > *
+    position absolute
+
+  display none
+  @media $bp.desktop
+    display block
+    width calc(50% - 480px)
+
+.banner-yandex-zen__left-imgs__img1
+  top 44px
+  right 340px
+  width 110px
+  height 73px
+  background url(../banner-welcome/assets/pic01@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__left-imgs__img2
+  top 124px
+  right 279px
+  width 110px
+  height 73px
+  background url(../banner-welcome/assets/pic02@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__left-imgs__img3
+  top 27px
+  right 117px
+  width 168px
+  height 112px
+  background url(../banner-welcome/assets/pic03@3x.png) no-repeat center / contain
+  z-index 1
+
+.banner-yandex-zen__left-imgs__img4
+  top 84px
+  right 60px
+  width 111px
+  height 74px
+  background url(../banner-welcome/assets/pic04@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__text-img
+  width 485px
+  height 97px
+  background url(assets/text-ru.png) no-repeat center / contain
+
+  @media $bp.phone
+    width 100%
+    height 90px
+    margin-top 16px
+    background url(assets/text_mobile-ru.png) no-repeat center / contain
+
+.banner-yandex-zen__link-img
+  background none
+
+  @media $bp.phone
+    display flex
+    justify-content center
+
+.banner-yandex-zen__right-imgs
+  flex 1 1 auto
+  position relative
+  overflow hidden
+
+  @media $yandexZenBannerPhone
+    display none
+
+  > *
+    position absolute
+
+.banner-yandex-zen__right-imgs__img5
+  top 101px
+  left 15px
+  width 137px
+  height 91px
+  background url(../banner-welcome/assets/pic05@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__right-imgs__img6
+  top 50px
+  left 61px
+  width 138px
+  height 83px
+  background url(../banner-welcome/assets/pic06@3x.png) no-repeat center / contain
+  z-index 1
+
+.banner-yandex-zen__right-imgs__img7
+  top 140px
+  left 239px
+  width 120px
+  height 83px
+  background url(../banner-welcome/assets/pic07@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__right-imgs__img8
+  top 23px
+  left 256px
+  width 138px
+  height 91px
+  background url(../banner-welcome/assets/pic08@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__right-imgs__img9
+  top 14px
+  left 309px
+  width 172px
+  height 115px
+  background url(../banner-welcome/assets/pic09@3x.png) no-repeat center / contain
+  z-index 1
+
+.banner-yandex-zen__right-imgs__img10
+  top 119px
+  left 480px
+  width 137px
+  height 91px
+  background url(../banner-welcome/assets/pic10@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__right-imgs__img11
+  top 84px
+  left 623px
+  width 110px
+  height 73px
+  background url(../banner-welcome/assets/pic11@3x.png) no-repeat center / contain
+  z-index 1
+
+.banner-yandex-zen__right-imgs__img12
+  top 67px
+  left 652px
+  width 110px
+  height 73px
+  background url(../banner-welcome/assets/pic12@3x.png) no-repeat center / contain
+
+.banner-yandex-zen__main
+  padding 24px 0 43px
+  flex 0 0 auto
+
+  position relative
+  display flex
+  flex-direction column
+  justify-content flex-start
+  border-radius 6px
+  box-sizing border-box
+
+  @media $bp.phone
+    padding 24px 16px 43px
+
+  @media $yandexZenBannerPhone
+    flex 1 1 auto
+    justify-content center
+    padding 16px 32px
+    text-align center
+
+.banner-yandex-zen__main__title
+  font-size 36px
+  line-height 40px
+  font-weight bold
+  letter-spacing 0
+  flex 0 0 auto
+
+  @media $yandexZenBannerPhone
+    font-size 18px
+    line-height 24px
+    letter-spacing 0
+
+.banner-yandex-zen__main__title__inner
+  font-size 36px
+  line-height 40px
+  font-weight normal
+  letter-spacing 0
+
+  @media $yandexZenBannerPhone
+    font-size 18px
+    line-height 24px
+    letter-spacing 0
+
+.banner-yandex-zen__main__steps
+  flex 0 0 auto
+  display flex
+
+  margin-top 18px
+  @media $yandexZenBannerPhone
+    margin-top 8px
+    justify-content center
+
+.banner-yandex-zen__main__step
+  display flex
+  flex-direction column
+  background-image none
+
+  @media $yandexZenBannerPhone
+    align-items center
+
+  &:hover
+    .SVGInline
+      opacity .4
+
+  & + &
+    margin-left 22px
+    padding-left 22px
+    border-left 1px solid alpha(white, 20%)
+    @media $yandexZenBannerPhone
+      margin-left 13px
+      padding-left 13px
+
+.banner-yandex-zen__main__step__phone-icon
+  height 30px
+  @media $yandexZenBannerDesktop
+    display none
+
+.banner-yandex-zen__main__step__first
+  display flex
+  align-items center
+  font-weight bold
+
+  > .SVGInline
+    margin-left 6px
+    position relative
+    top 2px
+    transition opacity .3s
+    @media $yandexZenBannerPhone
+      display none
+
+  @media $yandexZenBannerDesktop
+    font-size 18px
+    line-height 22px
+    margin-bottom 1px
+  @media $yandexZenBannerPhone
+    font-size 16px
+    line-height 22px
+
+.banner-yandex-zen__main__step__second
+  @media $yandexZenBannerDesktop
+    font-size 13px
+  @media $yandexZenBannerPhone
+    font-size 12px
+
+.banner-yandex-zen__main__links
+  flex 0 0 auto
+  display flex
+  @media $yandexZenBannerPhone
+    flex-direction column
+
+.banner-yandex-zen__main__link
+  $remove-link-style()
+  flex 1 1 auto
+
+  .arrow_right
+    svg path
+      fill black
+
+  @media $yandexZenBannerDesktop
+    margin-top 21px
+    max-width 216px
+    transition opacity .3s
+    &:hover
+      opacity .7
+
+  @media $yandexZenBannerPhone
+    margin 25px 0 0 5px
+    width calc(100% - 10px)
+
+  &:not(:first-child)
+    @media $yandexZenBannerDesktop
+      margin-left 20px
+    @media $yandexZenBannerPhone
+      margin-top 10px
+
+.banner-yandex-zen__main__link button
+  width 100%
+  height 40px
+  > div
+    display flex
+    justify-content space-between
+    align-items center
+
+  &.button_fill-inline g
+    fill $color-black

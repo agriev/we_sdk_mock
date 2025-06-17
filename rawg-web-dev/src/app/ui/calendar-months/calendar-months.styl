@@ -1,0 +1,49 @@
+.calendar__months
+  display flex
+  align-items baseline
+
+  @media $bp.desktop
+    margin 0 0 12px
+
+  @media $bp.phone
+    flex-direction column
+
+  .calendar__months-items
+    flex-grow 1
+    display flex
+
+    @media $bp.desktop
+      flex-wrap wrap
+
+    @media $bp.phone
+      order 2
+      width 100%
+      box-sizing border-box
+      padding 8px 0
+      overflow auto
+      -webkit-overflow-scrolling touch
+
+.calendar__month
+  $font18-large()
+  width auto
+  padding-bottom 1px
+  margin-right 16px
+
+  border-bottom 1px solid transparent
+  color alpha($color-white, 0.4)
+  cursor pointer
+  transition all 0.3s
+
+  &:hover
+    border-color alpha($color-white, 0.4)
+
+  @media $bp.phone
+    $font18-large()
+    margin 0 8px
+    padding 0px
+
+.calendar__month_active
+.calendar__month_active:hover
+  color $color-white
+  border-color $color-white
+  cursor default

@@ -1,0 +1,84 @@
+.discover-columns
+  width 100%
+  box-sizing border-box
+  grid-gap 24px
+
+  @media $bp.desktop
+    display grid
+    grid-gap 24px
+
+  @media $bp.phone
+    > * + *
+      margin-top 16px
+
+  @media screen and (min-width: 1335px)
+    .game-card-medium_online:first-child
+      grid-column-start 1
+      grid-column-end 3
+
+      .heading
+        font-size 40px
+        line-height 1
+
+      .game-card-medium__info__name
+        max-width 100%
+
+      .game-card-medium__body
+        position absolute
+
+        left 0
+        bottom 0
+
+        width 100%
+        padding 4px
+
+        box-sizing border-box
+
+      .game-card-medium__info
+        border-radius 10px
+        background-color rgba(#141414, 0.7)
+        backdrop-filter blur(20px)
+        transition background-color 0.3s
+        padding-bottom 16px
+        z-index 10
+
+      .game-card-buttons_online a
+        background-color #cdf500
+        color #000
+
+      &:hover
+        .game-card-buttons_online a
+          background-color white
+
+        .game-card-medium__info
+          background-color rgba(#141414, 0.8)
+
+      .game-card-medium__media
+        border-radius inherit !important
+
+.discover-columns__column
+  > * + *
+    @media $bp.desktop
+      margin-top 24px
+
+.discover-columns-title
+  font-size 32px
+  line-height 1
+
+  color white
+  font-weight bold
+
+  display flex
+  text-align left
+  width 100%
+
+  margin 48px 0 28px 0
+
+  @media $bp.desktop
+    font-size 40px
+
+  &:first-of-type
+    margin-top 32px
+
+    @media $bp.desktop
+      display none

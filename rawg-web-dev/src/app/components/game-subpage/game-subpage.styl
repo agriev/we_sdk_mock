@@ -1,0 +1,75 @@
+mediaElementWidth = 154px
+
+.game-subpage__list
+  display flex
+  flex-wrap wrap
+  margin-bottom 24px
+
+  @media $bp.phone
+    margin-left auto
+    margin-right auto
+    margin-top -8px
+
+    @media (min-width: mediaElementWidth * 1 + 1px) and (max-width: mediaElementWidth * 2 + 0px)
+      width mediaElementWidth * 1
+
+    @media (min-width: mediaElementWidth * 2 + 1px) and (max-width: mediaElementWidth * 3 + 0px)
+      width mediaElementWidth * 2
+
+    @media (min-width: mediaElementWidth * 3 + 1px) and (max-width: mediaElementWidth * 4 + 0px)
+      width mediaElementWidth * 3
+
+    &:not(.game-subpage__list_blocks)
+      padding 0 10px
+
+  .game-subpage__block-item
+    position relative
+
+    $remove-link-style()
+
+    .game-subpage__block-item__hover
+      $hover-overall-lighting()
+
+    &:hover
+      .game-subpage__block-item__hover
+        $hover-overall-lighting-active()
+
+    @media $bp.desktop
+      margin 16px 0 0 0
+
+      &:not(:nth-child(3n + 3))
+        margin-right 16px
+
+    @media $bp.phone
+      margin 8px 4px 0 4px
+
+.game-subpage__list_blocks
+  @media $bp.desktop
+    margin-left -22px
+
+.subpage-heading__title-wrapper
+  @media $bp.phone
+    width 100%
+
+  hr
+    border-top 1px solid #ccc
+    border-bottom none
+    border-left none
+    border-right none
+    margin 32px 0 16px
+    @media $bp.phone
+      margin 16px 0 16px
+
+.page__content
+  .review_page & .game__content-wrap
+  .post_page & .game__content-wrap
+    @media $bp.desktop
+      padding 40px 81px 60px 51px
+
+    @media $bp.phone
+      padding 16px 0
+
+  .theme_light.review_page & .game__content-wrap
+  .theme_light.post_page & .game__content-wrap
+    background-color white
+    border-radius 12px

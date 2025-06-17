@@ -1,0 +1,92 @@
+.post
+  margin 0 auto
+
+  @media $bp.desktop
+    width 100%
+    max-width $column-width-2-1-desktop
+
+.post__close-button
+  align-self flex-end
+  margin 25px 0
+
+  @media $bp.phone
+    margin-right 25px
+
+.post__post-card
+  background-color alpha($color-black, 0.3)
+  border-radius 4px
+  margin-top 24px
+
+  .theme_light &
+    color alpha(black, 90%)
+    background-color alpha(#0e0e0e, 6%)
+
+    .post-card
+      background-color unset
+
+.post__post-card-user
+  display flex
+  align-items center
+  font-size 14px
+  color alpha($color-white, 0.5)
+
+.post__post-card-user-link
+  display inline
+  border none
+  color $color-white
+  transition color 0.3s
+
+  &:hover
+    color alpha($color-white, 0.5)
+
+.post__post-card-user-text
+  margin-right 5px
+  display flex
+  align-items center
+  flex-wrap wrap
+
+  @media $bp.phone
+    display inline
+
+.post__post-card-body
+  background none
+
+  > div
+    background none
+
+  .post-card__game-background
+    display none
+    background none !important
+
+.post__subheading
+  font-weight normal
+  margin 0
+
+  .theme_light &
+    color black
+
+  @media $bp.desktop
+    font-size 44px
+
+  @media $bp.phone
+    margin 0
+    font-size 24px
+    text-align center
+
+.post__suggestions
+  @media $bp.phone
+    padding 0 10px
+
+.post__suggestions__title
+  font-size 44px
+
+  @media $bp.phone
+    font-size 24px
+    text-align center
+
+.post__suggestions__title__counter
+  opacity .4
+  margin-left 8px
+
+.post__suggestions-post
+  margin-top 24px

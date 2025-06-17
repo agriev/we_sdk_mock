@@ -1,0 +1,27 @@
+.logo
+  position relative
+  font-size 18px
+  font-weight 900
+  line-height 1
+  letter-spacing 5px
+  color $color-white
+
+  @media $bp.desktop
+    margin-right 12px
+
+  .locale-ru &
+    background-image url('./assets/ag-logo-small.svg?external')
+
+    background-size contain
+    background-position center
+    background-repeat no-repeat
+
+    width 113px
+    height 40px
+
+    @media $bp.desktop
+      width 220px
+      height 48px
+
+      background-image url('./assets/ag-logo.svg?external')
+      margin-right 18px

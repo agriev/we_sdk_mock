@@ -1,0 +1,31 @@
+.profile-games__search-wrap
+  display flex
+  justify-content space-between
+  align-items center
+  margin-bottom 18px
+  border-bottom 1px solid alpha($color-white, 0.2)
+
+  transition border-bottom-color .3s
+
+  @media $bp.phone
+    flex-wrap wrap
+    border-bottom none
+    margin-bottom 16px
+
+    .input-search__icon
+      display block
+
+  .input-search__icon
+    transition opacity .3s
+
+  .input-search__input::placeholder
+    transition color .3s
+
+  &:hover
+    border-bottom-color alpha($color-white, 0.5)
+    @media $bp.phone
+      border-bottom none
+    .input-search__input::placeholder
+      color $color-white
+    .input-search__icon
+      opacity 1

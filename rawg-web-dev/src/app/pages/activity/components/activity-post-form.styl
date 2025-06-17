@@ -1,0 +1,64 @@
+.activity__post-form
+  margin-bottom 16px
+
+  .post-form
+    background transparent
+    padding 0
+
+    .post-form__title
+      font-size 24px
+      font-weight bold
+      color $color-white
+      margin-bottom 26px
+
+    .post-form__ratings
+      .rating_button
+        height auto
+        padding 5px 10px
+        margin-bottom 0
+        margin-right 8.5px
+        .rating__icon
+          width 18px
+          height 18px
+
+    .post-form__reactions-title
+      margin-bottom 20px
+
+    .post-form__reaction
+      height auto
+      margin-right 8px
+      margin-bottom 8px
+      padding 7px 10px
+      font-size 9px
+      font-weight bold
+
+    .editor
+      background rgba(0,0,0,.4)
+
+    .post-form__publishing
+      flex-direction column
+      flex-wrap nowrap
+      > div:first-child
+        margin-bottom 5px
+        margin-right 0
+
+    .post-form__controls
+      margin-top 10px
+
+  .event-header__info-wrap
+    color $color-white
+    display flex
+    align-items center
+
+  .activity__post-form__cancel
+    margin-left auto
+    cursor pointer
+    display flex
+    align-items center
+    transition color .3s
+    &:hover
+      color $color-white
+
+  .error_filed
+    color white
+    margin-top 5px

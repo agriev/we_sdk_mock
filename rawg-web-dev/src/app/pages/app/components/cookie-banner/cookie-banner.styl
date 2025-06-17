@@ -1,0 +1,34 @@
+.cookie-banner
+  position fixed
+  bottom 0
+  left 0
+  right 0
+  width 100%
+  padding 24px 0 32px
+  background-color rgba(#151515, 0.9)
+  z-index 99
+
+  @media $bp.phone
+    padding 16px 0
+
+.cookie-banner__wrapper
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  max-width $page-width-desktop
+  box-sizing border-box
+  margin 0 auto
+
+  @media $bp.phone
+    flex-direction column
+    padding 0 16px
+
+  & > span
+    display block
+
+    @media $bp.desktop
+      width calc(100% - 72px)
+
+    @media $bp.phone
+      margin-bottom 16px

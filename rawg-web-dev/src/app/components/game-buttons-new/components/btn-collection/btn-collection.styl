@@ -1,0 +1,67 @@
+.btn-collection
+  color white
+  border-radius 6px
+  padding 8px 0 8px 0
+  display flex
+  align-items flex-end
+  transition border-color .3s
+  cursor pointer
+
+  @media $bp.desktop
+    margin-left 16px
+
+  @media $bp.phone
+    padding 0 0 8px 0
+    margin-top 16px
+
+.btn-collection__text
+  @media $bp.phone
+    display flex
+    align-items center
+
+.btn-collection__subtitle
+  font-size 12px
+  line-height 14px
+  opacity .4
+
+  @media $bp.phone
+    font-size 18px
+    margin-right 5px
+
+.btn-collection__title
+  font-size 18px
+  letter-spacing 0
+  display flex
+  transition opacity .3s
+  white-space nowrap
+
+  @media $bp.desktop
+    .btn-collection:hover &
+      opacity .4
+
+  .btn-collection_active &
+    color #afe94f
+
+.btn-collection__icon
+  background-size contain
+  background-repeat no-repeat
+  background-position center
+  margin-left 5px
+  transform translateY(-2px)
+
+.btn-collection__icon-add
+  width 20px
+  height 20px
+  background-image url('~assets/icons/add-game-to-collection-white.svg?external')
+
+.btn-collection__icon-added
+  width 16px
+  height 16px
+  background-image url('~assets/icons/check-rounded.svg?external')
+
+.btn-collection__icon-loading
+  width 16px
+  height 16px
+  margin-left 8px
+  margin-right 16px
+  margin-bottom 3px

@@ -1,0 +1,11 @@
+{
+  "ru": {
+    "confirmed": "Адрес электронной почты подтвержден.",
+    "not_confirmed": "Адрес электронной почты не подтвержден."
+  },
+
+  "en": {
+    "confirmed": "Your email is confirmed.",
+    "not_confirmed": "Your email is not confirmed."
+  }
+}

@@ -1,0 +1,55 @@
+.settings-page
+  .page__content
+    @media $bp.desktop
+      max-width $page-width-desktop
+
+.settings__title
+  margin 0 0 50px
+
+  @media $bp.phone
+    margin 10px 0 20px
+    text-align center
+
+.settings__tabs
+  margin-bottom 50px
+
+  @media $bp.phone
+    margin-bottom 40px
+
+  > ul.tabs__list
+    margin-top -10px
+
+    @media $bp.desktop
+      flex-wrap wrap
+      justify-content flex-start
+
+    @media $bp.phone
+      flex-wrap nowrap
+
+    > li.tabs__item
+      margin-top 10px
+
+      &:not(:last-child)
+        margin-right 16px
+
+  .tab__counter_empty
+    @media $bp.desktop
+      min-width auto
+
+.settings__content
+  form > div:not(:last-of-type)
+    margin-bottom 20px
+
+  form > div:last-of-type
+    margin-bottom 40px
+
+.settings__form-bottom-link
+  margin 20px auto 10px
+  text-align center
+
+.settings__form-bottom-link a
+  border-color transparent
+  cursor pointer
+
+  &:hover
+    border-color alpha($color-white, 0.5)

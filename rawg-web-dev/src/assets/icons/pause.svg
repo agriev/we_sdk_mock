@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="48px" viewBox="0 0 41 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>music-player-pause-lines</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-stories-playing-320" transform="translate(-140.000000, -450.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="music-player-pause-lines" transform="translate(140.000000, 450.000000)">
+                <path d="M12.9717374,0 L3.70615152,0 C1.65925758,0 0,1.65095279 0,3.68714163 L0,44.2467296 C0,46.2831245 1.65925758,47.9338712 3.70615152,47.9338712 L12.9717374,47.9338712 C15.0186313,47.9338712 16.6778889,46.2831245 16.6778889,44.2467296 L16.6778889,3.68714163 C16.6776818,1.65095279 15.0184242,0 12.9717374,0 Z M37.0621364,0 L27.7965505,0 C25.7494495,0 24.0901919,1.65095279 24.0901919,3.68714163 L24.0901919,44.2467296 C24.0901919,46.2831245 25.7494495,47.9338712 27.7965505,47.9338712 L37.0621364,47.9338712 C39.1090303,47.9338712 40.7682879,46.2831245 40.7682879,44.2467296 L40.7682879,3.68714163 C40.7684949,1.65095279 39.1090303,0 37.0621364,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+    <defs>
+        <linearGradient id="nwl11d309a" x1="63.998%" x2="32.896%" y1="17.479%" y2="89.719%">
+            <stop offset="0%" stop-color="#3F873F"/>
+            <stop offset="33%" stop-color="#3F8B3D"/>
+            <stop offset="64%" stop-color="#3E9637"/>
+            <stop offset="93%" stop-color="#3DA92E"/>
+            <stop offset="100%" stop-color="#3DAE2B"/>
+        </linearGradient>
+        <linearGradient id="zykncqjpxb" x1="45.021%" x2="130.442%" y1="55.218%" y2="-18.297%">
+            <stop offset="14%" stop-color="#3F873F"/>
+            <stop offset="40%" stop-color="#529F44"/>
+            <stop offset="71%" stop-color="#63B649"/>
+            <stop offset="91%" stop-color="#6ABF4B"/>
+        </linearGradient>
+        <linearGradient id="mh44gobx1c" x1="-4.508%" x2="101.568%" y1="50.016%" y2="50.016%">
+            <stop offset="9%" stop-color="#6ABF4B"/>
+            <stop offset="29%" stop-color="#63B649"/>
+            <stop offset="60%" stop-color="#529F44"/>
+            <stop offset="86%" stop-color="#3F873F"/>
+        </linearGradient>
+        <linearGradient id="clmqxjs3md" x1="-103.691%" x2="100.587%" y1="50.034%" y2="50.034%">
+            <stop offset="9%" stop-color="#6ABF4B"/>
+            <stop offset="29%" stop-color="#63B649"/>
+            <stop offset="60%" stop-color="#529F44"/>
+            <stop offset="86%" stop-color="#3F873F"/>
+        </linearGradient>
+        <linearGradient id="cjggfk5vje" x1="130.342%" x2="4.362%" y1="-51.554%" y2="108.831%">
+            <stop offset="0%" stop-color="#3F873F"/>
+            <stop offset="33%" stop-color="#3F8B3D"/>
+            <stop offset="64%" stop-color="#3E9637"/>
+            <stop offset="93%" stop-color="#3DA92E"/>
+            <stop offset="100%" stop-color="#3DAE2B"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path fill="url(#nwl11d309a)" d="M22.326.717c-.705-.41-1.576-.41-2.28 0L1.291 11.547C.589 11.95.156 12.7.156 13.51v21.68c0 .81.434 1.557 1.136 1.96l18.753 10.842c.702.405 1.566.405 2.268 0l18.78-10.842c.7-.405 1.13-1.152 1.132-1.96V13.51c0-.811-.434-1.56-1.136-1.965L22.326.717z" transform="translate(-431 -274) translate(440 276)"/>
+                <g>
+                    <path d="M20.019.717L1.212 11.547C.492 11.943.032 12.688 0 13.51v21.68c.012.535.22 1.047.584 1.439L21.716.48C21.14.34 20.533.424 20.019.717zM21.827 48.212c.184-.05.36-.124.526-.219l18.785-10.842c.71-.4 1.16-1.144 1.18-1.96V13.51c-.01-.596-.257-1.163-.686-1.577L21.827 48.212z" transform="translate(-431 -274) translate(440 276)"/>
+                    <path fill="url(#zykncqjpxb)" fill-rule="nonzero" d="M41.129 11.546L22.309.717c-.186-.106-.385-.186-.593-.236L.584 36.63c.182.205.395.381.632.52l18.856 10.843c.531.303 1.162.382 1.75.219l19.81-36.278c-.152-.149-.32-.28-.503-.388z" transform="translate(-431 -274) translate(440 276)"/>
+                    <path d="M42.318 35.19V13.51c-.023-.818-.474-1.564-1.19-1.964L22.309.717c-.214-.129-.45-.22-.695-.272l20.634 35.263c.046-.169.07-.342.071-.517zM1.212 11.546C.492 11.944.032 12.69 0 13.511v21.68c.035.82.496 1.564 1.216 1.96l18.856 10.842c.439.25.948.35 1.448.28L1.336 11.484l-.124.063z" transform="translate(-431 -274) translate(440 276)"/>
+                    <path fill="url(#mh44gobx1c)" fill-rule="nonzero" d="M41.138 37.15c.547-.313.946-.833 1.109-1.442L21.613.445c-.544-.11-1.11-.02-1.594.254L1.336 11.484l20.193 36.79c.291-.04.573-.135.828-.28l18.78-10.843z" transform="translate(-431 -274) translate(440 276)"/>
+                    <path fill="url(#clmqxjs3md)" fill-rule="nonzero" d="M41.138 37.15l-18.79 10.843c-.255.146-.537.24-.828.28l.374.682 20.87-12.08v-.285l-.517-.891c-.16.613-.56 1.136-1.11 1.452z" transform="translate(-431 -274) translate(440 276)"/>
+                    <path fill="url(#cjggfk5vje)" fill-rule="nonzero" d="M41.138 37.15l-18.79 10.843c-.255.146-.537.24-.828.28l.374.682 20.87-12.08v-.285l-.517-.891c-.16.613-.56 1.136-1.11 1.452z" transform="translate(-431 -274) translate(440 276)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

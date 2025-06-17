@@ -1,0 +1,66 @@
+.discover-games-list
+  margin-top 16px
+  margin-bottom 16px
+
+  @media $bp.phone
+    width 100%
+
+  .load-more
+    display flex
+    flex-direction column
+    align-items center
+
+    .heading:first-child
+      margin-top 0
+
+  @media $bp.phone
+    &--home
+      margin-top -50px
+
+.discover-games-list__controls
+  display flex
+  flex 0 1 auto
+  align-items stretch
+  margin-bottom 24px
+
+  @media $bp.phone
+    margin-bottom 16px
+    display block
+
+.discover-games-list__controls__left
+  flex 1 1 auto
+
+.discover-games-list__controls__right
+  flex 0 1 auto
+  display flex
+  align-items center
+  justify-content flex-end
+
+  @media $bp.phone
+    margin-left 0
+
+.discover__content__game-card-large
+  & + &
+    margin-top 24px
+
+.discover__content__game-card-medium
+  @media $bp.phone
+    width 100%
+
+  & + &
+    margin-top 10px
+
+.mode-select.discover-games-list__controls__right__mode-select
+  flex 0 1 auto
+
+  @media $bp.desktop
+    margin-left 16px
+
+.discover-games-list__heading
+  text-align left
+  width 100%
+  font-weight bold
+  margin 24px 0 24px
+
+  @media $bp.phone
+    font-size 32px

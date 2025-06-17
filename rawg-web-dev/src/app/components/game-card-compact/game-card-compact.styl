@@ -1,0 +1,199 @@
+.game-card-compact
+  display flex
+  position relative
+  width 100%
+  box-sizing border-box
+
+  @media $bp.desktop
+    &:not(:hover):not(.game-card-compact_always-show-btns)
+      .game-card-button_wishlist,
+      .game-card-button_more
+        opacity 0
+
+  @media $bp.phone
+    max-width calc(100vw - 20px)
+
+  .game-card-buttons
+    position relative
+    flex-wrap wrap
+
+    .game-card-button
+      margin-bottom 4px
+
+
+.game-card-compact__media
+  $remove-link-style()
+  position relative
+  flex-shrink 0
+  transition opacity .3s
+
+  &:hover
+    opacity .4
+    + .game-card-compact__info
+      .game-card-compact__icon svg
+        opacity .4
+
+  .game-card-compact_large &
+  .game-card-compact_largest &
+    width 80px
+    height 104px
+    margin-right 16px
+
+  .game-card-compact_medium &
+    width 56px
+    height 72px
+    margin-right 16px
+
+  .game-card-compact_small &
+    width 36px
+    height 47px
+    margin-right 8px
+
+.game-card-compact__cover
+  display block
+  width 100%
+  height 100%
+  background-color rgba(white, 0.05)
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  border-radius 6px
+  cursor pointer
+
+.game-card-compact__rating
+  position absolute
+  bottom -2px
+  right -4px
+  width 24px
+  height 24px
+
+  .game-card-compact_medium &
+    bottom -3px
+    right -8px
+
+  &.rating_exceptional
+    width 32px
+    height 32px
+    bottom -4px
+    right -12px
+
+.game-card-compact__info
+  flex 1 1 auto
+
+  .game-card-compact_large &,
+  .game-card-compact_largest &,
+  .game-card-compact_medium &
+    padding-top 2px
+
+.game-card-compact__heading
+  cursor pointer
+  transition all 0.3s
+  color white
+  display block
+
+  &_with-link
+    $remove-link-style()
+
+  &:hover
+    color rgba(white, 0.4)
+    transition all 0.3s
+
+    .game-card-compact__icon svg
+      opacity 0.4
+
+  .game-card-compact_small &
+    $font14-small()
+    margin 2px 0
+    font-weight bold
+
+  .game-card-compact_medium &
+    $heading5()
+    margin-bottom 4px
+    font-weight bold
+
+  .game-card-compact_large &
+    $heading5()
+    margin-bottom 4px
+    font-weight bold
+
+  .game-card-compact_largest &
+    $heading4()
+    margin-bottom 8px
+    font-weight bold
+
+.game-card-compact__meta
+  .game-card-compact_large &
+    margin-bottom 4px
+
+  .game-card-compact_largest &
+    margin-bottom 2px
+
+.game-card-compact__date,
+.game-card-compact__chart
+  $font14-small()
+  margin-top 30px
+  margin-right 12px
+  color rgba(white, 0.4)
+
+.game-card-compact__date
+  min-width 48px
+  text-align right
+
+.game-card-compact__chart
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content flex-end
+  width 16px
+  min-width 16px
+
+.game-card-compact__icon
+  position absolute
+  left -36px
+  top 0
+  cursor pointer
+
+  svg
+    transition all 0.3s
+
+.game-card-compact__right
+  align-self center
+  margin-left 16px
+  flex 0 0 auto
+
+.rating.game-card-compact__heading__rating
+  display inline
+  width 30px
+  height 22px
+  padding-right 40px
+
+  &::before
+    content "\00a0";
+
+  .rating__icon
+    width 30px
+    height 22px
+    position absolute
+    left 4px
+    top 50%
+    transform translateY(-50%)
+    margin-top 1px
+    @media $bp.phone
+      margin-top 0
+
+    &.rating__icon_exceptional
+      margin-left 5px
+      width 30px
+      height 30px
+      @media $bp.phone
+        margin-top -2px
+
+    &.rating__icon_meh
+      margin-top 4px
+      @media $bp.phone
+        margin-top 2px
+
+    &.rating__icon_skip
+      margin-top 5px
+      @media $bp.phone
+        margin-top 2px

@@ -1,0 +1,101 @@
+<mjml>
+
+
+  <mj-head>
+    <mj-style inline="inline">
+      .code { color: inherit; font-weight: bold } .link-gray { color: #676767 }
+    </mj-style>
+    <mj-style inline="inline">
+      .offer-image { // border: 1px solid red; height: 95px !important; } .offer-name div { font-size: 44px !important; line-height: 28px !important; } .offer-category div { font-size: 12px !important; letter-spacing: 1.7px !important; padding-bottom: 16px
+      !important; } @media only screen and (max-width: 480px){ .offer-category div { padding-top: 10px !important; padding-bottom: 0px !important; } .offer-name div { font-size: 20px !important; line-height: 44px !important; } }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="blue" color="blue" />
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif" padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+
+  <mj-body background-color="#151515">
+
+    <mj-section padding-top="55px" padding="10px">
+      <mj-column width="100%">
+        <mj-text color="white" font-size="18px" font-weight="bold" letter-spacing="5px">
+          RAWG
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text color="white" font-size="44px" line-height="118%" padding-top="35px" padding-bottom="16px">
+          Get the offer
+        </mj-text>
+        <mj-text color="white" font-size="24px" line-height="117%">
+          Imagine all your games in one unified profile: games you played long time ago, games you are playing now or waiting for.
+        </mj-text>
+        <mj-divider border-width="1px" border-color="#3B3B3B" padding-top="31px" padding-bottom="16px" />
+      </mj-column>
+    </mj-section>
+
+
+    <mj-section padding="10px">
+      <mj-column width="95px">
+        <mj-image css-class="offer-image" src="" alt="" width="95px" height="95px" />
+      </mj-column>
+      <mj-column padding-left="16px" width="80%">
+        <mj-text align="left" color="white" css-class="offer-category">
+          ENTERTIMENT
+        </mj-text>
+        <mj-text css-class="offer-name" color="white">
+          Wireless headphones
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <mj-section padding-top="24px">
+      <mj-column background-color="#55a229" padding="24px 32px" border-radius="6px">
+        <mj-table>
+          <tr>
+            <td width="6%">
+              <img src="assets/checked.png" />
+            </td>
+            <td width="94%" style="color: white; font-size: 24px; padding-left: 10px">
+              Owned
+            </td>
+          </tr>
+        </mj-table>
+        <mj-text color="white" font-size="14px" line-height="129%" padding-top="8px">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        </mj-text>
+        <mj-button background-color="white" color="#151515" inner-padding="14px 32px" font-size="18px" border-radius="4px" align="left" padding-top="24px" padding-bottom="16px" href="https://rawg.io">
+          Get at partner store
+        </mj-button>
+        <mj-text color="white" font-size="18px">
+          Code:
+          <span class="code">evjsjskd34ndksn327</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <mj-section>
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#3B3B3B" padding-top="50px" padding-bottom="30px" />
+      </mj-column>
+    </mj-section>
+
+
+    <mj-section>
+      <mj-column width="30%">
+        <mj-text color="white">
+          <a href="/" alt="Unsubscribe" class="link-gray">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text align="right" color="#676767">
+          2017 © RAWG, Behind The Games
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

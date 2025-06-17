@@ -1,0 +1,68 @@
+@import '../../stories.vars.styl'
+
+.stories__progresses-wrap
+  position absolute
+  left 0
+  width 100%
+  z-index 5
+  transition top .3s
+
+  @media $bp.desktop
+    top 0px
+    &.active
+      top 25px
+
+  @media $bp.desktop
+    top -40px
+    &.active
+      top 30px
+
+  @media $bp.phone
+    position relative
+    transition opacity .3s, top .3s
+    opacity 0
+    top 16px
+    .stories__content.non-first-play &
+      opacity 1
+      pointer-events none
+
+.stories__progresses
+  margin 0 auto 5px
+  display flex
+  max-width $header-width-desktop
+
+  @media $bp.phone
+    padding 0 16px
+
+  @media (min-width: $page-width-desktop)
+    padding 0 32px
+    .embedded-stories &
+      padding 0 16px
+
+.stories__progress-wrap
+  cursor pointer
+  flex 1 1 auto
+
+  @media $bp.desktop
+    padding 5px 0
+
+  & + &
+    margin-left 21px
+
+    @media $bp.phone
+      margin-left 5px
+
+.stories__progress
+  height 4px
+  border-radius 3.8px
+  background-color alpha(white, 40%)
+
+  transition background-color .3s
+  .stories__progress-wrap:hover &
+    background-color alpha(white, 55%)
+
+  .stories__progress-fill
+    height 4px
+    background-color white
+    border-radius 3.8px
+    transition width .3s

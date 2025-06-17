@@ -1,0 +1,57 @@
+.game__head-meta
+  $font12-small()
+  display flex
+  flex-wrap wrap
+  align-items center
+  text-transform uppercase
+  color $color-white
+  letter-spacing 2px
+
+  @media $bp.desktop
+    overflow hidden
+
+  @media $bp.phone
+    //justify-content center
+    //text-align center
+
+  .theme_light &
+    color black
+
+.game__head-meta > div
+  flex-shrink 0
+  margin-bottom 12px
+
+  &:not(:last-child)
+    margin-right 15px
+
+.game__meta-date
+  $font12-small()
+  padding 2px 7.5px 2px 7.5px
+  box-sizing border-box
+  color $color-black
+  border-radius 4px
+  background-color $color-white
+
+  .theme_light &
+    color black
+    border 1px solid #979797
+
+.game__meta-playtime
+  display flex
+  align-items center
+  @media $bp.desktop
+    position relative
+    top 2px
+
+.game__meta-playtime-icon
+  margin-right 8px
+  line-height 0
+
+.game__meta__right-elements
+  flex 1 0 auto
+  display flex
+  justify-content flex-end
+
+  @media $bp.phone
+    justify-content center
+    width 100%

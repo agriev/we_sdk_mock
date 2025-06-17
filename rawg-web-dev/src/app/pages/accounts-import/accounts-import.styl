@@ -1,0 +1,59 @@
+.accounts-import
+  position relative
+  width 966px
+  box-sizing border-box
+  margin 0 auto
+  padding-top 98px
+  padding-bottom 60px
+  @media $bp.phone
+    width 100%
+    padding 0 20px
+    padding-top 79px
+    padding-bottom 34px
+
+.accounts-import__title-wrap
+  @media $bp.phone
+    text-align center
+
+.accounts-import__title-connect
+  font-size 44px
+  color #eda61b
+  line-height 1.09
+  margin-right .25em
+  @media $bp.phone
+    font-size 24px
+
+.accounts-import__title
+  line-height 1.09
+  font-size 44px
+  @media $bp.phone
+    font-size 24px
+
+.accounts-import__text
+  width 685px
+  font-size 14px
+  line-height 1.43
+  letter-spacing 0.1px
+  margin-top 16px
+  margin-bottom 48px
+  @media $bp.phone
+    width auto
+    text-align center
+    margin-bottom 24px
+
+.accounts-import__video
+  & + &
+    margin-top 24px
+
+.accounts-import__close
+  position absolute
+  top 80px
+  right 0
+  width 50px
+  height 50px
+  background url('~assets/icons/close.svg?external') center / 18px no-repeat
+  background-color alpha($color-white, 0.1)
+  border-radius 50%
+  @media $bp.phone
+    top 21px
+    right 19px

@@ -1,0 +1,146 @@
+--extra-index-url=https://deploy:tmoepn@pypi.kanobu.ru/
+
+###########
+# general #
+###########
+aiodns
+aiohttp>3.6.2
+authlib
+beautifulsoup4
+boto3
+-e git+https://github.com/Tusky/cache-dependencies#egg=cache-dependencies
+cchardet
+celery
+celery-haystack
+colorthief
+coverage
+detectlanguage
+diff-match-patch
+django<3
+django-admin-autocomplete-filter
+django-admin-rangefilter
+django-admin-sortable2
+django-allauth
+django-autoslug
+django-bulk-update
+django-cacheback[celery]
+django-clear-cache
+django-constance[database]
+django-cors-headers
+django-crispy-forms
+django-filter
+django-haystack
+django-haystackbrowser
+-e git+https://github.com/cedadev/django-haystack-elasticsearch@c44097d88909d0cb0566615dd9014ff89bbcb8a8#egg=django-haystack-elasticsearch
+django-haystack-panel
+django-modeladmin-reorder
+django-modeltranslation
+django-multiupload
+django-ordered-model
+django-rest-auth
+django-rest-swagger
+django-reversion
+-e git+https://github.com/behindthegames/django-reversion-compare@improve-get-deleted#egg=django-reversion-compare
+django-select2-forms
+django-static-sitemaps
+django-storages
+django-transitions
+djangorestframework
+drf-haystack
+drf-nested-routers
+drf-yasg
+elasticsearch<7.0.0
+-e git+https://github.com/mobolic/facebook-sdk#egg=facebook-sdk
+feedparser
+gender-guesser
+-e git+https://github.com/mohammed-fazeel/gender-predictor#egg=gender_predictor
+google-api-python-client
+google-auth-oauthlib
+googletrans
+-e git+https://github.com/Sinkler/langdetect@esperanto#egg=langdetect
+importlib-metadata==4.13.0
+pytube
+lxml
+markdown
+mwparserfromhell
+nltk
+packaging  # todo delete after https://github.com/axnsan12/drf-yasg/issues/412
+parse-accept-language
+pillow
+pottery
+psycopg2-binary
+pycountry
+python-dateutil
+python3-openid
+pylibmc
+pymongo
+pusher
+# pytube todo use after fix https://github.com/pytube/pytube/pull/1680 instead knbpytube
+knbpsnawp  # todo use new version after upgrade python https://github.com/isFakeAccount/psnawp
+redis[hiredis]
+requests-oauthlib
+requests
+-e git+https://github.com/kennethreitz/requests-html#egg=requests-html  # todo update after release
+roman
+scrapy
+sentry-scrapy
+stripe
+transliterate
+tqdm
+tweepy
+twitchAPI
+unidecode
+wptools
+xbox-webapi
+
+##########
+# kanobu #
+##########
+knbauth==0.7.1
+papi==0.3.44
+
+###################
+# recommendations #
+###################
+implicit
+numpy
+scipy
+
+##############
+# dry-python #
+##############
+#git+https://github.com/proofit404/dependencies@e077b1cbd4dafd8955f72a06344c3ef709017ef0#egg=dependencies
+dependencies==8.0.0rc3
+git+https://github.com/dry-python/returns@ac9b635b7cd3fb6afbe6963b4edd50b07ff98098#egg=returns
+git+https://github.com/proofit404/stories@172e513ec19fd7c1c6132e01595c6e9a0c5022b8#egg=stories
+attrs
+
+#####################
+# debug and testing #
+#####################
+# django-cprofile-middleware
+django-debug-toolbar
+# django-debug-toolbar-line-profiler
+# django-debug-toolbar-template-timings
+django-eml-email-backend
+django-extensions
+ipython
+isort
+flake8
+fabric3
+pip-tools
+pyinstrument
+responses
+# snakeviz
+tblib
+# werkzeug
+# -e git+https://github.com/davidhalter/parso#egg=parso  # todo remove after https://github.com/davidhalter/parso/issues/75
+
+##############
+# production #
+##############
+flower
+newrelic
+sentry-sdk
+uwsgi==2.0.17.1  # todo warning! https://rawg.slack.com/archives/G36RYMP9D/p1550856421009400
+# uwsgitop

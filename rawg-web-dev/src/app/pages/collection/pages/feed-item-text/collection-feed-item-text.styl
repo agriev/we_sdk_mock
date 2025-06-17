@@ -1,0 +1,188 @@
+.collection-feed-item-text
+  @media $bp.phone
+    padding 0 10px
+
+.collection-feed-item-text-form
+  position relative
+  z-index 1
+
+  padding-bottom 50px
+
+  @media $bp.phone
+    padding 0 20px 50px
+
+.collection-feed-item-text-form__title
+  margin-bottom 40px
+  font-size 50px
+  color $color-orange
+
+  @media $bp.phone
+    font-size 30px
+    text-align center
+
+.collection-feed-item-text-form__title-game
+  color $color-white
+
+.collection-feed-item-text-form__field-textarea
+  position relative
+  margin-bottom 30px
+
+  @media $bp.desktop
+    width 900px
+
+.collection-feed-item-text-form__textarea
+  display block
+  width 100%
+  min-width 100%
+  max-width 100%
+  height 200px
+  padding 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  background alpha($color-black, 0.3)
+  color $color-white
+  font-family inherit
+  font-size 14px
+  line-height 1.4
+
+.collection-feed-item-text-form__controls
+  display flex
+  align-items center
+  justify-content space-between
+  padding 0
+  max-width 900px
+  box-sizing border-box
+
+  @media $bp.phone
+    flex-direction column
+    padding 16px 5px 0
+
+.collection-feed-item-text-form__publishing
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin-top 24px
+    flex-direction column
+    padding-bottom 30px
+
+.collection-feed-item-text-form__publishing > div
+  &:not(:last-child)
+    margin-right 40px
+
+    @media $bp.phone
+      margin-right 0
+      margin-bottom 15px
+
+.collection-feed-item-text-form__publish-button
+  display flex
+  align-items center
+  color #6f6f6f
+  cursor pointer
+  transition color 0.3s
+
+.collection-feed-item-text-form__publish-icon
+  position relative
+
+  display flex
+  justify-content center
+  align-items center
+  width 24px
+  height 24px
+  border-radius 50%
+
+  background-color #6f6f6f
+  line-height 0
+  transition background-color 0.05s
+
+  &::before
+    position absolute
+    left 0
+    top 4px
+    z-index -1
+
+    display block
+    height 16px
+    width 40px
+    border-radius 8px
+
+    background-color alpha($color-white, 0.1)
+
+    content ''
+
+  svg
+    fill alpha($color-white, 0.5)
+
+.collection-feed-item-text-form__publish-button > span
+  padding-left 20px
+  font-size 14px
+
+.collection-feed-item-text-form__publish-button:hover
+.collection-feed-item-text-form__publish-button_active
+  color $color-white
+
+.collection-feed-item-text-form__publish-button_active
+  .collection-feed-item-text-form__publish-icon
+    margin-left 15px
+
+    &::before
+      left -15px
+
+  & > span
+    padding-left 5px
+
+.collection-feed-item-text-form__publish-button_active .collection-feed-item-text-form__publish-icon_facebook
+  background-color $facebook-color
+
+.collection-feed-item-text-form__publish-button_active .collection-feed-item-text-form__publish-icon_twitter
+  background-color $twitter-color
+
+.collection-feed-item-text-form__button
+  position relative
+
+  display flex
+  justify-content center
+  align-items center
+  width auto
+  height auto
+
+  button
+    width auto
+    min-width 150px
+
+  @media $bp.phone
+    position relative
+
+.collection-feed-item-text-form__field-title
+  margin-bottom 16px
+  font-size 20px
+  color alpha($color-white, 0.4)
+
+.collection-feed-item-text-form__field-input
+  margin-bottom 32px
+
+.collection-feed-item-text-form__input
+  width 100%
+  height 50px
+  padding 0 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  background alpha($color-black, 0.3)
+  color $color-white
+  font-family inherit
+  font-size 14px
+
+  &:-webkit-autofill
+    -webkit-box-shadow 0 0 0 1000px alpha($color-black, 0.3) inset
+    -webkit-text-fill-color $color-white
+
+  &:invalid
+    box-shadow none
+
+  &:disabled
+    opacity 0.4
+    transition opacity 0.2s

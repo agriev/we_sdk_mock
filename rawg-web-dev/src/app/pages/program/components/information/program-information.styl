@@ -1,0 +1,45 @@
+.program__information
+  //
+
+.heading.program__information__heading
+  margin-bottom 0
+
+  @media $bp.desktop
+    $font24-large()
+    font-weight bold
+    margin-top 12px
+
+  @media $bp.phone
+    $font18-large()
+    font-weight bold
+    margin-top 0
+
+.program__information__items
+  display flex
+  flex-direction column
+  flex-wrap wrap
+
+  @media $bp.desktop
+    $font16-medium()
+    height 155px
+
+  @media $bp.phone
+    $font14-small()
+
+.program__information__item
+  display flex
+
+  @media $bp.desktop
+    margin-top 16px
+    width 50%
+
+  @media $bp.phone
+    margin-top 8px
+    flex-wrap wrap
+
+.program__information__item__name
+  font-weight bold
+  margin-right .5em
+
+  @media $bp.phone
+    flex 0 0 auto

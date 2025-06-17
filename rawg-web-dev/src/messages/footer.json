@@ -1,0 +1,19 @@
+{
+  "ru": {
+    "about": "О нас",
+    "privacy": "Лицензионное соглашение",
+    "terms": "Условия",
+    "feedback": "Обратная связь",
+    "text": "Данные из Steam, PSN, Xbox Live, App Store, Google Play, GOG, Википедии, YouTube, Twitch, Reddit и Imgur.",
+    "copyright": "1998-{date} © AG.ru"
+  },
+
+  "en": {
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "feedback": "Feedback",
+    "text": "Data from Steam, PSN, Xbox Live, App Store, Google Play, GOG, Wikipedia, YouTube, Twitch, Reddit and Imgur.",
+    "copyright": "1998-{date} © AG.ru"
+  }
+}

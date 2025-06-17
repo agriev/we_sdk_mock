@@ -1,0 +1,75 @@
+{% extends 'mailer/template_ru.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Привет!
+    </div>
+
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+       Спасибо, что вы присоединились к AG.ru, {{ user }}! Нажмите на ссылку ниже, чтобы подтвердить свою электронную почту:
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <a style="color: #f1951b !important; text-decoration: none !important;" href="{{ activate_url }}">Подтвердить почту</a>.
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        AG.ru — это крупнейшая мультиплатформенная база игр. Не знаете, что делать дальше? Вот с чего можно начать:
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <b>Начните свою библиотеку</b>
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <ul>
+            <li>
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/settings/gaming-profiles?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">Подключите свои игровые профили</a>,
+                и AG.ru будет импортировать игры из Steam, GOG, Xbox Live и PSN автоматически.
+            </li>
+            <li>
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/games?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">Дополните свою библиотеку</a>
+                играми с других платформ: смартфон, консоли Nintendo или ретро-платформы.
+            </li>
+            <li>
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/rateyourgames?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">Оцените игры</a> быстрее Соника.
+            </li>
+            <li>
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/collections/create?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">Создайте коллекцию</a>!
+                Вдохновитесь
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/collections/space-exploration-games?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">играми про освоение космоса</a>
+                и
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/collections/6-awesome-turn-based-indie-strategies?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">этим списком отличных пошаговых инди-игр</a>.
+            </li>
+            <li>
+                <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/?utm_source=welcome-letter&utm_medium=email&utm_campaign=verify-email">Смотрите и находите игры</a>
+                на главной странице. Понравилось что-то? Добавьте в вишлист, чтобы не забыть.
+            </li>
+        </ul>
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <b>Помогите AG.ru</b>
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <ul>
+            <li>
+                Подпишитесь на нашу <a style="color: #f1951b !important; text-decoration: none !important;" href="https://vk.com/absolute_games">группу в ВК</a>, чтобы узнавать последние новости, составлять коллекции вместе с сообществом и читать наши несмешные шутки.
+            </li>
+        </ul>
+    </div>
+
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Ура!
+    </div>
+{% endblock %}

@@ -1,0 +1,229 @@
+.platforms-stats
+  margin-bottom 48px
+
+  @media $bp.phone
+    margin-bottom 24px
+
+.platforms-stats__no-link
+  $remove-link-style()
+
+.platforms-stats__title
+  margin-bottom 24px
+  font-size 36px
+  font-weight 500
+
+  @media $bp.phone
+    margin-bottom 16px
+    padding 0 10px
+    font-size 20px
+    text-align center
+
+.platforms-stats__platforms
+  margin-bottom 6px
+  display flex
+
+  @media $bp.phone
+    margin-bottom 8px
+    padding 0 10px
+
+.platforms-stats__platforms-small
+  margin-bottom 10px
+
+.platforms-stats__platforms-meta
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    padding 0 10px
+
+.platforms-stats__platform
+  height 80px
+  transition 0.3s
+
+  &:first-child
+    border-top-left-radius 6px
+    border-bottom-left-radius 6px
+
+  &:last-child
+    border-top-right-radius 6px
+    border-bottom-right-radius 6px
+
+  @media $bp.phone
+    height 50px
+
+.platforms-stats__platform-link
+  &:hover
+    opacity 0.6
+    transition 0.3s
+
+.platforms-stats__platform-small
+  height 50px
+  overflow hidden
+  svg
+    height 40px
+    margin-left -23px
+
+.platforms-stats__platform-rows
+  height 50px
+  overflow hidden
+  svg
+    height 40px
+    margin-left -23px
+
+
+.platforms-stats__platform-meta
+  display flex
+  align-items center
+  flex-shrink 0
+  margin-top 8px
+
+  @media $bp.desktop
+    &:not(:last-child)
+      margin-right 16px
+
+  @media $bp.phone
+    width 50%
+    margin-top 0
+
+.platforms-stats__platform-icon
+  display flex
+  height 100%
+  align-items flex-end
+
+  &_row
+    & > svg
+      width 28px
+      height 28px
+
+  &_row&_mac path
+    fill: #666
+
+.platforms-stats__platform-meta-label
+  margin-right 5px
+  display inline-block
+  width 10px
+  height 10px
+  border-radius 50%
+
+.platforms-stats__platform-meta-name
+  $font14-small()
+  margin-right 5px
+  font-weight bold
+
+.platforms-stats__platform-meta-count
+  $font14-small()
+  color alpha($color-white, 0.4)
+  margin-left 4px
+
+.platforms-stats__platform_web
+.platforms-stats__platform-meta-label_web
+  background-image linear-gradient(to bottom, #2af598, #009efd)
+
+.platforms-stats__platform_pc
+.platforms-stats__platform-meta-label_pc
+  background-image linear-gradient(to bottom, #649bff, #4354ba)
+
+.platforms-stats__platform_playstation
+.platforms-stats__platform-meta-label_playstation
+  background-image linear-gradient(to bottom, #434343, #000)
+
+.platforms-stats__platform_mac
+.platforms-stats__platform-meta-label_mac
+  background-image linear-gradient(to bottom, #e9eff5, #a7a7a7)
+
+.platforms-stats__platform_xbox
+.platforms-stats__platform-meta-label_xbox
+  background-image linear-gradient(to bottom, #b4ed50, #429321)
+
+.platforms-stats__platform_ios
+.platforms-stats__platform-meta-label_ios
+  background-image linear-gradient(to bottom, #10b7d9, #0072f6)
+
+.platforms-stats__platform_android
+.platforms-stats__platform-meta-label_android
+  background-image linear-gradient(to top, #708b02, #aac051)
+
+.platforms-stats__platform_nintendo
+.platforms-stats__platform-meta-label_nintendo
+  background-image linear-gradient(to bottom, #ff5763, #f11a2a)
+
+.platforms-stats__platform_linux
+.platforms-stats__platform-meta-label_linux
+  background-image linear-gradient(to bottom, #ffe412, #e9810f)
+
+.platforms-stats__platform_atari
+.platforms-stats__platform-meta-label_atari
+  background-image linear-gradient(to bottom, #db3d38, #0e3ebe)
+
+.platforms-stats__platform_commodore-amiga
+.platforms-stats__platform-meta-label_commodore-amiga
+  background-image linear-gradient(to bottom, #8dea1a, #fd1627)
+
+.platforms-stats__platform_sega
+.platforms-stats__platform-meta-label_sega
+  background-image linear-gradient(to bottom, #1ad96b, #0d61a6)
+
+.platforms-stats__platform_3do
+.platforms-stats__platform-meta-label_3do
+  background-image linear-gradient(to bottom, #ffe51c 0%, #fe700e 50%, #fe0000 100%)
+
+.platforms-stats__platform_inside_3do
+  .platforms-stats__platform-icon
+    position relative
+    left 11px
+
+.platforms-stats__empty-text
+  padding 0 10px
+
+.commodore-amiga.platforms-stats__empty-text
+  max-width 50%
+  box-sizing border-box
+  font-size 14px
+
+  @media $bp.phone
+    max-width 100%
+    padding 0 10px
+    font-size 12px
+
+.platforms-stats__row
+  .platforms-stats__platforms
+    flex-direction column
+    .platforms-stats__platform
+      height 50px
+      border-radius 6px
+      position relative
+      display flex
+      align-items center
+      & + .platforms-stats__platform
+        margin-top 8px
+
+    .platforms-stats__platforms-meta
+      display none
+
+  .platforms-stats__platform-icon
+    position absolute
+    bottom 12px
+    left 12px
+    width 28px
+    display flex
+    justify-content center
+
+  .platforms-stats__platform-meta
+    flex-direction column
+    align-items left
+    margin-left 61px
+
+  .platforms-stats__platform-meta-name
+    min-width 100px
+
+  .platforms-stats__platform-meta-count
+    $font12-small()
+    margin-left 4px
+    padding-top 3px
+    min-width 100px
+
+  .platforms-stats__platform_inside_mac
+    .platforms-stats__platform-meta-name
+      color #010101
+    .platforms-stats__platform-meta-count
+      color rgba(0,0,0,0.4);

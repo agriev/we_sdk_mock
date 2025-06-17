@@ -1,0 +1,105 @@
+.footer
+  background-color #222
+  box-shadow inset 0 0 0 1px rgba(white, 0.05)
+
+  color rgba(#feffff, 0.2)
+
+  margin 0 12px 88px 12px
+  padding 20px 16px
+
+  font-size 14px
+  line-height 20px
+
+  border-radius 12px
+  box-sizing border-box
+
+  @media $bp.desktop
+    padding 24px 32px
+    margin 0 0 8px 0
+
+    width calc(100% - 32px)
+
+  &__top
+    display flex
+    flex-direction column
+
+    box-sizing border-box
+    border-bottom 1px solid rgba(#feffff, 0.05)
+
+    @media $bp.desktop
+      flex-direction row
+      align-items flex-start
+
+      border-bottom none
+
+  &__nav
+    display flex
+    flex-direction column
+
+    box-sizing border-box
+    flex 1
+
+    @media $bp.desktop
+      flex-direction row
+      padding-right 32px
+
+  &__link
+    color rgba(#feffff, 0.6)
+    transition color 0.2s
+
+    background none
+
+    &:hover
+      color white
+
+    & + &
+      margin-top 8px
+
+    @media $bp.desktop
+      & + &
+        margin-top 0
+        margin-left 24px
+
+  &__copyright
+    box-sizing border-box
+    padding 20px 0
+
+    @media $bp.desktop
+      padding 0
+      margin-top 9px
+
+  &__text
+    margin-top 20px
+
+    @media $bp.desktop
+      margin-top 16px
+
+  &__age
+    display flex
+    align-items center
+    justify-content center
+
+    border-radius 100%
+    margin-top 20px
+
+    width 40px
+    height 40px
+
+    background-color rgba(#feffff, 0.05)
+    color white
+
+    font-size 14px
+    line-height 24px
+
+    @media $bp.desktop
+      display none
+
+      margin-top 0
+      margin-left 40px
+
+  &__top &__age
+    display none
+
+  @media $bp.desktop
+    &__top &__age
+      display flex

@@ -1,0 +1,132 @@
+[
+  {
+    "model": "games.store",
+    "pk": 1,
+    "fields": {
+      "order": 0,
+      "slug": "steam",
+      "name": "Steam",
+      "domain": "store.steampowered.com",
+      "platforms": [
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "slug": "xbox-store",
+      "name": "Xbox",
+      "domain": "microsoft.com",
+      "platforms": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 3,
+    "fields": {
+      "order": 1,
+      "slug": "playstation-store",
+      "name": "PlayStation",
+      "domain": "store.playstation.com",
+      "platforms": [
+        18,
+        16,
+        19,
+        17
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 4,
+    "fields": {
+      "order": 3,
+      "slug": "apple-appstore",
+      "name": "App Store",
+      "domain": "apps.apple.com",
+      "platforms": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 5,
+    "fields": {
+      "order": 4,
+      "slug": "gog",
+      "name": "GOG",
+      "domain": "gog.com",
+      "platforms": [
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 6,
+    "fields": {
+      "order": 5,
+      "slug": "nintendo",
+      "name": "Nintendo",
+      "domain": "nintendo.com",
+      "platforms": [
+        7,
+        8,
+        9,
+        13,
+        10,
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 7,
+    "fields": {
+      "order": 6,
+      "slug": "xbox360",
+      "name": "Xbox 360",
+      "domain": "marketplace.xbox.com",
+      "platforms": [
+        14
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 8,
+    "fields": {
+      "order": 7,
+      "slug": "google-play",
+      "name": "Google Play",
+      "domain": "play.google.com",
+      "platforms": [
+        21
+      ]
+    }
+  },
+  {
+    "model": "games.store",
+    "pk": 9,
+    "fields": {
+      "order": 9,
+      "slug": "itch",
+      "name": "itch.io",
+      "domain": "itch.io",
+      "platforms": [
+        171
+      ]
+    }
+  }
+]

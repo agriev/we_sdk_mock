@@ -1,0 +1,25 @@
+{
+  "ru": {
+    "browse_title": "Каталог",
+    "browse_meta_title": "Каталог игр",
+    "browse_meta_description": "Каталог - AG.ru - это сайт для поиска видеоигр. Самая полная база данных, основанная на личном опыте геймеров.",
+    "browse_small_card_title": "Популярные",
+    "browse_card_title": "Популярные игры",
+    "suggestions_title": "Предлагаемые игры",
+    "suggestions_meta_title": "Предлагаемые игры",
+    "suggestions_meta_description": "Используйте быстрый поиск, чтобы найти самые популярные игры для любого случая или настроения.",
+    "show_all": "Показать все игры"
+  },
+
+  "en": {
+    "browse_title": "Browse",
+    "browse_meta_title": "Browse games",
+    "browse_meta_description": "Browse — RAWG is a video game discovery site. The most comprehensive database that is powered by personal player experiences.",
+    "browse_small_card_title": "Popular",
+    "browse_card_title": "Popular items",
+    "suggestions_title": "Suggested games",
+    "suggestions_meta_title": "Suggested games",
+    "suggestions_meta_description": "Take the shortcut to find the most searched-for games for any occasion or mood.",
+    "show_all": "Show all games"
+  }
+}

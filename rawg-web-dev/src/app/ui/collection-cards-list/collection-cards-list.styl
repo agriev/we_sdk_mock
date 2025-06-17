@@ -1,0 +1,88 @@
+.collection-cards-list
+  display flex
+  justify-content flex-start
+  flex-wrap wrap
+
+  @media $bp.phone
+    justify-content center
+
+.collection-cards-list_common
+  justify-content space-between
+
+  & > div
+    @media $bp.desktop
+      width 100%
+      max-width 468px
+      margin-bottom 18px
+
+
+.collection-cards-list__tiles
+  display flex
+  justify-content flex-start
+  flex-wrap nowrap
+  & > div
+    @media $bp.phone
+      width 100%
+
+.collection-cards-list__tiles__tile
+  margin-bottom 24px
+  @media $bp.phoone
+    margin-bottom 16px
+
+.collection-cards-list__tiles__tile__right__column
+  margin-left 24px
+
+.collection-cards-list_slider
+  display block
+
+  @media $bp.phoone
+    padding-bottom 20px
+
+.collection-cards-list__slider-arrow
+  height 210px
+
+.collection-cards-list__slide
+  position relative
+  width $column-width-1-1-desktop
+  box-sizing border-box
+  margin-right $column-offset-1-1-desktop
+
+  @media $bp.phone
+    width 282px
+    padding 10px
+    margin 0
+
+.collection-cards-list__button_container_tiles
+  flex-basis 100%
+
+.collections-cards-list__button_slide
+  margin 10px
+  height 247px
+  width 264px
+  border-radius 6px
+  background linear-gradient(to bottom, rgba(32,32,32,0.8), rgb(32,32,32) 50%)
+
+.collections-cards-list__button_container
+  display flex
+  align-items center
+  height 100%
+
+.collection-cards-list__button
+  display flex
+  justify-content center
+  align-items center
+  width 100px
+  height 100px
+  border-radius 50%
+  margin 0 auto
+  margin-top 8px
+
+  background-color alpha($color-white, 0.1)
+  font-size 12px
+  cursor pointer
+  transition all 0.3s
+
+  @media $bp.desktop
+    &:hover
+      background-color $color-white
+      color $color-black

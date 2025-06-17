@@ -1,0 +1,78 @@
+.tab
+  $remove-link-style()
+  position relative
+  display inline-flex
+  box-sizing border-box
+  text-decoration none
+  color alpha($color-white, 0.4)
+  cursor pointer
+  transition all .2s ease-out
+
+.tab__name
+  margin 0
+  font-weight normal
+  padding 5px 0 5px
+  border-bottom 2px solid transparent
+
+  font-size 20px
+  text-align center
+  white-space nowrap
+  transition all .2s ease-out
+
+.tab:hover .tab__name
+  border-color alpha($color-white, 0.4)
+
+.tab_active, .tab_active:hover
+  color $color-white
+
+.tab_samepage, .tab_samepage:hover
+  cursor default
+
+.tab_active
+.tab_active:hover
+  .tab__name
+    border-color $color-white
+
+.tab__counter
+  position relative
+  top 0
+  margin-left 4px
+  margin-right 15px
+
+  min-width 25px
+  text-align left
+  font-size 14px
+
+  @media $bp.phone
+    min-width 8px
+    margin-right 5px
+
+.tab_disabled
+  cursor not-allowed
+  opacity 0.2
+
+  &:hover .tab__name
+    border-color transparent
+
+.tab_small .tab__name
+  font-size 12px
+  font-weight 500
+
+.tab_small .tab__counter
+  min-width 20px
+  font-size 10px
+
+.tabs > ul > li
+  &:last-child .tab
+    .tab__counter_empty
+      min-width 0
+      margin-left 0
+      margin-right 0
+    .tab__counter
+      @media $bp.phone
+        margin-right 10px
+
+  &:first-child .tab
+    .tab__name
+      @media $bp.phone
+        margin-left 10px

@@ -1,0 +1,90 @@
+.input-search-with-info
+  display flex
+  justify-content space-between
+  align-items center
+  margin-bottom 40px
+  border-bottom 1px solid alpha($color-white, 0.2)
+
+  transition border-bottom-color .3s
+
+  @media $bp.phone
+    flex-wrap wrap
+    border-bottom none
+    margin-bottom 16px
+
+    .input-search__icon
+      display block
+
+  .input-search__icon
+    transition opacity .3s
+
+  .input-search__input::placeholder
+    transition color .3s
+    color alpha($color-white, 0.4)
+
+  &:hover
+    border-bottom-color alpha($color-white, 0.5)
+
+    @media $bp.phone
+      border-bottom none
+
+    .input-search__input::placeholder
+      color $color-white
+
+    .input-search__icon
+      opacity 1
+
+.input-search-with-info__wrap
+  display flex
+  align-items center
+  width 100%
+
+  .input-search-with-info__input-search
+    border-bottom none
+
+  @media $bp.phone
+    margin 0 10px
+    border-bottom 2px solid alpha($color-white, 0.2)
+    .input-search
+      width 100%
+
+.input-search-with-info__input-search
+  border-bottom none
+
+  .input-search__input
+    font-size 20px
+    padding-left 32px
+
+  .input-search__icon
+    opacity 0.4
+    top 15px
+
+  .input-search__icon-svg
+    width 20px
+    height 20px
+
+.button.input-search-with-info__reset-button
+  padding 0
+  margin 0
+  color $color-white
+  min-width 28px
+  height 28px
+  border-radius 50%
+  background url("~assets/icons/close.svg?external") no-repeat center / 10px, alpha($color-white, 0.1)
+
+.input-search-with-info__counter
+  text-align right
+  font-size 18px
+  color alpha($color-white, 0.3)
+  flex-shrink 0
+
+  @media $bp.desktop
+    margin-left 8px
+
+  @media $bp.phone
+    margin-top 16px
+    text-align left
+    padding 0 10px
+
+  strong
+    font-weight 500

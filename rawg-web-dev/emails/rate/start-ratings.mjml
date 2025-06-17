@@ -1,0 +1,389 @@
+<mjml>
+  <mj-head>
+    <mj-style inline="inline">
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .card {
+        width: 100%;
+        border-radius: 6px;
+        background-color: #222222;
+        overflow: hidden;
+      }
+
+      .button {
+        display:block;
+        min-width:64px;
+        padding:4px 22px;
+        color:white;
+        text-align:center;
+        text-decoration:none;
+        border:1px solid #727272;
+        border-radius:4px;
+      }
+
+      .big-button {
+        background-color: #429321;
+        background-image: linear-gradient(to bottom, #b4ec51, #429321);
+        border-radius: 6px;
+      }
+
+      .big-link {
+        display:block;
+        padding:16px 32px;
+        color:white;
+        text-align:center;
+        text-decoration:none;
+      }
+
+      .background-image {
+        background-position:center;
+        background-size:cover;
+      }
+
+      .game-title {
+        padding-top:24px;
+        padding-left:24px;
+        padding-bottom:16px;
+        color:white;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.17;
+      }
+
+      .game-title-small {
+        padding-right: 16px;
+        color:white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .small-text {
+        color:#4d4d4d;
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      .rating-wrapper {
+        min-width: 257px;
+        padding-bottom:32px;
+        text-align: -webkit-center;
+        text-align:center;
+      }
+
+      .rating-table {
+        width: 225px;
+        height: 194px;
+        border: 1px solid #37404b;
+        border-spacing: 0;
+        border-radius: 6px;
+      }
+
+      .rating-cell {
+        width: 112px;
+        height: 96px;
+        text-align:center;
+        vertical-align:center;
+      }
+
+       .rating-emoji {
+         padding-top: 8px;
+       }
+
+      .rating-value {
+        color:white;
+        font-size: 12px;
+      }
+
+      .gray-border {
+        border: 1px solid #37404b;
+      }
+
+      .orange-title {
+        padding-bottom: 24px;
+        color: #f1951b;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .text {
+        color: white;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: normal;
+        text-align: left;
+      }
+
+      .avatar {
+        padding-left: 16px;
+      }
+
+      .avatar img {
+        border-radius: 50%;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="white" color="white" />
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif" padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+
+  <mj-body background-color="#151515">
+    <mj-section padding-top="55px" padding="10px">
+      <mj-column width="100%">
+        <mj-text color="white" font-size="18px" font-weight="bold" letter-spacing="5px">
+          RAWG
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#3B3B3B" padding-top="12px" padding-bottom="24px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td>
+              <div class="orange-title" style="padding-bottom: 4px">
+                Hey, Nota Kuroi!
+              </div>
+              <div class="text">
+                We see you've played some games.
+                <br />
+                Are you ready to rate them?
+              </div>
+            </td>
+            <td class="avatar">
+              <img width="64px" height="64px" src="https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg" />
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#3B3B3B" padding-top="24px" padding-bottom="32px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td>
+              <div class="orange-title">
+                Rate the most recently played game
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%" css-class="card">
+        <mj-table width="100%">
+          <tr>
+            <td class="background-image" width="50%" style="width:285px;height:345px;background-image:url('https://media.rawg.io/media/screenshots/060/0604c5b2ce742b2e2819ead4364de00d.jpg');"></td>
+            <td width="50%">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <div class="game-title">Shadow of the Tomb Raider</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-left:24px;padding-bottom:8px;">
+                    <div class="small-text">Rate the game</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="rating-wrapper">
+                    <table align="center" class="rating-table">
+                      <tr>
+                        <td class="gray-border">
+                          <table align="center" class="rating-cell">
+                            <tr>
+                              <td class="rating-emoji">
+                                <img src="https://rawg.io/assets/images/exceptional.5ed63cd4ad1c4ff45ff9362d341c7aeb.png" width="54" height="71"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span class="rating-value">
+                                  Exceptional
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="gray-border">
+                          <table align="center" class="rating-cell">
+                            <tr>
+                              <td class="rating-emoji">
+                                <img src="https://rawg.io/assets/images/recommended.fca8f1d42cc312606f0edafc5fc08f6f.png" width="44" height="58"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span class="rating-value">
+                                  Exceptional
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="gray-border" style="text-aligh:center;vertical-align:middle;">
+                          <table align="center" class="rating-cell">
+                            <tr>
+                              <td class="rating-emoji">
+                                <img src="https://rawg.io/assets/images/meh.c8da096c2ff8087775554396754b1ef5.png" width="44" height="58"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span class="rating-value">
+                                  Exceptional
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="gray-border">
+                          <table align="center" class="rating-cell">
+                            <tr>
+                              <td class="rating-emoji">
+                                <img src="https://rawg.io/assets/images/skip.0e10d90165ebdac0e0274bc1585cf8bb.png" width="44" height="58"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span class="rating-value">
+                                  Exceptional
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="32px 10px">
+      <mj-column>
+        <mj-text padding-bottom="4px" color="#f1951b" font-size="18px" font-weight="bold">
+          You've played some more games. Rate and review them
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-wrapper>
+      <mj-section padding="0 10px">
+        <mj-column width="100%" padding-bottom="16px">
+          <mj-table width="100%">
+            <tr style="vertical-align:top">
+              <td width="56px" style="padding-right: 16px;">
+                <div class="background-image" style="width:56px;height:56px;border-radius:4px;background-image:url('https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg');">
+                </div>
+              </td>
+              <td>
+                <div class="game-title-small" style="padding-bottom:6px;">The Last Of Us</div>
+                <div>
+                  <table width="100%">
+                    <tr>
+                      <td style="font-size: 12px;color:#727272">
+                        <img src="https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg" width="12px" style="padding-right:6px" />
+                        <span style="padding-right:6px">Windows</span>
+                        <img src="https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg" width="12px" />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+              <td width="74px">
+                <a href="https://rawg.io/rate" class="button">Rate</a>
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0 10px">
+        <mj-column width="100%" padding-bottom="16px">
+          <mj-divider border-width="1px" border-color="#3B3B3B" />
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0 10px">
+        <mj-column width="100%" padding-bottom="16px">
+          <mj-table width="100%">
+            <tr style="vertical-align:top">
+              <td width="56px" style="padding-right: 16px;">
+                <div class="background-image" style="width:56px;height:56px;border-radius:4px;background-image:url('https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg');">
+                </div>
+              </td>
+              <td>
+                <div class="game-title-small" style="padding-bottom:6px;">The Last Of Us</div>
+                <div>
+                  <table width="100%">
+                    <tr>
+                      <td style="font-size: 12px;color:#727272">
+                        <img src="https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg" width="12px" style="padding-right:6px" />
+                        <span style="padding-right:6px">Windows</span>
+                        <img src="https://media.rawg.io/media/resize/200/-/avatars/54a/54a3d04278d83c69b2d50ba5c8833de4.jpg" width="12px" />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+              <td width="74px">
+                <a href="https://rawg.io/rate" class="button">Rate</a>
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-section padding="24px 10px 32px">
+      <mj-column>
+        <mj-text css-class="big-button"color="white" font-size="18px" font-weight="normal">
+          <a href="https://rawg.io/rate" class="big-link">
+            Rate <b>The Last Of Us</b>, <b>Death Stranding</b> and <b>BioShock Infinite</b> quickly
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#3B3B3B" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="32px 10px 48px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td style="72px">
+              <a class="small-text" href="https://rawg.io">
+                Unsubscribe
+              </a>
+            </td>
+            <td class="small-text" style="padding-left:8px;text-align:right">
+              <span>
+                2017 © RAWG, Behind The Games
+              </span>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

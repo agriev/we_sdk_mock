@@ -1,0 +1,329 @@
+.post-card
+  position relative
+
+  width 100%
+  min-height 180px
+  box-sizing border-box
+  overflow hidden
+  z-index 0
+
+  border-radius 4px
+
+  .theme_light &
+    background-color alpha(#0e0e0e, 6%)
+    color alpha(black, 90%)
+
+.post-card__top-block
+  $user-content-styles()
+
+  padding 32px 32px 24px
+  background-color alpha($color-black, 0.3)
+
+  .theme_light &
+    background-color unset
+
+  @media $bp.phone
+    padding 24px
+
+.post-card__bottom-block
+  padding 20px
+  background-color alpha($color-black, 0.3)
+  border-top 1px solid alpha(#d8d8d8, 0.1)
+
+  .theme_light &
+    background-color unset
+    border-top-color alpha(#979797, 20%)
+
+  @media $bp.phone
+    padding 15px 10px 15px 10px
+
+.post-card__header
+  display flex
+  justify-content space-between
+  align-items center
+
+a.post-card__title,
+.post-card__title
+  color $color-white
+  font-weight bold
+  line-height normal
+  transition color 0.3s
+  z-index 1
+
+  .heading
+    $add-link-style()
+    margin 0
+
+a.post-card__title
+  $remove-link-style()
+  transition all 0.3s
+
+  > h1, > h2
+    $add-link-style()
+    display inline
+
+    .theme_light &
+      color #151515
+      &:hover
+        color black
+
+  &:hover
+    > h1, > h2
+      color alpha($color-white, 0.4)
+      transition all 0.3s
+
+.post-card__e3-2018-promo
+  display inline-block
+  margin-left 6px
+  background-image url('~assets/icons/promos/e3-2018/e3-2018.svg?external')
+  background-size contain
+  background-repeat no-repeat
+  width 40px
+  height 20px
+
+.post-card__gamescom-promo
+  display inline-block
+  margin-left 6px
+  background-image url('~assets/icons/promos/gamescom/gamescom-icon.svg?external')
+  background-size contain
+  background-repeat no-repeat
+  width 80px
+  height 20px
+
+.post-card__controls
+  display flex
+  align-items center
+  align-self flex-start
+
+.post-card__your-badge
+  margin-right 15px
+  padding 3px 6px
+  border-radius 4px
+  background-color alpha($color-white, 0.1)
+  font-size 12px
+  color alpha($color-white, 0.8)
+
+  @media $bp.phone
+    position absolute
+    right 0
+
+.post-card__menu-button
+.post-card__menu-button.menu-button
+  position relative
+  width auto
+  height auto
+  font-size 14px
+  color alpha($color-white, 0.4)
+  transition color 0.3s
+
+  .theme_light &
+    color alpha(#111, 0.4)
+
+  &:hover
+    color $color-white
+    .theme_light &
+      color alpha(#111, 0.8)
+
+.post-card__menu-content
+  min-width 120px
+
+.post-card__menu-content-item
+  display block
+  border-radius 4px
+  white-space nowrap
+  cursor pointer
+  color black
+
+  &:not(.not-hover):hover
+    background-color alpha(black, 0.1)
+
+  @media $bp.desktop
+    padding 5px 10px
+
+    &:hover
+      color black
+
+  @media $bp.phone
+    text-align center
+
+    & + .post-card__menu-content-item
+      margin-top 10px
+
+.post-card__text
+  flex-shrink 0
+  position relative
+  margin-top 8px
+  margin-bottom 15px
+  font-size 16px
+  font-weight 300
+  line-height 1.38
+
+  a
+    display inline
+    color $color-white
+    transition all 0.3s
+
+    .theme_light &
+      color #111
+
+  > .editor__insertion
+    margin 16px 0
+
+  img
+    max-width 100%
+    height auto
+
+.post-card__text-more
+  display inline-block
+  height 14px
+  padding 1px 5px 0
+  border-radius 2px
+  background-color $color-white
+  font-size 12px
+  line-height 1
+  color $color-black
+  cursor pointer
+  transition background-color 0.3s
+
+  .theme_light &
+    background-color #606061
+    color white
+
+  &:hover
+    background-color alpha($color-white, 0.5)
+
+    .theme_light &
+      background-color alpha(#606061, 80%)
+      color white
+
+.post-card__footer
+  margin-left -4px
+  position relative
+  display flex
+  justify-content space-between
+  align-items center
+
+  @media $bp.phone
+    flex-wrap wrap
+
+.post-card__user
+  display flex
+  align-items center
+  margin-right 10px
+  flex-shrink 0
+
+.post-card__avatar-link
+  margin-right 10px
+
+  &, .theme_light .page__content &
+    $remove-link-style()
+
+.post-card__user-info
+  display flex
+  flex-direction column
+  align-items flex-start
+  flex-shrink 0
+
+.post-card__user-link
+  $remove-link-style()
+  margin-bottom 1px
+  font-size 14px
+  color $color-white
+
+a.post-card__date
+  $remove-link-style()
+  font-size 12px
+  color alpha($color-white, 0.2)
+  border-color transparent
+
+  .theme_light .page__content &
+    color alpha(black, 20%)
+    $remove-link-style()
+
+  &:hover
+    border-color alpha($color-white, 0.2)
+
+.post-card__game-title-wrapper
+  margin-bottom 16px
+  position relative
+  z-index 1
+
+  display flex
+  align-items center
+  border-bottom 1px solid alpha($color-white, 0.3)
+
+.post-card__game-title
+  margin-bottom 16px
+  font-size 36px
+  font-weight bold
+  color $color-white
+  transition color 0.3s
+  hyphens auto
+
+  &:hover
+    color alpha($color-white, 0.5)
+
+.post-card__subtitle
+  display inline
+  opacity .4
+  margin-left 10px
+  font-size 14px
+
+.post-card__game-background
+  position absolute
+  left 0
+  top 0
+  z-index 0
+
+  width 100%
+  height 200px
+  border-radius 4px 4px 0 0
+  background no-repeat center top
+  background-size cover
+  opacity 0.3
+
+.post-card_slider
+  height 100%
+  overflow hidden
+
+.post-card_slider .post-card__top-block
+  display flex
+  flex-direction column
+  justify-content space-between
+  height 100%
+  box-sizing border-box
+
+.post-card_slider .post-card__game-title
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+.post-card__text-wrapper
+  position relative
+  z-index 1
+  display flex
+  flex-direction column
+
+.post-card__obscurer
+  display none
+  $obscurerMaskImage = linear-gradient(to bottom, rgba(32, 32, 32, 0) 0%, rgba(24, 24, 24, 0.99) 100%)
+  @supports (mask-image: $obscurerMaskImage)
+    display block
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background black
+    mask-image $obscurerMaskImage
+    z-index -1
+
+.post-card__background
+  background-size cover
+  opacity .3
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  z-index -2

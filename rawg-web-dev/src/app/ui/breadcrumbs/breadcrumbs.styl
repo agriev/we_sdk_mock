@@ -1,0 +1,48 @@
+.breadcrumbs
+  display flex
+  margin 0 0 16px
+  flex 0 1 auto
+  justify-content space-between
+  align-items flex-start
+
+  @media $bp.phone
+    //justify-content center
+    margin 24px 0 8px
+    padding 0 10px
+    //text-align center
+
+.breadcrumbs__list
+  margin 0
+  padding 0
+  font-size 0
+  list-style none
+
+.breadcrumbs__item
+  $font10-small()
+  display inline-block
+  vertical-align top
+  color $color-gray
+  line-height 18px
+
+  .theme_light &
+    color black
+
+.breadcrumbs__link
+  $remove-link-style()
+
+  &:hover .breadcrumbs__name
+    color $color-white
+    .theme_light &
+      color black
+
+.breadcrumbs__name
+  letter-spacing 1.7px
+  color $color-gray
+  text-transform uppercase
+  transition all 0.3s
+
+  .theme_light &
+    color black
+
+.breadcrumbs__separator
+  margin 0 4px

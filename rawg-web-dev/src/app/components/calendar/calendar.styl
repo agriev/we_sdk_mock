@@ -1,0 +1,82 @@
+.calendar
+  width 100%
+
+  @media $bp.phone
+    margin-bottom 32px
+
+  @media $bp.desktop
+    .heading
+      margin-top 0
+
+  .view-all-link
+    margin 0
+
+.calendar__title
+  @media $bp.phone
+    text-align center
+
+.showcase-title_calendar
+  display flex
+  justify-content space-between
+  align-items center
+
+  @media $bp.phone
+    flex-wrap wrap
+
+.calendar__games
+  box-sizing border-box
+
+  > div:last-child
+    border-bottom none
+
+  .discover-games-list
+    margin-top 8px
+
+.calendar__more-games
+  display flex
+  align-items center
+  box-sizing border-box
+  padding-right 22px
+
+  @media $bp.phone
+    padding 0 10px
+
+.calendar__more-games-line
+  height 1px
+  background-color alpha($color-white, 0.1)
+
+  &:first-child
+    width 112px
+
+    @media $bp.phone
+      width 44px
+
+  &:last-child
+    flex-grow 1
+
+.calendar__more-games-button
+  $font12-small()
+  position relative
+  display inline-flex
+  align-items center
+  padding 0 15px
+  letter-spacing 1px
+  text-transform uppercase
+  cursor pointer
+  transition color 0.3s
+
+  svg g
+    transition fill 0.3s
+
+  &:hover
+    color alpha($color-white, 0.5)
+
+    svg g
+      fill alpha($color-white, 0.5)
+
+.calendar__more-games-button-icon
+  margin-left 10px
+
+  svg
+    width 7px
+    height 12px

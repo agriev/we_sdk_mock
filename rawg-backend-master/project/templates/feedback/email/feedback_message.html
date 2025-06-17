@@ -1,0 +1,11 @@
+<p>
+    From: {{ email }}
+</p>
+{% if current_site %}
+<p>
+    Site: {{ current_site }}
+</p>
+{% endif %}
+<p>
+    {{ text|linebreaksbr }}
+</p>

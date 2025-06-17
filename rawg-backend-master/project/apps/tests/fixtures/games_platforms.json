@@ -1,0 +1,492 @@
+[
+  {
+    "model": "games.platform",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "slug": "xbox-one",
+      "name": "Xbox One",
+      "parent": 3
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "slug": "ios",
+      "name": "iOS",
+      "parent": 4
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 4,
+    "fields": {
+      "order": 0,
+      "slug": "pc",
+      "name": "PC",
+      "parent": 1
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 5,
+    "fields": {
+      "order": 4,
+      "slug": "macos",
+      "name": "OS X",
+      "parent": 5
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 6,
+    "fields": {
+      "order": 5,
+      "slug": "linux",
+      "name": "Linux",
+      "parent": 6
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 7,
+    "fields": {
+      "order": 6,
+      "slug": "nintendo-switch",
+      "name": "Nintendo Switch",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 8,
+    "fields": {
+      "order": 7,
+      "slug": "nintendo-3ds",
+      "name": "Nintendo 3DS",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 9,
+    "fields": {
+      "order": 8,
+      "slug": "nintendo-ds",
+      "name": "Nintendo DS",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 10,
+    "fields": {
+      "order": 17,
+      "slug": "wii-u",
+      "name": "Wii U",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 11,
+    "fields": {
+      "order": 18,
+      "slug": "wii",
+      "name": "Wii",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 12,
+    "fields": {
+      "order": 155,
+      "slug": "neogeo",
+      "name": "Neo Geo",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 13,
+    "fields": {
+      "order": 9,
+      "slug": "nintendo-dsi",
+      "name": "Nintendo DSi",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 14,
+    "fields": {
+      "order": 10,
+      "slug": "xbox360",
+      "name": "Xbox 360",
+      "parent": 3
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 15,
+    "fields": {
+      "order": 13,
+      "slug": "playstation2",
+      "name": "PlayStation 2",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 16,
+    "fields": {
+      "order": 12,
+      "slug": "playstation3",
+      "name": "PlayStation 3",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 17,
+    "fields": {
+      "order": 16,
+      "slug": "psp",
+      "name": "PSP",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 18,
+    "fields": {
+      "order": 1,
+      "slug": "playstation4",
+      "name": "PlayStation 4",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 19,
+    "fields": {
+      "order": 15,
+      "slug": "ps-vita",
+      "name": "PS Vita",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 21,
+    "fields": {
+      "order": 3,
+      "slug": "android",
+      "name": "Android",
+      "parent": 8
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 22,
+    "fields": {
+      "order": 32,
+      "slug": "atari-flashback",
+      "name": "Atari Flashback",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 23,
+    "fields": {
+      "order": 31,
+      "slug": "atari-2600",
+      "name": "Atari 2600",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 24,
+    "fields": {
+      "order": 21,
+      "slug": "game-boy-advance",
+      "name": "Game Boy Advance",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 25,
+    "fields": {
+      "order": 33,
+      "slug": "atari-8-bit",
+      "name": "Atari 8-bit",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 26,
+    "fields": {
+      "order": 23,
+      "slug": "game-boy",
+      "name": "Game Boy",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 27,
+    "fields": {
+      "order": 14,
+      "slug": "playstation1",
+      "name": "PlayStation",
+      "parent": 2
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 28,
+    "fields": {
+      "order": 29,
+      "slug": "atari-7800",
+      "name": "Atari 7800",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 31,
+    "fields": {
+      "order": 30,
+      "slug": "atari-5200",
+      "name": "Atari 5200",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 34,
+    "fields": {
+      "order": 38,
+      "slug": "atari-st",
+      "name": "Atari ST",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 41,
+    "fields": {
+      "order": 27,
+      "slug": "apple-ii",
+      "name": "Apple II",
+      "parent": 5
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 43,
+    "fields": {
+      "order": 22,
+      "slug": "game-boy-color",
+      "name": "Game Boy Color",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 46,
+    "fields": {
+      "order": 47,
+      "slug": "atari-lynx",
+      "name": "Atari Lynx",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 49,
+    "fields": {
+      "order": 25,
+      "slug": "nes",
+      "name": "NES",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 50,
+    "fields": {
+      "order": 50,
+      "slug": "atari-xegs",
+      "name": "Atari XEGS",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 55,
+    "fields": {
+      "order": 26,
+      "slug": "macintosh",
+      "name": "Classic Macintosh",
+      "parent": 5
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 74,
+    "fields": {
+      "order": 74,
+      "slug": "sega-master-system",
+      "name": "SEGA Master System",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 77,
+    "fields": {
+      "order": 154,
+      "slug": "game-gear",
+      "name": "Game Gear",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 79,
+    "fields": {
+      "order": 24,
+      "slug": "snes",
+      "name": "SNES",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 80,
+    "fields": {
+      "order": 11,
+      "slug": "xbox-old",
+      "name": "Xbox",
+      "parent": 3
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 83,
+    "fields": {
+      "order": 20,
+      "slug": "nintendo-64",
+      "name": "Nintendo 64",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 105,
+    "fields": {
+      "order": 19,
+      "slug": "gamecube",
+      "name": "GameCube",
+      "parent": 7
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 106,
+    "fields": {
+      "order": 100,
+      "slug": "dreamcast",
+      "name": "Dreamcast",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 107,
+    "fields": {
+      "order": 52,
+      "slug": "sega-saturn",
+      "name": "SEGA Saturn",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 111,
+    "fields": {
+      "order": 103,
+      "slug": "3do",
+      "name": "3DO",
+      "parent": 12
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 112,
+    "fields": {
+      "order": 104,
+      "slug": "jaguar",
+      "name": "Jaguar",
+      "parent": 9
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 117,
+    "fields": {
+      "order": 54,
+      "slug": "sega-32x",
+      "name": "SEGA 32X",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 119,
+    "fields": {
+      "order": 53,
+      "slug": "sega-cd",
+      "name": "SEGA CD",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 166,
+    "fields": {
+      "order": 28,
+      "slug": "commodore-amiga",
+      "name": "Commodore / Amiga",
+      "parent": 10
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 167,
+    "fields": {
+      "order": 51,
+      "slug": "genesis",
+      "name": "Genesis",
+      "parent": 11
+    }
+  },
+  {
+    "model": "games.platform",
+    "pk": 171,
+    "fields": {
+      "order": 55,
+      "slug": "web",
+      "name": "Web",
+      "parent": 14
+    }
+  }
+]

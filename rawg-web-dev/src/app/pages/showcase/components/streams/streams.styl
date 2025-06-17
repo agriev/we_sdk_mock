@@ -1,0 +1,46 @@
+.showcase-streams
+  margin-top 48px
+
+  .slider-arrow
+    top 64px
+
+  @media $bp.phone
+    margin-top 18px
+    margin-left 10px
+
+.showcase-streams__twitch-content
+  margin-top 16px
+  display flex
+
+  @media $bp.phone
+    padding 0 10px
+    overflow-x auto
+
+.showcase-streams__twitch-item
+  flex-shrink 0
+  @media $bp.phone
+    width 264px
+  @media $bp.desktop
+    width $column-width-1-1-1-1-desktop
+
+.showcase-streams__slider
+  .slick-slide + .slick-slide
+    @media $bp.phone
+      margin-left 16px
+    @media $bp.desktop
+      margin-left $column-offset-1-1-1-1-desktop
+
+.showcase-streams__slider-arrow
+  height 125px
+
+.showcase-streams__title
+  display flex
+  flex 0 1 auto
+  align-items baseline
+  justify-content center
+
+.showcase-streams__logo
+  margin-left 8px
+
+  @media $bp.phone
+    height 16px

@@ -1,0 +1,31 @@
+.game-subpage__reddit-item
+  margin-top 24px
+  width 100%
+
+  .reddit-card__title
+    flex-grow 1
+    font-size 24px
+
+  &:not(:last-child)
+    padding-bottom 24px
+    border-bottom 1px solid alpha($color-white, 0.1)
+
+.reddit-card__title
+  &.reddit-card__title-no-image
+    @media $bp.phone
+      padding: 0px
+
+.game-subpage__reddit-icon
+  width 90px
+  height 32px
+  padding-bottom 20px
+  padding-left 17px
+  position relative
+  top 11px
+
+  @media $bp.phone
+    width 56px
+    height 20px
+    padding-bottom 6px
+    padding-left 10px
+    top 6px

@@ -1,0 +1,70 @@
+.tokens__stats-container
+  position relative
+  display flex
+  justify-content center
+  order 30
+
+  @media $bp.phone
+    padding 0 10px
+
+.tokens__stats
+  border-radius 16px
+  margin 40px auto 0 auto
+  max-width 1042px
+  width 100%
+
+  @media $bp.phone
+    margin-top 32px
+
+  .tokens__stats-container_active &
+    background-image linear-gradient(to bottom, #1ad96b, #0d61a6)
+
+  .tokens__stats-container_completed &
+    background-image linear-gradient(to bottom, #fad961, #f76b1c)
+
+  .tokens__stats-container_failure &
+    background-image linear-gradient(to bottom, #f5515f, #9f041b)
+
+.tokens__stats__money__container
+  display none
+
+  .tokens__stats-container_completed &
+    @media $bp.desktop
+      position absolute
+      display flex
+      justify-content center
+      width 100%
+      left 0
+      top -90px
+      overflow hidden
+
+      .tokens__stats__money
+        height 600px
+        width 1320px
+        min-width 1320px
+        position relative
+        &::before
+          content ''
+          display block
+          position absolute
+          left 0px
+          top 20px
+          width 286px
+          height 489px
+          background url('~app/pages/tokens/assets/money3.png') no-repeat center / contain
+
+        &::after
+          content ''
+          display block
+          position absolute
+          right 22px
+          top 14px
+          z-index 2
+          width 342px
+          height 515px
+          background url('~app/pages/tokens/assets/money4.png') no-repeat center / contain
+
+  .tokens__stats-container_joined &
+    .tokens__stats__money
+      &::after
+        top 40px

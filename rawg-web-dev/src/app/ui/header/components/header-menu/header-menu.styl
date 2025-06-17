@@ -1,0 +1,244 @@
+.header-user
+  $font14-small()
+  display flex
+  align-items center
+  flex-grow 0
+  color $color-white
+  border none
+  transition color 0.2s
+  cursor pointer
+
+  @media $bp.desktop
+    &:hover
+      color alpha($color-white, 0.8)
+
+  @media $bp.phone
+    margin-right 20px
+
+.header-user__text
+  white-space nowrap
+  margin-right 15px
+
+.header-menu
+  padding 10px 0
+
+.header-menu__icon
+  display flex
+  line-height 0
+
+.header-menu-dropdown-container.dropdown__container
+  min-width 170px
+  padding 0
+
+  @media $bp.phone
+    height calc(100% - 32px)
+    max-height 708px
+    min-width 310px
+    top 12px !important
+    right 5px !important
+
+.header-menu-dropdown-container .dropdown__content
+  @media $bp.desktop
+    padding 0
+
+  @media $bp.phone
+    height 100%
+    box-sizing border-box
+    overflow-y auto
+    border-radius 24px
+
+.header-menu-content
+  @media $bp.phone
+    display flex
+    flex-direction column
+    justify-content space-between
+
+  @media $bp.desktop
+    .header-menu-content__no-desktop
+      display none
+
+    .header-menu-content__settings-link
+      $remove-link-style()
+      $font14-small()
+      padding 4px 10px
+      border-radius 4px
+      color #000
+
+      &:hover
+        background-color alpha($color-black, 0.1)
+
+.header-menu__content-area
+  padding 20px 10px
+
+
+.header-menu-content__user
+  $fon14-small()
+  display flex
+  align-items center
+  justify-content flex-end
+  padding 10px 10px 0 10px
+  color $color-black
+
+  @media $bp.phone
+    align-items flex-start
+    justify-content flex-start
+
+.header-menu-content__user-link
+  display flex
+  justify-content flex-end
+  padding 10px 10px 0 10px
+  border none
+  color $color-black
+  transition color 0.3s
+
+  &:hover
+    color alpha($color-black, 0.5)
+
+  @media $bp.desktop
+    align-items center
+
+  @media $bp.phone
+    flex-direction column-reverse
+    align-items flex-start
+    justify-content flex-start
+
+.header-menu-content__first-settings-link
+  margin-top 20px
+  font-weight bold
+  @media $bp.desktop
+    margin-top 16px
+
+.header-menu-content__links
+.header-menu-content__settings-links
+  margin 20px auto 20px
+
+  > ul
+    padding-left 0
+    > li
+      list-style-type none
+
+  @media $bp.desktop
+    padding 0 10px
+
+  @media $bp.phone
+    margin-top 0
+
+.header-menu-content__link
+.header-menu-content__settings-link
+.header-menu-content__add-link
+  $remove-link-style()
+  display block
+  white-space nowrap
+  cursor pointer
+
+  @media $bp.desktop
+    a&:hover
+      background-color alpha($color-black, 0.1)
+
+.header-menu-content__link
+.header-menu-content__add-link
+  padding 4px 10px
+  border-radius 4px
+  color $color-black
+
+  &:hover
+    color $color-black
+
+  @media $bp.phone
+    $font24-large-desktop()
+    padding 6px 10px
+
+.header-menu-content__link
+  $font14-small()
+
+  @media $bp.desktop
+    max-width 160px
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+.header-menu-content__link_bold
+  font-weight 500
+
+.header-menu-content__link-container
+  width 100%
+
+.header-menu-content__rate
+
+.header-menu-content__settings-link
+  $font12-small()
+  padding 2px 10px
+  border-radius 3px
+  color alpha($color-black, 0.5)
+
+  @media $bp.phone
+    $font20-large()
+    padding 6px 10px
+
+.header-menu-content__bottom
+  $font12-small()
+  position relative
+
+  white-space nowrap
+  background-color $main-bg-color
+  border-radius 0 0 4px 4px
+  border none
+  width 100%
+  padding 10px
+  box-sizing border-box
+
+  text-align center
+  color $color-white
+  transition color 0.3s
+  cursor pointer
+
+  @media $bp.desktop
+    bottom -1px
+
+    &:hover
+      color alpha($color-white, 0.5)
+
+  @media $bp.phone
+    $font18-large()
+    width calc(100% - 20px)
+    margin 0 0 10px 10px
+    padding 15px 10px
+    border-radius 4px
+
+.header-menu-content__close
+  position absolute
+  top 20px
+  right 20px
+
+  @media $bp.desktop
+    display none
+
+.header-menu-content__close-icon svg
+  width 15px
+  height 15px
+
+.header-menu-content__close-icon svg path
+  fill alpha($color-black, 0.5)
+
+.header-menu-content__add-links
+  margin 10px -10px 0
+  padding 10px 0 10px 30px
+  background-color #f8f8f8
+
+  @media $bp.phone
+    padding 10px 0 10px 20px
+
+.header-menu-content__add-link
+  $font14-small()
+  display flex
+  align-items center
+  padding 10px 12px
+
+  @media $bp.phone
+    $font20-large()
+    padding 6px 10px
+    white-space pre-wrap
+
+.header-menu__dotted
+  padding-bottom 4px
+  cursor pointer

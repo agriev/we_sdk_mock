@@ -1,0 +1,1706 @@
+.game__movie .video-react .video-react-control-bar
+  background-color rgba(0,0,0,0.5)
+
+.game__movie .video-react .video-react-big-play-button
+  top auto
+  left 16px
+  bottom 16px
+  width 36px
+  height 36px
+  background transparent !important
+  border none
+
+  &:before
+    content ''
+    background url("~assets/icons/play.svg?external") no-repeat center / cover
+
+.page.game
+  @media (min-width: 1460px)
+    align-items center
+
+.game
+  .page__content-wrap
+    @media (min-width: 1040px) and (max-width: 1280px)
+      max-width 1040px
+
+  .page__content-wrap.with-sidebar .page__content
+    @media (min-width: 1280px)
+      width 100%
+      flex 1 1 auto
+      display flex
+      max-width 100%
+      align-items center
+
+    .game__content-wrap
+      max-width 960px
+
+
+  .discover__sidebar
+    @media (max-width: 1280px)
+      display none
+
+  .page__content
+    flex 1 1 auto
+
+    .breadcrumbs
+      margin-bottom 32px
+
+      @media $bp.phone
+        margin-bottom 16px
+
+.game.review_page
+.game.post_page
+  .discover__sidebar
+    @media (max-width: 1450px)
+      display none
+
+.game .page__content-wrap
+  width 100%
+
+.game-content-columns
+  display flex
+  gap 32px
+  flex-wrap wrap
+
+  @media (min-width: 1280px)
+    > div
+      display flex
+      flex-direction column
+
+      flex 1
+      flex-wrap wrap
+
+.game__head
+  display flex
+  flex-direction column
+  justify-content center
+  // min-height 100px
+  position relative
+
+  @media $bp.phone
+  //  align-items center
+  //  min-height auto
+    padding 0 10px
+
+.game__head-e3-2018-promo
+  background-image url('~assets/icons/promos/e3-2018/e3-2018.svg?external')
+  background-position-y center
+  background-repeat no-repeat
+
+  @media $bp.desktop
+    border-right 1px solid rgba(255, 255, 255, .4)
+    position absolute
+    left -120px
+    top 40px
+    background-size 79px
+    width calc(79px + 18px)
+    height calc(40px + 28px)
+
+  @media $bp.phone
+    background-size contain
+    width 64px
+    height 32px
+    margin 4px 0 12px 0
+
+.game__head-gamescom-promo
+  background-image url('~assets/icons/promos/gamescom/gamescom-games-collections.svg?external')
+  background-position-y center
+  background-repeat no-repeat
+
+  @media $bp.desktop
+    border-right 1px solid rgba(255, 255, 255, .4)
+    position absolute
+    left -150px
+    top 40px
+    background-size 114px
+    width calc(114px + 18px)
+    height calc(80px + 28px)
+
+  @media $bp.phone
+    background-size contain
+    width 80px
+    height 57px
+    margin 4px 0 12px 0
+
+.heading.game__title
+  margin-top 0
+  overflow-wrap break-word
+
+  @media $bp.phone
+    display flex
+    flex-direction column
+    justify-content center
+    padding 0
+    //text-align center
+
+.game__block-title
+  $font24-large()
+  margin 0
+  padding 0
+  margin-bottom 8px
+  font-weight bold
+
+  @media $bp.phone
+    font-size 20px
+
+  &_inner
+    margin-bottom 16px
+
+  &_additional
+    $remove-link-style()
+    display flex
+    align-items flex-end
+
+    & > *:not(:first-child)
+      margin-left 8px
+
+  &_center
+    justify-content center
+    color $color-white
+    transition color 0.3s
+
+    &:hover
+      color alpha($color-white, 0.4)
+
+.game__block-title-count
+  font-weight normal
+  color alpha($color-white, 0.4)
+
+.game__ratings-review-button
+  $remove-link-style()
+  display inline-flex
+  justify-content center
+  align-items center
+  flex-shrink 0
+  height 50px
+  padding 0 25px
+  box-sizing border-box
+  font-size 16px
+  border-radius 4px
+  background-color alpha($color-white, 0.1)
+  box-shadow none
+  transition all 0.3s
+  color alpha($color-white, 0.5)
+
+  & + &
+    margin-left 15px
+    @media $bp.phone
+      margin-left 0
+
+  .game__ratings-review-button__icon
+    width 20px
+    height 20px
+    margin-right 10px
+
+  .game__ratings-review-button__icon-svg
+    path
+      fill alpha($color-white, 0.5)
+      transition 0.3s
+
+  &:hover
+    color $color-black
+    background-color $color-white
+    path
+      fill $color-black
+      transition 0.3s
+
+
+  @media $bp.phone
+    margin-top 10px
+    width 100%
+
+.game__buttons
+  @media $bp.desktop
+    margin-bottom 32px
+
+  @media $bp.phone
+    padding 0 10px
+
+    .game-buttons__button
+      width 100%
+
+.game__owners
+  margin-top 30px
+  display flex
+  align-items center
+
+  @media $bp.phone
+    margin-top 24px
+    padding 0 10px
+    justify-content center
+    flex-wrap wrap
+    // flex-direction column
+
+.game__owners-avatars
+  display flex
+  align-items center
+  overflow hidden
+
+  @media $bp.phone
+    margin-bottom 8px
+
+.game__owners-avatar
+  position relative
+  border none
+  border-radius 50%
+
+  &:not(:first-child)
+    margin-left -10px
+
+.game__owners-avatar-image
+  width 36px
+  height 36px
+  border 2px solid #151515
+  box-sizing border-box
+
+.game__owners-count
+.game__owners-plus
+  position relative
+  display flex
+  justify-content center
+  align-items center
+  width 36px
+  height 36px
+  background-color $color-white
+  border-radius 50%
+  border 2px solid #151515
+  box-sizing border-box
+  font-size 13px
+  color #151515
+
+.game__owners-count
+  margin-left -10px
+
+.game__owners-plus
+  font-size 24px
+
+.game__owners-text
+  font-size 14px
+  margin-left 10px
+  @media $bp.phone
+    margin-right 10px
+
+.game__owners-title-text
+  display flex
+  align-items center
+  border none
+  color $color-white
+
+  &, svg path
+    transition color 0.3s, fill 0.3s
+
+  &:hover
+    color alpha($color-white, 0.4)
+    svg path
+      fill @color
+
+
+.game__owners-icon-text
+  margin-left 8px
+
+.game__owners-count-text
+  color alpha($color-white, 0.4)
+
+.game__about
+  margin-top 32px
+
+  @media $bp.phone
+    padding 0 10px
+
+.game__about-text
+  font-size 16px
+  line-height 22px
+
+  p + p
+    margin-top 16px
+
+  h1, h2, h3, h4, h5, h6
+    font-size 18px
+    line-height 22px
+    font-weight 700
+    margin-top 16px
+
+  @media $bp.phone
+    line-height 20px
+    font-size 14px
+
+.game__meta
+  margin-top 32px
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    padding 0 10px
+    display flex
+    flex-wrap wrap
+    border none
+
+.game__meta-block
+  width 50%
+  box-sizing border-box
+
+  &:not(:last-child)
+    margin-bottom 16px
+    @media $bp.phone
+      margin-bottom 11px
+
+  &:nth-child(2n)
+    padding-left 8px
+
+  &:nth-child(2n+1)
+    padding-right 8px
+
+  @media $bp.phone
+    text-align left
+
+.game__meta-block.game__meta-block_wide
+  padding 0
+  width 100%
+
+.game__meta-website
+  $add-link-style()
+  cursor pointer
+  display inline
+  transition 0.3s
+  word-break break-all
+  &:hover
+    transition 0.3s
+    color alpha($color-white, 0.4)
+
+.game__meta-title
+  margin-bottom 8px
+  font-size 14px
+  font-weight 500
+  color alpha($color-white, 0.2)
+
+.game__meta-text
+  font-size 16px
+  line-height 1.5
+  word-wrap break-word
+
+  @media $bp.phone
+    font-size 14px
+
+.game__meta-text_important
+  color $color-yellow
+
+.game__meta-text_secondary
+  color alpha($color-white, 0.7)
+
+.game__meta-filter-link
+  word-wrap break-word
+  $add-link-style()
+
+.game__system-requirements
+  margin-top 32px
+  max-width 590px
+  overflow hidden
+
+  @media $bp.phone
+    padding 0 10px
+
+.game__system-requirement
+  @media $bp.phone
+    font-size 14px
+
+.game__movie
+  border-radius 6px
+  overflow hidden
+  position relative
+
+  @media $bp.phone
+    width 264px
+    height 150px
+
+.game__screenshots
+  @media $bp.phone
+    width 100%
+    height 175px
+    box-sizing border-box
+    margin-bottom 24px
+    padding 0 10px
+    overflow-x auto
+
+.game__screenshots-inner
+  @media $bp.phone
+    display inline-flex
+    align-items center
+
+.game__screenshot
+  position relative
+  width 100%
+  height 216px
+  border-radius 6px
+  cursor pointer
+  overflow hidden
+  display block
+
+  @media $bp.phone
+    width 264px
+    height 148px
+
+img.game__screenshot-image
+  position absolute
+  width 100%
+  height 100%
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  object-fit cover
+
+.game__screenshots-list
+  display flex
+  flex-wrap wrap
+
+  justify-content flex-end
+
+  @media $bp.phone
+    flex-wrap nowrap
+
+.game__screenshots-item
+  position relative
+  margin-top 16px
+  width 184px
+  height 102px
+  border-radius 6px
+  background rgba($color-white, 0.05)
+  cursor pointer
+  overflow hidden
+
+  &:nth-child(2n)
+    margin-left 16px
+
+  @media $bp.phone
+    margin 0 0 0 16px
+    width 264px
+    height 148px
+
+.game__screenshots-all
+  display flex
+  flex-direction column
+  justify-content center
+  font-size 12px
+  align-items center
+  color rgba($color-white, 0.4)
+  transition all 0.3s
+  opacity .5
+  cursor pointer
+
+  .game__screenshots-all__decor
+    position absolute
+    background-position 50%
+    background-size cover
+    background-repeat no-repeat
+    width 100%
+    height 100%
+    z-index -1
+    opacity 0.1
+
+  svg > g
+    fill rgba($color-white, 0.4)
+    transition all 0.3s
+
+  &:hover
+    background $color-white
+    color $color-black
+
+    .game__screenshots-all__decor
+      opacity 0
+
+    svg > g
+      fill $color-black
+
+  .game__screenshots-icon
+    margin-bottom 8px
+
+.game__availability
+  margin-top 32px
+
+  @media $bp.phone
+    margin-top 24px
+    width 100%
+    overflow-x auto
+
+.game__availability-title
+  margin 0
+  font-size 18px
+  font-weight normal
+  color alpha($color-white, 0.4)
+
+  @media $bp.phone
+    padding 0 10px
+
+.game__contributors
+  @media $bp.phone
+    padding 0 10px
+
+.game__contributors-title
+  margin 18px 0 0 0
+  font-size 18px
+  font-weight normal
+  color alpha($color-white, 0.4)
+
+.game__contributors__item + .game__contributors__item
+  border-top 1px solid alpha($color-white, 0.1)
+
+.game__contributors__item
+  &:last-child
+    padding-bottom 0
+
+.game__availability-inner
+  display flex
+  flex-wrap wrap
+  cursor pointer
+
+  @media $bp.phone
+    padding 0 10px
+    flex-wrap nowrap
+    overflow-x auto
+
+.game__availability-item
+  $remove-link-style()
+  display flex
+  justify-content center
+  align-items center
+  width 184px
+  height 40px
+  margin-top 16px
+  color alpha($color-white, 0.5)
+  border-radius 6px
+  background-color alpha($color-white, 0.1)
+  transition all 0.3s
+
+  @media $bp.phone
+    margin-top 8px
+
+  &:nth-child(2n)
+    margin-left 16px
+
+  &:hover
+    background-color $color-white
+    color $color-black
+
+    svg g, svg path
+      fill $color-black
+      opacity 1
+
+    .game__availability-icon-svg.gog-svg
+      g, path, rect
+        fill $color-white
+        stroke transparent
+      path
+        fill $color-black
+      rect
+        stroke $color-black
+
+  @media $bp.phone
+    min-width 150px
+
+    &:not(:first-child)
+      margin-left 8px
+
+.game__availability-icon
+  margin-left 8px
+
+.game__availability-icon-svg
+  display block
+
+  > g, > path, > rect
+    transition all 0.3s
+
+.game__block-title-and-count
+  margin 0
+  display flex
+  justify-content space-between
+  align-items flex-end
+  color inherit
+
+  .game__block-title
+    color white
+    border none
+    transition color 0.3s
+    margin 0
+    &:hover
+      color alpha($color-white, 0.4)
+
+.game__block-count
+  padding-bottom 2px
+  font-size 14px
+  font-weight normal
+  color alpha($color-white, 0.4)
+  transition color 0.3s
+
+  @media $bp.phone
+    font-size 12px
+
+  &:hover
+    color $color-white
+
+.game__view-all-link
+  $remove-link-style()
+  position relative
+  top -11px
+  margin-left 56px
+  padding 0 12px
+  font-size 12px
+  line-height 1.4
+  color $color-white
+  text-transform uppercase
+  text-decoration none
+  background-color #151515
+  transition 0.3s
+
+  @media $bp.desktop
+    letter-spacing 1px
+
+  &:hover
+    color alpha($color-white, 0.4)
+
+    .game__view-all-icon-svg > path
+      fill alpha($color-white, 0.4)
+      transition 0.3s
+
+  @media $bp.phone
+    text-transform none
+    font-size 14px
+    top 0
+    margin-left 0
+    padding 12px 0
+    width 100%
+    border-radius 4px
+    display flex
+    justify-content center
+    background-color alpha($color-white, 0.1)
+    margin-bottom 24px
+
+    &:hover
+      background-color $color-white
+      color $color-black
+
+.game__view-all-icon-svg > path
+  transition 0.3s
+
+.game__view-all-icon
+  margin-left 6px
+
+  @media $bp.phone
+    display none
+
+.game__suggestions
+  margin-top 32px
+
+  padding-left 12px
+  padding-right 12px
+
+  @media $bp.phone
+    .section-heading
+      padding 0 10px
+
+  @media $bp.desktop
+    padding-left 0
+    padding-right 0
+
+.game__suggestions-games
+  margin-top 16px
+
+  .game__block-title-and-count
+    @media $bp.phone
+      margin-bottom 6px
+
+.game__suggestions-heading-h
+  margin 0
+
+.game__suggestions-heading-link
+  $remove-link-style()
+  $heading3()
+  display block
+  margin-bottom 24px
+  text-align center
+
+  a& > span
+    $add-link-style()
+
+.game__collections
+  margin-top 32px
+
+  @media $bp.phone
+    margin-top 16px
+    padding 0 10px
+
+  .collection-card_inline:last-of-type
+    border none
+
+.game__youtube
+  margin-top 48px
+  @media $bp.phone
+    margin-top 18px
+    padding 0 10px
+
+  .section-heading__image
+    height 0.6em
+
+.game__youtube-view-all
+  flex 1
+  padding-bottom 0
+
+.game__youtube-content
+  display flex
+
+  @media $bp.phone
+    flex-direction column
+
+.game__youtube-block-item
+  margin-top 16px
+
+  @media $bp.phone
+    width 100%
+
+.game__youtube-list
+  display flex
+  flex-wrap wrap
+
+.game__youtube-inline-item
+  @media $bp.desktop
+    margin-left $column-offset-1-1-1-desktop
+    width $column-width-1-1-1-desktop
+
+    &:nth-child(5)
+      border-bottom none
+      padding-bottom 0
+
+.game__imgur
+  margin-top 32px
+
+  @media $bp.phone
+    margin-top 24px
+
+.game__imgur-icon
+  width 45px
+  height 16px
+  padding-bottom 2px
+
+.game__imgur-content
+  margin-top 16px
+  display flex
+  overflow hidden
+
+  @media $bp.phone
+    padding 0 10px
+    overflow-x auto
+
+.game__imgur-item
+  flex-shrink 0
+  width 140px
+  height 80px
+  border-radius 4px
+  background alpha($color-white, 0.4) no-repeat center / cover
+  cursor pointer
+  position relative
+
+  &:hover
+    .game__imgur-item__hover
+      $hover-overall-lighting-active()
+
+  .game__imgur-item__hover
+    $hover-overall-lighting()
+
+  &:not(:first-child)
+    margin-left 24px
+    @media $bp.phone
+      margin-left 8px
+
+.game__achievements
+  margin-top 32px
+
+  @media $bp.phone
+    margin-top 24px
+    padding 0 10px
+
+.game__achievements-content
+  display flex
+  flex-wrap wrap
+
+  @media $bp.desktop
+    justify-content space-between
+    margin-bottom -16px
+
+.achievement-card.game__achievements-item
+  @media $bp.desktop
+    max-width $column-width-1-1-1-desktop
+    width 100%
+
+    &:nth-child(4)
+    &:nth-child(5)
+      border none
+
+.game__reddit
+  margin-top 48px
+
+  @media $bp.phone
+    margin-top 32px
+    padding 0 10px
+
+  .section-heading__image
+    margin-top 0
+
+.game__twitch
+  margin-top 48px
+
+  @media $bp.phone
+    margin-top 32px
+    padding 0 10px
+
+.game__twitch-title
+  margin 0
+  padding 0
+  $font24-large()
+
+.game__twitch-icon
+  width 48px
+  height 16px
+  padding-bottom 4px
+
+.game__twitch-content
+  margin-top 24px
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin-top 15px
+    overflow-x auto
+
+  .view-all__info-block
+    margin-top 0
+    .view-all__message
+      margin-top 16px
+
+.video-card_block.game__twitch-item
+  flex-shrink 0
+  max-width $column-width-1-1-1-1-desktop
+  width 100%
+
+  @media $bp.phone
+    width 264px
+
+  &:not(:first-child)
+    margin-left $column-offset-1-1-1-1-desktop
+
+.game__tabs-content
+  width 100%
+  max-width 630px
+
+  @media $bp.desktop
+    margin 80px auto 0
+
+  @media $bp.phone
+    margin 32px auto 0
+
+.tabs.game__tabs
+  &, ul.tabs__list
+    justify-content flex-start
+
+  @media $bp.phone
+    &, ul.tabs__list
+      justify-content center
+
+.game__tabs__title
+  font-size 24px
+  line-height 28px
+  text-align center
+
+  margin-top 0
+
+  @media $bp.phone
+    padding 0 10px
+
+.game__tab
+  // &.tab_active
+  //   > .tab__name
+  //     font-weight bold
+
+  @media $bp.desktop
+    .tab__name
+      font-size 24px
+
+.game__tabs-background
+  position absolute
+  left 0
+  margin-top -300px
+  z-index -10
+  opacity 0.4
+
+  width 100%
+  height 600px
+  background no-repeat center / cover
+
+  @media $bp.phone
+    margin-top -100px
+
+.game__about-title
+  margin 0 0 8px
+  padding 0
+
+.game__edit-button
+  $remove-link-style()
+  display inline-flex
+  justify-content center
+  align-items center
+  flex-shrink 0
+  padding 15px
+  box-sizing border-box
+  font-size 16px
+  border-radius 6px
+  border none
+  box-shadow none
+  cursor pointer
+  transition all 0.3s
+  width 100%
+
+  @media $bp.desktop
+    margin-top 32px
+
+  @media $bp.phone
+    margin-left 10px
+    margin-top 16px
+    width calc(100% - 20px)
+
+  svg
+    margin-right 8px
+
+  path
+    transition fill 0.3s
+
+  // color alpha($color-white, 0.5)
+  // background-color alpha($color-white, 0.1)
+
+  // &:hover
+  //   color $color-black
+  //   background-color $color-white
+  //   path
+  //     fill $color-black
+  //     transition 0.3s
+
+  color $color-black
+  background-color $color-white
+
+  path
+    fill $color-black
+
+  &:hover
+    color $color-black
+    background-color alpha($color-white, 0.6)
+    path
+      fill $color-black
+      transition 0.3s
+
+.game__edit__last-modified-str
+  margin-top 8px
+  font-size 14px
+  text-align center
+  color alpha(white, 40%)
+
+  @media $bp.phone
+    margin-bottom 16px
+
+.game__imgur
+  @media $bp.phone
+    .section-heading
+      padding 0 8px
+
+.game__events
+  margin 40px 0 0
+
+  @media $bp.phone
+    margin 32px 0 0
+    padding 0 10px
+
+.game__events-content
+  display flex
+  flex 0 1 auto
+  flex-wrap nowrap
+  margin 16px 0 0
+  padding 0
+  font-size 0
+  list-style none
+
+  @media $bp.phone
+    width calc(100% + 20px)
+    margin 16px -10px 0
+    overflow auto
+
+.game__events-item
+  width 222px
+  padding-right 24px
+
+  &:last-child
+    padding-right 0
+
+  @media $bp.phone
+    width 264px
+    padding-right 16px
+    padding-bottom 16px
+
+    &:first-child
+      padding-left 10px
+
+    &:last-child
+      padding-right 10px
+
+  .game-event-card_card
+    height 100%
+
+    @media $bp.phone
+      width 264px
+
+.game__seo-links
+  width 100%
+  max-width 630px
+  margin 0 auto
+  text-align center
+  font-size 16px
+  box-sizing border-box
+
+  h2
+    font-size: 24px
+    line-height: 28px
+    text-align: center
+    color white
+    margin-top 16px
+    margin-bottom 24px
+
+  a
+    border-bottom 1px solid alpha(white, 30%)
+
+  @media $bp.phone
+    width auto
+    margin: 16px 10px 0 10px
+    border-radius 4px
+    background-color alpha(white, 7%)
+
+    h2
+      margin-top 0
+
+    .game__seo-links__wrap
+      padding 24px
+      background-color alpha($color-black, 0.3)
+
+  ul
+    padding 0
+    margin 0
+
+    li
+      display block
+      text-align left
+      line-height 24px
+
+      &:not(:last-child)
+        margin-bottom 24px
+
+  a
+    $remove-link-style()
+
+.game__seo-links__header
+  font-weight bold
+  margin-bottom 8px
+
+.game__iframe
+  width 100%
+  position relative
+
+  border-radius 8px
+  overflow hidden
+  padding-bottom 56.25%
+
+  cursor pointer
+
+  .checkout-modal__overlay
+    align-items center !important
+
+  .checkout-modal__container
+    max-height 100% !important
+
+  // @media $bp.phone + " and (orientation: portrait)"
+  //   padding-bottom 177%
+
+  &-buttons
+    display flex
+    width 100%
+
+  @media $bp.desktop
+    cursor unset
+
+  > iframe
+    position absolute
+
+    left 0
+    top 0
+
+    width 100% !important
+    height 100% !important
+
+    border-radius inherit
+    background-color black
+
+  &-placeholder
+    position absolute
+
+    height 100%
+    width 100%
+
+    background-color black
+    background-size cover
+    background-position center
+
+  &-splash
+    background-color rgb(21, 21, 21)
+    position absolute
+
+    left 0
+    top 0
+
+    width 100%
+    height 100%
+
+    z-index 141
+
+    animation game-splash 1s forwards
+    animation-delay 4s
+
+    &-content
+      display flex
+      justify-content center
+      align-items center
+
+      position relative
+
+      width 100%
+      height 100%
+
+      animation game-splash-image 4s alternate forwards
+      animation-delay 0s
+
+      svg
+        width 100%
+        height auto
+
+    &-logo
+      width 80%
+
+      @media screen and (min-width 768px)
+        width 41%
+
+    &-figure-1
+      position absolute
+
+      left 0
+      bottom 0
+
+      width 60%
+
+      @media screen and (min-width 768px)
+        width 42%
+
+      @media $bp.desktop
+        bottom unset
+        left 0
+        top 0
+
+    &-figure-2
+      position absolute
+
+      right 0
+      top 0
+
+      width 50%
+
+      @media screen and (min-width 768px)
+        width 42%
+
+      @media $bp.desktop
+        top unset
+        right 0
+        bottom 0
+
+  @keyframes game-splash
+    from
+      opacity 1
+      visibility visible
+
+    to
+      opacity 0
+      visibility hidden
+
+  @keyframes game-splash-image
+    0%
+      opacity 0
+      visibility hidden
+
+    50%
+      opacity 1
+      visibility visible
+
+    100%
+      opacity 0
+      visibility hidden
+
+  &-loader
+    position fixed
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+    z-index 121
+
+  &-tools
+    display flex
+    width 100%
+    align-items flex-start
+    margin-top 16px
+    justify-content flex-end
+
+    &-inner
+      flex 1
+
+      display none
+      align-items center
+
+      & > * + *
+        margin-left 32px
+
+      @media $bp.desktop
+        display flex
+        justify-content flex-end
+
+  &-back
+    position fixed
+    cursor pointer
+
+    display flex
+    align-items center
+    justify-content center
+    color white
+
+    left 0
+    top 182px
+
+    height 40px
+    background rgba(34, 34, 34, 0.8)
+    box-shadow inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05)
+    backdrop-filter blur(20px)
+    border-radius 0px 6px 6px 0px
+
+    z-index 142
+
+    &__logo
+      margin-right 12px
+
+      svg
+        width 68px
+        height 24px
+
+    .SVGInline
+      display inline-flex
+
+    &__back
+      width 40px
+      height 40px
+
+      color #cdf500
+      align-items center
+      justify-content center
+
+      display none
+
+    &__body
+      display flex
+      align-items center
+
+      padding 0 8px
+
+      &-text
+        margin-right 4px
+
+    &__close
+      display flex
+      align-items center
+      justify-content center
+
+      width 40px
+      height 40px
+
+      border-left 1px solid rgba(254, 255, 255, 0.1)
+
+      color rgba(#FEFFFF, 0.4)
+      transition color 0.3s
+
+      &:hover
+        color white
+
+    &--closed
+      .game__iframe-back__back
+        display inline-flex
+
+      .game__iframe-back__body,
+      .game__iframe-back__close
+        display none
+
+  &-informer
+    position absolute
+
+    right 0
+    top 84px
+
+    cursor pointer
+
+    display none
+    color white
+
+    // min-height 56px
+    box-sizing border-box
+
+    color #CDF500
+
+    font-size 13px
+    line-height 16px
+
+    background rgba(34, 34, 34, 0.8)
+    box-shadow inset 0px 0px 0px 1px rgba(255, 255, 255, 0.05)
+    backdrop-filter blur(20px)
+    border-radius 6px 0px 0px 6px
+
+    z-index 150
+
+    @media $bp.desktop
+      display flex
+
+    .SVGInline
+      display inline-flex
+
+    &__body
+      display flex
+      align-items flex-start
+
+      padding 8px
+      flex 1
+
+      @media $bp.desktop
+        padding 10px
+
+      span
+        max-width 120px
+        word-wrap break-word
+        overflow hidden
+
+        @media $bp.desktop
+          color white
+          max-width 132px
+
+          font-size 14px
+          line-height 20px
+
+          margin-right 3px
+
+      .SVGInline
+        margin-right 8px
+
+        @media $bp.desktop
+          margin-left 3px
+          margin-right 13px
+
+      &-text
+        display flex
+        align-items center
+        height 100%
+
+    &__close
+      padding 13px 0
+      display flex
+      justify-content center
+      text-align center
+
+      width 40px
+      border-left 1px solid rgba(254, 255, 255, 0.1)
+
+      color rgba(#FEFFFF, 0.4)
+      transition color 0.3s
+
+      &:hover
+        color white
+
+      @media $bp.desktop
+        width 48px
+        justify-content flex-end
+
+        .SVGInline
+          margin-right 13px
+
+    &--closed
+      // min-height unset
+
+      .game__iframe-informer__body-text,
+      .game__iframe-informer__close
+        display none
+
+      .SVGInline
+        margin 0 !important
+
+      @media $bp.desktop
+        .game__iframe-informer__body
+          padding 9px 14px !important
+
+  &-overlay
+    position absolute
+    display flex
+    align-items center
+    justify-content center
+    left 0
+    top 0
+    right 0
+    bottom 0
+    background-color rgba(0, 0, 0, 0)
+    cursor pointer
+
+    z-index 121
+
+    @media $bp.desktop
+      display none
+
+    &__btn
+      display flex
+      align-items center
+      justify-content center
+      border none
+      height 48px
+      width 100%
+      color white
+      outline none
+      cursor pointer
+      margin 0
+      padding 0
+      font-size 16px
+      line-height 24px
+      background #CDF500
+      color black
+      border-radius 8px
+      margin-top 16px
+
+      .SVGInline
+        display inline-flex
+        margin-right 16px
+
+      &--text
+        background rgba(#feffff, 0.1)
+        color #cdf500
+
+      & + &
+        margin-left 8px
+
+  &-wrapper
+    display flex
+    flex-direction column
+    align-items flex-end
+
+    margin-bottom 64px
+    width 100%
+
+    box-sizing border-box
+
+    @media screen and (min-width: 1440px)
+      max-width 1112px
+
+    @media screen and (min-width: 1728px)
+      max-width 1260px
+
+    @media screen and (min-width: 1920px)
+      max-width 1426px
+
+    @media $bp.phone
+      padding 0 8px
+      margin-bottom 0
+
+  &-fullscreen
+    appearance none
+
+    font-size 16px
+    line-height 24px
+
+    color #CDF500
+    height 40px
+
+    display flex
+    align-items center
+
+    background none
+    border none
+    outline none
+
+    cursor pointer
+    transition opacity 0.3s
+
+    .SVGInline
+      display inline-flex
+      margin-right 16px
+
+    &:hover
+      color #cdf500
+      opacity 0.7
+
+    @media $bp.phone
+      display none
+
+  &-feedback
+    appearance none
+
+    font-size 16px
+    line-height 24px
+
+    color #CDF500
+    height 40px
+
+    display flex
+    align-items center
+
+    background none
+    border none
+    outline none
+
+    cursor pointer
+    transition opacity 0.3s
+
+    .SVGInline
+      display inline-flex
+      margin-right 16px
+
+    &:hover
+      color #cdf500
+      opacity 0.7
+
+  &--is-streched,
+  &--is-pwa
+    border-radius 0
+
+    .game__iframe-splash
+      position fixed
+
+    .game-payment
+      position fixed
+
+    .game__iframe-overlay
+      display none
+
+    > iframe
+      position fixed
+      z-index 140
+
+    .game__iframe-informer
+      position fixed
+      display flex
+
+      right unset
+      left 0
+
+      top 182px + 40px + 4px
+      border-radius 0px 4px 4px 0px
+
+      &--closed
+        .game__iframe-informer__body
+          align-items center
+          justify-content center
+
+          width 40px !important
+          height 40px !important
+
+          padding 0 !important
+
+  &--is-pwa
+    width 100%
+    height 100%
+
+    padding-bottom 0
+    position fixed
+
+    left 0
+    top 0
+
+  &--is-fullscreen
+    border-radius 0
+    padding-bottom 0
+
+    height 100vh
+    width 100vw
+
+    > iframe
+      height 100vh !important
+      width 100vw !important
+
+.game__footer
+  position static
+
+.game-section
+  display flex
+  flex-direction column
+
+  padding-top 24px
+  margin-top 56px
+
+  @media $bp.desktop
+    margin-top 40px
+
+  &__title
+    color white
+
+    font-size 32px
+    font-weight 600
+    line-height 32px
+
+    padding 0 12px
+
+    @media $bp.desktop
+      font-size 40px
+      line-height 56px
+      padding 0
+      margin-bottom 28px
+
+  &--online
+    display grid
+    grid-auto-flow row
+
+.game__plays
+  display flex
+  align-items center
+
+  margin-bottom 8px
+
+  @media $bp.desktop
+    margin-bottom 16px
+
+  .SVGInline
+    display none
+    margin-right 8px
+    color rgba(#feffff, 0.4)
+
+    @media $bp.desktop
+      display flex
+
+.game__heading-section
+  display flex
+  flex-direction column
+  margin-bottom 24px
+
+  width 100%
+
+  @media $bp.desktop
+    margin-bottom 32px
+
+.game__title
+  margin 0
+
+.game__short-description
+  font-size 16px
+  line-height 22px
+  color rgba(#feffff, 0.8)
+
+  @media $bp.desktop
+    font-size 20px
+    line-height 24px
+    color white
+    margin-top 12px

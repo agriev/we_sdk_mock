@@ -1,0 +1,78 @@
+.game-card-buttons
+  display flex
+  flex 0 1 auto
+  align-items center
+
+  &_centred
+    justify-content center
+
+  .game-card-button
+    &:not(:last-child)
+      margin-right 4px
+
+.game-card-buttons__dropdown
+  align-self flex-start
+
+.game-card-buttons__dropdown-wrapper
+  z-index 15
+
+  &.dropdown__container
+    @media $bp.phone
+      max-width 100%
+
+  .dropdown__content
+    padding 0
+    background-color transparent
+
+    @media $bp.phone
+      display flex
+      flex 0 1 auto
+      justify-content flex-end
+
+.game-card-buttons__added
+  color #55a26a
+
+  .game-card-button:not(:hover) &_active
+    color alpha(white, 40%)
+
+  .game-card-button:hover &
+    @media $bp.desktop
+      color #55a26a
+
+.game-card-buttons_online
+  display flex
+  align-items flex-start
+  justify-content flex-end
+
+  height 40px
+  flex 1
+
+  a
+    display inline-flex
+    align-items center
+    justify-content center
+
+    padding 8px 24px
+    border-radius 6px
+    color white
+
+    font-size 14px
+    line-height 24px
+    font-weight 500
+
+    background rgba(205, 245, 0, 0.3)
+    position relative
+
+    &:hover
+      color black
+      background white !important
+
+.game-card-buttons_count
+  display flex
+  align-items flex-end
+  height 40px
+
+  font-size 14px
+  line-height 24px
+
+  color white

@@ -1,0 +1,56 @@
+.user-list-line
+  display flex
+  flex-direction row
+  align-items center
+
+  .user-list-line__avatar-link
+    $remove-link-style()
+    margin-left -6px
+    display block
+
+  .user-list-line__count
+    display inline-block
+    border-radius 50%
+    width 24px
+    height 24px
+    color: #000000
+    // line-height 1
+    text-align center
+    background-color #ffffff
+    margin-left -5px
+    position relative
+
+    > span
+      position absolute
+      width 100%
+      height 100%
+      left 0
+      top 0
+
+  .user-list-line__plus-users
+    $font14-small()
+    padding-left 8px
+    text-align left
+    color #ffffff
+
+    > strong
+      &::before
+        content '+'
+
+
+  .user-list-line__status
+    font-size 13px
+    color #ffffff
+    height 17px
+    border-radius 2px
+    border solid 1px #ffffff
+    margin-left 6px
+    padding-left 4px
+    padding-right 4px
+    font-weight 300
+    text-align center
+
+.user-list-line__tooltip
+  color black
+  &:hover
+    color black

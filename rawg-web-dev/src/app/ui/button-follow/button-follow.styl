@@ -1,0 +1,27 @@
+.button-follow__wrapper
+  display flex
+  justify-content center
+
+.button.button-follow
+  font-weight normal
+  font-size 16px
+  padding 10px 35px
+  height auto
+  width auto
+  box-shadow none
+
+  .button-follow__wrapper_off &
+    color white
+    background-color alpha(white, 10%)
+
+    @media $bp.desktop
+      &:hover
+        color black
+        background-color white
+        opacity 1
+
+  .button-follow__wrapper_loading &
+    @media $bp.desktop
+      &, &:hover
+        color white
+        background-color alpha(white, 10%)

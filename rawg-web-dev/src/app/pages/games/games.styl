@@ -1,0 +1,168 @@
+// Пока решено не использовать ширину в 1170px
+// .games-page
+//   .page__content
+//     @media $bp.desktop
+//       max-width 1170px
+
+//   .games__filter
+//     @media $bp.desktop
+//       width 1170px
+
+.games__seo-area
+  margin 0 0 16px
+
+  .games__seo-area__title
+    margin 0
+    font-size 72px
+    font-weight bold
+    text-align left
+
+  @media $bp.phone
+    margin 0 0 16px
+
+    .games__seo-area__title
+      font-size 36px
+      text-align center
+
+  .games__seo-area__text-more
+    display inline-block
+    height 14px
+    padding 1px 5px 0
+    border-radius 2px
+    background-color $color-white
+    font-size 12px
+    line-height 1
+    color $color-black
+    cursor pointer
+    transition background-color 0.3s
+
+    &:hover
+      background-color alpha($color-white, 0.5)
+
+.games__seo-area__description
+  font-size 16px
+  line-height 22px
+
+.games__filter
+  height 50px
+  position sticky
+  top -1px
+  z-index 5
+  margin-bottom 40px
+
+  .filter
+    background-color rgba($color-black, 30%)
+    transition background-color 0.3s
+
+  &_top
+    .filter
+      background-color rgba($color-black, 80%)
+      transition background-color 0.3s
+
+  @media $bp.desktop
+    width $page-width-desktop
+
+  @media $bp.phone
+    width 100%
+    max-width $page-width-phone
+    margin-bottom 16px
+
+.games__counter
+  text-align right
+  font-size 18px
+  color alpha($color-white, 0.3)
+  flex-shrink 0
+  @media $bp.phone
+    margin-top 16px
+    text-align left
+    padding 0 10px
+
+.games__search-wrap
+  display flex
+  justify-content space-between
+  align-items center
+  margin-bottom 40px
+  border-bottom 1px solid alpha($color-white, 0.2)
+
+  transition border-bottom-color .3s
+
+  @media $bp.phone
+    flex-wrap wrap
+    border-bottom none
+    margin-bottom 16px
+
+    .input-search__icon
+      display block
+
+  .input-search__icon
+    transition opacity .3s
+
+  .input-search__input::placeholder
+    transition color .3s
+    color alpha($color-white, 0.4)
+
+  &:hover
+    border-bottom-color alpha($color-white, 0.5)
+    @media $bp.phone
+      border-bottom none
+    .input-search__input::placeholder
+      color $color-white
+    .input-search__icon
+      opacity 1
+
+.games__search__input-wrap
+  display flex
+  align-items center
+  width 100%
+  .games__input-search
+    border-bottom none
+  @media $bp.phone
+    margin 0 10px
+    border-bottom 2px solid alpha($color-white, 0.2)
+    .input-search
+      width 100%
+
+.games__input-search
+  border-bottom none
+
+  .input-search__input
+    font-size 20px
+    padding-left 32px
+  .input-search__icon
+    opacity 0.4
+    top 15px
+  .input-search__icon-svg
+    width 20px
+    height 20px
+
+.games__input-search__reset-button.button
+  padding 0
+  margin 0
+  color $color-white
+  min-width 28px
+  height 28px
+  border-radius 50%
+  background url("~assets/icons/close.svg?external") no-repeat center / 10px, alpha($color-white, 0.1)
+  margin-right 20px
+  @media $bp.phone
+    margin-right 0
+
+.games__counter strong
+  font-weight 500
+
+.games__follow-btn
+  height 50px
+  margin-right 8px
+  margin-left 8px
+
+  @media $bp.desktop
+    .button
+      &:hover
+        opacity 1
+        color black
+        background-color white
+
+    &.button-follow__wrapper_loading .button:hover
+        opacity .8
+        color white
+        background-color rgba(white, 0.1)

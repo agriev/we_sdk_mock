@@ -1,0 +1,145 @@
+.game-edit__screenshots
+  display flex
+  flex-wrap wrap
+  margin-left -20px
+
+  @media $bp.phone
+    justify-content center
+
+.game-edit__screenshot
+  width 176px
+  height 100px
+  margin-left 16px
+  margin-top 20px
+
+  position relative
+
+  border-width 2px
+  border-style solid
+  border-color transparent
+  border-radius 6px
+
+  background-color black
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+  &.game-edit__screenshot_new
+    border-color rgba(19, 201, 72, 0.5)
+
+  &.game-edit__screenshot_deleted::after
+    content ''
+    position absolute
+    top -2px
+    left -2px
+    width calc(100% + 4px)
+    height calc(100% + 4px)
+    background alpha(black, 70%)
+    pointer-events none
+    z-index 1
+    transition opacity .3s
+    border-radius 6px
+
+  &:not(.game-edit__screenshot_deleted)::before
+    content ''
+    position absolute
+    top -2px
+    left -2px
+    width calc(100% + 4px)
+    height calc(100% + 4px)
+    background black
+    pointer-events none
+    z-index 2
+    opacity 0
+    transition opacity .3s
+    border-radius 6px
+
+  &:hover::before
+    opacity .7
+
+.game-edit__screenshot__btns
+  opacity 0
+  pointer-events none
+  transition opacity .3s
+  position relative
+  z-index 2
+
+  .game-edit__screenshot:hover &
+    opacity 1
+    pointer-events auto
+
+.game-edit__screenshot__replace
+.game-edit__screenshot__delete
+.game-edit__screenshot__restore
+  font-size 16px
+  color alpha(white, 40%)
+  display flex
+  align-items center
+  cursor pointer
+
+  transition color .3s
+
+  .SVGInline
+    &, & svg
+      width 24px
+      height 24px
+      margin-right 8px
+    svg
+      path, circle
+        transition opacity .3s, fill .3s
+
+  &:hover, .game-edit__screenshot__replace-wrapper:hover &
+    color alpha(white, 90%)
+    .SVGInline svg
+      path
+        fill black
+      circle
+        opacity 1
+
+.game-edit__screenshot__replace-wrapper
+  position relative
+  display inline-block
+
+.game-edit__screenshot__replace
+  margin-bottom 8px
+
+.game-edit__screenshot__replace__input
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  z-index 1
+  opacity 0
+  cursor pointer
+
+.game-edit__screenshot__wrapper
+  position relative
+  display inline-block
+
+  &:hover
+    .game-edit__screenshot__input__add-btn:not(.game-edit__add-btn_readonly)
+      background-color alpha(white, 100%)
+      color black
+      svg path
+        fill black
+        fill-opacity 1
+
+  &.game-edit__screenshot__wrapper_uploading
+    &, &:hover, .game-edit__add-btn
+      cursor default
+
+.game-edit__screenshot__input
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  z-index 1
+  opacity 0
+  cursor pointer

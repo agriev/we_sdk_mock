@@ -1,0 +1,43 @@
+.import-form
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  margin-bottom 48px
+  @media $bp.phone
+    flex-wrap wrap
+    margin-bottom 32px
+
+  .input
+    width 360px
+    margin-right 16px
+    @media $bp.phone
+      margin-right 0
+      width 100%
+
+.import-form__submit-button
+  width 247px
+  @media $bp.phone
+    width 100%
+    margin-top 24px
+
+.import-form__label-wrap
+  display flex
+  margin-bottom 8px
+  flex-basis 100%
+
+.import-form__label
+  font-size 16px
+  color alpha($color-white, 0.2)
+  margin-right 8px
+  max-width 600px
+.import-form__icon-svg
+  height 16px
+  width auto
+  margin-bottom -2px
+  opacity 0.4
+
+.import-form__status-block
+  margin-top 16px
+  margin-bottom 0
+  flex-basis 100%
+  text-align left

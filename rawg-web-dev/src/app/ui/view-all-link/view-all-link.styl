@@ -1,0 +1,77 @@
+.view-all-link
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  margin-top -8px
+  overflow hidden
+  cursor pointer
+  position relative
+
+  &::before, &::after
+    content ''
+    display block
+    min-width 84px
+    height 1px
+    background-color alpha($color-white, 0.1)
+
+  &_left::after
+    flex-grow 2
+
+  &_right::before
+    flex-grow 2
+
+.view-all-link__link
+  $remove-link-style()
+  $font12-small()
+  padding 0 12px
+  color $color-white
+  text-transform uppercase
+  letter-spacing 1px
+  transition 0.3s
+
+  &:hover
+    color alpha($color-white, 0.4)
+
+    .view-all-link__icon path
+      fill alpha($color-white, 0.4)
+      transition 0.3s
+
+.view-all-link__icon
+  margin-left 6px
+
+  &_top
+    margin-left 8px
+    svg
+      transform rotate(-90deg)
+
+  &_bottom
+    margin-left 8px
+    svg
+      transform rotate(90deg)
+
+.view-all-link_mobile-button
+  @media $bp.phone
+    display block
+    margin-top 0
+
+    &::before, &::after
+      display none
+
+    .view-all-link__link
+      $font14-small()
+      display block
+      width 100%
+      margin-bottom 24px
+      padding 12px 0
+      text-align center
+      text-transform capitalize
+      border-radius 4px
+      background-color alpha($color-white, 0.1)
+
+      &:hover
+        background-color $color-white
+        color $color-black
+
+    .view-all-link__icon
+      display none

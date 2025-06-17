@@ -1,0 +1,26 @@
+.header__browse-menu
+  display flex
+
+  & > *:not(:last-child)
+    .header__item-link.header__browse-menu__section-title
+      margin-right 16px
+
+.header__item-link.header__browse-menu__section-title
+  $font14-small()
+  color alpha($color-white, 0.8)
+  background-image none
+  text-transform none
+
+.browse-menu-phone__wrap
+  display flex
+  flex-wrap wrap
+
+.header__browse-menu-phone__link
+  @media $bp.phone
+    width 50%
+
+.header__browse-menu__phone-links
+  display flex
+  flex-wrap wrap
+  .header-dropdown-content__games-menu-title
+    width 100%

@@ -1,0 +1,56 @@
+.tokens__offers
+  width 1024px
+  margin 0 auto
+  margin-top 48px
+  order 100
+
+  &.tokens__offers_finished
+    order 51
+    @media $bp.phone
+      margin-top 65px
+
+    .tokens-header__position_icon
+      @media $bp.phone
+        top -50px
+
+  @media $bp.phone
+    position relative
+    width 100%
+
+  .tokens-header__position
+    @media $bp.desktop
+      left -25px
+
+  .tokens-header__texts
+    @media $bp.desktop
+      padding-left 32px
+
+
+.tokens__offers-wrap
+  display flex
+  justify-content space-between
+  margin 0 25px
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin 0 10px
+
+.tokens__offers__cols-wrap
+  flex 1
+  display flex
+  justify-content center
+
+.tokens__offers__col1, .tokens__offers__col2
+  flex 1
+  display flex
+  flex-direction column
+
+.tokens__offers__col1
+  align-items flex-end
+
+.tokens__offers__col2
+  margin-left 8px
+
+.tokens__offers__card-placeholder
+  width 222px
+  height 0

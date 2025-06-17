@@ -1,0 +1,26 @@
+{
+  "count": 21,
+  "results": [
+    { "id": 1, "title": "Blew my mind", "positive": true },
+    { "id": 2, "title": "Just one more turn", "positive": true },
+    { "id": 3, "title": "Can’t stop playing", "positive": true },
+    { "id": 4, "title": "Time-tested", "positive": true },
+    { "id": 5, "title": "Liked before it became a hit", "positive": true },
+    { "id": 6, "title": "Constantly dying and enjoy it", "positive": true },
+    { "id": 7, "title": "Sit Back and Relax", "positive": true },
+    { "id": 8, "title": "Better With Friends", "positive": true },
+    { "id": 9, "title": "Underrated", "positive": true },
+    { "id": 10, "title": "That Ending!", "positive": true },
+    { "id": 11, "title": "Beaten more than once", "positive": true },
+    { "id": 12, "title": "OST on repeat", "positive": true },
+    { "id": 13, "title": "Buggy as hell", "positive": false },
+    { "id": 14, "title": "Disappointment of the year", "positive": false },
+    { "id": 15, "title": "Waste of time", "positive": false },
+    { "id": 16, "title": "Boooring", "positive": false },
+    { "id": 17, "title": "Ugly as my life", "positive": false },
+    { "id": 18, "title": "I could make it better", "positive": false },
+    { "id": 19, "title": "Oh God i managed it", "positive": false },
+    { "id": 20, "title": "Game over at last!", "positive": false },
+    { "id": 21, "title": "Reviewers bribed", "positive": false }
+  ]
+}

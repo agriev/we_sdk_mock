@@ -1,0 +1,55 @@
+.showcase-recent
+  margin-bottom 36px // 48 - 12
+
+  max-width $page-width-desktop
+  margin-left auto
+  margin-right auto
+
+  @media $bp.phone
+    margin-bottom 39px
+    max-width $page-width-phone
+
+.showcase-recent__tabs
+  display flex
+  padding 0 0 24px
+
+  @media $bp.desktop
+    justify-content center
+
+  @media $bp.phone
+    justify-content space-evenly
+
+.showcase-recent__tab
+  color white
+  transition color .3s
+
+  @media $bp.desktop
+    font-size 18px
+
+  @media $bp.phone
+    font-size 14px
+
+  & + &
+    @media $bp.desktop
+      margin-left 24px
+
+  &:not(.active)
+    cursor pointer
+    color alpha(white, 40%)
+
+  &:hover
+    color white
+
+  &.active
+    cursor default
+    color white
+    padding-bottom 10px
+
+    $custom-underline(alpha(white, 0.7), 1, 0)
+
+.showcase-recent__games-list
+  display none
+  margin-bottom 32px
+
+  &_visible
+    display block

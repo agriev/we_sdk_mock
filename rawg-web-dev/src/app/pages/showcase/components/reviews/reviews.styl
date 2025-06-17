@@ -1,0 +1,26 @@
+.showcase-reviews
+  margin-left auto
+  margin-right auto
+
+  margin-bottom 48px
+
+  @media $bp.desktop
+    max-width $page-width-desktop
+
+  @media $bp.phone
+    max-width $page-width-phone
+    padding-top 16px
+    margin-bottom 56px
+
+.showcase-reviews__columns
+  display flex
+  justify-content space-between
+
+.showcase-reviews__column
+  width $column-width-1-1-desktop
+
+.showcase-reviews__review
+  background-color #202020
+
+  &:not(:last-child)
+    margin-bottom 24px

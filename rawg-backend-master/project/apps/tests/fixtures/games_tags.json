@@ -1,0 +1,434 @@
+[
+  {
+    "model": "games.tag",
+    "pk": 3,
+    "fields": {
+      "synonyms": "[\"adventure\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "adventure",
+      "name": "Adventure"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 4,
+    "fields": {
+      "synonyms": "[\"funny\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "funny",
+      "name": "Funny"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 7,
+    "fields": {
+      "synonyms": "[\"multiplayer\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "multiplayer",
+      "name": "Multiplayer"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 8,
+    "fields": {
+      "synonyms": "[\"first-person\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "first-person",
+      "name": "First-Person"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 13,
+    "fields": {
+      "synonyms": "[\"atmospheric\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "atmospheric",
+      "name": "Atmospheric"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 18,
+    "fields": {
+      "synonyms": "[\"co-op\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "co-op",
+      "name": "Co-op"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 20,
+    "fields": {
+      "synonyms": "[\"action\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "action",
+      "name": "Action"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 24,
+    "fields": {
+      "synonyms": "[\"rpg\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "rpg",
+      "name": "RPG"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 26,
+    "fields": {
+      "synonyms": "[\"gore\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "gore",
+      "name": "Gore"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 28,
+    "fields": {
+      "synonyms": "[\"shooter\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "shooter",
+      "name": "Shooter"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 31,
+    "fields": {
+      "synonyms": "[\"singleplayer\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "singleplayer",
+      "name": "Singleplayer"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 34,
+    "fields": {
+      "synonyms": "[\"violent\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "violent",
+      "name": "Violent"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 36,
+    "fields": {
+      "synonyms": "[\"open world\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "open-world",
+      "name": "Open World"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 37,
+    "fields": {
+      "synonyms": "[\"sandbox\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "sandbox",
+      "name": "Sandbox"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 42,
+    "fields": {
+      "synonyms": "[\"great soundtrack\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "great-soundtrack",
+      "name": "Great Soundtrack"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 44,
+    "fields": {
+      "synonyms": "[\"nudity\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "nudity",
+      "name": "Nudity"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 45,
+    "fields": {
+      "synonyms": "[\"2d\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "2d",
+      "name": "2D"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 61,
+    "fields": {
+      "synonyms": "[\"top-down\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "top-down",
+      "name": "Top-Down"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 62,
+    "fields": {
+      "synonyms": "[\"moddable\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "moddable",
+      "name": "Moddable"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 79,
+    "fields": {
+      "synonyms": "[\"free to play\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "free-to-play",
+      "name": "Free to Play"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 85,
+    "fields": {
+      "synonyms": "[\"racing\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "racing",
+      "name": "Racing"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 114,
+    "fields": {
+      "synonyms": "[\"physics\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "physics",
+      "name": "Physics"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 118,
+    "fields": {
+      "synonyms": "[\"story rich\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "story-rich",
+      "name": "Story Rich"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 123,
+    "fields": {
+      "synonyms": "[\"comedy\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "comedy",
+      "name": "Comedy"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 130,
+    "fields": {
+      "synonyms": "[\"driving\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "driving",
+      "name": "Driving"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 136,
+    "fields": {
+      "synonyms": "[\"music\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "music",
+      "name": "Music"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 144,
+    "fields": {
+      "synonyms": "[\"crime\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "crime",
+      "name": "Crime"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 148,
+    "fields": {
+      "synonyms": "[\"dark humor\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "dark-humor",
+      "name": "Dark Humor"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 149,
+    "fields": {
+      "synonyms": "[\"third person\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "third-person",
+      "name": "Third Person"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 150,
+    "fields": {
+      "synonyms": "[\"third-person shooter\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "third-person-shooter",
+      "name": "Third-Person Shooter"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 153,
+    "fields": {
+      "synonyms": "[\"satire\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "satire",
+      "name": "Satire"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 192,
+    "fields": {
+      "synonyms": "[\"mature\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "mature",
+      "name": "Mature"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 193,
+    "fields": {
+      "synonyms": "[\"classic\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "classic",
+      "name": "Classic"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 224,
+    "fields": {
+      "synonyms": "[\"1980s\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "1980s",
+      "name": "1980s"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 319,
+    "fields": {
+      "synonyms": "[\"silent protagonist\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "silent-protagonist",
+      "name": "Silent Protagonist"
+    }
+  },
+  {
+    "model": "games.tag",
+    "pk": 321,
+    "fields": {
+      "synonyms": "[\"bowling\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:06.200Z",
+      "slug": "bowling",
+      "name": "Bowling"
+    }
+  }
+]

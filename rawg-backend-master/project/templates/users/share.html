@@ -1,0 +1,310 @@
+{% load utils i18n %}<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        @font-face {
+            font-family: Custom;
+            src: url("file:///app/project/templates/share/normal.otf") format("opentype");
+        }
+        @font-face {
+            font-family: Custom;
+            src: url("file:///app/project/templates/share/bold.otf") format("opentype");
+            font-weight: bold;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Custom, serif;
+            position: relative;
+        }
+        table, tbody, td {
+            padding: 0;
+            margin: 0;
+            border-spacing: 0;
+        }
+
+        .back {
+            background: url({{ image }}) 0 0 / cover no-repeat;
+            width: 1200px;
+            height: 630px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+        }
+        .content {
+            background: url("file:///app/project/templates/users/share.png") 0 0 no-repeat;
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            display: inline-block;
+            margin-top: 62px;
+            margin-left: 82px;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 78px;
+            vertical-align: middle;
+        }
+        {% if avatar %}
+            .avatar {
+                display: inline-block;
+                width: 86px;
+                height: 86px;
+                margin-top: 62px;
+                margin-left: 20px;
+                background: url({{ avatar }}) 0 0 / cover no-repeat;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        {% endif %}
+
+        .count {
+            margin-top: 34px;
+            margin-left: 82px;
+        }
+        .head {
+            font-size: 24px;
+        }
+        .head b {
+            font-size: 64px;
+        }
+
+        .platforms {
+            display: inline-block;
+            width: 1011px;
+            margin: 20px 101px 0 88px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .platforms .platform {
+            display: inline-block;
+            height: 80px;
+            background-color: white;
+            position: relative;
+        }
+        .platforms .platform img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 74px;
+        }
+        .platforms-legend {
+            margin: 20px 101px 0 88px;
+        }
+        .platforms-legend .legend {
+            display: inline-block;
+            margin-right: 12px;
+        }
+        .platforms-legend .legend-round {
+            display: inline-block;
+            background-color: white;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 2px;
+        }
+        .platforms-legend .legend-title {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .platforms-legend .legend-count {
+            display: inline-block;
+            font-size: 14px;
+            color: #686868;
+        }
+
+        .genres {
+            width: 1024px;
+            margin: 30px 88px 0;
+        }
+        .genres td {
+            min-width: 150px;
+        }
+        .genres .genre {
+            display: inline-block;
+            position: relative;
+            padding-top: 36px;
+            padding-left: 10px;
+        }
+        .genres .genre-counter {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            font-size: 96px;
+            font-weight: bold;
+            opacity: 0.1;
+        }
+        .genres .genre-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .genres .genre-count {
+            font-size: 18px;
+            color: #727272;
+        }
+
+        .subscribe {
+            position: absolute;
+            bottom: 35px;
+            right: 50px;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 5.6px;
+        }
+        .subscribe.ru {
+            bottom: 17px;
+            right: 30px;
+        }
+
+        .platforms .platfrom_mac img {
+            height: 80px;
+        }
+        .platforms .platfrom_3do img {
+            margin-left: 11px;
+        }
+
+        .platfrom_pc {
+            background-image: linear-gradient(to bottom, #649bff, #4354ba);
+        }
+        .platfrom_playstation {
+            background-image: linear-gradient(to bottom, #434343, #000);
+        }
+        .platfrom_mac {
+            background-image: linear-gradient(to bottom, #e9eff5, #a7a7a7);
+        }
+        .platfrom_xbox {
+            background-image: linear-gradient(to bottom, #b4ed50, #429321);
+        }
+        .platfrom_ios {
+            background-image: linear-gradient(to bottom, #10b7d9, #0072f6);
+        }
+        .platfrom_android {
+            background-image: linear-gradient(to top, #708b02, #aac051);
+        }
+        .platfrom_nintendo {
+            background-image: linear-gradient(to bottom, #ff5763, #f11a2a);
+        }
+        .platfrom_linux {
+            background-image: linear-gradient(to bottom, #ffe412, #e9810f);
+        }
+        .platfrom_atari {
+            background-image: linear-gradient(to bottom, #db3d38, #0e3ebe);
+        }
+        .platfrom_commodore-amiga {
+            background-image: linear-gradient(to bottom, #fd1627, #8dea1a);
+        }
+        .platfrom_sega {
+            background-image: linear-gradient(to bottom, #1ad96b, #0d61a6);
+        }
+        .platfrom_3do {
+            background-image: linear-gradient(to bottom, #ffe51c, #fe700e 51%, #fe0000);
+        }
+        .platfrom_web {
+            background-image: linear-gradient(to top, #009efd, #2af598);
+        }
+
+        .legend_pc {
+            background-image: linear-gradient(to top, #4354b9, #649bff);
+        }
+        .legend_playstation {
+            background-image: linear-gradient(to bottom, #444444, #000000);
+            border: solid 1px rgba(255, 255, 255, 0.4);
+        }
+        .legend_mac {
+            background-color: #151515;
+        }
+        .legend_xbox {
+            background-image: linear-gradient(to bottom, #b4ec51, #429321);
+        }
+        .legend_ios {
+            background-image: linear-gradient(to bottom, #10b7d9, #0072f6);
+        }
+        .legend_android {
+            background-image: linear-gradient(to top, #708b02, #aac051);
+        }
+        .legend_nintendo {
+            background-image: linear-gradient(to bottom, #ff5763, #f11a2a);
+        }
+        .legend_linux {
+            background-image: linear-gradient(to top, #e8810f, #ffe412);
+        }
+        .legend_atari {
+            background-image: linear-gradient(to bottom, #db3d38, #0e3ebe);
+        }
+        .legend_commodore-amiga {
+            background-image: linear-gradient(to top, #fd1627, #8dea1a);
+            border: solid 0.3px #000000;
+        }
+        .legend_sega {
+            background-image: linear-gradient(to bottom, #1ad96b, #0d61a6);
+        }
+        .legend_3do {
+            background-image: linear-gradient(to bottom, #ffe51c, #fe700e 51%, #fe0000);
+        }
+        .legend_web {
+            background-image: linear-gradient(to top, #009efd, #2af598);
+        }
+    </style>
+</head>
+<body>
+<div class="back"></div>
+<div class="content">
+    <span class="name img{{ rating }}">{{ name }}</span>
+    <div class="avatar"></div>
+    <div class="count">
+        <div class="head">
+            <b>{{ games_count }}</b>
+            {% blocktrans count counter=games_count %}game{% plural %}games{% endblocktrans %}
+        </div>
+    </div>
+    <div class="platforms">
+        {% for platform in platforms %}<div class="platform platfrom_{{ platform.slug }}" style="width: {{ platform.percent | stringformat:'3.2f' }}%">
+            {% if platform.percent > 15 %}
+                <img src="file://{{ img_path }}/{{ platform.slug }}.svg">
+            {% endif %}
+            &nbsp;
+        </div>{% endfor %}
+    </div>
+    <div class="platforms-legend">
+        {% for platform in platforms %}
+            <div class="legend">
+                <div class="legend-round legend_{{ platform.slug }}"></div>
+                <div class="legend-title">{{ platform.platform }} </div>
+                <div class="legend-count">{{ platform.count }}</div>
+            </div>
+        {% endfor %}
+    </div>
+    <table class="genres">
+        <tr>
+            {% for genre in genres %}
+                <td>
+                    <div class="genre">
+                        <div class="genre-counter">{{ forloop.counter }}</div>
+                        <div class="genre-title">{{ genre.name }}</div>
+                        <div class="genre-count">{{ genre.count }} {% blocktrans count counter=genre.count %}game{% plural %}games{% endblocktrans %}</div>
+                    </div>
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+    <div class="subscribe {{ language }}">
+        {% if language == 'ru' %}
+            <img src="file:///app/project/templates/share/logo_ag.png">
+        {% else %}
+            AG
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

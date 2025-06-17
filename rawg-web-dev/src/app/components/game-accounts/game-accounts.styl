@@ -1,0 +1,49 @@
+.game-accounts
+  @media $bp.phone
+    padding 0 10px 80px
+    display flex
+    flex-direction column
+    align-items center
+
+.game-accounts__title
+  font-size 44px
+  font-weight normal
+  line-height 1.09
+  margin-bottom 16px
+  @media $bp.phone
+    text-align center
+    font-size 24px
+    line-height 1.17
+    margin-bottom 10px
+    padding 0 40px
+
+.game-accounts__text
+  width 600px
+  font-size 14px
+  font-weight normal
+  line-height 1.43
+  letter-spacing 0.1px
+  margin-bottom 32px
+  @media $bp.phone
+    width auto
+    text-align center
+    margin-bottom 16px
+
+.game-accounts__wrap
+  display grid
+  grid-template-columns repeat(4, 222px)
+  grid-template-rows auto
+  grid-row-gap 16px
+  grid-column-gap 24px
+  margin-bottom 32px
+  @media $bp.phone
+    grid-template-columns auto
+
+.game-accounts__skip
+  font-size 18px
+  color $color-white
+
+  $remove-link-style()
+
+  @media $bp.phone
+    font-size 16px

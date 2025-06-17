@@ -1,0 +1,108 @@
+.page_secondary
+  .page__form
+    h1, h2
+      margin-bottom 40px
+
+    form > div:not(:last-of-type)
+      margin-bottom 20px
+
+    form > div:last-of-type
+      margin-bottom 40px
+
+    textarea
+      max-width 100%
+
+  .page__info
+    display flex
+    flex-direction column
+    align-items center
+    padding 0 60px
+    box-sizing border-box
+    text-align center
+
+  .page__info > div
+    max-width 80%
+    &:not(:last-child)
+      margin-bottom 40px
+
+  .page__info a
+    font-size 20px
+    color $color-white
+    border-color $color-white
+    transition all 0.3s
+
+    &:hover
+      color alpha($color-white, 0.5)
+      border-color alpha($color-white, 0.5)
+
+  .page__block
+    margin-bottom 20px
+
+  .page__block_offset
+    margin-bottom 40px
+
+  .page__additional
+    margin-top 20px
+    text-align center
+
+    display flex
+    flex-direction column
+
+    a
+      margin 10px auto 0
+      display inline-block
+      border-color transparent
+
+    @media $bp.phone
+      margin-top 0
+
+  .page__footer-agreement
+    text-align center
+
+    @media $bp.phone
+      padding-left 5px
+      padding-right 5px
+      max-width 386px
+      box-sizing border-box
+
+    .page__footer-link
+      padding 0
+
+  .page__footer-link
+    margin-top 40px
+    text-align: center;
+    border-color transparent
+
+    @media $bp.desktop
+      &:hover
+        border-color alpha($color-white, 0.5)
+
+    @media $bp.phone
+      margin-top 0
+      padding 0 10px
+
+  .page__footer
+    padding $header-height-desktop
+    position absolute
+    left 0
+    right 0
+    bottom 0
+
+  .page__notifications
+    display none
+
+  @media $bp.phone
+    .page__content
+      h1, h2
+        margin 20px 0 30px
+
+      h1, h2, h3
+        padding 0 10px
+        box-sizing border-box
+        text-align center
+
+      form > div:not(:last-of-type)
+        margin-bottom 20px
+
+      form > div:last-of-type
+        margin-bottom 40px

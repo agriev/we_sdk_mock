@@ -1,0 +1,22 @@
+[run]
+branch = True
+source =
+    api
+    apps
+omit =
+    */migrations/*
+    */tests/*
+    */tests.py
+    api/shop/*
+    api/token/*
+    apps/mocks/*
+    apps/shop/*
+    apps/token/*
+concurrency = multiprocessing
+parallel = true
+
+[report]
+ignore_errors = True
+
+[html]
+directory = ../tmp/coverage

@@ -1,0 +1,248 @@
+.welcome
+  padding-bottom 0
+
+  .page__content
+    @media $bp.desktop
+      max-width $page-width-desktop
+
+.welcome__content
+  display flex
+  flex-direction column
+  justify-content space-between
+  min-height 100%
+  flex-grow 1
+
+.welcome__block
+  margin-bottom 120px
+  text-align center
+
+  @media $bp.phone
+    margin-bottom 120px
+
+    &:last-child
+      margin-bottom 45px
+
+.welcome__title-h1
+  margin 0 0 60px
+
+  @media $bp.phone
+    margin-bottom 30px
+
+.welcome__title-h2
+  margin 0 0 40px
+
+  @media $bp.phone
+    padding 0 10px
+    font-size 30px
+
+.welcome__title-description
+  font-size 24px
+  line-height 34px
+
+  @media $bp.phone
+    padding 0 20px
+    font-size 18px
+    line-height 28px
+
+.welcome__description
+  margin-bottom 60px
+  font-size 18px
+  line-height 28px
+
+  @media $bp.phone
+    padding 0 20px
+
+.welcome__slider
+  position relative
+  margin-bottom 48px
+
+.welcome__slider-overlay
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+
+  width 100%
+  height 100%
+
+  cursor pointer
+
+  @media $bp.phone
+    display none
+
+.welcome__block_header
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  box-sizing border-box
+  padding 95px 0 0
+  margin-bottom 180px
+
+  @media $bp.phone
+    margin-bottom 160px
+    padding-top 60px
+
+.welcome__image
+  margin 0 auto
+  background no-repeat center
+  background-size contain
+
+.welcome__image_user
+  @media $bp.desktop
+    width $page-width-desktop
+    height 1416px
+    background-image url("./assets/welcome-desktop-block-user.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-user@2x.jpg")
+
+  @media $bp.phone
+    width 320px
+    height 519px
+    background-image url("./assets/welcome-phone-block-user.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-user@2x.jpg")
+
+.welcome__image_profile
+  @media $bp.desktop
+    width $page-width-desktop
+    height 528px
+    background-image url("./assets/welcome-desktop-block-profile.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-profile@2x.jpg")
+
+  @media $bp.phone
+    width 320px
+    height 519px
+    background-image url("./assets/welcome-phone-block-profile.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-profile@2x.jpg")
+
+.welcome__image_collection
+  @media $bp.desktop
+    width $page-width-desktop
+    height 653px
+
+  @media $bp.phone
+    width 320px
+    height 519px
+
+.welcome__image_collection-1
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-collections-1.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-collections-1@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-collections-1.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-collections-1@2x.jpg")
+
+.welcome__image_collection-2
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-collections-2.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-collections-2@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-collections-2.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-collections-2@2x.jpg")
+
+.welcome__image_collection-3
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-collections-3.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-collections-3@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-collections-3.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-collections-3@2x.jpg")
+
+.welcome__image_game
+  @media $bp.desktop
+    width $page-width-desktop
+    height 653px
+
+  @media $bp.phone
+    width 320px
+    height 519px
+.welcome__image_game-1
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-games-1.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-games-1@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-games-1.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-games-1@2x.jpg")
+
+.welcome__image_game-2
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-games-2.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-games-2@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-games-2.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-games-2@2x.jpg")
+
+.welcome__image_game-3
+  @media $bp.desktop
+    background-image url("./assets/welcome-desktop-block-games-3.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-desktop-block-games-3@2x.jpg")
+
+  @media $bp.phone
+    background-image url("./assets/welcome-phone-block-games-3.jpg")
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
+      background-image url("./assets/welcome-phone-block-games-3@2x.jpg")
+
+.welcome__description_signup
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+  @media $bp.phone
+    padding 0 10px
+
+.welcome__invite-form
+  margin-bottom 40px
+
+.welcome__link
+  font-size 20px
+  border-color transparent
+
+  &:first-of-type
+    margin 20px 0 10px
+
+  &:hover
+    border-color alpha($color-white, 0.5)
+
+.welcome__button-link
+  margin-bottom 20px
+
+.welcome__slides
+  .slick-dots
+    bottom -30px

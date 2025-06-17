@@ -1,0 +1,48 @@
+.tabs
+
+  .tabs__list
+    display flex
+    justify-content flex-start
+    align-items center
+    flex-wrap wrap
+    width 100%
+    padding-left 0
+    margin 0
+
+    @media $bp.phone
+      flex-wrap nowrap
+
+    .tabs__item
+      list-style-type none
+
+      &:not(:last-child)
+        margin-right 8px
+
+  &, & > .tabs__list
+    @media $bp.phone
+      justify-content flex-start
+      overflow auto
+      -webkit-overflow-scrolling touch
+
+.tabs_disabled
+  position relative
+
+  &::after
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+    background transparent
+    cursor not-allowed
+    content ''
+
+.tabs_centred
+  .tabs__list
+    justify-content center
+
+@media $bp.phone
+  .tabs_mobile-centered
+    .tabs__list
+      justify-content center

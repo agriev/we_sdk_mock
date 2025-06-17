@@ -1,0 +1,143 @@
+.profile-games__editing-panel
+  position fixed
+  left 0
+  right 0
+  bottom 0
+  z-index 6
+
+  background-color #282828
+  box-shadow 0 0 1px 0 alpha($color-black, 0.2)
+
+  @media $bp.desktop
+    height 80px
+
+  @media $bp.phone
+    max-width 350px
+    width 100%
+    left unset
+    border-top-left-radius 4px
+
+.profile-games__editing-panel-content
+  position relative
+  margin 0 auto
+  display flex
+  align-items center
+  justify-content space-between
+  height 100%
+
+  @media $bp.desktop
+    width $page-width-desktop
+
+  @media $bp.phone
+    padding 0 15px
+    flex-direction column
+
+.profile-games__editing-panel-selects
+  display flex
+  align-items center
+  justify-content space-between
+  flex-shrink 0
+
+  @media $bp.phone
+    flex-direction column
+    width 100%
+
+.profile-games__editing-panel-selects_disabled
+  position relative
+  opacity 0.4
+
+  &::after
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+
+    cursor not-allowed
+    content ''
+
+
+.profile-games__editing-panel-info
+  width 180px
+  flex-grow 0
+  flex-shrink 0
+  font-size 18px
+
+  @media $bp.desktop
+    span:first-of-type
+      margin-right 10px
+
+  @media $bp.phone
+    display flex
+    justify-content space-between
+    width 100%
+    box-sizing border-box
+    padding-bottom 13px
+
+    & > div
+      padding-top 15px
+
+.profile-games__editing-panel-arrow
+  margin-right 10px
+  cursor pointer
+
+.profile-games__editing-panel-undo
+  font-size 14px
+  color alpha($color-white, 0.5)
+  cursor pointer
+  transition color 0.3s
+  margin-left 8px
+
+  &:hover
+    color $color-white
+
+.profile-games__editing-button
+.profile-games__delete-button
+  min-width 180px
+  height 50px
+  padding 0 20px
+  box-sizing border-box
+  font-size 18px
+  color $color-white
+
+  @media $bp.phone
+    width 100%
+
+.profile-games__editing-select
+  @media $bp.desktop
+    margin-right 20px
+
+  @media $bp.phone
+    width 100%
+    margin-bottom 20px
+
+.profile-games__delete-button
+  display flex
+  align-items center
+  justify-content center
+  border 2px solid #e94a30
+  cursor pointer
+  border-radius 4px
+
+  @media $bp.phone
+    margin-bottom 20px
+
+.dropdown__container_multiple-editing
+  position fixed !important
+  top auto !important
+  bottom 15px !important
+  min-width 180px
+
+.dropdown__container_multiple-editing .dropdown__content
+  max-height 300px
+  overflow-y auto
+
+.profile-games__editing-panel-close
+  @media $bp.desktop
+    position absolute
+    right -35px
+    top -15px
+    background-color #3d3d3d
+
+  @media $bp.phone
+    margin-bottom 20px

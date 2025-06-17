@@ -1,0 +1,52 @@
+.game-posts
+  margin-top 64px
+  position relative
+  display flex
+  flex-direction column
+
+  @media $bp.phone
+    margin-top 12px
+    padding 0 10px
+
+.game-posts__item
+  margin-bottom 24px
+
+.game-posts__ordering
+  position absolute
+  top -48px
+  right -5px
+
+  @media $bp.phone
+    position relative
+    top 0
+    right auto
+
+    margin-bottom 30px
+
+  .dropdown__button
+    @media $bp.phone
+      justify-content center
+
+.game-posts__ordering-container
+  min-width 175px
+
+.game-posts__ordering-button
+  position relative
+  font-size 14px
+  font-weight 300
+  color $color-white
+
+  .select-button__title
+    margin-right 10px
+
+.game-posts__ordering-content
+  font-size 14px
+
+.game-posts__add-link
+  $remove-link-style()
+  margin-bottom 24px
+  text-decoration none
+
+.game-posts__add-card
+  &:not(:hover)
+    background-color alpha($color-black, 0.3)

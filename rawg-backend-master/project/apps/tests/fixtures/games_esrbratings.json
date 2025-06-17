@@ -1,0 +1,74 @@
+[
+  {
+    "model": "games.esrbrating",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "hidden": false,
+      "slug": "everyone",
+      "name": "Everyone",
+      "short_name": "E",
+      "description": "Content is generally suitable for all ages. May contain minimal cartoon, fantasy or mild violence and/or infrequent use of mild language."
+    }
+  },
+  {
+    "model": "games.esrbrating",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "hidden": false,
+      "slug": "everyone-10-plus",
+      "name": "Everyone 10+",
+      "short_name": "E10+",
+      "description": "Content is generally suitable for ages 10 and up. May contain more cartoon, fantasy or mild violence, mild language and/or minimal suggestive themes."
+    }
+  },
+  {
+    "model": "games.esrbrating",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "hidden": false,
+      "slug": "teen",
+      "name": "Teen",
+      "short_name": "T",
+      "description": "Content is generally suitable for ages 13 and up. May contain violence, suggestive themes, crude humor, minimal blood, simulated gambling and/or infrequent use of strong language."
+    }
+  },
+  {
+    "model": "games.esrbrating",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "hidden": false,
+      "slug": "mature",
+      "name": "Mature",
+      "short_name": "M",
+      "description": "Content is generally suitable for ages 17 and up. May contain intense violence, blood and gore, sexual content and/or strong language."
+    }
+  },
+  {
+    "model": "games.esrbrating",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "hidden": false,
+      "slug": "adults-only",
+      "name": "Adults Only",
+      "short_name": "AO",
+      "description": "Content suitable only for adults ages 18 and up. May include prolonged scenes of intense violence, graphic sexual content and/or gambling with real currency."
+    }
+  },
+  {
+    "model": "games.esrbrating",
+    "pk": 6,
+    "fields": {
+      "order": 6,
+      "hidden": false,
+      "slug": "rating-pending",
+      "name": "Rating Pending",
+      "short_name": "RP",
+      "description": "Not yet assigned a final ESRB rating. Appears only in advertising, marketing and promotional materials related to a physical (e.g., boxed) video game that is expected to carry an ESRB rating, and should be replaced by a game's rating once it has been assigned."
+    }
+  }
+]

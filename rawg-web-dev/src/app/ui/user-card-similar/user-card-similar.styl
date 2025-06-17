@@ -1,0 +1,30 @@
+.user-card-similar
+  display flex
+  padding 16px 0
+
+.user-card-similar__link
+  $remove-link-style()
+
+.user-card-similar__avatar
+  margin-right 16px
+
+.user-card-similar__name
+  $font16-medium()
+  margin 0
+  transition 0.3s
+  color $color-white
+  display inline
+  &:hover
+    color alpha($color-white, 0.4)
+    transition 0.3s
+
+.user-card-similar__info-wrap
+  flex 1 1 auto
+
+.user-card-similar__text
+  $font12-small()
+  color alpha($color-white, 0.4)
+
+.user-card-similar__followed-counter
+  padding-left 8px
+  margin-left auto

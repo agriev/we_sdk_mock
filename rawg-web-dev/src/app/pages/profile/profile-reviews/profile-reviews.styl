@@ -1,0 +1,66 @@
+.profile-reviews__review
+  &:not(:last-child)
+    margin-bottom 16px
+
+  &.review-card_full
+    background-image linear-gradient(to bottom, rgba(32, 32, 32, 0), #2c2c2c)
+
+  .review-card__bottom-block
+    background-color transparent
+
+.profile-reviews__ratings
+  padding-top 30px
+
+  @media $bp.phone
+    padding 0 10px
+    margin-bottom 30px
+
+.profile-reviews__ratings-title
+  $font24-large()
+  font-weight bold
+  margin-bottom 25px
+
+  @media $bp.phone
+    text-align center
+
+.profile-reviews__rate-button-wrap
+  margin-top 24px
+  display flex
+  flex-direction column
+  align-items flex-start
+
+.profile-reviews__rate-button
+  width 200px
+  font-weight bold
+  color alpha($color-black, 0.6)
+
+.profile-reviews__rate-percent
+  color alpha($color-black, 0.4)
+
+.profile-reviews__ratings-items
+  display flex
+  flex-direction column
+
+  @media $bp.phone
+    align-items center
+
+.profile-reviews__ratings-item
+  display inline-flex
+
+  &:not(:last-child)
+    margin-bottom 20px
+
+.profile-reviews__ratings-item-count
+  display inline-flex
+  align-items center
+  margin-left 10px
+
+.profile-reviews__empty-icon
+  margin 0 auto 20px
+  width 140px
+  height 140px
+  background url("~assets/icons/emoji/zzz.png") no-repeat center
+  background-size cover
+
+.profile-reviews__toggle-only-reivews
+  margin 15px 0 25px 0

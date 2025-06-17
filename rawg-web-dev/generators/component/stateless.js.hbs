@@ -1,0 +1,48 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'recompose';
+import { hot } from 'react-hot-loader';
+{{#if connectedComponent}}
+import { connect } from 'react-redux';
+{{/if}}
+{{#if injectReactIntl}}
+import { injectIntl } from 'react-intl';
+import intlShape from 'tools/prop-types/intl-shape';
+{{/if}}
+
+import './{{ dashCase name }}.styl';
+
+const hoc = compose(
+  hot(module),
+  {{#if injectReactIntl}}
+  injectIntl,
+  {{/if}}
+  {{#if connectedComponent}}
+  connect(state => ({
+    size: state.app.size,
+  })),
+  {{/if}}
+);
+
+const componentPropTypes = {
+  className: PropTypes.string,
+  {{#if injectReactIntl}}
+  intl: intlShape.isRequired,
+  {{/if}}
+};
+
+const defaultProps = {
+  className: '',
+};
+
+const {{ properCase name }}Component = ({ className }) => (
+  <div className={['{{ dashCase name }}', className].join(' ')}>
+  </div>
+);
+
+{{ properCase name }}Component.propTypes = componentPropTypes;
+{{ properCase name }}Component.defaultProps = defaultProps;
+
+const {{ properCase name }} = hoc({{ properCase name }}Component);
+
+export default {{ properCase name }};

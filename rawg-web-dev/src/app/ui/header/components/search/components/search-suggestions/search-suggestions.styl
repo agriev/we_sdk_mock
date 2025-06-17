@@ -1,0 +1,140 @@
+.header__search__suggestions__container
+  // width 320px
+  .dropdown__content
+    // border-radius 0 0 18.5px 18.5px
+    border-radius 18.5px
+    padding 0
+    background-color $color-black
+    :first-child.header__search__suggestions__section
+      border-top-color transparent
+    @media $bp.phone
+      background-color #151515
+      border-radius 0
+    .header__search__suggestions__section
+      padding 0 16px
+      margin 0 0 10px
+      border-top solid 1px alpha($color-white, 0.1)
+      @media $bp.phone
+        padding 0 16px
+      .header__search__suggestions__section__title
+        display flex
+        justify-content space-between
+        margin 16px 0 8px
+        .header__search__suggestions__section__title_info
+          font-size 18px
+          font-weight bold
+          color $color-white
+          .header__search__suggestions__section__title_count
+            color alpha($color-white, 0.4)
+            font-weight normal
+            margin-left 4px
+    .search-results
+      margin 0
+      .search-results__item
+        border none
+
+        .collection-card
+          padding 8px 0
+          &:hover
+            .collection-card__meta
+              .collection-card__title
+                color alpha($color-white, 0.4)
+          .collection-card__games
+            max-width 38px
+            max-height 42px
+            .collection-card__game
+              width 17px
+              height 17px
+          .collection-card__meta
+            .collection-card__title
+              font-size 14px
+              font-weight bold
+              color $color-white
+            .collection-card__count
+              font-size 12px
+              color alpha($color-white, 0.4)
+              text-transform none
+
+        .collection-card_new.collection-card_inline
+          .collection-card__meta
+            margin-left 8px
+          .collection-card__games
+            grid-gap 2px
+            max-width 36px
+            max-height 36px
+
+        .user-card, .person-card
+          padding 8px 0
+          align-items flex-start
+          .avatar
+            min-width 36px
+            width 36px !important
+            height 36px !important
+            .avatar__initials
+              font-size 18px !important
+          .user-card__name, .person-card__name
+            font-size 14px
+          .user-card__meta
+            padding-top 6px
+            .user-card__meta-counter
+              span
+                svg
+                  min-width 14px
+                  width 14px !important
+                  height 14px !important
+
+.dropdown__container.dropdown__container_standard-widths.header__search__suggestions__container
+  @media $bp.desktop
+    min-width 240px
+    margin-top 12px
+  @media $bp.phone
+    top 60px !important
+    left 0 !important
+    max-width 100%
+    width 100%
+    height calc(100vh - 70px)
+    max-height calc(100vh - 70px)
+
+.header__search__suggestions__container_empty
+  display none
+
+.header__search__suggestions__section__see-all
+  $remove-link-style()
+  text-decoration underline
+  color alpha($color-white, 0.4)
+  &:hover
+    color alpha($color-white, 0.2)
+
+.header__search__suggestions__footer
+  display flex
+  justify-content space-between
+  padding 16px
+  border-top solid 1px alpha($color-white, 0.1)
+  font-size 14px
+  color alpha($color-white, 0.4)
+  @media $bp.phone
+    padding 16px 24px 52px
+    justify-content flex-start
+  .header__search__suggestions__section__see-all
+    @media $bp.phone
+      margin-right 8px
+
+.header__search__loading
+  padding 80px 0
+
+.header__search-suggestions__close-button
+  @media $bp.desktop
+    display none
+  @media $bp.phone
+    display flex
+    border-radius 100%
+    background-color $color-white
+    position fixed
+    bottom 16px
+    right 16px
+    padding 0
+    border none
+  .header__search__close-button_icon
+    height 16px
+    width 16px
+    margin 16px

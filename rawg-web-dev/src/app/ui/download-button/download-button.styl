@@ -1,0 +1,43 @@
+.download-button
+  position relative
+  width 100%
+  margin 16px 0
+
+.download-button__link
+  $remove-link-style()
+  $font14-small()
+  position relative
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  width 100%
+  box-sizing border-box
+  margin 16px 0
+  background-color #202020
+  border-radius 6px
+  padding 12px 16px 12px 16px
+
+  &:hover
+    color #fad860
+
+  // because border-radius and border-source-image can not be used together
+.download-button__border
+  position absolute
+  top -1px
+  bottom -1px
+  left -1px
+  right -1px
+  display block
+  background-color #fad961
+  background-image linear-gradient(to bottom, #fad961, #f76b1c)
+  border-radius 6px
+  opacity .7
+
+  .download-button:hover &
+    opacity 1
+
+.download-button__title
+  position relative
+  line-height 14px
+  text-align center

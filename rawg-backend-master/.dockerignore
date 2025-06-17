@@ -1,0 +1,7 @@
+*
+!.circleci/
+!config/
+!crawlers/
+!locale/
+!project/
+!setup.cfg

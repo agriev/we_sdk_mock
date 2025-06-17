@@ -1,0 +1,60 @@
+.review-card
+  position relative
+  background-color alpha(white, 7%)
+
+  width 100%
+  min-height 180px
+  box-sizing border-box
+  overflow hidden
+  z-index 0
+
+  border-radius 4px
+
+  .theme_light &
+    background-color alpha(#0e0e0e, 6%)
+    color alpha(black, 90%)
+
+.review-card__top-block
+  padding 32px 32px 24px
+
+  @media $bp.phone
+    padding 24px
+    background-color alpha($color-white, 0.05)
+
+.review-card__bottom-block
+  padding 20px
+  border-top 1px solid alpha(#d8d8d8, 0.1)
+
+  .theme_light &
+    background-color unset
+    border-top-color alpha(#979797, 20%)
+
+  @media $bp.phone
+    padding 15px 10px 15px 10px
+
+.review-card__footer
+  margin-left -4px
+  margin-top 7px
+  position relative
+  display flex
+  justify-content space-between
+  align-items center
+  flex-wrap wrap
+
+.review-card_slider
+  height 100%
+  overflow hidden
+
+.review-card_slider .review-card__top-block
+  display flex
+  flex-direction column
+  justify-content space-between
+  height 100%
+  box-sizing border-box
+  @media $bp.phone
+    padding-top 20px
+
+.review-card_slider .review-card__reactions
+  margin-bottom 6px
+  height 30px
+  overflow hidden

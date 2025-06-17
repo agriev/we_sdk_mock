@@ -1,0 +1,260 @@
+<mjml>
+  <mj-head>
+    <mj-style inline="inline">
+      .link-gray {
+        color: #676767 !important;
+      }
+
+      .container {
+        padding: 0 10px 30px;
+        background-color: #151515;
+      }
+
+      .headings-container {
+        padding-top: 55px;
+      }
+
+      @media (max-width: 600px) {
+        .headings-container {
+          padding-top: 16px !important;
+        }
+      }
+
+      .title > div {
+        font-size: 36px !important;
+        color: white !important;
+        line-height: 118% !important;
+        padding-top: 24px !important;
+        padding-bottom: 16px !important;
+      }
+
+      @media (max-width: 600px) {
+        .title > div {
+          font-size: 24px !important;
+          line-height: 28px !important;
+          text-align: center !important;
+          padding: 16px 27px 0 !important;
+        }
+      }
+
+      .header-title > div {
+        color: white !important;
+        font-size: 18px !important;
+        font-weight: bold !important;
+        letter-spacing: 5px !important;
+      }
+
+      @media (max-width: 600px) {
+        .header-title > div {
+          text-align: center !important;
+        }
+      }
+
+      .message-container-wrapper {
+        margin-top: 32px !important;
+      }
+
+      @media (max-width: 600px) {
+        .message-container-wrapper {
+          margin-top: 16px !important;
+        }
+      }
+
+      .message-container {
+        background-color: #57a42a;
+        padding: 32px 32px 40px;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 600px) {
+        .message-container {
+          padding: 24px 24px 40px;
+        }
+      }
+
+      .message-title > div {
+        color: white !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+      }
+
+      @media (max-width: 600px) {
+        .message-title > div {
+          font-size: 18px !important;
+        }
+      }
+
+      .message-title2 > div {
+        color: white !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        margin-top: 16px !important;
+      }
+
+      .message-title2 .coin {
+        position: relative !important;
+        top: 3px !important;
+        width: 20px !important;
+      }
+
+      @media (max-width: 600px) {
+        .message-title2 > div {
+          font-size: 18px !important;
+        }
+        .message-title2 .coin {
+          width: 15px !important;
+        }
+      }
+
+      .message-text > div {
+        color: white !important;
+        font-size: 16px !important;
+        line-height: 22px !important;
+        padding-top:8px !important;
+      }
+
+      @media (max-width: 600px) {
+        .message-text > div {
+          font-size: 14px !important;
+          line-height: 18px !important;
+        }
+      }
+
+      .wreath-left {
+        position: relative;
+        top: 3px;
+        margin-left: 3px;
+      }
+
+      .wreath-right {
+        position: relative;
+        top: 3px;
+        margin-right: 3px;
+      }
+
+      .message-btn {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+      }
+
+      .message-btn td {
+        padding: 14px 32px !important;
+        background: transparent !important;
+        background-color: white !important;
+        border-radius: 4px !important;
+      }
+
+      .message-btn a {
+        background-color: white !important;
+        color: #151515 !important;
+        font-size: 18px !important;
+      }
+
+      @media (max-width: 600px) {
+        .message-btn {
+          padding-top: 16px !important;
+        }
+        .message-btn a {
+          font-size: 14px !important;
+        }
+      }
+
+      .divider {
+        padding-top: 40px !important;
+        padding-bottom: 30px !important;
+      }
+
+      .divider p {
+        border-top: 1px solid #3B3B3B !important;
+      }
+
+      @media (max-width: 600px) {
+        .divider {
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .footer-desktop {
+          display: none !important;
+        }
+      }
+
+      @media (min-width: 601px) {
+        .footer-phone {
+          display: none !important;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-all
+        font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif"
+        padding="0"
+      />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body css-class="container">
+
+    <mj-section css-class="headings-container">
+      <mj-column width="100%">
+        <mj-text css-class="header-title">RAWG</mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text css-class="title">Rawgers won achievements run</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section css-class="message-container-wrapper">
+      <mj-column css-class="message-container">
+        <mj-text css-class="message-title">Hey there!</mj-text>
+        <mj-text css-class="message-text">
+          The latest achievements run on RAWG was successful: the community won YYYY <img width="13" src="assets/coin.png" />. You played BBBB games and earned <img class="wreath-left" width="13" src="assets/wreath-left.png" /> CCCC <img class="wreath-right" width="13" src="assets/wreath-right.png" /> karma points for DDDD 🏆. You are in top-20% of the rawgers! You did a good job!
+        </mj-text>
+        <mj-text css-class="message-title2">ZZZZ <img class="coin" src="assets/coin.png" /> are yours</mj-text>
+        <mj-text css-class="message-text">
+          You can get your tokens right now and spend them on games.
+        </mj-text>
+        <mj-button align="left" css-class="message-btn" href="https://rawg.io">
+          Claim tokens
+        </mj-button>
+        <mj-text css-class="message-text">
+          🔥 Hurry up! Your     AAAA     karma points will burn on DATE
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-divider css-class="divider" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section css-class="footer-desktop">
+      <mj-column width="30%">
+        <mj-text color="white">
+          <a href="/" alt="Unsubscribe" class="link-gray">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text align="right" color="#676767">
+          2017 © RAWG, Behind The Games
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section css-class="footer-phone">
+      <mj-column width="100%">
+        <mj-text align="center" color="#676767">
+          2017 © RAWG, Behind The Games
+        </mj-text>
+        <mj-text color="white" align="center" padding-top="8px">
+          <a href="/" alt="Unsubscribe" class="link-gray">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

@@ -1,0 +1,321 @@
+.game-viewer
+  position relative
+
+.game-viewer__slider
+  position relative
+  width 100%
+  height 350px
+  overflow hidden
+  scroll-behavior smooth
+
+  background-color alpha($color-black, 0.5)
+
+  @media $bp.phone
+    height 170px
+
+.game-viewer__slider div
+  height 100%
+
+.game-viewer__slider-nav
+  position absolute
+  z-index 1
+  top 50%
+  transform translateY(-50%)
+
+  display flex
+  justify-content center
+  align-items center
+  width 50px
+  height 50% !important
+
+  font-size 0
+  line-height 0
+  opacity 0.4
+  cursor pointer
+  transition opacity 0.3s
+
+  &:hover
+    opacity 1.0
+
+  &_left
+    left 0
+
+  &_right
+    right 0
+
+  @media $bp.phone
+    display none
+
+.game-viewer__slides
+  position relative
+  display flex
+  flex-wrap nowrap
+
+  transform translatex(200px)
+  transition: transform 300ms
+
+  > div
+    flex 0 0 auto
+
+.game-viewer__slide
+  height 100%
+  background no-repeat center
+  background-size cover
+  cursor pointer
+
+  @media $bp.phone
+    height 170px
+
+.game-viewer__list
+  height 96px
+  overflow hidden
+
+  @media $bp.phone
+    height 10px
+    margin-top 10px
+
+.game-viewer__videos-list
+  bottom 50% !important
+
+.game-viewer__list-inner
+  display flex
+  justify-content flex-start
+  padding-bottom 50px
+  padding-right 24px
+  scroll-behavior smooth
+  width 100%
+  overflow hidden
+  box-sizing border-box
+
+  @media $bp.phone
+    justify-content center
+
+.game-viewer__list-item
+  display flex
+  justify-content center
+  align-items center
+  width 100px
+  height 56px
+  flex-shrink 0
+  margin 20px 20px 0 0
+  background alpha($color-white, 0.1) no-repeat center
+  background-size cover
+  cursor pointer
+  opacity 0.25
+  position relative
+  border-radius 4px
+
+  transition opacity .3s
+
+  @media $bp.phone
+    width 6px
+    height 6px
+    margin 2px
+    background-color $color-white
+    background-image none !important
+    border-radius 50%
+
+  &:hover
+    opacity .5
+    .game-viewer__list-item__hover
+      $hover-overall-lighting-active()
+
+  > .game-viewer__list-item__hover
+    $hover-overall-lighting()
+
+.game-viewer__list-item_active
+  cursor default
+  &, &:hover
+    opacity 1
+
+.game-viewer__list-item-icon
+  display flex
+  justify-content center
+  align-items center
+  height 100%
+
+  &::before
+    font-family video-react !important
+    content "\F200"
+
+  @media $bp.phone
+    display none
+
+.game-viewer__close
+  position absolute
+  top 20px
+  right 20px
+  z-index 2
+
+  @media $bp.phone
+    top auto
+    bottom 32px
+    left calc(50% - 25px)
+
+  @media $bp.phone + " and (orientation: phoneLandscape)"
+    top 10px
+    bottom auto
+    left 10px
+
+.game-viewer_full-size
+  position fixed
+  top 0
+  left 0
+  z-index 111
+
+  width 100%
+  height 100%
+  padding 90px 0 96px
+  box-sizing border-box
+
+  background-color #000
+
+  @media $bp.phone
+    padding 0
+
+.game-viewer_full-size .game-viewer__slider
+  position static
+  height 100%
+
+.game-viewer_full-size .game-viewer__slider-nav
+  top 20px
+  transform none
+
+  width 50px
+  height 50px !important
+  box-sizing border-box
+  border 1px solid alpha(#979797, 0.05)
+  border-radius 50%
+
+  background-color alpha($color-white, 0.05)
+  opacity 1.0
+  cursor pointer
+  transition background-color 0.3s
+
+  &:hover
+    background-color $color-white
+    .arrow__icon
+      filter brightness(0%)
+
+  &:after
+    position fixed
+    top 0
+
+    display block
+    width 50%
+    height 0;
+
+    content ''
+    cursor pointer
+
+    @media $bp.phone
+      display none
+
+  &_left
+    left calc(50% - 60px)
+
+    &:after
+      left 0
+
+  &_right
+    left calc(50% + 20px)
+
+    &:after
+      right 0
+
+.game-viewer_full-size .game-viewer__slide
+  background-size contain
+
+.game-viewer_full-size .game-viewer__list
+  @media $bp.phone
+    position absolute
+    bottom 25%
+    left 0
+    right 0
+    display flex
+    justify-content center
+
+    // // width 100%
+    // border 1px solid red
+
+  @media $bp.phone + " and (orientation: phoneLandscape)"
+    bottom 10px
+
+.game-viewer_full-size .game-viewer__list-item
+  @media $bp.desktop
+    margin 20px 0 0 20px
+
+    &:last-child:after
+      display block
+      width 20px
+      height 100%
+      padding-left 100%
+      padding-right 40px
+      content ''
+
+.game-viewer__movie-slide
+  position relative
+  width auto
+  height 100%
+  max-height 100%
+  display flex
+  justify-content center
+  align-items center
+
+  @media $bp.phone
+    align-items flex-start
+    margin-top 32px
+
+.game-viewer__video-wrapper
+  width 100%
+  max-width calc((100vh - 216px) * 1.77777)
+  height auto !important
+  background-color alpha($color-white, 0.01)
+
+.game-viewer__video
+  position relative
+  width 100%
+  height 0
+  padding-bottom 56.25%
+
+  iframe
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    width 100%
+    height 100%
+    border none
+
+.game-viewer__loading
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index 4
+
+  display flex
+  justify-content center
+  align-items center
+  background-color alpha($color-black, 0.8)
+
+  svg
+    fill alpha($color-white, 0.1)
+
+.game-viewer__more
+  display flex
+  justify-content center
+  align-items center
+  width 100px
+  height 56px
+  flex-shrink 0
+  margin 20px 20px 0 20px
+  background alpha($color-white, 0.1) no-repeat center
+  cursor pointer
+  opacity 0.4
+  line-height 0
+
+  @media $bp.phone
+    display none

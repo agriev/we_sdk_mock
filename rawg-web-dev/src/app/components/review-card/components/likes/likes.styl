@@ -1,0 +1,103 @@
+.review-card__likes
+  display flex
+  align-items center
+  justify-content flex-end
+  flex-grow 1
+  margin-top 10px
+
+.review-card__likes-text
+  $font12-small()
+  max-width 90%
+  color alpha($color-white, 0.2)
+  text-align right
+
+  .theme_light &
+    color alpha(black, 40%)
+
+  @media $bp.phone
+    max-width 50%
+
+.review-card__likes-buttons
+  display flex
+  align-items center
+  padding-bottom 5px
+  margin-left 16px
+
+.review-card__likes-rating
+  $font20-large()
+  padding 0 8px
+  font-weight bold
+  color alpha($color-white, 0.2)
+
+  .theme_light &
+    color #55a26a
+
+.review-card__likes-rating_positive
+.review-card__likes-rating_negative
+  padding 0 10px 0 6px
+
+.review-card__likes-rating_positive
+  color #55a26a
+
+.review-card__likes-rating_negative
+  color #ad5756
+
+a.review-card__likes-button
+  $remove-link-style()
+
+  #game_reviews
+    transition all 0.3s
+
+.review-card__likes-button
+  cursor pointer
+
+.review-card__likes-button_disabled
+  opacity 0.4
+  cursor not-allowed
+
+.review-card__likes-button_active.review-card__likes-button_positive
+  #game_reviews
+    fill #8affaa
+
+.review-card__likes-button_positive
+  &:hover
+    #game_reviews
+      fill #8affaa
+
+.review-card__likes-button_active.review-card__likes-button_negative
+  #game_reviews
+    fill #f17a78
+
+.review-card__likes-button_negative
+  &:hover
+    #game_reviews
+      fill #f17a78
+
+.review-card__icon
+  display inline-block
+
+  &.review-card__icon_positive__up-active
+    background url('~assets/icons/up-active.svg?external') no-repeat center / cover
+    width 19px
+    height 20px
+
+    .theme_light &
+      background url('~assets/icons/up-active-light-theme.svg?external') no-repeat center / cover
+
+  &.review-card__icon__up
+    background url('~assets/icons/up.svg?external') no-repeat center / cover
+    width 19px
+    height 20px
+
+  &.review-card__icon_negative__down-active
+    background url('~assets/icons/down-active.svg?external') no-repeat center / cover
+    width 19px
+    height 20px
+
+  &.review-card__icon__down
+    background url('~assets/icons/down.svg?external') no-repeat center / cover
+    width 19px
+    height 20px
+
+.review-card__icon_negative
+  margin-top 6px

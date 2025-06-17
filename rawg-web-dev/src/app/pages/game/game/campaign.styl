@@ -1,0 +1,65 @@
+.game-campaign
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+  position fixed
+
+  left 0
+  top 0
+
+  width 100%
+  height 100%
+
+  background-color rgba(20, 20, 20, 0.9)
+  z-index 9999
+
+  padding 16px
+  box-sizing border-box
+
+  &__timer
+    display flex
+    align-items center
+    position absolute
+
+    right 16px
+    top 16px
+
+    background-color #141414
+    padding 12px
+
+    box-sizing border-box
+
+    font-size 14px
+    line-height 24px
+
+    color rgba(white, 0.6)
+    border-radius 12px
+
+    height 56px
+
+    span
+      color white
+
+  &__close
+    display flex
+    align-items center
+    justify-content center
+
+    margin-left 16px
+
+    width 32px
+    height 32px
+
+    background-color #FA3746
+    border-radius 100%
+
+    cursor pointer
+
+    .SVGInline
+      display inline-flex
+
+    svg
+      width 14px
+      height 14px

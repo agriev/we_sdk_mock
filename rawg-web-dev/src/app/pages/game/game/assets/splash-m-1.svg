@@ -1,0 +1,22 @@
+<svg width="607" height="759" viewBox="0 0 607 759" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_101_314)">
+<rect opacity="0.1" x="304" y="683" width="76" height="76" transform="rotate(-90 304 683)" fill="white"/>
+<rect opacity="0.1" x="228" y="455" width="76" height="76" transform="rotate(-90 228 455)" fill="white"/>
+<rect opacity="0.1" y="607" width="76" height="76" transform="rotate(-90 0 607)" fill="white"/>
+<rect opacity="0.1" x="-0.00012207" y="76" width="76" height="76" transform="rotate(-90 -0.00012207 76)" fill="white"/>
+<rect opacity="0.1" x="152" y="683" width="76" height="76" transform="rotate(-90 152 683)" fill="white"/>
+<rect opacity="0.05" x="76" y="531" width="76" height="76" transform="rotate(-90 76 531)" fill="white"/>
+<rect opacity="0.05" x="76" y="304" width="76" height="76" transform="rotate(-90 76 304)" fill="white"/>
+<rect opacity="0.05" x="152" y="152" width="76" height="76" transform="rotate(-90 152 152)" fill="white"/>
+<rect opacity="0.05" x="228" y="607" width="76" height="76" transform="rotate(-90 228 607)" fill="white"/>
+<rect opacity="0.05" x="228" y="759" width="76" height="76" transform="rotate(-90 228 759)" fill="white"/>
+<rect opacity="0.05" x="532" y="683" width="76" height="75" transform="rotate(-90 532 683)" fill="white"/>
+<rect opacity="0.05" y="759" width="76" height="76" transform="rotate(-90 0 759)" fill="white"/>
+<rect opacity="0.05" y="455" width="76" height="76" transform="rotate(-90 0 455)" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_101_314">
+<rect width="759" height="607" fill="white" transform="translate(607) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>

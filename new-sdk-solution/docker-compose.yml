@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: app
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app"]
+      interval: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    command: >-
+      sh -c "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - ./backend/src:/app
+      - ./games:/app/games_assets
+    environment:
+      DJANGO_DEBUG: "1"
+      SECRET_KEY: "change_me"
+      DATABASE_URL: "postgres://app:app@db:5432/app"
+      ALLOWED_HOSTS: "*"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    command: nginx -g "daemon off;"
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data: 

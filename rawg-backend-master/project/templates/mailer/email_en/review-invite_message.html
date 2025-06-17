@@ -1,0 +1,18 @@
+{% extends 'mailer/template_en.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Hey, {{ user.username }}
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        We see you've played some games.
+        <br/>
+        Are you ready to rate them?
+    </div>
+{% endblock %}
+
+{% block orange_header %}Rate the most recently played game{% endblock %}
+
+{% block unsubscribe_link %}https://{{ current_site }}/settings/notifications?user_id={{ user.id }}&slug={{ mail_slug }}&hash={{ user.security_hash }}&email={{ user.email }}{% endblock %}

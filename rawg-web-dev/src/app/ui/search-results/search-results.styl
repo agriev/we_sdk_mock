@@ -1,0 +1,70 @@
+.search-results
+  margin-left 34px
+  margin-right 34px
+
+  @media $bp.phone
+    margin-left 10px
+    margin-right 10px
+    // border-bottom 1px solid alpha($color-white, 0.1)
+
+.search-results__item
+  border-bottom 1px solid alpha($color-white, 0.1)
+
+  > a
+    background-image none
+
+.search-results__user-card
+  background none
+  color white
+  height inherit
+  width 100%
+  padding 16px 0
+  border none
+  transition 0.3s
+
+  .user-card__name
+    font-weight bold
+    width inherit
+
+  &:hover
+    background none
+    & .user-card__name
+      opacity 0.4
+      transition 0.3s
+
+  @media $bp.phone
+    padding 12px 0
+
+.search-results__game-card
+  &.game-card-compact
+    padding 16px 0
+    border none
+
+  &.game-card-compact_small
+    padding 8px 0
+
+  &:not(:first-child)
+    border-top 1px solid alpha($color-white, 0.1)
+
+  @media $bp.phone
+    padding-bottom 12px
+    padding-top 0
+
+.search-results__collection-card
+  border none
+  padding 16px 0
+  @media $bp.phone
+    padding 12px 0
+
+
+.search-results__person-card
+  width 100%
+  @media $bp.phone
+    padding 12px 0
+
+.search-results__game-selected
+  background: rgba(49, 61, 73, 0.25)
+  margin-left -16px
+  margin-right -16px
+  padding-left 16px
+  padding-right 16px

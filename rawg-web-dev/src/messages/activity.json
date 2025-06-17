@@ -1,0 +1,31 @@
+{
+  "ru": {
+    "explore_created_collection": "создаёт {count} {count, plural, one {новую коллекцию} few {новые коллекции} many {новых коллекций}}",
+    "explore_collection_add_games": "добавляет {count} {count, plural, one {игра} few {игры} many {игр}} в коллекцию",
+    "explore_start_game": "начинает играть в {count} {count, plural,  one {новую игру} few {новые игры} many {новых игр}}",
+    "explore_complete_games": "проходит {count} {count, plural, one {игру} few {игры} many {игр}}",
+    "tab_notifications": "Уведомления",
+    "button_review": "Написать рецензию",
+    "button_post": "Добавить комментарий",
+    "button_collection": "Создать коллекцию",
+    "similar_players": "Рекомендуем подписаться",
+    "followed_you": "Теперь вы в подписках",
+    "select_game": "Выберите игру"
+  },
+
+  "en": {
+    "explore_created_collection":
+      "has created {count} {count, plural, one {collection} other {collections}}",
+    "explore_collection_add_games":
+      "has added {count} {count, plural, one {game} other {games}} to collection",
+    "explore_start_game": "started playing {count} {count, plural, one {game} other {games}}",
+    "explore_complete_games": "completed {count} {count, plural, one {game} other {games}}",
+    "tab_notifications": "Notifications",
+    "button_review": "Write a review",
+    "button_post": "Add a comment",
+    "button_collection": "Create collection",
+    "similar_players": "Recommended players",
+    "followed_you": "has followed you",
+    "select_game": "Select game"
+  }
+}

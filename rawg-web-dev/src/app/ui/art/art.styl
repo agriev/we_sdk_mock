@@ -1,0 +1,38 @@
+.art-wrapper
+  display flex
+  flex-direction column
+  justify-content space-between
+  flex-grow 1
+  flex-shrink 0
+  width 100%
+  min-height 100%
+
+.art
+  width 100%
+  height 100%
+
+  background no-repeat center top
+  background-size cover
+  transition background 0.3s
+
+.art_secondary
+  background-position-x ($column-width-1-1-1-desktop / 2) + ($column-offset-1-1-1-desktop / 2)
+  background-size cover
+
+.art_colored
+  max-height 100%
+  background-size cover
+
+.art__video-wrap
+  position absolute
+  top 0
+  left 0
+  width 100%
+  padding-bottom 56.25%
+
+.art__video
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%

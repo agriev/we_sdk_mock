@@ -1,0 +1,58 @@
+.sitemap-page
+  .page__content-wrap
+    max-width 100%
+    padding 0 10px
+
+    @media (min-width: 1280px)
+      max-width 1280px
+
+.sitemap__heading
+  margin-top 0
+  margin-bottom 32px
+
+.sitemap__letters
+  max-width 100%
+  display flex
+  overflow-x auto
+  flex 0 0 auto
+
+.sitemap__letters__divider
+  margin 0 10px
+
+.sitemap__letters__letter
+  margin-left 9px
+  margin-bottom 8px
+  font-size 20px
+  opacity .4
+
+  &.inactive
+    $remove-link-style()
+
+  &:hover
+    opacity .8
+    color white
+
+  &.active
+    opacity 1
+    &:hover
+      opacity 1
+
+  &:first-child
+    margin-left 0
+
+.sitemap-items
+  columns 3 300px
+  column-gap 50px
+
+  .discover-columns__column
+    > * + *
+      @media $bp.desktop
+        margin-top 0
+
+.sitemap__game
+  margin-bottom 16px
+  display block
+  font-size 12px
+  $remove-link-style()
+  font-weight bold
+  font-size 18px

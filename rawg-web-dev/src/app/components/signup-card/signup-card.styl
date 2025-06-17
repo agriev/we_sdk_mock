@@ -1,0 +1,133 @@
+.signup-card
+  width 798px
+  max-height 365px
+  box-sizing border-box
+  overflow hidden
+  transition max-height .3s
+
+  &_centred
+    margin 0 auto
+
+    @media $bp.phone
+      padding 0 16px
+
+  &.signup-card_active
+    overflow visible
+    max-height 3000px
+
+  @media $bp.phone
+    width 100%
+    max-width 273px
+    max-height 312px
+
+.signup-card__wrapper
+  width 100%
+  box-sizing border-box
+  margin 0 auto
+  padding 42px 64px 64px
+  background-color rgba(white, 0.06)
+  border-radius 6px
+
+  @media $bp.phone
+    padding 24px
+
+  & > .heading
+    margin 0 0 32px
+
+    @media $bp.phone
+      margin 0 0 16px
+      font-weight bold
+
+  &.signup-card__wrapper_success
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+    @media $bp.desktop
+      height 365px
+
+    @media $bp.phone
+      min-height 328px
+
+.signup-card__columns
+  display grid
+  grid-template-columns 304px auto
+  width 100%
+
+  @media $bp.phone
+    grid-template-columns auto
+    grid-template-rows auto auto
+
+.signup-card__emphasis
+  margin-left 0.25em
+  color #e1a74b
+
+.signup-card__form
+  width 304px
+
+  .register-form
+    @media $bp.phone
+      width 100%
+      padding 0
+
+  @media $bp.phone
+    grid-row 2/-1
+    width 100%
+
+.signup-card__socials
+  box-sizing border-box
+
+  @media $bp.desktop
+    padding 30px 76px 0 80px
+
+  @media $bp.phone
+    grid-row 1/2
+    width 100%
+    margin 0 auto 24px
+
+  .heading
+    margin-bottom 16px
+    font-weight normal
+
+    @media $bp.phone
+      $font14-small()
+
+  .social-accounts-auth-block
+    @media $bp.phone
+      width 100%
+      padding 0
+
+  .social-accounts-auth-block__link
+    @media $bp.desktop
+      & + .social-accounts-auth-block__link
+        margin-top 16px
+
+      &.social-accounts-auth-block__link_vk
+        margin-bottom 0
+
+
+.signup-card__login
+  margin-top 24px
+  text-align center
+
+.signup-card__check-icon
+  margin-bottom 24px
+  &, svg
+    width 96px
+    height 96px
+    @media $bp.phone
+      width 64px
+      height 64px
+
+.signup-card__success-text
+  font-size 24px
+  line-height 28px
+  text-align center
+
+  @media $bp.phone
+    font-size 16px
+    line-height 20px
+
+  a
+    font-weight bold

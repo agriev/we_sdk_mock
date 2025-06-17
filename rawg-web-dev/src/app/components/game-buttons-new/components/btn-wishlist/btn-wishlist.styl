@@ -1,0 +1,75 @@
+.btn-wishlist
+  color white
+  border-radius 6px
+  padding 5px 0 5px 16px
+  display flex
+  align-items flex-end
+  transition border-color .3s
+  cursor pointer
+  border 1px solid white
+  box-sizing border-box
+  height 50px
+  overflow hidden
+
+  @media $bp.phone
+    width 100%
+
+  @media $bp.desktop
+    margin-left 16px
+    &:hover
+      border-color alpha(white, 40%)
+
+  @media $bp.phone
+    margin-top 8px
+
+  &.btn-wishlist_active
+    // box-shadow 0px 0px 0px 2px #46B11B
+    border 2px solid #46B11B
+    border-radius 6px
+
+    &:hover
+      @media $bp.desktop
+        border 2px solid alpha(#46B11B, 60%)
+
+.btn-wishlist__text
+  flex 1 0 auto
+
+.btn-wishlist__subtitle
+  font-size 12px
+  line-height 14px
+  opacity .4
+
+.btn-wishlist__title
+  font-size 18px
+  letter-spacing 0
+  display flex
+  align-items baseline
+
+.btn-wishlist__title__counter
+  opacity .4
+  margin-left 6px
+  font-size 15px
+
+.btn-wishlist__icon
+  width 28px
+  height 36px
+  background-size cover
+  background-repeat no-repeat
+  background-position left center
+  margin-left 12px
+  transform translateX(1.5px) translateY(-1px)
+
+.btn-wishlist__icon-plus
+  height 44px
+  transform translateX(1.5px) translateY(2px)
+  background-image url('~assets/icons/icon-game-wishlist-white.svg?external')
+
+.btn-wishlist__icon-toplay
+  background-image url('~assets/icons/check-rounded.svg?external')
+
+.btn-wishlist__icon-loading
+  width 16px
+  height 16px
+  margin-left 8px
+  margin-right 0px
+  transform translateY(3px)

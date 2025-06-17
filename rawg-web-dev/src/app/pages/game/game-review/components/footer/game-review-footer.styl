@@ -1,0 +1,44 @@
+.game_review__footer
+  display flex
+  margin 32px 0
+
+  @media $bp.phone
+    flex-direction column
+
+.game_review__footer__rating
+  flex 0 0 auto
+
+  @media $bp.phone
+    display flex
+    flex-direction column
+    align-items center
+
+.game_review__footer__rating__heading
+  font-size 16px
+  line-height 20px
+
+  .theme_light &
+    color #111111
+
+.game_review__footer__rating__counter
+  font-size 48px
+  font-weight bold
+  line-height 48px
+  color #f6c000
+
+.game_review__footer__rating__title
+  color #f6c000
+  font-size 18px
+  line-height 20px
+
+.game_review__footer__author
+  flex 1 1 auto
+  text-align right
+
+  @media $bp.phone
+    order -1
+    text-align center
+    margin-bottom 32px
+
+  .theme_light &
+    color #111111

@@ -1,0 +1,29 @@
+.checkbox
+  display flex
+  align-items center
+  cursor pointer
+  color alpha($color-white, 0.5)
+  transition color 0.3s
+
+  &:hover
+    color alpha($color-white, 0.8)
+
+.checkbox_checked
+  color $color-white
+
+.checkbox__input
+  margin-right 16px
+  display flex
+  flex-shrink 0
+  justify-content center
+  align-items center
+  width 30px
+  height 30px
+  background alpha($color-black, 0.3)
+  cursor pointer
+
+  > .SVGInline
+    display flex
+
+  svg g
+    stroke $color-white

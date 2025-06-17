@@ -1,0 +1,18 @@
+{% extends 'mailer/template_ru.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Привет!
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        Почта, к которой привязан ваш аккаунт на AG.ru, изменилась.
+        Это сделали вы, то вам не нужно ничего делать.
+        Если нет, то, пожалуйста, свяжитесь с нашей поддержкой: <a style="color: #f1951b !important; text-decoration: none !important;" href="mailto:feedback@kanobu.ru">feedback@kanobu.ru</a>.
+    </div>
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Команда AG.ru
+    </div>
+{% endblock %}

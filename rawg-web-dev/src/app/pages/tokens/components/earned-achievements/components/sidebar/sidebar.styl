@@ -1,0 +1,132 @@
+.tokens__earned-achievements-sidebar
+  display flex
+  box-sizing border-box
+  border-radius 6px
+
+  .slick-list
+    max-width 100vw
+
+  @media $bp.desktop
+    flex-direction column
+    width 100%
+    max-width 304px
+    position relative
+    top -85px
+
+  @media $bp.phone
+    flex-direction row
+    order -1
+    margin-bottom 25px
+
+  .slick-dots
+    bottom -20px
+    max-width 100vw
+
+.tokens__earned-achievements-help-block
+  background alpha($color-white, 6%)
+
+  @media $bp.desktop
+    padding 0 24px
+
+    &:nth-of-type(1)
+      border-top-left-radius 6px
+      border-top-right-radius 6px
+      padding-top 24px
+
+    &:nth-of-type(3)
+      border-bottom-left-radius 6px
+      border-bottom-right-radius 6px
+      padding-bottom 32px
+
+
+  @media $bp.phone
+    width 200px !important
+    height 150px
+    padding 24px
+
+    .tokens__earned-achievements-sidebar .slick-slide[data-index="0"] &
+      border-top-left-radius 6px
+      border-bottom-left-radius 6px
+      margin-left 10px
+
+    .tokens__earned-achievements-sidebar .slick-slide[data-index="2"] &
+      border-top-right-radius 6px
+      border-bottom-right-radius 6px
+      margin-right 10px
+
+  h2
+    font-size 24px
+    font-weight bold
+    line-height 28px
+    @media $bp.phone
+      font-size 16px
+      line-height 20px
+
+  h3
+    font-size 18px
+    font-weight bold
+    @media $bp.desktop
+      margin-top 24px
+    @media $bp.phone
+      font-size 16px
+
+  p
+    font-size 14px
+    line-height 18px
+    margin-top 8px
+    @media $bp.phone
+      font-size 12px
+
+  @media $bp.desktop
+    flex-direction column
+
+  @media $bp.phone
+    flex-direction row
+
+.tokens__earned-achievements-help__achievement
+  display flex
+  margin-top 15px
+
+.tokens__earned-achievements-help__achievement-value
+  position relative
+  text-align center
+  font-size 16px
+  padding 0 16px
+  margin-right 10px
+  @media $bp.phone
+    padding 0 14px
+
+  &::before
+  &::after
+    content ''
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    top 0px
+    width 11px
+    height 18px
+    position absolute
+
+    [data-type="bronze"]&
+      background-image url('~app/pages/tokens/assets/wreath-bronze.svg?external')
+
+    [data-type="silver"]&
+      background-image url('~app/pages/tokens/assets/wreath-silver.svg?external')
+
+    [data-type="gold"]&
+      background-image url('~app/pages/tokens/assets/wreath-gold.svg?external')
+
+    @media $bp.phone
+      width 10px
+      height 18px
+      top 0
+
+  &::before
+    left 0
+
+  &::after
+    right 0
+    transform rotateY(180deg)
+
+.tokens__earned-achievements-help__achievement-title
+  font-size 14px

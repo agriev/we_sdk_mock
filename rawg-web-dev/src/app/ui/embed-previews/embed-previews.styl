@@ -1,0 +1,68 @@
+.embed-previews
+  display flex
+  margin-bottom 16px
+
+  .editor__insertion
+    margin 0
+
+.embed-previews__preview
+  position relative
+  width 80px
+  height 44px
+  border-radius 4px
+  overflow hidden
+  border none
+  transition opacity 0.3s
+
+  &:not(:last-child)
+    margin-right 8px
+
+  &.clickable:hover
+    cursor pointer
+    opacity 0.7
+
+  img
+    width 100%
+    height 100%
+
+  @media $bp.phone
+    width 66px
+    height 36px
+
+.embed-previews__preview-embed
+  width 100%
+  height 100%
+  background-image url("./embed-preview.svg?external")
+  background-repeat no-repeat
+  background-position center
+  background-size cover
+
+  &.with-img::after
+    content ''
+    display block
+    position absolute
+    left calc(50% - 10px)
+    bottom calc(50% - 10px)
+    width 20px
+    height 20px
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+    background-image url('~assets/icons/play-with-round.svg?external')
+
+.embed-previews__preview-count
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+  display flex
+  justify-content center
+  align-items center
+  background alpha($main-bg-color, 0.4)
+  color $color-white
+  font-size 24px
+
+  @media $bp.phone
+    font-size 14px

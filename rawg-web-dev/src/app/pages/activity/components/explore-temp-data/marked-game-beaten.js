@@ -1,0 +1,276 @@
+import { GAME_STATUS_BEATEN } from 'app/pages/game/game.types';
+
+/* eslint-disable sonarjs/no-duplicate-string */
+
+export default {
+  id: 227424,
+  user: {
+    id: 4203,
+    username: 'MedievalRain',
+    slug: 'medievalrain',
+    full_name: 'Vladislav Borzhemski',
+    avatar: null,
+    games_count: 250,
+    collections_count: 0,
+  },
+  reactions: [],
+  action: 'marked_game',
+  created: '2018-03-06T23:34:15.084255Z',
+  games: {
+    count: 1,
+    results: [
+      {
+        id: 38067,
+        slug: 'starcraft-ii-wings-of-liberty',
+        name: 'StarCraft II: Wings of Liberty',
+        released: '2010-07-27',
+        platforms: [
+          {
+            platform: {
+              id: 4,
+              name: 'PC',
+              slug: 'pc',
+            },
+          },
+        ],
+        dominant_color: '1c272e',
+        saturated_color: '29722e',
+        background_image:
+          'https://resize.rawg.io/media/https://api.rawg.io/media/screenshots/b8a/b8a664fc06a64a43b8ea4f121f794a48.jpg',
+        rating_top: 5,
+        ratings: [
+          {
+            id: 5,
+            count: 5,
+            title: 'exceptional',
+            percent: 62.5,
+          },
+          {
+            id: 4,
+            count: 3,
+            title: 'recommended',
+            percent: 37.5,
+          },
+        ],
+        added: 36,
+        charts: {
+          year: {
+            year: 2010,
+            change: 'up',
+            position: 348,
+          },
+          genre: {
+            name: 'Strategy',
+            change: 'up',
+            position: 1177,
+          },
+        },
+        user_game: null,
+        user_review: null,
+        parent_platforms: [
+          {
+            selected: false,
+            platform: {
+              id: 1,
+              name: 'PC',
+              slug: 'pc',
+            },
+          },
+        ],
+        reviews_count: 8,
+        reviews_users: [
+          {
+            id: 4997,
+            username: 'Kneels',
+            slug: 'kneels',
+            full_name: '',
+            avatar: null,
+            games_count: 501,
+            collections_count: 0,
+            review_id: 18311,
+          },
+          {
+            id: 4862,
+            username: 'Rumik',
+            slug: 'rumik',
+            full_name: 'Ryan Brain',
+            avatar: null,
+            games_count: 422,
+            collections_count: 2,
+            review_id: 16882,
+          },
+          {
+            id: 4564,
+            username: 'davidgyg',
+            slug: 'davidgyg',
+            full_name: '',
+            avatar: null,
+            games_count: 79,
+            collections_count: 0,
+            review_id: 14992,
+          },
+          {
+            id: 4203,
+            username: 'MedievalRain',
+            slug: 'medievalrain',
+            full_name: 'Vladislav Borzhemski',
+            avatar: null,
+            games_count: 250,
+            collections_count: 0,
+            review_id: 25807,
+          },
+          {
+            id: 3277,
+            username: 'teofilius',
+            slug: 'teofilius',
+            full_name: 'Teofilius Kilmonis',
+            avatar: null,
+            games_count: 64,
+            collections_count: 0,
+            review_id: 8834,
+          },
+          {
+            id: 3192,
+            username: 'Aktemir53',
+            slug: 'aktemir53',
+            full_name: '',
+            avatar: null,
+            games_count: 563,
+            collections_count: 1,
+            review_id: 8048,
+          },
+        ],
+      },
+    ],
+  },
+  statuses: {
+    beaten: {
+      count: 2,
+      results: [
+        {
+          id: 38067,
+          slug: 'starcraft-ii-wings-of-liberty',
+          name: 'StarCraft II: Wings of Liberty',
+          released: '2010-07-27',
+          platforms: [
+            {
+              platform: {
+                id: 4,
+                name: 'PC',
+                slug: 'pc',
+              },
+            },
+          ],
+          dominant_color: '1c272e',
+          saturated_color: '29722e',
+          background_image:
+            'https://resize.rawg.io/media/https://api.rawg.io/media/screenshots/b8a/b8a664fc06a64a43b8ea4f121f794a48.jpg',
+          rating_top: 5,
+          ratings: [
+            {
+              id: 5,
+              count: 5,
+              title: 'exceptional',
+              percent: 62.5,
+            },
+            {
+              id: 4,
+              count: 3,
+              title: 'recommended',
+              percent: 37.5,
+            },
+          ],
+          added: 36,
+          charts: {
+            year: {
+              year: 2010,
+              change: 'up',
+              position: 348,
+            },
+            genre: {
+              name: 'Strategy',
+              change: 'up',
+              position: 1177,
+            },
+          },
+          user_game: null,
+          user_review: null,
+          parent_platforms: [
+            {
+              selected: false,
+              platform: {
+                id: 1,
+                name: 'PC',
+                slug: 'pc',
+              },
+            },
+          ],
+          reviews_count: 8,
+          reviews_users: [
+            {
+              id: 4997,
+              username: 'Kneels',
+              slug: 'kneels',
+              full_name: '',
+              avatar: null,
+              games_count: 501,
+              collections_count: 0,
+              review_id: 18311,
+            },
+            {
+              id: 4862,
+              username: 'Rumik',
+              slug: 'rumik',
+              full_name: 'Ryan Brain',
+              avatar: null,
+              games_count: 422,
+              collections_count: 2,
+              review_id: 16882,
+            },
+            {
+              id: 4564,
+              username: 'davidgyg',
+              slug: 'davidgyg',
+              full_name: '',
+              avatar: null,
+              games_count: 79,
+              collections_count: 0,
+              review_id: 14992,
+            },
+            {
+              id: 4203,
+              username: 'MedievalRain',
+              slug: 'medievalrain',
+              full_name: 'Vladislav Borzhemski',
+              avatar: null,
+              games_count: 250,
+              collections_count: 0,
+              review_id: 25807,
+            },
+            {
+              id: 3277,
+              username: 'teofilius',
+              slug: 'teofilius',
+              full_name: 'Teofilius Kilmonis',
+              avatar: null,
+              games_count: 64,
+              collections_count: 0,
+              review_id: 8834,
+            },
+            {
+              id: 3192,
+              username: 'Aktemir53',
+              slug: 'aktemir53',
+              full_name: '',
+              avatar: null,
+              games_count: 563,
+              collections_count: 1,
+              review_id: 8048,
+            },
+          ],
+        },
+      ],
+    },
+  },
+  status: GAME_STATUS_BEATEN,
+};

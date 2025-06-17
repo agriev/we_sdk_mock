@@ -1,0 +1,90 @@
+.review-card__header
+  display flex
+  justify-content space-between
+  align-items flex-start
+
+.review-card__game-title-wrapper
+  position relative
+  z-index 1
+  display flex
+  align-items flex-start
+  width 100%
+
+  .review-card_slider &
+    padding-right 20px
+
+  @media $bp.phone
+    padding-bottom 5px
+
+.review-card__game-title
+  $heading4()
+  color $color-white
+  transition color 0.3s
+  hyphens auto
+  white-space normal
+
+  @media $bp.phone
+    font-weight bold
+
+a.review-card__rating-link
+  $remove-link-style()
+  color $color-white
+
+  .theme_light &
+  .theme_light.review_page .page__content .content &
+    color #111111
+
+  .rating__text
+    $add-link-style()
+
+  &:hover
+    color alpha($color-white, 0.5)
+    .theme_light &
+    .theme_light.review_page .page__content .content &
+      color black
+
+.review-card__top-block
+  .rating_emoji
+    left -2px
+
+.review-card__rating
+  flex-direction row-reverse
+  justify-content flex-end
+  flex-shrink 0
+  padding 0
+
+  &.rating_emoji
+    width 38px
+    height 28px
+
+  .rating__text
+    $heading4()
+
+  .rating__icon
+    width 28px
+    height 28px
+    margin-right 0
+    margin-left 10px
+    @media $bp.phone
+      position: relative;
+  .rating__icon_exceptional
+    @media $bp.phone
+      top: -3px;
+  .rating__icon_recommended
+    @media $bp.phone
+      top: -3px;
+
+.review-card__rating_fixed
+  position absolute
+  right 10px
+  top 10px
+
+.review-card__rating_title
+  .rating__text
+    display none
+
+.review-card__controls
+  display flex
+  align-items center
+  justify-content flex-end
+  flex 1 0 auto

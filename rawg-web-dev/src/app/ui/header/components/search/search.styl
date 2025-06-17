@@ -1,0 +1,182 @@
+.header__search
+  @media $bp.desktop
+    width 100%
+    min-width 200px
+    margin -7px 32px 0
+    z-index 2
+
+.header__search__form
+  @media $bp.desktop
+    width 100%
+    margin-top -6px
+
+  @media $bp.phone
+    display flex
+    margin 0 12px 0 16px
+
+.header__search__form_with-results
+  @media $bp.phone
+    background-color #151515
+    left 0
+    top 0
+    z-index 1
+    position fixed
+    padding 16px 10px
+    width calc(100% - 20px)
+    margin 0
+
+.header__search__input__area
+  position relative
+  display flex
+  align-items center
+  &:hover
+    .header__search__input
+      color black
+      opacity 1
+      background-image url("~assets/icons/search-hover.svg?external")
+      background-color white
+      &::placeholder
+        color alpha($color-black, 0.6)
+
+  @media $bp.desktop
+    width 100%
+
+  @media $bp.phone
+    .header__search__form_with-results &
+      width 100%
+
+.header__search__hotkey-help__wrap
+  position absolute
+  right 15px
+  top 11px
+
+  display flex
+  align-items center
+  color alpha(white, 50%)
+  font-size 11px
+  font-family monospace
+
+  opacity 1
+  transition opacity .3s
+
+  &.hidden
+    opacity 0
+    pointer-events none
+
+  @media $bp.phone
+    display none
+
+  > *:not(:first-child)
+    margin-left 4px
+
+.header__search__hotkey-help-key
+  border 1px solid alpha(white, 30%)
+  border-radius 3px
+  padding 3px 5px
+
+.header__search__input
+  $font14-small()
+  width 190px
+  padding 0 12px 0 38px
+  line-height 14px
+  color rgba($color-white, 0.6)
+  background url("~assets/icons/search.svg?external") no-repeat scroll 16px center
+  background-size 14px
+  background-color alpha($color-white, 0.16)
+  border none
+  transition color .3s, background-color .3s, opacity .3s
+
+  @media $bp.desktop
+    width 100%
+    transition color .3s, background-color .3s, opacity .3s, width 0.05s linear
+    height 44px
+    border-radius 24px
+
+  @media $bp.phone
+    width 100%
+    height 28px
+    border-radius 16px
+
+  &::placeholder
+    transition color .3s
+    color alpha($color-white, 0.6)
+
+  &:hover, &:focus
+    color black
+    opacity 1
+    background-image url("~assets/icons/search-hover.svg?external")
+    background-color white
+    &::placeholder
+      color alpha($color-black, 0.6)
+
+
+.header__search__input_with-results
+  &:focus
+    // font-size 14px
+    // height 48px
+    // width 270px
+    // background-position 16px
+    // border-radius 18.5px 18.5px 0 0
+    // color white
+    // opacity 1
+    // background $color-black url("~assets/icons/search.svg?external") no-repeat scroll 16px
+    // background-size 16px
+    &::placeholder
+      color alpha($color-white, 0.6)
+    @media $bp.phone
+      // width 100%
+      // margin 8px 0
+      // width calc(100% - 20px)
+      // height 40px
+      // border-radius 18.5px
+      // background $color-black url("~assets/icons/search.svg?external") no-repeat scroll
+      // background-size 16px
+      // color white
+
+
+.header__search__link
+  $remove-link-style()
+  display flex
+  align-items center
+  flex-grow 0
+  text-transform none
+  white-space nowrap
+  padding 8px 28px 8px 16px
+  font-size 13px
+
+.header__search__icon
+  background: url("~assets/icons/search.svg?external") no-repeat center / contain;
+  line-height 0
+  width 15px
+  height 15px
+  margin-right 8px
+
+
+.header__search__text
+  padding 0 8px
+  @media $bp.phone
+    display none
+
+
+.header__search__close-button
+  display flex
+  border-radius 100%
+  background-color transparent
+  border none
+  padding 0
+  margin 0 4px 0 -26px
+  cursor pointer
+
+.header__search__close-button_icon
+  background-image url('~assets/icons/close-dark.svg?external')
+  background-size cover
+  height 10px
+  width 10px
+  margin 6px
+
+.header__search__close-button_icon_gray
+  background-image url('~assets/icons/close-gray.svg?external')
+  background-size cover
+  height 10px
+  width 10px
+  margin 6px

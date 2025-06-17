@@ -1,0 +1,135 @@
+.btn-add-game
+  border-radius 6px
+  cursor pointer
+  overflow hidden
+
+  @media $bp.phone
+    width 100%
+
+  &.btn-add-game_active
+    box-shadow 0px 0px 0px 2px #46B11B
+    border 0.5px solid black
+    border-radius 6px
+
+.btn-add-game__content
+  background-color white
+  color black
+  padding 5px 0 5px 16px
+  display flex
+  align-items flex-end
+  transition background-color .3s
+  box-sizing border-box
+  height 50px
+  overflow hidden
+  width 100%
+
+  @media $bp.desktop
+    min-width 180px
+
+  .btn-add-game__categories &
+    @media $bp.phone
+      display none
+
+  .btn-add-game:hover &
+    @media $bp.desktop
+      background-color alpha(white, 80%)
+
+  .btn-add-game__categories &
+    border-bottom 1px solid alpha(#151515, 10%)
+
+.btn-add-game__text
+  flex 1 0 auto
+
+.btn-add-game__subtitle
+  font-size 12px
+  line-height 14px
+  opacity .4
+
+  .btn-add-game__categories &
+    opacity .16
+
+.btn-add-game__title
+  font-size 18px
+  letter-spacing 0
+  display flex
+  align-items baseline
+
+  .btn-add-game__categories &
+    opacity .4
+
+.btn-add-game__title__counter
+  opacity .4
+  margin-left 6px
+  font-size 14px
+
+.btn-add-game__title__arrow
+  width 14px
+  height 8px
+  margin-left 6px
+  background-size contain
+  background-repeat no-repeat
+  background-image url('~assets/icons/arrow-down.svg?external')
+
+.btn-add-game__icon-container
+  margin-left 12px
+  width 32px
+  height 43px
+  overflow hidden
+
+.btn-add-game__icon
+  width 43px
+  height 43px
+  background-size contain
+  background-repeat no-repeat
+  background-position left center
+
+  .btn-add-game__categories &
+    opacity .4
+
+.btn-add-game__icon-plus
+  background-image url('~assets/icons/add-rounded.svg?external')
+  height 38px
+  transform translateX(1.5px) translateY(4px)
+
+.btn-add-game__icon-yet
+  background-image url('~assets/icons/emoji/yet.png')
+  transform translateY(2px)
+
+.btn-add-game__icon-owned
+  background-image url('~assets/icons/emoji/owned.png')
+
+.btn-add-game__icon-dropped
+  background-image url('~assets/icons/emoji/dropped.png')
+
+.btn-add-game__icon-beaten
+  background-image url('~assets/icons/emoji/beaten.png')
+  transform translateX(-2px) translateY(3px)
+
+.btn-add-game__icon-playing
+  background-image url('~assets/icons/emoji/playing.png')
+
+.btn-add-game__icon-loading
+  width 16px
+  height 16px
+  margin-left 8px
+  margin-right 0px
+  transform translateY(3px)
+
+  svg circle
+    stroke #ccc
+    .btn-add-game:hover &
+      @media $bp.desktop
+        stroke white
+
+.btn-add-game__categories
+  border-radius 6px
+  overflow hidden
+
+  @media $bp.desktop
+    border 2.5px solid white
+    width 100%
+    transform translateX(-2px) translateY(8px)
+    background white
+
+    .select-category
+      border-radius 0

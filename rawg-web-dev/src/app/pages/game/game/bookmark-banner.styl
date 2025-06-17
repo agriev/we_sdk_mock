@@ -1,0 +1,146 @@
+.game-bookmark-banner
+  display flex
+  flex-direction column
+
+  box-sizing border-box
+  flex 1
+
+  padding 14px 16px
+  border-radius 8px
+  background-color rgba(#feffff, 0.05)
+
+  font-size 14px
+  line-height 20px
+
+  width calc(100% - 20px)
+  margin -32px auto 32px auto
+
+  color white
+
+  &__title
+    font-size 16px
+    line-height 24px
+    font-weight 600
+
+    color white
+
+    @media $bp.desktop
+      color #0f0f0f
+
+  .SVGInline
+    position relative
+    display inline-flex
+
+  &__body
+    color rgba(#feffff, 0.6)
+
+    @media $bp.desktop
+      color #414141
+
+  &__body .safari
+    color #cdf500
+    transform translateY(5px)
+
+  &__body .android
+    color #cdf500
+
+    transform translateY(5px)
+    margin 0 10px
+
+  &__close
+    position absolute
+
+    right 16px
+    top 12px
+
+    width 32px
+    height 32px
+
+    display flex
+    align-items center
+    justify-content center
+
+    color #a4a4a4
+    cursor pointer
+
+    transition color 0.3s
+
+    &:hover
+      color #0f0f0f
+
+  @media $bp.desktop
+    flex-direction row
+    position relative
+
+    background-color white
+
+    left unset
+    bottom unset
+    transform unset
+    backdrop-filter unset
+
+    width 100%
+
+    margin 0
+    margin-right 80px
+
+    padding 9px 24px 9px 0
+    color #414141
+
+    align-items center
+
+    box-shadow none
+    max-width 368px
+    flex unset
+
+    float left
+
+    &__title
+      display none
+
+    &__body
+      display flex
+      align-items flex-start
+
+      .star
+        margin 0 12px
+        color #a4a4a4
+
+    a
+      color #175ce5
+      background-image none
+
+    &__close
+      display none
+
+  &--is-floating
+    position fixed
+    margin 0
+
+    bottom 10px
+    left 50%
+
+    z-index 160
+
+    max-width 460px
+    width calc(100% - 20px)
+
+    color #414141
+
+    backdrop-filter blur(20px)
+    transform translateX(-50%)
+
+    background-color white
+    box-shadow inset 0 0 0 1px rgba(black, 0.1)
+
+    .game-bookmark-banner__title
+      color #0f0f0f
+
+    .game-bookmark-banner__body
+      color #414141
+
+      .android
+        color #0f0f0f
+
+      .safari
+        color #3377FF

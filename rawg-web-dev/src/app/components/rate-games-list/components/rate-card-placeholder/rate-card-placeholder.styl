@@ -1,0 +1,90 @@
+.rate-card-placeholder
+  display flex
+  width 798px
+  height 365px
+  margin 0 auto
+  background-color rgba($color-white, 0.06)
+  border-radius 6px
+
+  @media $bp.phone
+    width 100%
+    max-width 273px
+    height 312px
+
+.rate-card-placeholder__cover
+  width 525px
+  height 365px
+  background-color rgba($color-white, 0.03)
+  border-top-left-radius 6px
+  border-bottom-left-radius 6px
+
+  @media $bp.phone
+    display none
+
+.rate-card-placeholder__container
+  display flex
+  flex-direction column
+  justify-content space-between
+  width 273px
+  padding 24px
+
+  @media $bp.phone
+    width 100%
+    max-width 273px
+
+.rate-card-placeholder__title
+  width 200px
+  height 28px
+  background-color rgba($color-white, 0.03)
+  border-radius 6px
+
+.rate-card-placeholder__ratings
+  display flex
+  flex-wrap wrap
+  width 225px
+  height 194px
+  background-color rgba($color-white, 0.03)
+  border 1px solid rgba($color-white, 0.1)
+  border-radius 6px
+
+.rate-card-placeholder__button
+  width 50%
+  height 50%
+  box-sizing border-box
+
+  &:nth-child(even)
+    border-left 1px solid rgba($color-white, 0.1)
+
+  &:nth-child(-n+2)
+    border-bottom 1px solid rgba($color-white, 0.1)
+
+  &:nth-child(1)
+    border-top-left-radius 6px
+  &:nth-child(2)
+    border-top-right-radius 6px
+  &:nth-child(3)
+    border-bottom-left-radius 6px
+  &:nth-child(4)
+    border-bottom-right-radius 6px
+
+.rate-card-placeholder__animated
+  background-color rgba($color-white, 0.03)
+  background-image linear-gradient(to right, rgba($color-white, 0.03) 8%, rgba($color-white, 0.1) 18%, rgba($color-white, 0.03) 33%)
+  background-size 1000px 104px
+  animation-name placeHolderShimmer
+  animation-duration 1s
+  animation-fill-mode forwards
+  animation-iteration-count infinite
+  animation-timing-function linear
+
+  &_with-delay
+    animation-name placeHolderShimmer
+    animation-delay 0.5s
+
+@keyframes placeHolderShimmer
+  0% {
+    background-position -568px 0
+  }
+  100% {
+    background-position 568px 0
+  }

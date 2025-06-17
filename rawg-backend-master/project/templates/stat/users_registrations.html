@@ -1,0 +1,13 @@
+{% extends 'stat/count.html' %}
+
+{% block checkboxes %}
+    <div class="form-group">
+        <label for="language">Language</label>
+        <select class="form-control" id="language" name="language">
+            <option value=""{% if not language %} selected{% endif %}>All</option>
+            <option value="en"{% if language == 'en' %} selected{% endif %}>En</option>
+            <option value="ru"{% if language == 'ru' %} selected{% endif %}>Ru</option>
+        </select>
+    </div>
+{% endblock %}
+

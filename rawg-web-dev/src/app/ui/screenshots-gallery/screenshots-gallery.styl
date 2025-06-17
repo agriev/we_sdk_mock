@@ -1,0 +1,49 @@
+.screenshots-gallery
+  position relative
+  width 100%
+  font-size 0
+
+.screenshots-gallery__wrapper
+  $image-wrapper()
+
+img.screenshots-gallery__image
+  display none !important
+
+  &_active
+    display block !important
+
+.screenshots-gallery__overlay
+  position absolute
+  left 0
+  top 0
+  right 0
+  bottom 0
+  width 100%
+  height 100%
+  background-image linear-gradient(to bottom, rgba(black, 0), rgba(black, 0.6));
+
+.screenshots-gallery__progress-wrapper
+  position absolute
+  left 0
+  right 0
+  bottom 15px
+  display flex
+  flex 1 1 auto
+  width 100%
+  box-sizing border-box
+  padding 0 16px
+
+.screenshots-gallery__progress
+  width 100%
+  height 4px
+  box-sizing border-box
+  background-color rgba(white, 0.4)
+  border-radius 3.8px
+  transition all 0.3s
+
+  &_active
+    background-color rgba(white, 0.7)
+    transition all 0.3s
+
+  &:not(:first-child)
+    margin-left 8px

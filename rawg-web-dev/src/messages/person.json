@@ -1,0 +1,15 @@
+{
+  "ru": {
+    "read_more": "полный текст",
+    "chart_title": "Игры {name} по году выпуска",
+    "overview_platforms_stats_title": "Платформы игр",
+    "known_title": "Главные работы"
+  },
+
+  "en": {
+    "read_more": "full text",
+    "chart_title": "{name} games by release year",
+    "overview_platforms_stats_title": "Platforms of games",
+    "known_title": "Known for"
+  }
+}

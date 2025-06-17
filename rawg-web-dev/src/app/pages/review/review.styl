@@ -1,0 +1,78 @@
+.review
+  margin 0 auto
+
+  @media $bp.desktop
+    width 100%
+    max-width $column-width-2-1-desktop
+
+  @media $bp.phone
+    margin 0 10px
+
+.review__close-button
+  align-self flex-end
+  margin 25px 0
+
+  @media $bp.phone
+    margin-right 25px
+
+.review__review-card
+  background-color alpha(white, 7%)
+  border-radius 4px
+
+  .theme_light &
+    color #151515
+    background-color unset
+
+.review__review-card-body
+  background none
+
+  > div
+    background none
+
+  .review-card__game-background
+    display none
+    background none !important
+
+.review__subheading
+  font-weight normal
+
+  .rating
+    align-items baseline
+
+    .rating__icon
+      @media $bp.phone
+        transform translateY(2px)
+
+  @media $bp.desktop
+    margin 8px 0 24px 0
+    font-size 44px
+
+    .rating__text
+      font-size 44px
+
+  @media $bp.phone
+    margin 8px 0 8px 0
+    font-size 24px
+
+    .rating__icon
+      width 24px
+      height 24px
+      margin-left 8px
+
+    .rating__text
+      font-size 24px
+
+.review__suggestions
+  @media $bp.phone
+    padding 0 10px
+
+.review__suggestions__title
+  font-size 44px
+
+  @media $bp.phone
+    font-size 24px
+    text-align center
+
+.review__suggestions__title__counter
+  opacity .4
+  margin-left 8px

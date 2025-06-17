@@ -1,0 +1,109 @@
+.discover-filter
+  @media $bp.desktop
+    display flex
+  @media $bp.phone
+    display block
+
+.discover-filter__selects
+  display flex
+  align-items center
+  height 55px
+
+  @media $bp.phone
+    justify-content flex-start
+    overflow-x auto
+    border-radius 0
+
+.discover-filter__group
+  display flex
+  justify-content space-between
+  align-items center
+
+  height 100%
+
+.discover-filter__select
+  display flex
+  justify-content center
+  align-items center
+  height 100%
+  margin-right 8px
+  flex 0 0 auto
+
+.discover-filter-button
+  width auto
+  min-width 150px
+  padding 10px 16px
+  background-color rgba(255,255,255,0.07)
+  border-radius 8px
+
+  font-size 14px
+  color white
+
+.discover-filter-button__value
+  font-weight bold
+
+.discover-filter-button .select-button__title
+  margin-right 6px
+
+.discover-filter-button .select-button__icon_arrow
+  margin-top 3px
+
+.discover-filter-button .select-button__icon_check
+  width 10px
+  height 7px
+
+.discover-filter-button .select-button__icon_arrow
+  width 7px
+  height 13px
+  margin-right 6px
+
+.discover-filter__select .dropdown__container
+  @media $bp.desktop
+    top 10px
+    padding 0 5px
+
+.discover-filter-content
+  box-sizing border-box
+  overflow visible
+
+  @media $bp.desktop
+    padding 5px 10px 10px
+
+.discover-filter-content .select-content__title
+  @media $bp.desktop
+    font-size 14px
+    height auto
+    padding-top 12px
+
+.discover-filter-content .select-content__item
+  @media $bp.desktop
+    height 20px
+    margin 5px 0
+    font-size 12px
+
+.discover-filter-content .select-content__item a,
+.discover-filter-content .select-content__item__childs a
+  $remove-link-style()
+  color black
+  width 100%
+
+.discover-filter_disabled .discover-filter__group_disabled
+  position relative
+  opacity 0.4
+
+  &::after
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+    background transparent
+    cursor not-allowed
+    content ''
+
+.toggle-button-wrapper.switcher-only-my-platforms
+.toggle-button-wrapper.switcher-only-platforms-exclusives
+  justify-content flex-end
+  @media $bp.desktop
+    flex 1 1 auto

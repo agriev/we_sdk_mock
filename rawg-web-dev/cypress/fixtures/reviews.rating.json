@@ -1,0 +1,9 @@
+{
+  "count": 4,
+  "results": [
+    { "id": 5, "title": "exceptional", "positive": true },
+    { "id": 4, "title": "recommended", "positive": true },
+    { "id": 3, "title": "meh", "positive": false },
+    { "id": 1, "title": "skip", "positive": false }
+  ]
+}

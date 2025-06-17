@@ -1,0 +1,125 @@
+.game-authorization
+  display flex
+  flex-direction column
+
+  margin 0 12px 24px 12px
+
+  background-color white
+  color black
+
+  padding 16px
+  border-radius 8px
+  box-sizing border-box
+
+  cursor pointer
+  transition opacity 0.3s, visibility 0.3s
+
+  &.isSidebar
+    margin 0
+    display none
+
+    position sticky
+    top 40px
+
+    z-index 2
+    width 200px
+
+    @media screen and (min-width: 1280px)
+      display flex
+
+  &.isHidden
+    opacity 0
+    visibility hidden
+
+  &__title
+    font-weight 600
+    font-size 20px
+
+    line-height 24px
+
+    @media $bp.desktop
+      font-size 18px
+      line-height 22px
+
+  form
+    display flex
+    flex-direction column
+
+  &__form
+    display none
+    flex-direction column
+
+    padding 16px 0
+    pointer-events none
+
+    @media $bp.desktop
+      display flex
+
+    input
+      padding 8px 20px
+      border none
+
+      color black
+      background-color #e1e1e1
+
+      font-size 14px
+      line-height 24px
+
+      border-radius 6px
+      transition background-color 0.3s
+
+      &.isError
+        background-color rgba(#fc4531, 0.5)
+
+    input + input
+      margin-top 8px
+
+  button
+    pointer-events none
+
+    background-color black
+    color white
+
+    border none
+    height 48px
+
+    border-radius 6px
+    margin-top 16px
+
+    font-size 16px
+    line-height 24px
+
+    cursor pointer
+    transition color 0.3s
+
+    @media $bp.desktop
+      font-size 14px
+      line-height 24px
+      height 40px
+
+      &:hover
+        color rgba(255, 255, 255, 0.5)
+
+  &__links
+    display none
+    flex-direction column
+
+    pointer-events none
+
+    a
+      color black
+      text-decoration underline
+
+      &:hover
+        opacity 0.5
+        color black
+
+    a + a
+      margin-top 4px
+
+    @media $bp.desktop
+      display flex
+
+  &__error
+    margin 10px 0
+    color #fc4531

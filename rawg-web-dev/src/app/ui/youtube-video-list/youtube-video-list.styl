@@ -1,0 +1,46 @@
+.youtube-video-list
+  display flex
+  margin-top 16px
+
+  @media $bp.phone
+    justify-content center
+
+.youtube-video-list__inner
+  display flex
+  width 100%
+
+  @media $bp.phone
+    flex-wrap wrap
+
+.youtube-video-list__first-video
+  @media $bp.phone
+    width 100%
+
+.youtube-video-list__other-video
+  width $column-width-1-2-desktop
+
+  @media $bp.phone
+    width 100%
+
+.youtube-video-list__other-videos
+  flex 1
+  margin-left 25px
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin-left 0
+
+    > div:not(:last-child)
+      border-bottom: 1px solid rgba(255,255,255,0.1)
+      padding-top 16px !important
+
+  > div:nth-child(-n + 2)
+    padding-top 0
+
+  > :nth-last-child(-n+2)
+    border-bottom none
+
+  .video-card_inline
+    padding-bottom 14px

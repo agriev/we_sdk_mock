@@ -1,0 +1,550 @@
+[
+  {
+    "model": "games.game",
+    "pk": 416,
+    "fields": {
+      "synonyms": "[\"grand theft auto: san andreas\"]",
+      "slug": "grand-theft-auto-san-andreas",
+      "name": "Grand Theft Auto: San Andreas",
+      "description": "Five years ago Carl Johnson escaped from the pressures of life in Los Santos, San Andreas... a city tearing itself apart with gang trouble, drugs and corruption. Where filmstars and millionaires do their best to avoid the dealers and gangbangers. <br />\r\n<br />\r\nNow, it&#39;s the early 90s. Carl&#39;s got to go home. His mother has been murdered, his family has fallen apart and his childhood friends are all heading towards disaster. <br />\r\n<br />\r\nOn his return to the neighborhood, a couple of corrupt cops frame him for homicide. CJ is forced on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets.",
+      "metacritic": 93,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/6a9/6a98eef17e9d747a8f50bb98970e6246.jpg",
+      "released": "2008-01-04",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/sanandreas/pc",
+      "can_play": true,
+      "iframe": "https://www.testurl.com/testpath?param_a=1&param_b=2",
+      "developers": [
+        10
+      ],
+      "publishers": [
+        2155,
+        187
+      ],
+      "genres": [
+        4,
+        3,
+        12
+      ],
+      "tags": [
+        20,
+        3,
+        13,
+        193,
+        123,
+        144,
+        130,
+        4,
+        42,
+        192,
+        62,
+        7,
+        36,
+        24,
+        37,
+        28,
+        31,
+        118,
+        149,
+        150
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 430,
+    "fields": {
+      "synonyms": "[\"grand theft auto: vice city\"]",
+      "slug": "grand-theft-auto-vice-city",
+      "name": "Grand Theft Auto: Vice City",
+      "description": "Welcome to Vice City. Welcome to the 1980s.<br />\r\n<br />\r\nFrom the decade of big hair, excess and pastel suits comes a story of one man&#39;s rise to the top of the criminal pile. Vice City, a huge urban sprawl ranging from the beach to the swamps and the glitz to the ghetto, was one of the most varied, complete and alive digital cities ever created. Combining open-world gameplay with a character driven narrative, you arrive in a town brimming with delights and degradation and given the opportunity to take it over as you choose.<br />\r\n<br />\r\nHaving just made it back onto the streets of Liberty City after a long stretch in maximum security, Tommy Vercetti is sent to Vice City by his old boss, Sonny Forelli. They were understandably nervous about his re-appearance in Liberty City, so a trip down south seemed like a good idea. But all does not go smoothly upon his arrival in the glamorous, hedonistic metropolis of Vice City. He&#39;s set up and is left with no money and no merchandise. Sonny wants his money back, but the biker gangs, Cuban gangsters, and corrupt politicians stand in his way. Most of Vice City seems to want Tommy dead. His only answer is to fight back and take over the city himself.",
+      "metacritic": 94,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/c1e/c1ec98efbb00334ddc8c97ceaae04b5d.jpg",
+      "released": "2011-01-10",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/grandtheftautovicecity",
+      "can_play": true,
+      "iframe": "https://www.someurl.com/somepath?arg_a=1&arg_b=2",
+      "developers": [
+        10
+      ],
+      "publishers": [
+        2155,
+        187
+      ],
+      "genres": [
+        4,
+        3,
+        12
+      ],
+      "tags": [
+        224,
+        20,
+        3,
+        13,
+        193,
+        144,
+        130,
+        4,
+        42,
+        192,
+        62,
+        7,
+        136,
+        36,
+        37,
+        28,
+        31,
+        149,
+        150,
+        34
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 432,
+    "fields": {
+      "synonyms": "[\"grand theft auto iii\", \"grand theft auto 3\"]",
+      "slug": "grand-theft-auto-iii",
+      "name": "Grand Theft Auto III",
+      "description": "The sprawling crime epic that changed open-world games forever.<br />\r\nWelcome to Liberty City. Where it all began.<br />\r\n<br />\r\nThe critically acclaimed blockbuster Grand Theft Auto III brings to life the dark and seedy underworld of Liberty City. With a massive and diverse open world, a wild cast of characters from every walk of life and the freedom to explore at will, Grand Theft Auto III puts the dark, intriguing and ruthless world of crime at your fingertips.<br />\r\n<br />\r\nWith stellar voice acting, a darkly comic storyline, a stunning soundtrack and revolutionary open-world gameplay, Grand Theft Auto III is the game that defined the open world genre for a generation.",
+      "metacritic": 93,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/411/41157e13762e098df232886865d5500f.jpg",
+      "released": "2008-01-04",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/grandtheftauto3",
+      "can_play": false,
+      "iframe": "https://www.someurl.com/somepath?arg_a=1&arg_b=2",
+      "developers": [
+        10,
+        6
+      ],
+      "publishers": [
+        2155,
+        187
+      ],
+      "genres": [
+        4,
+        3,
+        12
+      ],
+      "tags": [
+        20,
+        3,
+        13,
+        193,
+        144,
+        130,
+        42,
+        192,
+        62,
+        7,
+        36,
+        37,
+        153,
+        28,
+        319,
+        31,
+        118,
+        149,
+        150,
+        34
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 2908,
+    "fields": {
+      "synonyms": "[\"grand theft auto: the trilogy\"]",
+      "slug": "grand-theft-auto-the-trilogy",
+      "name": "Grand Theft Auto: The Trilogy",
+      "description": "Grand Theft Auto: The Trilogy. All three games in the epic saga are here together: GTA III, GTA: Vice City and GTA: San Andreas.<br><br>Experience Grand Theft Auto: The Trilogy for PS2\u2122 with full 1080p up-rendering and enhanced features such as Trophies, Shareplay, Remote Play, Activity Feeds and Second Screen support for game manuals with PS Vita or PS App.<br><br>This title has been converted from the original PlayStation\u00ae2 version to the PS4\u2122 system. Consequently, there may be times where the title plays differently from the PlayStation\u00ae2 version, or where some features may not function properly. This version does not supportPlayStation\u00ae2 peripherals, therefore some functionality may not be available.<br><br>  Software subject to license (us.playstation.com/softwarelicense).  Online activity subject to Terms of Services and User Agreement (www.playstationnetwork.com/terms-of-service). One-time license fee for play on account\u2019s designated primary PS4\u2122 system and other PS4\u2122 systems when signed in with that account.<br><br>\u00a91999-2004 Rockstar Games, Inc. Rockstar Games, the Rockstar Games R*, Grand Theft Auto marks and logos are registered trademarks of Take-Two Interactive Software, Inc. All Rights Reserved. You must accept the license at rockstargames.com/eula. Violation of EULA, Code of Conduct, or other policies may result in game restriction or account termination. Access to special features may require internet connection, may not be available to all users, and may, upon 30 days notice, be terminated, modified, or offered under different terms. The content of this videogame is purely fictional, does not represent/depict any actual event/person/entity we do not endorse, condone or encourage the conduct depicted. Unauthorized copying, reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited.",
+      "metacritic": 0,
+      "image": "",
+      "image_background": null,
+      "released": "2016-01-12",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "",
+      "developers": [
+        10
+      ],
+      "publishers": [],
+      "genres": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 3498,
+    "fields": {
+      "synonyms": "[\"grand theft auto v\"]",
+      "alternative_names": [
+        "gta5",
+        "gta 5",
+        "my favourite game"
+      ],
+      "slug": "grand-theft-auto-v",
+      "name": "Grand Theft Auto V",
+      "description": "When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.<br> <br>Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second. <br> <br>The game offers players a huge range of PC-specific customization options, including over 25 separate configurable settings for texture quality, shaders, tessellation, anti-aliasing and more, as well as support and extensive customization for mouse and keyboard controls. Additional options include a population density slider to control car and pedestrian traffic, as well as dual and triple monitor support, 3D compatibility, and plug-and-play controller support.  <br> <br>Grand Theft Auto V for PC also includes Grand Theft Auto Online, with support for 30 players and two spectators. Grand Theft Auto Online for PC will include all existing gameplay upgrades and Rockstar-created content released since the launch of Grand Theft Auto Online, including Heists and Adversary modes.<br> <br>The PC version of Grand Theft Auto V and Grand Theft Auto Online features First Person Mode, giving players the chance to explore the incredibly detailed world of Los Santos and Blaine County in an entirely new way.<br> <br>Grand Theft Auto V for PC also brings the debut of the Rockstar Editor, a powerful suite of creative tools to quickly and easily capture, edit and share game footage from within Grand Theft Auto V and Grand Theft Auto Online. The Rockstar Editor\u2019s Director Mode allows players the ability to stage their own scenes using prominent story characters, pedestrians, and even animals to bring their vision to life. Along with advanced camera manipulation and editing effects including fast and slow motion, and an array of camera filters, players can add their own music using songs from GTAV radio stations, or dynamically control the intensity of the game\u2019s score. Completed videos can be uploaded directly from the Rockstar Editor to YouTube and the Rockstar Games Social Club for easy sharing.  <br> <br>Soundtrack artists The Alchemist and Oh No return as hosts of the new radio station, The Lab FM. The station features new and exclusive music from the production duo based on and inspired by the game\u2019s original soundtrack. Collaborating guest artists include Earl Sweatshirt, Freddie Gibbs, Little Dragon, Killer Mike, Sam Herring from Future Islands, and more. Players can also discover Los Santos and Blaine County while enjoying their own music through Self Radio, a new radio station that will host player-created custom soundtracks.<br><br>SPECIAL CONTENT FOR RETURNING PLAYERS<br>Players returning from the PS3\u2122 and Xbox 360 versions get special access to a host of content on PC including rare versions of classic vehicles to collect from across the Grand Theft Auto series such as the Dukes, the Dodo Seaplane and a faster, more maneuverable Blimp; activities including wildlife photography and new shooting range challenges, new weapons and more.<br><br>Special access content requires Rockstar Games Social Club account. Visit http://rockstargames.com/v/bonuscontent for details.",
+      "metacritic": 96,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/406/4069c55176e28a308489051732ba8c07.jpg",
+      "released": "2013-09-17",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "ratings_count": 15,
+      "rating": "4.90",
+      "weighted_rating": 5.00,
+      "website": "http://www.rockstargames.com/V/",
+      "developers": [
+        10,
+        3524
+      ],
+      "publishers": [
+        2155
+      ],
+      "genres": [
+        4,
+        3
+      ],
+      "tags": [
+        20,
+        3,
+        13,
+        123,
+        18,
+        144,
+        8,
+        4,
+        42,
+        192,
+        62,
+        7,
+        36,
+        85,
+        24,
+        37,
+        28,
+        31,
+        149,
+        150
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 4058,
+    "fields": {
+      "synonyms": "[\"grand theft auto: liberty city stories\"]",
+      "slug": "grand-theft-auto-liberty-city-stories",
+      "name": "Grand Theft Auto: Liberty City Stories",
+      "description": "Forced to fight for his life in Liberty City, Toni Cipriani must use any means necessary to secure his place in the leadership of the Leone family.<br><br>\u00a92002-2006 Rockstar Games, Inc. Rockstar Games,  R*, Grand Theft Auto and Liberty City Stories marks/logos are Take-Two Interactive Software trademarks.  All Rights Reserved.  This videogame is fictional; doesn\u2019t depict any actual event/person/entity; &amp; any similarities are coincidental.  Take-Two doesn\u2019t endorse or encourage engaging in any conduct depicted in game. Unauthorized copying, reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited.  Use of software is subject to license in the game manual &amp; online at rockstargames.com/eula.  Non-transferable access to special features such as exclusive, unlockable, downloadable or online content, services, or functions may require single-use serial code, additional fee and/or account registration (13+).<br><br>  Purchase or use of this item is subject to the PlayStation\u00aeNetwork Terms of Service, this item\u2019s use restrictions, and other applicable terms located at http://www.us.playstation.com/support/useragreements. If you do not wish to accept all these terms, do not purchase or use this item. One-time license fee for downloads to up to 2 console systems that are associated with the purchasing account.<br><br>Access to special features require internet connection, may not be available to all users, and may, upon 30 days notice, be terminated, modified, or offered under different terms.<br><br>This title has been converted from the original PlayStation\u00ae2 version to the PS3\u2122 system. Consequently, there may be times where the title plays differently from the PlayStation\u00ae2 version, or where some features may not function properly. This version does not support PlayStation\u00ae2 peripherals, therefore some functionalities may not be available.<br><br>This item is being licensed to you by Sony Computer Entertainment America and is subject to the Network Terms of Service and User Agreement, this item\u2019s use restrictions and other applicable terms located at www.us.playstation.com/support/useragreements. If you do not wish to accept all these terms, do not download this item. This item may be used with up to 2 activated systems associated with this Sony Entertainment Network Account. Please see software description for device compatibility.",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/7ea/7ea2cb35e3756328ed62fd1e636f937e.jpeg",
+      "released": "2009-10-22",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/",
+      "developers": [
+        10,
+        6
+      ],
+      "publishers": [
+        187
+      ],
+      "genres": [
+        4,
+        3
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 4059,
+    "fields": {
+      "synonyms": "[\"grand theft auto: vice city stories\"]",
+      "slug": "grand-theft-auto-vice-city-stories",
+      "name": "Grand Theft Auto: Vice City Stories",
+      "description": "Vice City, 1984. Kicked out onto the streets of a city torn between glamour and gluttony, Vic is faced with a stark choice - build an empire or be crushed.This title has been converted from the original PlayStation\u00ae2 version to the PS3\u2122 system. Consequently, there may be times where the title plays differently from the PlayStation\u00ae2 version, or where some features may not function properly. This version does not support PlayStation\u00ae2 peripherals, therefore functionalities such as multiplayer, versus, and co-op modes are not available.  <br><br>  Software subject to license (us.playstation.com/softwarelicense).  Online activity subject to Terms of Services and User Agreement (www.playstationnetwork.com/terms-of-service). One time license fee entitles play on up to 2 PlayStation\u00ae 3 systems activated by this account.<br><br>\u00a92000-2007 Rockstar Games, Inc. Rockstar Games, Grand Theft Auto and Vice City Stories marks/logos are Take-Two Interactive Software trademarks.  All Rights Reserved.This videogame is fictional doesn\u2019t depict any actual event/person/entity &amp; any similarities are coincidental.  Take-Two doesn\u2019t endorse or encourage engaging in any conduct depicted in game. Unauthorized copying, reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited.  Use of software is subject to license in the game manual &amp; online at rockstargames.com/eula.  Non-transferable access to special features such as exclusive, unlockable, downloadable or online content, services, or functions may require single-use serial code, additional fee and/or account registration (13+)",
+      "metacritic": 0,
+      "image": "",
+      "image_background": null,
+      "released": "2009-10-22",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "",
+      "developers": [
+        6
+      ],
+      "publishers": [],
+      "genres": [
+        4
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 4414,
+    "fields": {
+      "synonyms": "[\"grand theft auto: episodes from liberty city\"]",
+      "slug": "grand-theft-auto-episodes-from-liberty-city",
+      "name": "Grand Theft Auto: Episodes from Liberty City",
+      "description": "Grand Theft Auto: Episodes from Liberty City includes both The Lost and Damned, and The Ballad of Gay Tony together and does not require a copy of the original Grand Theft Auto IV to play.<br />\r\n<br />\r\nIn The Lost and Damned, experience Liberty City as Johnny, a veteran member of The Lost, a notorious biker gang. Johnny has been creating business opportunities for The Lost in Liberty City but his first loyalty must be to the patch he wears on his back and to Billy Grey, the club&#39;s President. However, when Billy returns from rehab hell-bent on bloodshed and debauchery, Johnny finds himself in the middle of a vicious turf war with rival gangs for control of a city torn apart by violence and corruption. Can the brotherhood survive?<br />\r\n\t\t\t\t\t<br />\r\nThe Ballad of Gay Tony injects Liberty City with an overdose of guns, glitz, and grime. As Luis Lopez, part-time hoodlum and full-time assistant to legendary nightclub impresario Tony Prince (aka &amp;quot;Gay Tony&amp;quot;), players will struggle with the competing loyalties of family and friends, and with the uncertainty about who is real and who is fake in a world in which everyone has a price.",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/386/3866ffe0b96612632fa22c6ecd20f427.jpg",
+      "released": "2010-04-12",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/episodesfromlibertycity",
+      "developers": [
+        10,
+        8798
+      ],
+      "publishers": [
+        2155
+      ],
+      "genres": [
+        4,
+        3
+      ],
+      "tags": [
+        20,
+        3,
+        13,
+        123,
+        144,
+        130,
+        4,
+        42,
+        192,
+        62,
+        7,
+        44,
+        36,
+        85,
+        37,
+        28,
+        31,
+        118,
+        149,
+        150
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 4459,
+    "fields": {
+      "synonyms": "[\"grand theft auto iv\"]",
+      "slug": "grand-theft-auto-iv",
+      "name": "Grand Theft Auto IV",
+      "description": "What does the American dream mean today?                    <br>\t\t\t\t\tFor Niko Bellic fresh off the boat from Europe, it is the hope he can escape from his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity. As they slip into debt and get dragged into a criminal underworld by a series of shysters, thieves and sociopaths, they discover that the reality is very different from the dream in a city that worships money and status, and is heaven for those who have them and a living nightmare for those who don&#39;t.                    <br>\t\t\t\t\t<ul class=&quot;bb_ul&quot;><li>New high resolution technology brings Liberty City to life with even more stunning graphical detail                    <br>\t\t\t\t\t</li><li>Expanded multiplayer will require even more strategy and skill to come out on top                    <br>\t\t\t\t\t</li><li>Custom Match allows you to pick your favorite multiplayer options and then instantly find online matches that fit                                      <br>\t\t\t\t\t</li><li>Optimized for PC controls and Xbox 360 controller                    </li></ul>",
+      "metacritic": 90,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/8b9/8b9109e1ac0f84f70be63f994c9257b5.jpg",
+      "released": "2008-12-02",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/iv",
+      "developers": [
+        3524,
+        8796,
+        1638
+      ],
+      "publishers": [
+        2155
+      ],
+      "genres": [
+        4,
+        3
+      ],
+      "tags": [
+        20,
+        3,
+        13,
+        321,
+        193,
+        18,
+        144,
+        148,
+        4,
+        26,
+        62,
+        7,
+        36,
+        114,
+        37,
+        153,
+        28,
+        31,
+        149,
+        150
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 5200,
+    "fields": {
+      "synonyms": "[\"grand theft auto: chinatown wars\"]",
+      "slug": "grand-theft-auto-chinatown-wars",
+      "name": "Grand Theft Auto: Chinatown Wars",
+      "description": "Left For Dead In The Worst Place In America<br>Following his father\u2019s murder, Huang Lee has a simple mission: deliver an ancient sword to his Uncle Kenny to ensure his family retains control of the Triad gangs of Liberty City. Huang is a spoiled rich kid who expects everything to run smoothly, but his trip does not go exactly as planned. After being robbed and left to die, he will search for honor, riches and revenge in the most dangerous and morally bankrupt city in the world.<br><br>Retired Features:\u00a0 Rockstar Games Social Club features and unlocks for Chinatown Wars will no longer be available as of 5/31/14.<br><br>  Software subject to license (us.playstation.com/softwarelicense).\u00a0 Online activity subject to Terms of Services and User Agreement (www.sonyenteretainmentnetwork.com/terms-of-service).<br><br>\u00a9 2007-2009 Rockstar Games, Inc.  Rockstar Games, R* logo, Grand Theft Auto, and other marks are registered trademarks of Take-Two Interactive Software, Inc. The ratings icon is a trademark of the Entertainment Software Association. This product contains software technology licensed from GameSpy Industries, Inc. \u00a9 1999-2009 All other marks and trademarks are properties of their respective owners.  All Rights Reserved.   <br><br>Use of this software subject to license in game manual &amp;amp; online at rockstargames.com/eula.  Non-transferable access to special features such as exclusive, unlockable, downloadable or online content, services, or functions may require single-use serial code, additional fee, internet connection, and/or online account registration (13+). Special features may not be available to all users and may on 30 days notice be terminated, modified, or offered under different terms.<br>This videogame is fictional, doesn\u2019t depict any actual event, person, or entity any similarities are coincidental.  We don\u2019t endorse or encourage any conduct depicted.  Unauthorized copying, reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is prohibited.",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/991/9910161931ab26990d7dfa5210b12853.jpeg",
+      "released": "2009-10-20",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/chinatownwars",
+      "developers": [
+        10
+      ],
+      "publishers": [
+        187
+      ],
+      "genres": [
+        4,
+        3,
+        12,
+        2
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 7374,
+    "fields": {
+      "synonyms": "[\"grand theft auto v & great white shark cash card\"]",
+      "slug": "grand-theft-auto-v-great-white-shark-cash-card",
+      "name": "Grand Theft Auto V & Great White Shark Cash Card",
+      "description": "Save by purchasing this bundle of Grand Theft Auto V and a Great White Shark Cash Card worth $1,250,000 in-game to spend in GTA Online.",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/557/55794357576cc28757caefc9886b3f2e.jpg",
+      "released": "2015-06-09",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "",
+      "developers": [],
+      "publishers": [
+        2155
+      ],
+      "genres": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 7872,
+    "fields": {
+      "synonyms": "[\"grand theft auto: ifruit\"]",
+      "slug": "grand-theft-auto-ifruit",
+      "name": "Grand Theft Auto: iFruit",
+      "description": "PLEASE NOTE: iFruit has been updated for GTAV PC. Please select &amp;quot;Social Club&amp;quot; as the platform for PC support.<br /><br />How would we survive without apps? Apps can transform your mobile device into essential tools like a harmonica, disco ball or convincing moustache. Somewhere out there is the perfect storm of touchscreen technology to fix everything that\u2019s wrong with your life. And maybe all you\u2019re missing is the iFruit app. Maybe not. At least you\u2019ll have something to keep you entertained while your significant other prattles on endlessly about their day.<br /><br />iFruit hooks directly into your experience of Grand Theft Auto V with some fun activities to further postpone the need for real social interaction.  Keep up-to-date on the latest Grand Theft Auto V news, log into the Rockstar Games Social Club, stay connected on LifeInvader and launch other Rockstar Games apps.<br /><br />Los Santos Customs<br />The Los Santos Customs app offers players the freedom to create their ultimate vehicle in Grand Theft Auto V from anywhere. At the bar, on the beach, on the toilet. This is the future, we\u2019re almost sure of it. You can even create and reserve custom license plates for both Grand Theft Auto V and Grand Theft Auto Online \u2013 order your personalized plates before they\u2019re gone!  <br /><br />Also choose from paint jobs, window tints, smoke colors, wheels, hoods and spoilers. Upgrade your engine, brakes, exhaust, suspension, and accessorize with new lights, horns, tires and body armor. Place your order on-the-go and find it waiting for you in the garage the next time you play Grand Theft Auto V, or send your order in while playing and get a call from your local mechanic to swing by. Everybody\u2019s had some work done in Los Santos, so don\u2019t let your ride be the exception to the rule.  <br /><br />Chop the Dog<br />Depth of content, high production values, defecation. It\u2019s the app that has it all. Because who doesn\u2019t love tending to a virtual pet? Chop is Franklin\u2019s canine sidekick in Grand Theft Auto V. Look after him well in the \u201cChop the Dog\u201d app and you will reap the benefits when playing as Franklin in Grand Theft Auto V. Pet him, feed and water him, play fetch and tug-of-war, teach him tricks. Too much or too little of an activity, however, will cause Chop to become unhappy, and nobody likes an unhappy Rottweiler. Take Chop on walks to give him a chance to work off last night\u2019s steak and Piswasser and to mark his turf in the hood - defending his ladies, fending off gang members and even protecting the beach babes of Los Santos from unsightly tan lines by removing their bikinis. <br /><br />Looking after Chop successfully is reflected in his behavior in Grand Theft Auto V in a number of ways:<br /><br />\u2022 He will be more helpful and responsive to Franklin <br />\u2022 He will perform tricks such as sitting, begging and giving paw if properly trained through the app <br />\u2022 He will sniff out the nearest hidden items when the player takes him for a walk<br />\u2022 Earn enough credits through walks and proper caretaking and exchange them for new collars for Chop",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/de1/de163fa5ebaa3e978eeab32819544404.jpeg",
+      "released": "2013-09-16",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "",
+      "developers": [
+        10
+      ],
+      "publishers": [
+        187
+      ],
+      "genres": [
+        4,
+        3
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 20861,
+    "fields": {
+      "synonyms": "[\"grand theft auto\"]",
+      "slug": "grand-theft-auto",
+      "name": "Grand Theft Auto",
+      "description": "Drive dozens of varied vehicles around three of America&#39;s toughest cities.<br />\n\t\t\t\t\tOnly the best will be able to tame the fastest cars. Only the smartest will know all the short-cuts and the whereabouts of the hottest wheels.<br />\n\t\t\t\t\tOnly the toughest will be able to take on the world and finish the job like a professional...",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/311/31181ab4311854dcccb0da8dcb25a8d1.jpg",
+      "released": "2008-01-04",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/classics/gta.html",
+      "developers": [
+        3524
+      ],
+      "publishers": [
+        2155
+      ],
+      "genres": [
+        4
+      ],
+      "tags": [
+        45,
+        20,
+        3,
+        193,
+        36,
+        31,
+        61
+      ]
+    }
+  },
+  {
+    "model": "games.game",
+    "pk": 20862,
+    "fields": {
+      "synonyms": "[\"grand theft auto 2\"]",
+      "slug": "grand-theft-auto-2",
+      "name": "Grand Theft Auto 2",
+      "description": "<p>Grand Theft Auto is back. The cars are faster. The streets are busier. The bad guys are nastier. The police are angrier. And now, the FBI and the Army are getting involved...</p>\n\t\t\t\t\t<p>Seven ruthless gangs are involved in a ruthless power struggle and it is up to you to make a name for yourself.</p>\n\t\t\t\t\t<p>Respect is earned, not given.</p>",
+      "metacritic": 0,
+      "image": "",
+      "image_background": "https://api.ag.ru/media/screenshots/1db/1db4550f72a957adad5f7f7faf95d8d4.jpg",
+      "released": "2008-01-04",
+      "updated": "2018-01-01T13:20:30+03:00",
+      "created": "2018-01-01T13:20:30+03:00",
+      "website": "http://www.rockstargames.com/classics/index.html",
+      "developers": [
+        3524
+      ],
+      "publishers": [
+        2155
+      ],
+      "genres": [
+        4
+      ],
+      "tags": [
+        45,
+        20,
+        193,
+        144,
+        79,
+        36,
+        28,
+        31
+      ]
+    }
+  }
+]

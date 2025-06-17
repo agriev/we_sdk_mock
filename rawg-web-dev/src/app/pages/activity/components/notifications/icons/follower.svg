@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Новый-фолловер" transform="translate(-88.000000, -82.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(60.000000, 60.000000)">
+                <g id="Group" transform="translate(28.000000, 22.000000)">
+                    <circle id="Oval" fill="#71C386" cx="8" cy="8" r="8"></circle>
+                    <path d="M12,7.33333333 L8.66666667,7.33333333 L8.66666667,4 C8.66666667,3.632 8.368,3.33333333 8,3.33333333 C7.632,3.33333333 7.33333333,3.632 7.33333333,4 L7.33333333,7.33333333 L4,7.33333333 C3.632,7.33333333 3.33333333,7.632 3.33333333,8 C3.33333333,8.368 3.632,8.66666667 4,8.66666667 L7.33333333,8.66666667 L7.33333333,12 C7.33333333,12.368 7.632,12.6666667 8,12.6666667 C8.368,12.6666667 8.66666667,12.368 8.66666667,12 L8.66666667,8.66666667 L12,8.66666667 C12.368,8.66666667 12.6666667,8.368 12.6666667,8 C12.6666667,7.632 12.368,7.33333333 12,7.33333333 Z" id="Shape" stroke="#FFFFFF" stroke-width="0.571428571" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+.register-form
+
+  @media $bp.phone
+    width calc(100vw - 40px)
+    max-width 400px
+    padding 0 20px
+
+  .button
+    @media $bp.phone
+      width 100%
+
+  & > div:not(:last-of-type)
+    margin-bottom 20px
+
+  & > div:last-of-type
+    margin-bottom 40px
+
+  textarea
+    max-width 100%
+
+.register-form__password-help
+  max-width calc(100vw - 100px)
+  transition all .3s
+  opacity 0
+  overflow hidden
+  max-height 0px
+  margin-top 0px
+  padding-bottom 0px
+  padding-left 22px
+  font-size 13px
+
+  background url('~assets/icons/important.svg?external') no-repeat 1px 1px / 15px
+
+  &.register-form__password-help_active
+    opacity 1
+    max-height 50px
+    margin-top 10px
+    padding-bottom 5px

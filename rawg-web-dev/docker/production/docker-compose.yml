@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+  node:
+    container_name: rawg-node
+    restart: always
+    image: rawg-node:blue
+    command: ["pm2-runtime", "start", "/app/docker/production/ecosystem.config.js"]
+    networks:
+      - frontend
+      - consul
+    env_file:
+      - env
+    environment:
+      - SERVICE_4000_NAME=bluefront
+      - SERVICE_4000_TAGS=frontends
+
+  node-temp:
+    container_name: rawg-node-temp
+    image: rawg-node:green
+    command: ["pm2-runtime", "start", "/app/docker/production/ecosystem.config.js"]
+    networks:
+      - frontend
+      - consul
+    env_file:
+      - env
+    environment:
+      - SERVICE_4000_NAME=greenfront
+      - SERVICE_4000_TAGS=frontends
+      - PM2_INSTANCES=3
+
+  nginx:
+    container_name: rawg-nginx-front
+    restart: always
+    image: rawgio/rawg-nginx-front:latest
+    volumes:
+      - ./build/:/app/build/assets/
+      - ./pub/:/app/build/pub/
+      - ./logs/nginx/:/logs/
+    networks:
+      - frontend
+      - proxy
+      - consul
+    environment:
+      - VIRTUAL_HOST=rawg.io,www.rawg.io
+      - LETSENCRYPT_HOST=rawg.io,www.rawg.io
+      - LETSENCRYPT_EMAIL=ag@rawg.io
+
+networks:
+  frontend:
+  proxy:
+    external:
+      name: nginxproxy
+  consul:
+    external:
+      name: consul

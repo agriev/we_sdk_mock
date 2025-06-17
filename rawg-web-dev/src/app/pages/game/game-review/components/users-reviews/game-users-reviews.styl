@@ -1,0 +1,56 @@
+.game_users-reviews
+  @media $bp.phone
+    padding 0 8px
+
+.game_users-reviews__heading
+  font-weight normal
+
+  @media $bp.desktop
+    font-size 44px
+    line-height 55px
+    margin-bottom 24px
+
+  @media $bp.phone
+    font-size 24px
+    line-height 28px
+    margin-bottom 16px
+    text-align center
+
+  .theme_light &
+    color #111
+
+  .theme_light.review_page .page__content .content & a
+    $add-link-style(0.4, #0e0e0e)
+    color #111
+
+.game_users-reviews__title-counter
+  color #111
+  opacity .4
+  margin-left 8px
+
+  @media $bp.desktop
+    font-size 44px
+    line-height 55px
+
+  @media $bp.phone
+    font-size 24px
+    line-height 32px
+
+.game_users-reviews__item
+  & + &
+    @media $bp.desktop
+      margin-top 24px
+
+    @media $bp.phone
+      margin-top 8px
+
+  & > .review-card__top-block
+  & > .review-card__bottom-block
+    background-color alpha($color-black, 0.3)
+
+    .theme_light &
+      background-color unset
+
+  & > .review-card__bottom-block
+    .theme_light &
+      border-top 1px solid alpha(#979797, 20%)

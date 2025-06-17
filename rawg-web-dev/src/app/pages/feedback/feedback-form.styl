@@ -1,0 +1,75 @@
+.feedback-form
+  max-width 452px
+
+  @media $bp.phone
+    padding 0 20px 150px
+
+  h2
+    font-size 44px
+    margin-bottom 20px !important
+    @media $bp.phone
+      font-size 24px
+  h3
+    $font14-paragraph()
+
+  .textarea
+    margin-bottom 32px !important
+    .textarea__field
+      @media $bp.phone
+        min-width auto
+
+.feedback-form__label
+  $font16-paragraph()
+  opacity 0.2
+  color $color-white
+  margin-bottom 8px !important
+
+.feedback-form__buttons
+  display flex
+  align-items center
+
+  @media $bp.phone
+    flex-direction column
+
+    button
+      width 100%
+
+.feedback-form__buttons__text
+  margin-left 24px
+  font-size 18px
+  color white
+  border-bottom 1px solid rgba(255,255,255,0.5)
+  cursor pointer
+  white-space nowrap
+  @media $bp.phone
+    margin-top 16px
+    margin-left 0
+
+
+.feedback-form__check-icon
+  margin-top 4px
+  margin-bottom 16px
+
+  @media $bp.phone
+    display flex
+    justify-content center
+
+  svg
+    width 96px
+    height 96px
+
+    @media $bp.phone
+      width 64px
+      height 64px
+
+.feedback-form__success-text
+  @media $bp.desktop
+    font-size 36px
+    line-height 1.33
+    margin-top 10px
+  @media $bp.phone
+    font-size 18px
+    line-height 1.22
+    color $color-white
+    text-align center
+    margin-bottom 121px !important

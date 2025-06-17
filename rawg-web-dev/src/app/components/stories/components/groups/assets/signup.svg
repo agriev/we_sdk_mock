@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="43" cy="43" r="43"></circle>
+    </defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-289.000000, -106.000000)">
+            <g id="Group-11-Copy-3" transform="translate(289.000000, 106.000000)">
+                <g id="Group-8-Copy-2">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Oval-3-Copy" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <path d="M34.8427734,31.8066406 C34.9306641,27.4296875 37.9892578,24.40625 43.3857422,24.40625 C48.4130859,24.40625 51.7353516,27.2011719 51.7353516,31.2617188 C51.7353516,33.8984375 50.4521484,35.7441406 47.9736328,37.203125 C45.6357422,38.5566406 44.9853516,39.4179688 44.9853516,41.1054688 L44.9853516,42.0371094 L40.3271484,42.0371094 L40.2919922,41.0703125 C40.0634766,38.2578125 41.0302734,36.6757812 43.4560547,35.2519531 C45.7236328,33.8984375 46.4091797,33.0546875 46.4091797,31.4199219 C46.4091797,29.7851562 45.0732422,28.625 43.0693359,28.625 C41.0478516,28.625 39.7119141,29.8730469 39.6064453,31.8066406 L34.8427734,31.8066406 Z M42.8408203,50.5273438 C40.8720703,50.5273438 39.6416016,49.3847656 39.6416016,47.5390625 C39.6416016,45.6757812 40.8720703,44.5332031 42.8408203,44.5332031 C44.8095703,44.5332031 46.0224609,45.6757812 46.0224609,47.5390625 C46.0224609,49.3847656 44.8095703,50.5273438 42.8408203,50.5273438 Z" id="?" fill="#FFFFFF" mask="url(#mask-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

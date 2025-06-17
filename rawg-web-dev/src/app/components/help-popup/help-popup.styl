@@ -1,0 +1,216 @@
+.help-popup-overlay
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 100%
+  z-index 20
+
+  background-color alpha(black, 90%)
+
+  opacity 0
+  pointer-events none
+  transition opacity 0.3s
+
+  &.active
+    transition opacity 1s
+    opacity 1
+    pointer-events all
+
+.help-popup
+  z-index 21
+  position fixed
+
+  background-image linear-gradient(to bottom, #fad961, #f76b1c)
+
+  display flex
+  flex-direction column
+  align-items center
+
+  opacity 0
+  pointer-events none
+  transition opacity 0.3s
+
+  @media $bp.desktop
+    border-radius 6px
+    left 50%
+    top 100px
+    transform translateX(-50%)
+    max-height calc(100vh - 100px)
+
+    width 680px
+    height 600px
+
+  @media $bp.phone
+    left 0
+    top 0
+    width 100%
+    height 100%
+
+  &.active
+    transition opacity 1s
+    opacity 1
+    pointer-events all
+
+.help-popup__image-wrap
+  opacity 0
+  position absolute
+
+  @media $bp.desktop
+    margin-top -32px
+    width 568px
+    height 320px
+    position absolute
+
+  @media $bp.phone
+    border-radius 6px
+    margin-top 10px
+    width calc(100% - 60px)
+
+    &.next
+      left calc(100% - 15px)
+      top 0
+      opacity 1
+
+    &.previous
+      right calc(100% - 15px)
+      top 0
+      opacity 1
+
+  &.active
+    position relative
+    opacity 1
+
+.help-popup__image
+  background-position center
+  background-size cover
+  width 100%
+
+  @media $bp.desktop
+    height 100%
+    border-top-left-radius 6px
+    border-top-right-radius 6px
+
+  @media $bp.phone
+    padding-bottom 56.25%
+    height 0
+    overflow hidden
+    border-radius 6px
+
+.help-popup__dots
+  margin 24px 0 16px
+  display flex
+
+  @media $bp.phone
+    order 10
+
+.help-popup__dots__dot
+  border-radius 50%
+  opacity .4
+  background-color white
+
+  transition opacity 0.3s
+
+  @media $bp.desktop
+    width 10px
+    height 10px
+    & + &
+      margin-left 16px
+
+  @media $bp.phone
+    width 8px
+    height 8px
+    & + &
+      margin-left 8px
+
+  &.active
+    opacity 1
+
+.help-popup__title
+  letter-spacing 0
+  text-align center
+
+  @media $bp.desktop
+    font-size 32px
+    line-height 36px
+    margin-bottom 16px
+    padding 0 84px
+
+  @media $bp.phone
+    font-size 24px
+    margin-top 16px
+    margin-bottom 8px
+    padding 0 10px
+
+.help-popup__text
+  letter-spacing 0
+  margin-bottom 24px
+
+  text-align center
+  flex 1 1 auto
+
+  @media $bp.desktop
+    font-size 16px
+    line-height 22px
+    margin-bottom 16px
+    padding 0 106px
+
+  @media $bp.phone
+    font-size 14px
+    line-height 20px
+    margin-bottom 8px
+    padding 0 10px
+
+.show-more-button.help-popup__button
+  height 40px
+  font-size 16px
+  text-align left
+
+  background-color white
+  color black
+
+  @media $bp.desktop
+    width 200px
+    margin-bottom 30px
+
+  @media $bp.phone
+    width calc(100% - 20px)
+    max-width 200px
+    margin-bottom 20px
+
+  &.finished
+    text-align center
+
+.help-popup__close-btn
+  position absolute
+  right -60px
+  top -60px
+
+.help-popup__arror-left
+.help-popup__arror-right
+  position fixed
+  width 26px
+  height 47px
+  top 50%
+
+  transform translateY(-50%)
+
+  background-size contain
+  background-position center
+  background-repeat no-repeat
+  background-image url('~assets/icons/arrow.svg?external')
+
+  opacity 0.24
+  cursor pointer
+
+  transition opacity 0.3s
+
+  &:hover
+    opacity 0.6
+
+.help-popup__arror-left
+  left -60px
+  transform translateY(-50%) rotate(180deg)
+
+.help-popup__arror-right
+  right -60px

@@ -1,0 +1,128 @@
+[
+  {
+    "model": "games.platformparent",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "slug": "pc",
+      "name": "PC"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "slug": "playstation",
+      "name": "PlayStation"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "slug": "xbox",
+      "name": "Xbox"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "slug": "ios",
+      "name": "iOS"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 5,
+    "fields": {
+      "order": 6,
+      "slug": "mac",
+      "name": "Apple Macintosh"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 6,
+    "fields": {
+      "order": 7,
+      "slug": "linux",
+      "name": "Linux"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 7,
+    "fields": {
+      "order": 8,
+      "slug": "nintendo",
+      "name": "Nintendo"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 8,
+    "fields": {
+      "order": 5,
+      "slug": "android",
+      "name": "Android"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 9,
+    "fields": {
+      "order": 9,
+      "slug": "atari",
+      "name": "Atari"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 10,
+    "fields": {
+      "order": 10,
+      "slug": "commodore-amiga",
+      "name": "Commodore / Amiga"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 11,
+    "fields": {
+      "order": 11,
+      "slug": "sega",
+      "name": "SEGA"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 12,
+    "fields": {
+      "order": 12,
+      "slug": "3do",
+      "name": "3DO"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 13,
+    "fields": {
+      "order": 13,
+      "slug": "neo-geo",
+      "name": "Neo Geo"
+    }
+  },
+  {
+    "model": "games.platformparent",
+    "pk": 14,
+    "fields": {
+      "order": 14,
+      "slug": "web",
+      "name": "Web"
+    }
+  }
+]

@@ -1,0 +1,135 @@
+.collection-card
+  position relative
+  width $column-width-1-1-1-desktop
+
+  @media $bp.phone
+    width 264px
+
+.collection-card__games
+  display flex
+  flex-wrap wrap
+  width calc(100% + 15px)
+  height 208px
+  margin-right -10px
+
+  @media $bp.phone
+    height 180px
+
+.collection-card__game
+  position relative
+  width 148px
+  height 100px
+  border-radius 6px
+  background alpha($color-white, 0.04) no-repeat center
+  background-size cover
+  margin-right 10px
+  margin-bottom 10px
+
+  @media $bp.phone
+    width 128px
+    height 86px
+
+  .collection-card__game__hover
+    $hover-overall-lighting()
+
+.collection-card__plus-count
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+
+  display flex
+  justify-content center
+  align-items center
+  background-color alpha($color-black, 0.5)
+  border-radius 6px
+  color alpha($color-white, 0.5)
+  font-size 32px
+
+  @media $bp.phone
+    font-size 27px
+
+.collection-card__title
+  margin-top 20px
+  font-size 24px
+  font-weight bold
+
+  @media $bp.phone
+    margin-top 15px
+    font-size 16px
+
+.collection-card__count
+  margin-top 5px
+  font-size 12px
+  color alpha($color-white, 0.4)
+  text-transform uppercase
+  letter-spacing 1px
+  transition opacity .3s
+
+  @media $bp.phone
+    font-size 10px
+
+.collection-card__link
+  $remove-link-style()
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+
+  border none
+  cursor pointer
+
+.collection-card__last
+  padding 16px 0 21px
+
+.collection-card_inline
+  display flex
+  width 100%
+  padding 16px 0
+  border-bottom 1px solid alpha($color-white, 0.1)
+
+  @media $bp.phone
+    border none
+    & + &
+      border-top 1px solid alpha($color-white, 0.1)
+
+  &:hover
+    .collection-card__title
+      color alpha($color-white, 0.4)
+    .collection-card__count
+      opacity .6
+    .collection-card__game__hover
+      $hover-overall-lighting-active()
+
+  for num in 1 2 3 4
+    .collection-card__game:nth-child({num})
+      .collection-card__game__hover
+        transition-delay 0.05s * num
+
+  .collection-card__games
+    display grid
+    grid-template-columns auto auto
+    grid-template-rows auto auto
+    grid-gap 4px
+    width 80px
+    height 80px
+    margin-right 1px
+
+  .collection-card__game
+    width 38px
+    height 38px
+    margin 0
+    border-radius 4px
+
+  .collection-card__meta
+    margin-left 16px
+
+  .collection-card__plus-count
+    display none
+
+  .collection-card__title
+    margin-top 0
+    font-size 16px
+    transition color 0.3s

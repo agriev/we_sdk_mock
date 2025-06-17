@@ -1,0 +1,13 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <form action="" method="post">
+        <p>Select main game:</p>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="action" value="merge_games">
+        <input type="submit" name="apply" value="Continue">
+    </form>
+{% endblock %}

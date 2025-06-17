@@ -1,0 +1,34 @@
+{
+  "ru": {
+    "head_title": "Обратная связь",
+    "title": "Обратная связь",
+    "button": "Отправить отзыв",
+    "another_message": "Создать новое сообщение",
+    "success_button": "Перейти на главную страницу",
+    "form_email_label": "E-mail",
+    "form_email_placeholder": "Ваш e-mail",
+    "form_username_label": "Никнейм",
+    "form_username_placeholder": "Ваше имя",
+    "form_message_label": "Сообщение",
+    "form_message_placeholder": "Текст вашего сообщения",
+    "text": "Свяжитесь с командой AG.ru - дайте нам знать о любых проблемах или возможностях для улучшения платформы.",
+    "success_text": "Сообщение успешно отправлено, спасибо!"
+  },
+
+  "en": {
+    "head_title": "Feedback",
+    "title": "Feedback",
+    "button": "Send feedback",
+    "another_message": "Compose new message",
+    "success_button": "Go to the main page",
+    "form_email_label": "E-Mail",
+    "form_email_placeholder": "Your E-Mail",
+    "form_username_label": "Username",
+    "form_username_placeholder": "Your name",
+    "form_message_label": "Message",
+    "form_message_placeholder": "Text of your message",
+    "text":
+      "We are actively developing RAWG and will be improving the service on a regular basis based on user feedback.",
+    "success_text": "Message sent successfully, thank you!"
+  }
+}

@@ -1,0 +1,120 @@
+.game-social-links
+  display flex
+  flex-direction column
+
+  width 100%
+  text-align left
+
+  margin-top 24px
+  background rgba(#feffff, 0.05)
+
+  border-radius 6px
+  padding 12px 16px
+  box-sizing border-box
+
+  @media $bp.desktop
+    padding 0 24px
+    height 40px
+
+    margin-right 30px
+    background none
+
+    width unset
+    flex-direction row
+
+    margin-top 0
+
+    align-items center
+    text-align left
+
+
+  &__text
+    font-size 16px
+    line-height 24px
+    color white
+
+    margin-bottom 12px
+    white-space nowrap
+
+    @media $bp.desktop
+      margin-bottom 0
+      font-size 14px
+
+      color rgba(#feffff, 0.4)
+
+    @media screen and (max-width 1600px)
+      display none
+
+    @media $bp.phone
+      display block
+
+  &__icons
+    display flex
+    align-items center
+    // justify-content center
+
+    @media $bp.desktop
+      margin-left 20px
+
+      svg
+        display inline-flex
+        height 24px
+        width 24px
+
+    * + *
+      margin-left 20px
+
+      @media $bp.desktop
+        margin-left 16px
+
+    a
+      background none
+      color #cdf500
+
+      @media $bp.desktop
+        color white
+
+        &:hover
+          color rgba(white, 0.5)
+
+  &--header
+    background linear-gradient(98deg, #FF0000 0%, #FF8000 100%)
+    margin-top 0
+
+    flex-direction row
+    justify-content space-between
+    align-items center
+
+    border-radius 0
+
+    padding 0 12px
+    height 40px
+
+    @media $bp.desktop
+      border-radius 80px
+      padding 0 24px
+
+  &--header &__text
+    color white
+    display block
+
+    margin-bottom 0
+
+    font-size 14px
+    line-height 24px
+
+  &--header &__icons
+    .SVGInline
+      display inline-flex
+
+    svg
+      display inline-flex
+      height 24px
+      width 24px
+
+    a
+      display inline-flex
+      color white
+
+  // &--with-text-link &__text
+  //   text-decoration underline

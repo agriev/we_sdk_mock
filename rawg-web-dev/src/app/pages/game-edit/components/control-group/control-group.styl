@@ -1,0 +1,41 @@
+.game-edit__control-group
+  margin-top 32px
+  padding 24px 32px 8px
+  background #232323
+  border-radius 6px
+  box-shadow 0 -2px 5px alpha(black, 50%)
+
+  @media $bp.phone
+    padding 16px 24px 8px
+
+.game-edit__control-group-content
+  margin-bottom 24px
+
+.game-edit__control-group-title
+  font-weight bold
+  font-size 24px
+  line-height 28px
+  padding-bottom 20px
+  margin-bottom 20px
+  border-bottom 1px solid alpha(white, 10%)
+  display flex
+
+  @media $bp.phone
+    font-size 18px
+    padding-bottom 16px
+    margin-bottom 16px
+
+.game-edit__control-group-title__text
+  flex 1 1 auto
+
+.game-edit__control-group-question
+  opacity .5
+  cursor pointer
+
+  transition opacity .3s
+
+  &:hover
+    opacity .7
+
+  &.game-edit__control-group-question_active
+    opacity 1

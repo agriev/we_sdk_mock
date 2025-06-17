@@ -1,0 +1,23 @@
+.top-reviews
+  margin-bottom 48px
+
+.top-reviews__review
+  width $column-width-1-1-desktop
+  height 338px
+  margin-right $column-offset-1-1-desktop
+  background-color alpha($color-white, 0.05)
+
+  @media $bp.phone
+    width 264px
+    height 360px
+    margin-right 6px
+    margin-left 10px
+    margin-bottom 8px
+
+.top-reviews__review_grow
+  width 100%
+  height auto
+
+  @media $bp.phone
+    margin 0 10px
+    width calc(100% - 20px)

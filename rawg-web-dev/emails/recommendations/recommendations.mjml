@@ -1,0 +1,339 @@
+<mjml>
+  <mj-head>
+    <mj-style inline="inline">
+      a {
+        color: #f1951b;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #f1951b;
+      }
+
+      .card {
+        width: 100%;
+        border-radius: 6px;
+        background-color: #222222;
+        overflow: hidden;
+      }
+
+      .button {
+        display:block;
+        min-width:64px;
+        padding:4px 22px;
+        color:white;
+        text-align:center;
+        text-decoration:none;
+        border:1px solid #727272;
+        border-radius:4px;
+      }
+
+      .big-button {
+        border-radius: 6px;
+      }
+
+      .big-link {
+        display:block;
+        padding:16px 32px;
+        color:white;
+        text-align:center;
+        text-decoration:none;
+      }
+
+      .background-image {
+        background-position:center;
+        background-size:cover;
+      }
+
+      .game-title {
+        padding-top:24px;
+        padding-left:24px;
+        padding-bottom:16px;
+        color:white;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.17;
+      }
+
+      .game-title-small {
+        padding-right: 16px;
+        color:white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .small-text {
+        color:#4d4d4d;
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      .rating-table {
+        width: 225px;
+        height: 194px;
+        border: 1px solid #37404b;
+        border-spacing: 0;
+        border-radius: 6px;
+      }
+
+      .rating-cell {
+        width: 112px;
+        height: 96px;
+        text-align:center;
+        vertical-align:center;
+      }
+
+       .rating-emoji {
+         padding-top: 8px;
+       }
+
+      .rating-value {
+        color:white;
+        font-size: 12px;
+      }
+
+      .gray-border {
+        border: 1px solid #37404b;
+      }
+
+      .orange-title {
+        padding-bottom: 24px;
+        color: #f1951b;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .text {
+        color: white;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: normal;
+        text-align: left;
+      }
+
+      .text + .text {
+        margin-top: 24px;
+      }
+
+      .avatar {
+        padding-left: 16px;
+      }
+
+      .avatar img {
+        border-radius: 50%;
+      }
+
+      .game-image {
+        border-radius: 6px;
+        max-width: 100%;
+      }
+
+      .game-info {
+        color: white;
+      }
+
+      .game-info__release {
+        background: white;
+        color: black;
+        display: inline-block;
+        padding: 0 5px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+
+      .game-info__platforms {
+        margin-left: 12px;
+        display: inline-block;
+        height: 14px;
+        width: auto;
+      }
+
+      .game-info__platform {
+        width: 14px;
+        height: 14px;
+        opacity: 0.4;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top: 2px;
+      }
+
+      .platform-pc {
+        background-image: url(https://rawg.io/assets/icons/platforms/pc.svg);
+      }
+
+      .platform-playstation {
+        width: 20px;
+        background-image: url(https://rawg.io/assets/icons/platforms/playstation.svg);
+      }
+
+      .platform-3do {
+        background-image: url(https://rawg.io/assets/icons/platforms/3do.svg);
+        width: 6px;
+      }
+
+      .platform-android {
+        background-image: url(https://rawg.io/assets/icons/platforms/android.svg);
+      }
+
+      .platform-atari {
+        background-image: url(https://rawg.io/assets/icons/platforms/atari.svg);
+        width: 16px;
+      }
+
+      .platform-commodore-amiga {
+        background-image: url(https://rawg.io/assets/icons/platforms/commodore-amiga.svg);
+        width: 18px;
+      }
+
+      .platform-ios {
+        background-image: url(https://rawg.io/assets/icons/platforms/ios.svg);
+      }
+
+      .platform-linux {
+        background-image: url(https://rawg.io/assets/icons/platforms/linux.svg);
+      }
+
+      .platform-mac {
+        background-image: url(https://rawg.io/assets/icons/platforms/mac.svg);
+      }
+
+      .platform-nintendo {
+        background-image: url(https://rawg.io/assets/icons/platforms/nintendo.svg);
+        width: 18px;
+      }
+
+      .platform-sega {
+        background-image: url(https://rawg.io/assets/icons/platforms/sega.svg);
+      }
+
+      .platform-web {
+        background-image: url(https://rawg.io/assets/icons/platforms/web.svg);
+      }
+
+      .platform-xbox {
+        background-image: url(https://rawg.io/assets/icons/platforms/xbox.svg);
+      }
+
+      .game-info__platform + .game-info__platform {
+        margin-left: 4px;
+      }
+
+      .game-name {
+        color: white;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: bold;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="white" color="white" />
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif" padding="0" />
+    </mj-attributes>
+  </mj-head>
+
+
+  <mj-body background-color="#151515">
+    <mj-section padding-top="55px" padding="10px">
+      <mj-column width="100%">
+        <mj-text color="white" font-size="18px" font-weight="bold" letter-spacing="5px">
+          RAWG
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#3B3B3B" padding-top="12px" padding-bottom="24px" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 10px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td>
+              <div class="orange-title" style="padding-bottom: 4px">
+                Hey, Nota Kuroi!
+              </div>
+              <div class="text">
+                Some new games have been added to your profile on RAWG.
+              </div>
+              <div class="text">
+                Such as [Games Name] {and [Game Name]}. What are you going to do with it: play it now or leave it for later? Let us and your friends know! Go and set the category for the new games <a href="https://rawg.io/@accujazz">in your library</a>.
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="20px 10px 20px 10px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td width="30%" style="padding-right: 16px">
+              <img class="game-image" src="https://media.rawg.io/media/crop/600/400/games/b20/b209839daeec70f12821c8413194a97b.jpg"
+            </td>
+            <td valign="top">
+              <div class="game-info">
+                <div class="game-info__release">
+                  Mar 21, 2017
+                </div>
+                <div class="game-info__platforms">
+                  <div class="game-info__platform platform-pc"></div>
+                  <div class="game-info__platform platform-playstation"></div>
+                  <div class="game-info__platform platform-3do"></div>
+                  <div class="game-info__platform platform-android"></div>
+                  <div class="game-info__platform platform-atari"></div>
+                  <div class="game-info__platform platform-commodore-amiga"></div>
+                  <div class="game-info__platform platform-ios"></div>
+                  <div class="game-info__platform platform-linux"></div>
+                  <div class="game-info__platform platform-mac"></div>
+                  <div class="game-info__platform platform-nintendo"></div>
+                  <div class="game-info__platform platform-sega"></div>
+                  <div class="game-info__platform platform-web"></div>
+                  <div class="game-info__platform platform-xbox"></div>
+                </div>
+              </div>
+              <div class="game-name">
+                Call of Duty: Modern Warfare Remastered
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0px 10px 0px">
+      <mj-column>
+        <mj-text css-class="big-button" color="white" font-size="18px" font-weight="normal">
+          <a href="https://rawg.io/" class="big-link" style="border-radius: 6px; border: 1px solid #ccc;">
+            Organize my library
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="24px 10px 0 10px">
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#3B3B3B" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="32px 10px 48px">
+      <mj-column width="100%">
+        <mj-table width="100%">
+          <tr>
+            <td style="72px">
+              <a class="small-text" href="https://rawg.io">
+                Unsubscribe
+              </a>
+            </td>
+            <td class="small-text" style="padding-left:8px;text-align:right">
+              <span>
+                2017 © RAWG, Behind The Games
+              </span>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

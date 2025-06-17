@@ -1,0 +1,33 @@
+{
+  "ru": {
+    "top_title": "Оцените лучшие игры за всю историю",
+    "top_description": "Оцените лучшие новинки и классику",
+    "about": "Листайте карусель игр и оценивайте их с помощью эмодзи. Зарегистрируйтесь и подключите свои игровые профили, чтобы персонализировать карусель",
+    "rating_exceptional": "Это либо игра Кодзимы, либо какой-то другой шедевр",
+    "rating_recommended": "Вы думаете, что любой фанат жанра должен сыграть в это",
+    "rating_meh": "У вас либо смешанные чувства, либо вообще никаких чувств к этой игре",
+    "rating_skip": "Такую игру вы не посоветуете даже злейшему врагу",
+    "rated_text": "Уже есть оценка у {count} из {total} игр",
+    "share": "Поделиться с друзьями",
+    "share_with_links": "поделиться через {link_fb} или {link_tw}",
+    "hide_import": "Больше не предлагать",
+    "rate": "Оцените игру",
+    "start": "Начать оценивать"
+  },
+
+  "en": {
+    "top_title": "Rate the All-Time Best Games",
+    "top_description": "Rate the best recent and classic video games",
+    "about": "Run through the games carousel and rate the games with emoji. Sign up and connect your gaming profiles to personalize the queue",
+    "rating_exceptional": "It's either Knack 2 or some other masterpiece",
+    "rating_recommended": "You believe that any fan of the genre should play it",
+    "rating_meh": "You have either mixed feelings about it or no feelings whatsoever",
+    "rating_skip": "You won't recommend this game to your worst enemy",
+    "rated_text": "you rated {count} out of {total} games",
+    "share": "Share with friends",
+    "share_with_links": "share via {link_fb} or {link_tw}",
+    "hide_import": "Do not show me this again",
+    "rate": "Rate the game",
+    "start": "Start rating now"
+  }
+}

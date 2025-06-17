@@ -1,0 +1,1 @@
+{% load utils %}{% for o in object.tags.visible %}{{ o.name|clear_spaces|default_if_none:'' }} {% endfor %}

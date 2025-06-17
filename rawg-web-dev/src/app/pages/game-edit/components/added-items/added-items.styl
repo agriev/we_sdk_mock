@@ -1,0 +1,88 @@
+.game-edit__added-item
+  position relative
+
+  display flex
+  flex 0 1 auto
+  align-items center
+
+  max-width 400px
+  box-sizing border-box
+  margin-right 12px
+  margin-top 12px
+  padding 10.5px 16px
+
+  border-radius 24.5px
+  border-width 2px
+  border-style solid
+  border-color alpha(white, 20%)
+  background-color alpha(black, 40%)
+
+  transition border-color .3s
+
+  @media $bp.phone
+    max-width calc(100vw - 48px)
+
+  &_selectable
+    cursor pointer
+
+    &:hover
+      border-color alpha(white, 40%)
+
+  &_new,
+  &_updated
+    border-color rgba(19, 201, 72, 0.5)
+
+  &_deleted,
+  &_error
+    border-color alpha(#e94a30, 100%)
+
+  &_selected, &_selected:hover
+    border-color alpha(white, 100%)
+
+.game-edit__added-item__text
+  font-size 18px
+  text-overflow ellipsis
+  white-space nowrap
+  transition color .3s
+  overflow hidden
+
+  &.delete-allowed
+    margin-right 16px
+
+  .game-edit__added-item_deleted &
+    color alpha(white, 40%)
+
+.game-edit__added-item__close
+  .SVGInline
+    display block
+    width 24px
+    height 24px
+    cursor pointer
+
+    &:hover
+      svg g
+        fill black
+      svg circle
+        fill white
+        opacity 1
+
+    svg
+      width 24px
+      height 24px
+      g, circle
+        transition fill .3s, opacity .3s
+
+.game-edit__added-item__icon
+  display flex
+  flex 0 1 auto
+  justify-content center
+  align-items center
+
+  max-width 28px
+  height 24px
+  margin-right 8px
+
+  opacity 0.5
+
+  img
+    height 100%

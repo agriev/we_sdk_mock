@@ -1,0 +1,48 @@
+.social-accounts-connect-block
+  width $column-width-1-1-1-desktop
+  margin 0 auto
+
+.social-accounts-connect
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  height 50px
+  padding 0 10px 0 20px
+  box-sizing border-box
+
+  font-size 18px
+  line-height 0
+  cursor pointer
+
+  &:not(:last-child)
+    margin-bottom 20px
+
+  &:last-child
+    margin-bottom 40px
+
+.social-accounts-connect-icon
+  fill: $color-white
+
+.social-accounts-connect_facebook
+  padding-right 20px
+  background-color $facebook-color
+
+.social-accounts-connect_twitter
+  background-color $twitter-color
+
+.social-accounts-connect_steam
+  background-color $steam-color
+
+.social-accounts-connect
+  transition color 0.3s
+
+  .social-accounts-connect-text_disconnect
+    transition color 0.3s
+    color alpha($color-white, 0.3)
+
+  &:hover
+    color alpha($color-white, 0.7)
+
+    .social-accounts-connect-text_disconnect
+      color alpha($color-white, 0.2)

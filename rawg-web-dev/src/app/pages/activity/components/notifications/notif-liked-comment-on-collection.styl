@@ -1,0 +1,23 @@
+.notif-liked-comment-on-collection
+  .comment
+    .comment__block
+      .comment__body
+        flex-direction column
+
+        .notif-liked-comment-on-collection__go_to_discussion
+          cursor pointer
+          display flex
+          align-items center
+          font-size 12px
+          margin-bottom 8px
+
+          transition opacity .3s
+          opacity .4
+          &:hover
+            opacity .8
+
+          .SVGInline svg
+            margin-right 8px
+            transform rotate(180deg)
+            width 16px
+            height 14px

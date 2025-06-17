@@ -1,0 +1,146 @@
+{% load i18n %}<!DOCTYPE html>
+<!--suppress CssUnknownTarget, CssUnusedSymbol, CssOverwrittenProperties -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        @font-face {
+            font-family: Custom;
+            src: url("file:///app/project/templates/share/normal.otf") format("opentype");
+        }
+        @font-face {
+            font-family: Custom;
+            src: url("file:///app/project/templates/share/bold.otf") format("opentype");
+            font-weight: bold;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            {% if images|length < 4 %}background: url({{ images|first }}) 0 0 / cover no-repeat;{% endif %}
+            font-family: Custom, serif;
+            position: relative;
+        }
+        {% if images|length == 4 %}
+            body > div.images {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 600px;
+                height: 315px;
+            }
+            {% for image in images %}
+                body > div.image{{ forloop.counter }} {
+                    background: url({{ image }}) 0 0 / cover no-repeat;
+                    position: absolute;
+                    {% if forloop.counter == 2 %}
+                    left: 600px;
+                    {% endif %}
+                    {% if forloop.counter == 3 %}
+                    top: 315px;
+                    {% endif %}
+                    {% if forloop.counter == 4 %}
+                    left: 600px;
+                    top: 315px;
+                    {% endif %}
+                }
+            {% endfor %}
+        {% endif %}
+        body > div.shadow {
+            position: relative;
+            background-color: rgba(15, 15, 15, .5);
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            color: white;
+        }
+        table, tbody, td {
+            padding: 0;
+            margin: 0;
+            border-spacing: 0;
+        }
+        .thin {
+            width: 1200px;
+            height: 50px;
+        }
+        .fat {
+            height: 520px;
+        }
+        span {
+            display: block;
+        }
+        .count {
+            margin-left: 267px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+        .name {
+            margin-left: 263px;
+            margin-right: 80px;
+            position: relative;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 80px;
+            text-rendering: optimizelegibility;
+            hyphens: auto;
+        }
+        .name:before {
+            content: '';
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: url(file:///app/project/templates/collections/icon.png) 0 0 no-repeat;
+            top: -30px;
+            left: -170px;
+        }
+        .subscribe {
+            padding-right: 50px;
+            vertical-align: top;
+            text-align: right;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 5.6px;
+        }
+        .subscribe.ru {
+            padding-right: 30px;
+        }
+        .subscribe.ru img {
+            position: relative;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+<div class="images image1"></div>
+<div class="images image2"></div>
+<div class="images image3"></div>
+<div class="images image4"></div>
+<div class="shadow">
+    <table>
+        <tbody>
+            <tr>
+                <td class="thin"></td>
+            </tr>
+            <tr>
+                <td class="fat">
+                    <span class="count">
+                        {{ count }} {% blocktrans count counter=count %}game{% plural %}games{% endblocktrans %}
+                    </span>
+                    <span class="name">{{ name }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="thin subscribe {{ language }}">
+                    {% if language == 'ru' %}
+                        <img src="file:///app/project/templates/share/logo_ag.png">
+                    {% else %}
+                        <span>AG</span>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

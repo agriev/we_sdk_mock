@@ -1,0 +1,177 @@
+.leaderboard-header-container
+  max-width 1000px
+  width 100%
+  margin 48px auto 0 auto
+  order 80
+
+  @media $bp.phone
+    margin 48px auto 0 auto
+
+  .tokens-header
+    @media $bp.desktop
+      width 608px
+
+.leaderboard-container
+  max-width 800px
+  width 100%
+  margin 0 auto 0 auto
+
+.heading.leaderboard-title
+  margin-top 0
+
+  @media $bp.phone
+    padding 0 10px
+    text-align center
+
+.leaderboard
+  width 100%
+
+  @media $bp.phone
+    padding-bottom 50px
+
+.leaderboard-wrap
+  display flex
+  flex-direction column
+
+  @media $bp.phone
+    margin 0 4px
+
+.leaderboard__wreaths
+  display inline-block
+
+  &::before
+  &::after
+    background url('~app/pages/tokens/assets/wreath-gold.svg?external') no-repeat center / contain
+    content ''
+    width 32px
+    height 36px
+    display inline-block
+    position relative
+    top 5px
+
+    @media $bp.phone
+      width 25px
+      height 24px
+      top 3px
+
+  &::after
+    transform rotateY(180deg)
+
+.leaderboard__headings
+  font-size 12px
+  padding-top 16px
+  padding-bottom 16px
+  width 100%
+  display flex
+  box-sizing border-box
+
+  z-index 2
+  background #151515
+  position sticky
+  top 0
+
+  @media (min-width: 1024px)
+    width calc(100% + 48px)
+    transform translateX(-24px)
+    padding-left 24px
+    padding-right 24px
+
+  @media $bp.phone
+    padding 8px 5px
+
+  .leaderboard__heading
+    opacity .4
+
+    &:nth-child(1)
+      text-align left
+      @media $bp.desktop
+        width calc(105px + 43%)
+        flex 0 0 auto
+      @media $bp.phone
+        flex 1 1 auto
+        width calc(105px + 15%)
+    &:nth-child(2)
+      text-align left
+      flex 1 1 auto
+      width 30%
+    &:nth-child(3)
+      text-align right
+      flex 1 1 auto
+      width 30%
+
+.leaderboard__more-games
+  display flex
+  align-items center
+  box-sizing border-box
+  margin 24px 0 0
+
+  @media $bp.phone
+    padding 0 10px
+
+.leaderboard__more-games-phone-button
+  background-color alpha($color-white, 10%)
+  box-shadow none
+  color white
+  font-size 14px
+  padding 12px
+  height auto
+  margin 16px 0 0
+  width 100%
+  &:hover
+    background-color alpha($color-white, 10%)
+    box-shadow none
+
+  svg path
+    fill white
+
+.leaderboard__more-games-line
+  height 1px
+  background-color alpha($color-white, 0.1)
+
+  &:first-child
+    width 92px
+
+    @media $bp.phone
+      width 44px
+
+  &:last-child
+    flex-grow 1
+
+.leaderboard__more-games-button
+  position relative
+
+  display inline-flex
+  align-items center
+  padding 0 15px
+
+  font-size 12px
+  letter-spacing 1px
+  text-transform uppercase
+  cursor pointer
+  transition color 0.3s
+
+  svg g
+    transition fill 0.3s
+
+  &:hover
+    color alpha($color-white, 0.5)
+
+    svg g
+      fill alpha($color-white, 0.5)
+
+.leaderboard__more-games-button-icon
+  margin-left 10px
+
+  .arrow__icon__small
+    width 4.2px
+    height 7.2px
+
+.leaderboard__loading
+  margin 40px auto
+  text-align center
+
+  svg
+    fill alpha($color-white, 0.1)
+
+.leaderboard__filter
+  position relative

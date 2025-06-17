@@ -1,0 +1,83 @@
+.game-card-compact-list
+  &_default
+    width 100%
+
+  &_3-columns
+    @media $bp.phone
+      overflow hidden
+
+.game-card-compact-list_default .game-card-compact-list__wrapper
+  & > *
+    padding 16px 0
+    border-bottom 1px solid rgba(white, 0.1)
+
+    &_small
+      padding 8px 0
+
+    &:last-child
+      border none
+
+.game-card-compact-list_3-columns .game-card-compact-list__wrapper
+  $three-columns-grid()
+
+  @media $bp.phone
+    padding 0 10px 16px
+    overflow auto
+
+  & > *
+    padding 16px 0
+    border-bottom 1px solid rgba(white, 0.1)
+
+    &:nth-child(-n + 3)
+      padding-top 0
+
+    &:nth-last-child(-n + 3)
+      padding-bottom 0
+      border none
+
+    @media $bp.phone
+      width 264px
+
+.game-card-compact-list_3-columns-desktop .game-card-compact-list__wrapper
+  @media $bp.desktop
+    $three-columns-grid()
+
+    & > *
+      padding 16px 0
+      border-bottom 1px solid rgba(white, 0.1)
+
+      &:nth-child(-n + 3)
+        padding-top 0
+
+      &:nth-last-child(-n + 3)
+        padding-bottom 0
+        border none
+
+  @media $bp.phone
+    padding 0 10px
+
+    & > *
+      padding 16px 0
+      border-bottom 1px solid rgba(white, 0.1)
+
+      &:last-child
+        border none
+
+.game-card-compact-list_one-line .game-card-compact-list__wrapper
+  @media $bp.desktop
+    display flex
+    flex 0 1 auto
+    flex nowrap
+    padding 0 10px
+
+    & > *
+      width 280px
+      margin-right 24px
+
+  @media $bp.phone
+    & > *
+      padding 16px 0
+      border-bottom 1px solid rgba(white, 0.1)
+
+      &:last-child
+        border none

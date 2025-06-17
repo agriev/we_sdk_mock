@@ -1,0 +1,67 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block content %}
+    <h1>Users Retention D1/D7/D30</h1>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="input-daterange input-group" id="datepicker">
+                <input type="text" class="input-sm form-control" name="start" value="{{ start_date|date:'d/m/Y' }}">
+                <span class="input-group-addon">to</span>
+                <input type="text" class="input-sm form-control" name="end" value="{{ end_date|date:'d/m/Y' }}">
+            </div>
+        </div>
+        <button class="btn btn-primary">Show</button>
+        <div class="form-group earliest-date">
+            Earliest date: {{ min_date|date:'d/m/Y' }}
+        </div>
+    </form>
+
+    <br><br>
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>D1</td>
+            <td>{{ d1 }}</td>
+        </tr>
+        <tr>
+            <td>D7</td>
+            <td>{{ d7 }}</td>
+        </tr>
+        <tr>
+            <td>D30</td>
+            <td>{{ d30 }}</td>
+        </tr>
+        <tr>
+            <td>Registrations</td>
+            <td>{{ regs_total }}</td>
+        </tr>
+        <tr>
+            <td>Day 1 Returns</td>
+            <td>{{ day1_returns }}</td>
+        </tr>
+        <tr>
+            <td>Day 7 Returns</td>
+            <td>{{ day7_returns }}</td>
+        </tr>
+        <tr>
+            <td>Day 30 Returns</td>
+            <td>{{ day30_returns }}</td>
+        </tr>
+    </table>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+        });
+    </script>
+{% endblock %}

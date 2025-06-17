@@ -1,0 +1,33 @@
+.comments-list
+  padding 0
+
+.comments-list__load-wrapper
+  text-align center
+
+.comments-list__load
+  display inline-block
+  margin 0 0 25px
+  text-align center
+  color $color-white
+  border none
+  cursor pointer
+  transition color 0.3s
+  font-size 14px
+  $add-link-style()
+
+  .theme_light &
+    $add-link-style(0.4, #0e0e0e)
+    color #111
+
+  &:hover
+    color alpha($color-white, 0.5)
+    .theme_light &
+      $add-link-style(0.4, #0e0e0e)
+      color #333
+
+.comments-list__load_all
+  margin 20px auto 0
+
+.comments-list__load_children
+  vertical-align top
+  margin-left 55px

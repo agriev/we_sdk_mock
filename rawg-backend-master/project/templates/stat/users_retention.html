@@ -1,0 +1,90 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block content %}
+    <h1>Users Retention</h1>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="input-daterange input-group" id="datepicker">
+                <input type="text" class="input-sm form-control" name="start" value="{{ start_date|date:'d/m/Y' }}">
+                <span class="input-group-addon">to</span>
+                <input type="text" class="input-sm form-control" name="end" value="{{ end_date|date:'d/m/Y' }}">
+            </div>
+        </div>
+        <button class="btn btn-primary">Show</button>
+        <div class="form-group earliest-date">
+            Earliest date: {{ min_date|date:'d/m/Y' }}
+        </div>
+    </form>
+
+    <br><br>
+
+    <canvas id="chart"></canvas>
+
+    <br><br>
+    {% if points %}
+    {% block table %}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th></th>
+            <th></th>
+            {% for point_set in points %}
+            <th>{{point_set.0.period_name|title}} {{forloop.counter }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th> # </th>
+            <th> All Users </th>
+            {% for t in total %}
+            <th> {{ t }} </th>
+            {% endfor %}
+        </tr>
+        {% for point_set in points %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td style='width: 250px;'><strong>{{ point_set.0.period_str }}</strong><br>&nbsp({{ point_set.0.reg }} users)</td>
+            {% for p in point_set %}
+            <td>{{ p.percent }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+    {% endif %}
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: [{% for point in total %}'{{ forloop.counter }}'{% if not forloop.last %},{% endif %}{% endfor %}],
+                    datasets: [
+                        {
+                            label: 'Percent',
+                            fill: false,
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            borderWidth: 3,
+                            data: [{% for point in total %}{{ point }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                }
+            });
+        });
+    </script>
+{% endblock %}

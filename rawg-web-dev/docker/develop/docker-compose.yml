@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  node:
+    container_name: rawg-node
+    image: node:10
+    command: bash -c 'cd app && npm run start:dev'
+    ports:
+      - 4000:4000
+    volumes:
+      - $PWD:/app/
+    env_file:
+      - $PWD/docker/production/env
+      - $PWD/docker/develop/env

@@ -1,0 +1,88 @@
+.offer-details-card
+  width $page-width-desktop
+  border-radius 6px
+  background-color #151515
+  box-sizing border-box
+  padding 48px
+  border-radius 6px
+
+  display grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows auto 1fr
+  grid-auto-rows: auto
+
+  @media $bp.phone
+    width 100vw
+    padding 32px 10px
+    grid-template-columns 1fr
+    border-radius 0
+    padding-top 70px
+
+.offer-details-card__gallery
+  @media $bp.phone
+    order 2
+
+.offer-details-card__info-wrap
+  flex-basis: 366px
+  margin-left 32px
+  @media $bp.phone
+    display flex
+    flex-wrap wrap
+    margin-left 0
+    justify-content center
+
+.offer-details-card__buttons-wrap
+  display flex
+  margin-top 29px
+  margin-bottom 32px
+  @media $bp.phone
+    // flex-wrap wrap
+    justify-content center
+    margin-top 16px
+    margin-bottom 24px
+
+
+.offer-details-card__info__category
+  text-transform uppercase
+  font-size 12px
+  letter-spacing 1.7px
+  margin-bottom 19px
+  margin-top 20px
+  @media $bp.phone
+    margin 8px 0
+    flex-basis 100%
+    text-align center
+
+.offer-details-card__info__name
+  font-size 44px
+  line-height 1.09
+  @media $bp.phone
+    text-align center
+    font-size 24px
+    line-height 1.17
+    flex-basis 100%
+
+.offer-details-card__description
+  margin-left 32px
+  grid-column 2
+  @media $bp.phone
+    grid-column auto
+    order 3
+    margin-left 0
+    margin-top 24px
+
+.offer-details-card__description__title
+  font-size 24px
+  font-weight bold
+  margin-bottom 8px
+  @media $bp.phone
+    font-size 18px
+
+.offer-details-card__description__text
+  font-size 16px
+  @media $bp.phone
+    font-size 14px
+    line-height 1.29
+
+.offer-details-card__button
+  margin-right 24px

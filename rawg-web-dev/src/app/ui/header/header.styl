@@ -1,0 +1,1819 @@
+.header
+  display flex
+  flex-direction column
+
+  box-sizing border-box
+  padding 12px
+
+  position relative
+
+  @media $bp.desktop
+    background-color unset
+    padding 0
+
+  &__logo
+    background none
+
+    @media $bp.desktop
+      display none
+
+  &__main
+    display flex
+    align-items center
+
+    height 64px
+    background-color #222
+    box-shadow inset 0 0 0 1px rgba(white, 0.05)
+
+    border-radius 12px
+    padding 12px
+    box-sizing border-box
+
+    margin-bottom 44px + 8px
+
+    &-nav a
+      font-size 16px
+      line-height 24px
+
+      background none
+      margin-right 32px
+      color rgba(#feffff, 0.6)
+
+      transition color 0.2s
+
+      &:hover
+        color white
+
+      &.active
+        color white
+
+    &-search
+      position relative
+      display flex
+
+      max-width 400px
+      width 100%
+
+      margin-right 40px
+
+      &-dropdown
+        position absolute !important
+        display flex
+        flex-direction column
+
+        top 100%
+        left 0
+
+        min-height 184px
+        max-height 488px
+
+        margin-top 8px
+        border-radius 12px
+        width 100%
+
+        background-color #222
+        box-shadow inset 0 0 0 1px rgba(white, 0.05)
+
+        z-index 69
+
+    &-profile
+      position relative
+
+      &-body
+        display flex
+        align-items center
+
+        cursor pointer
+
+        color rgba(#feffff, 0.4)
+        transition color 0.2s
+
+        &:hover
+          color white
+
+      &-avatar img
+        width 40px
+        height 40px
+        border-radius 100%
+
+        background-color rgba(#feffff, 0.05)
+        box-shadow inset 0 0 0 1px rgba(white, 0.1)
+        object-fit cover
+
+        user-select none
+
+      .SVGInline
+        display inline-flex
+        margin-left 8px
+
+      &--active &-body
+        color white
+
+      &-dropdown
+        position absolute
+        width 288px
+
+        top 100%
+        right -16px
+
+        z-index 143
+
+        margin-top 8px
+
+        .header-profile__root
+          border-radius 12px
+
+          background-color #222
+          box-shadow inset 0 0 0 1px rgba(white, 0.05)
+
+        .header-profile__menu
+          padding 12px 8px
+
+        .header-profile__entry,
+        .header-profile__entry--exit
+          height 40px
+
+        .header-profile__entry
+          border-radius 6px
+          transition background-color 0.2s, color 0.2s
+
+          &:hover
+            background-color rgba(#feffff, 0.05)
+            color white
+
+          &--active
+            background-color rgba(#feffff, 0.1)
+            color white
+
+            .SVGInline
+              color #cdf500
+
+        .header-profile__entry + .header-profile__entry
+          margin-top 4px
+
+        .header-profile__footer
+          height unset
+          padding 12px 8px 8px 8px
+
+    &-column
+      display flex
+      justify-content flex-end
+      align-items center
+
+      flex 1
+
+    &-burger
+      display flex
+      justify-content center
+      align-items center
+
+      cursor pointer
+      margin-left 24px
+
+      width 40px
+      height 40px
+
+    &-auth
+      appearance none
+      background-color white
+
+      border none
+      outline none
+
+      font-size 16px
+      line-height 24px
+
+      cursor pointer
+
+      color #0f0f0f
+      padding 0 24px
+      border-radius 6px
+
+      height 40px
+      transition background-color 0.2s
+
+      &:hover
+        background-color #cdf500
+
+    &-avatar
+      display inline-flex
+      flex-shrink 0
+      position relative
+
+      img
+        width 40px
+        height 40px
+
+        border-radius 100%
+        cursor pointer
+
+        background-color rgba(#feffff, 0.05)
+        box-shadow inset 0 0 0 1px rgba(white, 0.1)
+        object-fit cover
+
+    @media $bp.desktop
+      margin-bottom 0
+      height 72px
+
+      padding 0 24px
+
+  &__searchable
+    position absolute
+    z-index 144
+
+    // transition transform 0.2s, top 0.2s, padding 0.2s, position 0.2s
+
+    left 0
+    top 84px - 12px
+
+    width 100%
+    padding 12px
+
+    box-sizing border-box
+
+  &__search
+    position relative
+
+    &-unhider
+      display none
+      align-items center
+      justify-content flex-end
+      width 100%
+
+      svg
+        color rgba(#feffff, 0.4)
+        cursor pointer
+
+      svg:hover
+        color white
+
+    input
+      box-sizing border-box
+      border-radius 12px
+
+      border none
+      outline none
+
+      height 48px
+      width 100%
+
+      background-color rgba(#feffff, 0.1)
+      color white
+
+      font-size 16px
+      line-height 24px
+
+      caret-color #cdf500
+      padding 0 46px 0 52px
+
+      backdrop-filter blur(20px)
+      // transition padding 0.2s, background-color 0.2s, box-shadow 0.2s, border-radius 0.2s
+
+      @media $bp.desktop
+        height 40px
+
+      &:focus
+        padding-left 16px
+        background-color rgba(#feffff, 0.05)
+        box-shadow: inset 0 0 0 1px rgba(white, 0.1)
+
+        ~ .header__search-search
+          opacity 0
+          transform scale(0.2)
+
+      &:not(:placeholder-shown)
+        padding-left 16px
+        background-color rgba(#feffff, 0.05)
+        box-shadow: inset 0 0 0 1px rgba(white, 0.1)
+
+        ~ .header__search-search
+          opacity 0
+          transform scale(0.2)
+
+        ~ .header__search-x
+          opacity 1
+          transform scale(1)
+          visibility visible
+
+    &-search
+      display inline-flex
+      align-items center
+      color rgba(#feffff, 0.6)
+
+      pointer-events none
+      position absolute
+
+      left 0
+      top 0
+
+      padding 0 16px
+
+      height 100%
+      // transition transform 0.2s, opacity 0.2s
+
+    &-x
+      display inline-flex
+      align-items center
+      color rgba(#feffff, 0.6)
+
+      cursor pointer
+      position absolute
+
+      right 0
+      top 0
+
+      padding 0 16px
+
+      height 100%
+      // transition transform 0.2s, opacity 0.2s, visibility 0.2s
+
+      opacity 0
+      visibility hidden
+
+      transform scale(0.2)
+
+    &--from-header
+      width 100%
+
+      .header__search-x,
+      .header__search-search
+        width 32px
+        justify-content center
+        padding 0 12px
+
+      input
+        padding 0 52px
+        border-radius 24px
+
+        &:hover
+          background-color rgba(#feffff, 0.05)
+          box-shadow inset 0 0 0 1px rgba(#feffff, 0.1)
+
+        &:focus
+          padding-left 20px
+
+        &:not(:placeholder-shown)
+          padding-left 20px
+
+      @media (min-width: 1060px)
+        width 0
+        overflow hidden
+
+  &--with-menu
+    .header__searchable
+      position fixed
+
+      top 0
+      padding 16px
+
+      transform translateY(4px)
+
+      input
+        border-radius 8px
+
+.header__main
+  @media (min-width: 1060px)
+    .header__search-unhider
+      display flex
+
+    &--focused
+      .header__search
+        width 100%
+        overflow unset
+
+        &-unhider
+          display none
+
+  @media (min-width: 1060px) and (max-width: 1400px)
+    &--focused .game-social-links
+      display none
+
+  &-coin
+    position relative
+    margin-right 10px
+
+    @media $bp.desktop
+      margin-right 16px
+
+    &--authorized
+      margin-right 20px
+
+      @media $bp.desktop
+        margin-right 32px
+
+.header-menu
+  position fixed
+  z-index 143
+
+  left 0
+  top 0
+
+  height 100%
+  width 100%
+
+  padding 4px
+  box-sizing border-box
+
+  overflow hidden
+
+  &::before
+    content ''
+    position absolute
+
+    left 0
+    top 0
+
+    width 100%
+    height 100%
+
+    background-color rgba(#2d2d2d, 0.8)
+    backdrop-filter blur(20px)
+
+  &__root
+    position relative
+
+    display flex
+    flex-direction column
+    background-color #141414
+
+    height 100%
+
+    border-radius 20px
+    overflow hidden
+
+  &__section
+    box-sizing border-box
+    padding 32px 16px
+
+    border-bottom 1px solid rgba(#feffff, 0.05)
+
+    &--search
+      padding 0 16px
+      height 80px
+
+    &--footer
+      padding 0 16px
+
+      display flex
+      height 80px
+      align-items center
+
+      border-bottom none
+      border-top 1px solid rgba(#feffff, 0.05)
+
+    &--recent
+      padding-top 24px
+
+      .header-menu__text
+        margin-top 12px
+
+        font-size 16px
+        line-height 22px
+
+        color rgba(#feffff, 0.6)
+
+        a
+          color rgba(#cdf500, 0.8)
+          background none
+
+          cursor pointer
+
+    &--rubrics
+      .header-menu__rubric
+        display flex
+        align-items center
+        justify-content space-between
+        background none
+
+        font-weight bold
+
+        font-size 24px
+        line-height 28px
+
+        &:after
+          content ''
+
+          background-color rgba(#feffff, 0.4)
+          mask-image url('./assets/rubric-chevron.svg?external')
+
+          width 6px
+          height 10px
+
+        &--active
+          color #cdf500
+
+      * + *
+        margin-top 16px
+
+    &--sitemap
+      padding-bottom 24px
+      border-bottom none
+
+  &__title
+    display flex
+    align-items center
+    justify-content space-between
+
+    font-weight bold
+    background none
+
+    font-size 24px
+    line-height 28px
+
+    &--active
+      color #cdf500
+
+    &:link:after
+      content ''
+
+      background-color rgba(#feffff, 0.4)
+      mask-image url('./assets/rubric-chevron.svg?external')
+
+      width 6px
+      height 10px
+
+  &__section-children
+    margin-top 20px
+
+  &__section-child
+    display flex
+    align-items center
+
+    color rgba(#feffff, 0.6)
+
+    font-size 16px
+    line-height 24px
+
+    cursor pointer
+    // transition color 0.2s
+
+    background none
+
+    .SVGInline
+      display inline-flex
+      align-items center
+      justify-content center
+
+      margin-right 20px
+
+      width 24px
+      height 24px
+
+      color rgba(#feffff, 0.2)
+      transition color 0.2s
+
+    &:hover
+      color white
+
+      .SVGInline
+        color rgba(#feffff, 0.4)
+
+    &--active
+      color white
+
+      .SVGInline
+        color #cdf500 !important
+
+
+  &__section-child + &__section-child
+    margin-top 16px
+
+  &__lastPlayed-slider
+    margin-left -16px !important
+    margin-right -16px !important
+
+    margin-top 16px
+
+    padding-left 16px !important
+    padding-right 16px !important
+
+  &__lastPlayed-slide
+    display flex
+    flex-direction column
+
+    background none
+
+    img
+      background #222
+      display inline-flex
+      border-radius 8px
+
+      width 100%
+      height 144px
+
+      object-fit cover
+
+    span
+      margin-top 8px
+
+      font-size 16px
+      line-height 24px
+
+      color rgba(#feffff, 0.6)
+      white-space nowrap
+
+      text-overflow ellipsis
+      overflow hidden
+
+    &--active span
+      color #cdf500
+
+  &__hits-slider
+    margin-left -16px !important
+    margin-right -16px !important
+
+    margin-top 16px
+
+    padding-left 16px !important
+    padding-right 16px !important
+
+  &__hits-slide
+    display flex
+    flex-direction column
+
+    background none
+
+    img
+      background #222
+      display inline-flex
+      border-radius 8px
+
+      width 100%
+      height 72px
+
+      object-fit cover
+
+    span
+      margin-top 8px
+
+      font-size 16px
+      line-height 24px
+
+      color rgba(#feffff, 0.6)
+      white-space nowrap
+
+      text-overflow ellipsis
+      overflow hidden
+
+    &--active span
+      color #cdf500
+
+  &__body
+    position relative
+    flex 1
+
+    overflow hidden
+
+    // animation header-menu-body 0.3s
+    background-color #141414
+
+    &-inner
+      background-color #141414
+      position absolute
+
+      display flex
+      flex-direction column
+
+      height 100%
+      width 100%
+
+      overflow-y auto
+
+      &--search
+        z-index 2
+
+  &__auth
+    appearance none
+    border-radius 8px
+
+    cursor pointer
+
+    border none
+    outline none
+
+    background-color white
+    color #0f0f0f
+
+    height 48px
+
+    font-size 16px
+    line-height 24px
+
+    padding 0 24px
+    // transition background-color 0.2s
+
+    &:hover
+      background-color #cdf500
+
+  &__results
+    display flex
+    background none
+
+    font-size 16px
+    line-height 24px
+
+    color rgba(#feffff, 0.4)
+
+    span
+      margin-right 8px
+      color #cdf500
+
+  &__user
+    display flex
+    align-items center
+
+    flex 1
+    padding-right 48px
+
+    cursor pointer
+
+    &-avatar img
+      width 48px
+      height 48px
+      border-radius 100%
+
+      background-color rgba(#feffff, 0.05)
+      box-shadow inset 0 0 0 1px rgba(white, 0.1)
+      object-fit cover
+
+    &-name
+      margin-left 16px
+      font-weight bold
+
+      font-size 18px
+      line-height 24px
+
+.header-menu-floatable
+  position fixed
+
+  right 0
+  bottom 0
+
+  cursor pointer
+  z-index 140
+
+  width 64px
+  height 64px
+
+  background-color rgba(#222, 0.8)
+  color white
+
+  box-shadow inset 0 0 0 1px rgba(white, 0.05)
+  backdrop-filter blur(20px)
+  border-radius 12px
+
+  // transition background-color 0.2s, box-shadow 0.2s, border-radius 0.2s, width 0.2s, height 0.2s, transform 0.2s
+  transform translate(-12px, -12px)
+
+  transform-origin center center
+
+  .SVGInline
+    display inline-flex
+    position absolute
+
+    left 50%
+    top 50%
+
+    transform translate(-50%, -50%)
+    // transition transform 0.2s, opacity 0.2s
+
+    &:nth-child(2),
+    &:nth-child(3)
+      transform translate(-50%, -50%) scale(0.2)
+      opacity 0
+
+  &--active
+    border-radius 8px
+    box-shadow none
+
+    background-color rgba(#feffff, 0.1)
+    transform translate(-20px, -20px)
+
+    height 48px
+    width 48px
+
+    z-index 144
+
+    .SVGInline:nth-child(1)
+      transform translate(-50%, -50%) scale(0.2)
+      opacity 0
+
+    .SVGInline:nth-child(2)
+      transform translate(-50%, -50%) scale(1)
+      opacity 1
+
+  &--back
+    .SVGInline:nth-child(1),
+    .SVGInline:nth-child(2)
+      transform translate(-50%, -50%) scale(0.2)
+      opacity 0
+
+    .SVGInline:nth-child(3)
+      transform translate(-50%, -50%) scale(1)
+      opacity 1
+
+  @media $bp.desktop
+    display none
+
+.header-search
+  flex 1
+  overflow-y auto
+  position relative
+
+  &__loading
+    position absolute
+
+    left 50%
+    top 50%
+
+    transform translate(-50%, -50%)
+
+  &__not-found
+    position absolute
+
+    left 50%
+    top 50%
+
+    transform translate(-50%, -50%)
+
+    font-size 16px
+    line-height 24px
+
+    color rgba(#feffff, 0.4)
+    white-space nowrap
+
+  &__section
+    display flex
+    flex-direction column
+
+    padding 20px 4px
+    box-sizing border-box
+
+    @media $bp.desktop
+      padding 20px 8px
+
+    &-title
+      font-size 18px
+      line-height 24px
+
+      padding 0 12px
+      color white
+
+      span
+        margin-left 8px
+        color rgba(#feffff, 0.4)
+
+    &-entry
+      display flex
+      align-items flex-start
+
+      background none
+
+      padding 12px
+      border-radius 6px
+
+      color rgba(#feffff, 0.6)
+
+      font-size 16px
+      line-height 22px
+
+      // transition background-color 0.2s, color 0.2s
+
+      &:hover
+        background-color rgba(#feffff, 0.05)
+        color white
+
+      &:first-of-type
+        margin-top 12px
+
+      img
+        background-color rgba(#feffff, 0.05)
+        box-shadow inset 0 0 0 1px rgba(white, 0.1)
+        object-fit cover
+
+      &--game img
+        height 64px
+        width 48px
+        border-radius 4px
+
+      &--creator img
+        width 48px
+        height 48px
+        border-radius 100%
+
+    &-info
+      display flex
+      flex-direction column
+      margin-left 12px
+
+      flex 1
+
+      small
+        color rgba(#feffff, 0.4)
+
+        font-size 14px
+        line-height 22px
+
+        margin-top 4px
+
+    &-collection
+      display grid
+
+      grid-template-columns 1fr 1fr
+      grid-template-rows 1fr 1fr
+      grid-gap 4px
+
+      height 48px
+      width 48px
+
+      img
+        width 100%
+        height 100%
+        border-radius 4px
+
+    &:first-child
+      padding-top 24px
+
+      @media $bp.desktop
+        padding-top 16px
+
+    &:not(:last-child)
+      border-bottom 1px solid rgba(#feffff, 0.05)
+
+    &--total
+      padding 8px
+
+      span
+        color #cdf500
+        margin-right 8px
+
+.header-profile
+  position fixed
+  z-index 144
+
+  display flex
+  flex-direction column
+  justify-content flex-end
+
+  left 0
+  top 0
+
+  height 100%
+  width 100%
+
+  padding 4px
+  box-sizing border-box
+
+  overflow hidden
+
+  &::before
+    content ''
+    position absolute
+
+    left 0
+    top 0
+
+    width 100%
+    height 100%
+
+    background-color rgba(#2d2d2d, 0.8)
+    backdrop-filter blur(20px)
+
+  &__root
+    position relative
+
+    display flex
+    flex-direction column
+    background-color #141414
+
+    border-radius 20px
+    overflow hidden
+
+    min-height 100px
+
+  &__user
+    display flex
+    align-items center
+
+    padding 16px
+
+    a
+      background-image none
+
+    &-avatar
+      width 56px
+      height 56px
+      border-radius 100%
+
+      background-color rgba(#feffff, 0.05)
+      box-shadow inset 0 0 0 1px rgba(white, 0.1)
+      object-fit cover
+
+    &-info
+      display flex
+      flex-direction column
+      margin-left 20px
+
+    &-name
+      color white
+      font-size 20px
+      line-height 24px
+      font-weight bold
+      margin-bottom 2px
+
+    &-settings
+      color #cdf500
+
+      font-size 14px
+      line-height 22px
+
+      background none
+      cursor pointer
+
+      &:hover
+        color white
+
+  &__footer
+    display flex
+    height 88px
+    align-items flex-end
+
+    box-sizing border-box
+
+    border-top 1px solid rgba(#feffff, 0.05)
+    padding 16px
+
+  &__entry
+    display flex
+    align-items center
+
+    font-size 16px
+    line-height 24px
+
+    color rgba(#feffff, 0.6)
+    // transition color 0.2s
+
+    background none
+    cursor pointer
+
+    .SVGInline
+      display inline-flex
+      align-items center
+      justify-content center
+
+      width 24px
+      height 24px
+
+      color rgba(#feffff, 0.2)
+      margin-right 20px
+      transition color 0.2s
+
+    &:hover
+      color white
+
+      .SVGInline
+        color rgba(#feffff, 0.4)
+
+    & + &
+      margin-top 20px
+
+    &--exit
+      height 48px
+      width 100%
+      padding-right 48px
+
+  &__menu
+    display flex
+    flex-direction column
+
+    border-top 1px solid rgba(#feffff, 0.05)
+    padding 24px 16px
+
+.header-fade-profile
+  &-enter
+    opacity 0
+
+    .header-profile__root
+      opacity 0
+      transform translateY(20%) scale(0.9)
+
+  &-enter-active
+    opacity 1
+    // transition opacity 0.2s
+
+    .header-profile__root
+      opacity 1
+      transform translateY(0) scale(1)
+
+      // transition opacity 0.2s, transform 0.2s
+
+  &-exit
+    opacity 1
+
+    .header-profile__root
+      opacity 1
+      transform translateY(0) scale(1)
+
+  &-exit-active
+    opacity 0
+    transition opacity 0.2s
+
+    .header-profile__root
+      opacity 0
+      transform translateY(20%) scale(0.9)
+      // transition opacity 0.2s, transform 0.2s
+
+// @keyframes header-menu-body
+//   from
+//     opacity 0
+//     transform translateY(30px)
+
+//   to
+//     opacity 1
+//     transform translateY(0)
+
+.page-with-slider .header
+  background-color rgba(#feffff, 0.05)
+
+  @media $bp.desktop
+    background-color unset
+
+.header--online
+  @media $bp.phone
+    .header__searchable
+      display none
+
+    .header__main
+      margin-bottom 0
+
+    &.header--with-menu .header__searchable
+      display block
+
+.header-coin
+  display flex
+  flex-direction column
+
+  .coin-balance
+    display flex
+    align-items center
+    cursor pointer
+
+    &__icon
+      position relative
+
+      width 40px
+      height 40px
+
+      &--with-status::before
+        position absolute
+        display block
+
+        right -2px
+        top -2px
+
+        content ''
+
+        width 12px
+        height 12px
+
+        border-radius 100%
+        background-color #FF0000
+
+        animation header-coin-status 0.8s infinite forwards step-end
+
+    &__amount
+      display none
+
+      font-size 16px
+      font-weight 600
+
+      line-height 24px
+
+      color rgba(#FEFFFF, 0.4)
+      margin-left 12px
+
+.header .coin-informer
+  position fixed
+
+  right 0
+  top 0
+
+  z-index 146
+
+  width 100%
+  height 100%
+
+  background-color rgba(#2d2d2d, 0.8)
+  backdrop-filter blur(20px)
+  padding 4px
+
+  box-sizing border-box
+
+  display flex
+  flex-direction column
+  justify-content flex-end
+
+  .SVGInline
+    display inline-flex
+
+  @media $bp.desktop
+    position absolute
+    background-color unset
+    backdrop-filter unset
+
+    padding unset
+
+    height auto
+    width 340px
+    top 100%
+
+    margin-top 8px
+
+  &--authorized
+    height 100%
+
+    @media $bp.desktop
+      height 660px
+
+  &__body
+    display flex
+    flex-direction column
+
+    background-color #141414
+    border-radius 20px
+
+    width inherit
+    height auto
+
+    overflow-y auto
+    overflow-x hidden
+
+    @media $bp.desktop
+      border 1px solid rgba(white, 0.05)
+      border-radius 12px
+      background-color #222
+
+      scrollbar-width thin
+      scrollbar-color #cdf500 #222
+
+      &::-webkit-scrollbar
+        width 4px
+
+      &::-webkit-scrollbar-track
+        border-radius 4px
+        background-color #222
+
+      &::-webkit-scrollbar-thumb
+        border-radius 4px
+        background-color rgba(#feffff, 0.2)
+
+  &--authorized .coin-informer__body
+    height inherit
+
+  &__content
+    display flex
+    flex-direction column
+
+    flex 1
+
+  &__button
+    display flex
+    align-items center
+    justify-content center
+
+    font-size 16px
+    line-height 24px
+
+    background-color #cdf500
+    color #0f0f0f
+
+    cursor pointer
+    padding 12px 24px
+
+    border-radius 8px
+    width 100%
+
+    box-sizing border-box
+
+    &:hover
+      background-color white
+
+  &__header
+    display flex
+    flex-direction column
+
+    padding 20px 16px
+    width 100%
+
+    box-sizing border-box
+
+  &__title
+    color white
+
+    font-size 24px
+    font-weight 600
+    line-height 28px
+
+  &__subtitle
+    font-size 16px
+    line-height 20px
+
+    color rgba(#feffff, 0.6)
+    margin-top 12px
+
+  &__section
+    width 100%
+    box-sizing border-box
+
+    display flex
+    align-items flex-start
+
+    padding 24px 16px
+    border-top 1px solid rgba(#feffff, 0.05)
+
+    &--register
+      padding-top 10px
+      border none
+
+  &-update
+    align-items center
+    color white
+
+    font-size 16px
+    line-height 20px
+
+    &__text
+      margin-left 20px
+
+.header .coin-informer-stats
+  &__chest
+    margin-right 20px
+
+  &__items
+    display flex
+    flex-direction column
+
+    > * + *
+      margin-top 4px
+
+  &__item
+    display flex
+    align-items center
+    color rgba(#feffff, 0.6)
+
+    font-size 16px
+    line-height 24px
+
+    &-key
+      margin-right 8px
+
+    &-value
+      display flex
+      align-items center
+      color white
+
+    &-delimiter
+      color rgba(#feffff, 0.4)
+      margin 0 8px
+
+  &__currency
+    margin-left 4px
+
+  &__hearts
+    display flex
+    align-items center
+
+    color rgba(#feffff, 0.1)
+
+    * > *
+      margin-left 4px
+
+  &__heart
+    color #175ce6
+
+.header .coin-informer-hotstreak
+  align-items center
+
+  &__hot
+    margin-right 20px
+
+  &__body
+    display flex
+    align-items center
+
+    font-size 16px
+    line-height 24px
+
+    color rgba(#feffff, 0.6)
+
+  &__value
+    color white
+
+    display flex
+    align-items center
+    margin-left 8px
+
+    > * + *::before
+      content '/'
+      display inline-flex
+      margin 0 8px
+
+      color rgba(#feffff, 0.4)
+
+  &__balance
+    display flex
+    align-items center
+
+.header .coin-informer-weeks
+  flex-direction column
+
+  padding-top 32px
+  padding-bottom 8px
+
+.header .coin-informer-week
+  display flex
+
+  &__status
+    display flex
+    flex-direction column
+
+    margin-right 24px
+
+    &-icon
+      width 24px
+      height 24px
+
+    &-line
+      display flex
+      align-items center
+      justify-content center
+
+      width 24px
+      flex 1
+
+      margin 8px 0
+
+      &::before
+        content ''
+        height 100%
+
+        border-left 1px dashed rgba(#feffff, 0.2)
+
+  &__title
+    font-size 16px
+    line-height 24px
+
+  &__subtitle
+    font-size 14px
+    line-height 18px
+
+    margin-top 4px
+    color rgba(#feffff, 0.6)
+
+  &__days
+    display flex
+    flex-wrap wrap
+
+    margin-top 20px
+    margin-bottom 24px
+
+  &__day
+    display flex
+    align-items center
+    justify-content center
+
+    position relative
+
+    width 40px
+    height 40px
+
+    margin-right 8px
+    margin-top 8px
+
+    color rgba(#feffff, 0.4)
+
+    font-size 16px
+    line-height 24px
+
+    &:hover > .coin-informer-week__tooltip
+      visibility visible
+
+    &-bg
+      position absolute
+
+      left 0
+      top 0
+
+      width 100%
+      height 100%
+
+      path:nth-child(1)
+        fill rgba(#feffff, 0.1)
+
+    &-text
+      position relative
+
+    &-heart
+      position absolute
+
+      right -8px
+      top -8px
+
+      color #175ce6
+
+    &--done
+      color #0f0f0f
+
+      .coin-informer-week__day-bg
+        path:nth-child(1)
+          fill #cdf500
+
+    &--life
+      color white
+
+      .coin-informer-week__day-bg
+        path:nth-child(1)
+          fill none
+        path:nth-child(2)
+          fill rgba(#175ce5, 0.4)
+
+    &--hot
+      color #0f0f0f
+
+      .coin-informer-week__day-bg
+        path:nth-child(1)
+          fill #ffd400
+        path:nth-child(2)
+          fill rgba(#ff0000, 0.6)
+
+    &--missed
+      color white
+
+      .coin-informer-week__day-bg
+        path:nth-child(1)
+          fill none
+        path:nth-child(2)
+          fill rgba(#ff0000, 0.4)
+
+  &__tooltip
+    position absolute
+
+    right -16px
+    top 100%
+
+    min-width fit-content
+
+    font-size 14px
+    line-height 18px
+
+    color rgba(#feffff, 0.8)
+    background-color #222
+    box-shadow 0px 0px 0px 1px rgba(white, 0.05) inset
+    border-radius 8px
+    padding 12px 20px
+
+    margin-top 8px
+    z-index 2
+
+    width max-content
+    visibility hidden
+
+  &:last-child .coin-informer-week__status-line
+    display none
+
+.header .coin-informer-footer
+  position sticky
+  bottom 0
+
+  z-index 2
+  padding 16px
+
+  background-color rgba(#141414, 0.8)
+  box-shadow 0 -1px 0 0 rgba(white, 0.05)
+  backdrop-filter blur(20px)
+
+  display flex
+  align-items center
+
+  width 100%
+  box-sizing border-box
+
+  @media $bp.desktop
+    display none
+
+  .coin-informer__button
+    flex 1
+
+  &__points
+    display flex
+
+    flex-wrap wrap
+    flex 1
+
+  &__point
+    color rgba(#feffff, 0.1)
+
+    margin-right 4px
+    margin-top 4px
+
+    &--done
+      color #cdf500
+
+    &--life
+      color rgba(#175ce5, 0.4)
+
+    &--missed
+      color rgba(#ff0000, 0.4)
+
+    &--hot
+      color #ff5500
+
+  &__close
+    display flex
+    align-items center
+    justify-content center
+
+    width 48px
+    height 48px
+
+    background-color rgba(#feffff, 0.1)
+    border-radius 8px
+
+    margin-left 24px
+    cursor pointer
+
+  &__balance
+    display flex
+    align-items center
+    flex 1
+
+    &-body
+      margin-left 20px
+
+    &-key
+      font-size 16px
+      line-height 20px
+      color rgba(#feffff, 0.4)
+      margin-bottom 4px
+
+    &-value
+      display flex
+      align-items center
+
+      font-weight 600
+      font-size 22px
+      line-height 24px
+
+      color white
+
+      .SVGInline
+        margin-left 4px
+
+.header .coin-informer-winner
+  flex-direction column
+
+  &__body
+    display flex
+    justify-content flex-end
+    align-items center
+
+    flex-direction column
+
+    width 100%
+    min-height 260px
+
+    margin-bottom 20px
+    position relative
+
+    background-color rgba(#feffff, 0.05)
+    background-image url('./assets/coin/winning.svg?external')
+    background-repeat no-repeat
+    background-position top center
+
+    animation coin-informer-winner 0.8s infinite step-end
+    border-radius 8px
+
+    &--preview
+      margin-bottom 0
+      margin-top 16px
+
+      min-height 188px
+
+  &__amount
+    display flex
+    align-items center
+    justify-content center
+
+    font-size 28px
+    font-weight 600
+    line-height 32px
+
+    color white
+    margin-bottom 32px
+
+    position relative
+
+    &-text
+      display flex
+      align-items center
+      justify-content center
+
+      position absolute
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+
+      .SVGInline
+        margin-left 4px
+
+@keyframes coin-informer-winner
+  0%
+    background-image url('./assets/coin/winning.svg?external')
+  50%
+    background-image url('./assets/coin/winning-2.svg?external')
+
+.header .coin-informer-faq
+  flex-direction column
+
+  &__title
+    font-size 24px
+    font-weight 600
+    line-height 28px
+    margin-bottom 24px
+
+  &__items
+    display flex
+    flex-direction column
+    width 100%
+
+    > * + *
+      margin-top 8px
+
+.header .coin-informer-accordion
+  padding 20px
+  border-radius 12px
+
+  background-color rgba(#feffff, 0.05)
+  box-sizing border-box
+
+  width 100%
+  cursor pointer
+
+  &__header
+    display flex
+    align-items center
+    justify-content space-between
+
+    font-size 18px
+    line-height 24px
+
+    .SVGInline
+      align-items center
+      justify-content center
+
+      width 32px
+      height 32px
+
+      color rgba(#feffff, 0.4)
+
+  &__content
+    hyphens auto
+    margin-top 4px
+
+    font-size 16px
+    line-height 20px
+
+    color rgba(#feffff, 0.6)
+
+  &--opened
+    .coin-informer-accordion__header .SVGInline
+      transform rotate(180deg)
+
+  &:hover .coin-informer-accordion__header .SVGInline
+    color white
+
+@keyframes header-coin-status
+  0%
+    opacity 1
+  33%
+    opacity 0
+  100%
+    opacity 0
+
+.header__main-coin--authorized .coin-balance__amount
+  @media $bp.desktop
+    display block
+
+.header--alternative
+  .header__main
+    margin-bottom 0
+
+    @media $bp.desktop
+      background-color #141414
+      border-radius 0
+      box-shadow none
+      height 88px
+      padding 0 32px
+
+  .header__logo
+    display inline-flex !important

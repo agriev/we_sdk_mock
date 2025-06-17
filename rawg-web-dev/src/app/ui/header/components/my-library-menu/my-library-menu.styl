@@ -1,0 +1,45 @@
+.my-library-menu
+  @media $bp.phone
+    margin-bottom 24px
+
+  .header-menu-content__link
+    $remove-link-style()
+    $font14-small()
+
+    @media $bp.phone
+      font-size 24px
+      padding 6px 0
+      width 100%
+
+  .header-dropdown-menu-content__links
+    @media $bp.phone
+      position relative
+
+.my-library-menu__wrap
+  @media $bp.phone
+    display flex
+    flex-wrap wrap
+    overflow-x auto
+    padding-bottom 0
+
+.header-dropdown-content__my-library-title.header-menu-content__link
+  $font14-small()
+  font-weight 500
+  padding 4px 10px
+  color $color-black
+
+  @media $bp.phone
+    padding 6px 0 8px
+    font-size 24px
+    font-weight bold
+    text-transform none
+
+
+.my-library-menu__rate
+  background-color #429321
+  transition 0.3s
+  color $color-white
+  &:hover
+    background-color #7cbd43
+    transition 0.3s
+    color $color-white

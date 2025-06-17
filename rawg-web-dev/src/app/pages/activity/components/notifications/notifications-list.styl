@@ -1,0 +1,134 @@
+.notifications-list
+  .event-container:not(:last-child)
+    margin-bottom 16px
+
+// по умолчанию в проекте стоит inline-block.
+// Здесь нужно inline, чтобы ссылки могли начинаться
+// на одной строке и заканчиваться на другой
+a.event-header__item-link
+  display inline
+
+.event-header__item-clickable
+  display inline
+  outline none
+  color $color-white
+  line-height 1.2
+  text-decoration none
+  transition color .3s
+
+  &:hover
+    cursor pointer
+    color alpha($color-white, 0.4)
+
+.notifications-comment__item
+  margin 15px
+  background-image linear-gradient(to bottom, rgba(32, 32, 32, 0), #181818)
+  padding 15px
+  box-shadow 0px 3px 40px 0px rgba(0,0,0,.2)
+
+  &
+  .comment__obscurer
+  .comment__background
+    border-radius: 4px
+
+  .comment__block
+    .comment__body
+      flex-direction row
+      position relative
+
+      .comment__arrow-icon
+        margin-right 7px
+
+      .comment__text
+        padding-right 40px
+
+      .comment__controls
+        position absolute
+        bottom 0
+        right 0
+
+.notifications-comment__item__just-text
+  padding 14px 11px 0
+  margin-bottom 0
+
+.notifications-post_item
+  margin 14px
+  width auto
+  min-height 0
+
+  .post-card__top-block
+    padding 24px 24px 32px 24px
+    border-radius 4px
+
+    .post-card__title
+      font-size 18px
+
+    .post-card__text
+      font-size 14px
+      margin-bottom 0
+
+.notifications-review_item
+  margin 14px
+  width auto
+  min-height 0
+
+  .review-card__top-block
+    padding 24px
+
+.collection-card-new__inline-container.notifications-collection__item
+  margin 14px
+  padding 14px
+  width auto
+
+  .collection-card-new__profile-link-inline
+    display none
+
+  .collection-card-new__title-link-inline
+    font-size 16px
+
+  .collection-card-new__inline-images
+    width 56px
+
+  .collection-card-new__game-small
+    width 26px
+    height 26px
+
+  @media $bp.phone
+    margin-top -14px
+    .collection-card-new__title-inline
+      width calc(100% - 72px)
+    .collection-card-new__meta-list-item-inline
+      margin-top 0
+      &:first-child
+        margin-left 64px
+    .collection-card-new__meta-list-item__amount
+      font-size 14px
+    .collection-card-new__meta-list-item__description
+      font-size 10px
+
+.notifications__game-is-released
+  .event-container__head-wrap
+    background-image linear-gradient(to bottom, #903535, #8b392c)
+
+    .explore-games-events__header
+      .SVGInline
+        margin-right 9px
+      .event-header__info-wrap
+        > span
+          color $color-white
+
+  .event-container__body-wrap
+    background-image linear-gradient(to bottom, #ff5858, #d47d00)
+    border-bottom-left-radius 8px
+    border-bottom-right-radius 8px
+
+.notifications-list__empty-state
+  .notifications-list__empty-state-icon
+    margin 0 auto 20px
+    width 140px
+    height 140px
+    background url('~assets/icons/emoji/zzz.png') no-repeat center
+    background-size cover
+
+  .notifications-list__empty-state-text
+    text-align center

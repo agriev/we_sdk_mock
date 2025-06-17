@@ -1,0 +1,61 @@
+.game_review__screenshots-wrap
+  margin 16px 0
+
+  @media $bp.phone
+    overflow-x auto
+
+.game_review__screenshots
+  display flex
+
+.game_review__screenshots__left
+  display flex
+  flex-direction column
+  width 386px
+
+.game_review__screenshots__left__img
+  height 219px
+  background-size cover
+  border-radius 12px
+  cursor pointer
+
+  & + &
+    margin-top 25px
+
+.game_review__screenshots__right
+  display flex
+  flex-direction column
+  margin-left 24px
+  width 222px
+
+.game_review__screenshots__right__img
+  height 138px
+  background-size cover
+  border-radius 12px
+  cursor pointer
+
+  & + &
+    margin-top 24px
+
+.game_review__screenshots__img
+  width 260px
+  height 147px
+  border-radius 12px
+  background-size cover
+  flex 0 0 auto
+
+  & + &
+    margin-left 8px
+
+.game_review__screenshots__heading
+  display inline-block
+  h2
+    a
+      .theme_light &
+        color black
+        $add-link-style(0.4, black)
+
+.game_review__screenshots__heading__count
+  margin-left 8px
+  opacity .4
+  position relative
+  top 2px

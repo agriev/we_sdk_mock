@@ -1,0 +1,18 @@
+.status-block
+  font-size 12px
+  font-weight normal
+  line-height 1.33
+  letter-spacing 0.1px
+  text-align center
+  color alpha($color-white, 0.4)
+  margin-bottom 24px
+  flex-basis auto
+  @media $bp.phone
+    grid-column 2
+    grid-row auto
+    text-align left
+    margin-bottom 16px
+    align-self start
+
+.status-block__error
+  color #f9473a

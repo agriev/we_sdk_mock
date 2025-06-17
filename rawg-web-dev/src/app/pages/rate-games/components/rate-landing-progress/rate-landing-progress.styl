@@ -1,0 +1,48 @@
+.rate-landing-progress
+  $font16-medium()
+  display flex
+  flex 0 1 auto
+  justify-content center
+  width 798px
+  box-sizing border-box
+  margin 0 auto 44px
+
+  @media $bp.desktop
+    margin-top -68px
+
+    .locale-ru &
+      margin-top -12px
+
+  @media $bp.phone
+    flex-direction column
+    align-items center
+    width 100%
+    margin 0 auto 24px
+    padding 0 16px
+
+.rate-landing-progress__count
+  color #f99f3d
+
+.rate-landing-progress__rated
+  display flex
+  flex 0 1 auto
+  align-items center
+
+  @media $bp.phone
+    margin-bottom 16px
+
+.rate-landing-progress__share
+  position relative
+
+  @media $bp.desktop
+    margin-left 32px
+
+    &::after
+      content ''
+      position absolute
+      top 0
+      left -15.5px
+      display block
+      width 1px
+      height 100%
+      background-color rgba(white, 0.4)

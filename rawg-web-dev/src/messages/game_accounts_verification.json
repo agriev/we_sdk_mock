@@ -1,0 +1,48 @@
+{
+  "ru": {
+    "title": "Подтвердите аккаунты",
+    "desc": "Для синхронизации достижений необходимо подтвердить аккаунт, для этого добавлен проверенный код в описании профиля в каждой из платформ.",
+    "skip": "пропустить этот шаг",
+    "awaiting": "Ждём подтверждения",
+    "verified": "Подтверждено",
+    "not-linked": "Аккаунт не связан",
+    "check_all": "Проверить все",
+    "verification_link": "Ссылка для подтверждения:",
+    "done": "Готово",
+    "additional": "Вы можете <a href='/'>пропустить этот шаг</a> и вручную добавить игры позже.",
+    "steam_help_step1_title": "Найдите свой профиль в Steam",
+    "steam_help_step1_text": "Зайдите в Steam, найдите свой никнейм и выберите «Профиль» из выпадающего меню. Затем скопируйте URL-адрес страницы. Или можно просто ввести свой ID, если вы его помните.",
+    "steam_help_step2_title": "Проверьте настройки приватности в Steam",
+    "steam_help_step2_text": "Мы можем импортировать только публичную информацию. Убедитесь, что ваш профиль и игры общедоступны. Зайдите в Steam, откройте свой профиль, нажмите «Изменить», перейдите в настройки приватности и выберите «Открытый» для «Мой профиль» и «Доступ к игровой информации».",
+    "psn_help_step1_title": "Проверьте настройки конфиденциальности PSN",
+    "psn_help_step1_text": "Мы можем импортировать игры только с информацией о трофеях. Убедитесь, что ваши трофеи публичны. Чтобы проверить настройки конфиденциальности, запустите PlayStation, выберите «Настройки» > «PlayStation Network» / «Управление учетной записью» > «Настройки конфиденциальности» > «Обмен опытом» > «Трофеи».",
+    "xbox_help_step1_title": "Проверьте настройки конфиденциальности Xbox Live",
+    "xbox_help_step1_text": "Мы можем импортировать только публичную информацию. Убедитесь, что ваш профиль общедоступен. Чтобы проверить настройки конфиденциальности, запустите Xbox, выберите «Настройки» > «Учетная запись» > «Конфиденциальность и безопасность в Интернете» > «Конфиденциальность Xbox Live» > «Просмотр сведений и настройка» > «Состояние и история в Интернете». Измените настройки так, чтобы все могли просматривать историю ваших игр и приложений. Выберите профиль и разрешите всем просматривать его."
+  },
+
+  "en": {
+    "title": "Verify accounts",
+    "desc":
+      "Для синхронизации достижений необходимо подтвердить аккаунт, для этого добавьте проверочный код в описание профиля в каждой из платформ.",
+    "skip": "skip this step",
+    "awaiting": "Awaiting verification",
+    "verified": "Verified",
+    "not-linked": "Account isn't linked",
+    "check_all": "Check all",
+    "verification_link": "Verification link:",
+    "done": "Done",
+    "additional": "You can <a href='/'>skip this step</a> and manually add games later.",
+    "steam_help_step1_title": "Find your Steam profile url",
+    "steam_help_step1_text":
+      "Go to Steam, navigate your nickname and choose \"Profile\" from the drop-down menu. Then copy the URL of the page. Also you can just paste your user ID if you know it.",
+    "steam_help_step2_title": "Check your Steam privacy settings",
+    "steam_help_step2_text":
+      "For successful import make sure your Steam profile (including the \"Game details\" setting) page is set to public. Go to Steam, view your profile, click \"Edit\" and in \"My Privacy Settings\" tab choose the \"Public\" option for your \"My profile\" and \"Game details\"your profile status.",
+    "psn_help_step1_title": "Check your PSN privacy settings",
+    "psn_help_step1_text":
+      "Your account must have trophies to be viewable by everyone. To check your privacy settings launch PlayStation, select Settings > PlayStation Network/Account Management > Privacy Settings > Sharing Your Experience > Trophies.",
+    "xbox_help_step1_title": "Check your Xbox Live privacy settings",
+    "xbox_help_step1_text":
+      "To check your privacy settings launch Xbox, select Settings > Account > Privacy and online safety > Xbox Live privacy > View details and customize > Online status and history. Let everybody to see your game and app history. Select Profile and let everybody to see your Xbox profile."
+  }
+}

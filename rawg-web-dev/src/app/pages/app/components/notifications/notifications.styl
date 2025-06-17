@@ -1,0 +1,140 @@
+.notifications
+  width 100%
+
+@keyframes notifications-enter-desktop
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+@keyframes notifications-enter-phone
+  0% {
+    opacity: 0;
+    clip-path: inset(70px 0px 0px 0px);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0px 0px 0px 0px);
+  }
+
+@keyframes notifications-leave-desktop
+  0% {
+    opacity: 1;
+    clip-path: inset(0px 0px 0px 0px);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(0px 0px 70px 0px);
+  }
+
+@keyframes notifications-leave-phone
+  0% {
+    opacity: 1;
+    clip-path: inset(0px 0px 0px 0px);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(70px 0px 0px 0px);
+  }
+
+.notification
+  display flex
+  justify-content center
+  align-items center
+  width 100%
+  height 70px
+  box-sizing border-box
+  text-align center
+  color $color-white
+
+  &.notification_fixed
+    left 0
+    position fixed
+    z-index 100
+
+    @media $bp.desktop
+      top 0
+
+    @media $bp.phone
+      bottom 0
+
+    animation-fill-mode forwards
+    animation-duration .5s
+    animation-iteration-count 1
+
+    @media $bp.desktop
+      animation-name notifications-enter-desktop
+
+    @media $bp.phone
+      animation-name notifications-enter-phone
+      height auto
+      min-height 60px
+      max-height 100px
+
+    &.notification_deleting
+      @media $bp.desktop
+        animation-name notifications-leave-desktop
+
+      @media $bp.phone
+        animation-name notifications-leave-phone
+
+    &.notification_ready
+      background-image linear-gradient(270deg,rgba(125, 210, 52, 0.9),rgba(44, 179, 80, 0.9))
+
+    &.notification_error
+      background-image linear-gradient(270deg,rgba(174, 81, 124, 0.9),rgba(215, 64, 64, 0.9))
+
+.notification_ready
+  background-image linear-gradient(to left, #7dd234, #2cb350)
+
+.notification_error
+  background-image linear-gradient(to left, #ae517c, #d74040)
+
+.notification__text
+  padding 0 20px
+  box-sizing border-box
+  flex-grow 1
+
+  @media $bp.phone
+    padding 5px 0 5px 10px
+
+.notification__text a
+  color $color-white
+  text-decoration-color $color-white
+
+.notification__close
+  display flex
+  justify-content center
+  align-items center
+  width 50px
+  height 50px
+  margin-right auto
+  cursor pointer
+
+.notification__close-icon svg
+  width 15px
+  height 15px
+
+.notification__close-icon svg path
+  fill $color-white
+  transition all 0.3s
+
+.notification__close:hover .notification__close-icon svg path
+  fill alpha($color-white, 0.5)
+
+.notification_br
+  display none
+
+.notification_br_phone
+  @media $bp.phone
+    display block
+
+.notification_br_desktop
+  @media $bp.desktop
+    display block

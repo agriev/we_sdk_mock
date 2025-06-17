@@ -1,0 +1,51 @@
+.connect-button
+  margin-top auto
+  width 100%
+  grid-column 1 / span 2
+
+.connect-button_disconnect
+  background none
+  color $color-white
+  box-sizing border-box
+  border 1px solid $color-white
+  box-shadow none
+  &:hover
+    box-shadow none
+    color $color-black
+
+.connect-button__dropdown
+  margin-top auto
+  width 100%
+  @media $bp.phone
+    grid-column span 2
+
+.connect-button__content
+  padding 10px
+  @media $bp.phone
+    padding 0
+
+.connect-button__dropdown-container
+  width 240px
+  margin-top -138px
+  box-sizing border-box
+
+.connect-button__confirm-wrap
+  display flex
+
+.connect-button__confirm_yes
+  margin-right 16px
+
+.connect-button__dropdown-title
+  font-size 14px
+  line-height 1.29
+  color #ff4111
+  margin-bottom 8px
+  margin-top 14px
+  @media $bp.phone
+    margin-top 0
+
+.connect-button__dropdown-text
+  font-size 14px
+  line-height 1.29
+  color $color-black
+  margin-bottom 16px

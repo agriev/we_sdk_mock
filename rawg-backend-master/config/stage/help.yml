@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  help:
+    container_name: rawg-help
+    image: rawg-web-stage:latest
+    entrypoint: ["bash", "/app/config/wait-for-it.sh", "postgres:5432", "rabbit:5672", "memcached:11211",
+                 "--timeout=60", "--", "bash", "/app/config/web.sh"]
+    volumes:
+      - ./logs/:/app/logs/
+    links:
+      - postgres
+      - memcached
+      - celery
+      - celery-beat
+      - elastic
+    env_file:
+      - env_web
+    networks:
+      - backend
+    sysctls:
+      - net.core.somaxconn=4096

@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap')
+
+$bp = {
+  desktop: 'screen and (min-width: 1040px)',
+  phone: 'screen and (max-width: 1039px)'
+}
+
+primary = #005ff9
+dark = #161616
+blockShadow = 0 20px 60px 0 rgba(0, 0, 0, .15)
+
+.apidocs
+  font-family 'Inter', sans-serif
+  background-color #e9eef2
+  color black
+  padding 24px 0 48px
+  overflow-x hidden
+
+  @media $bp.desktop
+    padding 64px 0 90px
+
+  &__container
+    &._dark
+      color white
+      background-color #0c0c0c
+
+  &__content
+    margin auto
+    max-width 280px
+
+    @media $bp.desktop
+      max-width 1040px
+
+  .logo
+    color black
+
+  code
+    display block
+    color white
+    background-color dark
+    font-family 'PT Mono', monospace
+    border-radius 20px
+    font-size 14px
+    line-height 24px
+    padding 24px 24px 32px
+    word-break break-all
+
+    @media $bp.desktop
+      font-size 16px
+      padding 32px 32px 40px
+      word-break unset
+
+  a
+    color currentColor
+    text-decoration none
+    background-image none
+
+  .slider-slick .slick-list
+    padding 0
+
+.apidocs-h2
+  font-size 32px
+  font-weight 800
+  line-height 1.22
+  max-width 702px
+  text-align center
+
+  @media $bp.desktop
+    font-size 40px
+    line-height 1.23
+
+.apidocs-lead
+  margin-bottom 32px
+  font-size 16px
+  line-height 26px
+
+  & > a
+    text-decoration underline
+
+  @media $bp.desktop
+    margin-bottom 40px
+    font-size 18px
+
+.apidocs-header
+  position relative
+  display flex
+  align-items center
+  justify-content space-between
+  line-height 20px
+
+  @media $bp.phone
+    & > &__anchors, & > .apidocs-socials
+        display none
+
+  &__anchors
+    display flex
+    align-items center
+
+  &__anchor
+    font-size 16px
+    font-weight 500
+    text-decoration none
+    color black
+
+    &:hover
+      color primary
+
+    &:not(:last-child)
+      margin-right 40px
+
+  &__burger
+    width 40px
+    height 40px
+    display flex
+    justify-content center
+    align-items center
+    background-color dark
+    border-radius 12px
+
+    svg
+      padding 11px
+
+  &__menu
+    position absolute
+    right 0
+    width 280px
+    top 56px
+    background-color dark
+    border-radius 20px
+    z-index 10
+    color white
+    padding 32px 24px
+    box-sizing border-box
+    overflow hidden
+    max-height 500px
+    transition max-height .2s, padding .3s
+
+    &._hidden
+      max-height 0
+      padding-top 0
+      padding-bottom 0
+
+    .apidocs-header
+      &__anchors
+        display grid
+        grid-row-gap 24px
+        align-items center
+
+    .apidocs-socials
+      margin-top 40px
+
+  &__burger,
+  &__menu
+    @media $bp.desktop
+      display none
+
+.apidocs-socials
+  display flex
+
+  &__link
+    display flex
+    justify-content center
+    align-items center
+    height 40px
+    width 40px
+    line-height 0
+    border solid 1px #cccccc
+    color black
+    box-sizing border-box
+    border-radius 12px
+
+    svg
+      fill currentColor
+
+    &:not(:last-of-type)
+      margin-right 12px
+
+    &:hover
+      color white
+      background-color primary
+      border none
+
+.apidocs-button
+  display flex
+  justify-content center
+  align-items center
+  padding 0 24px
+  border solid 1px #cccccc
+  color black
+  box-sizing border-box
+  border-radius 12px
+  height 52px
+  font-size 16px
+  font-weight 500
+
+  @media $bp.desktop
+    height 56px
+    font-size 18px
+
+  &._black
+    color white
+    background-color dark
+    border none
+
+  &:hover
+    color white
+    background-color primary
+    border-color primary
+
+// BLOCKS
+
+.apidocs-explore
+  margin-top 56px
+
+  @media $bp.desktop
+    display flex
+    margin-top 120px
+
+  &__text
+    width 100%
+    max-width 456px
+
+  &__title
+    margin-bottom 16px
+    font-size 40px
+    line-height 48px
+    font-weight 800
+
+    @media $bp.desktop
+      font-size 60px
+      line-height 72px
+
+  &__lead
+    margin-bottom 32px
+
+    @media $bp.desktop
+      margin-bottom 40px
+
+  &__cover
+    width 0
+    position relative
+    margin-left 64px
+
+    @media $bp.phone
+      display none
+
+  &__cover-image
+    position absolute
+    left 0
+    top -30px
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,.15))
+
+  &__buttons-wrapper
+    display grid
+
+    @media $bp.phone
+      grid-gap 12px
+
+    @media $bp.desktop
+      grid-gap 16px
+      grid-template-columns repeat(2, auto)
+
+.apidocs-apikey
+  padding-top 80px
+
+  &__code
+    box-shadow blockShadow
+
+  &__title
+    text-align left
+    margin-bottom 12px
+
+  @media $bp.desktop
+    display flex
+    align-items flex-start
+    padding-top 160px
+
+    &__text
+      min-width 456px
+      max-width 456px
+
+    &__title
+      margin-bottom 16px
+
+    &__code
+      margin-top -4px
+      margin-left 64px
+
+    &__description
+      margin-bottom 0
+
+.apidocs-reasons
+  padding-top 80px
+  margin-bottom 80px
+
+  @media $bp.desktop
+    padding-top 120px
+    margin-bottom 120px
+
+  &__subtitle
+    opacity .6
+    font-size 21px
+    font-weight bold
+    line-height 1.23
+    text-align center
+    margin-bottom 12px
+
+    @media $bp.desktop
+      font-size 24px
+      margin-bottom 16px
+
+  &__title
+    text-align center
+    margin 0 auto 32px
+
+    @media $bp.desktop
+      margin-bottom 40px
+      max-width 702px
+
+  &__list
+    display grid
+    grid-row-gap 12px
+
+    @media $bp.desktop
+      grid-template-columns repeat(3, 1fr)
+      grid-column-gap 40px
+      grid-row-gap 32px
+
+  &__reason
+    position relative
+    color white
+    background-color dark
+    padding 80px 24px 32px
+    box-shadow blockShadow
+    border-radius 20px
+
+    @media $bp.desktop
+      padding 88px 32px 36px
+
+    &._primary
+      background-color primary
+
+    &._white
+      background-color white
+      color black
+
+  &__reason-image
+    position absolute
+    right 16px
+    top 16px
+
+    @media $bp.desktop
+      right 24px
+      top 24px
+
+  &__reason-text
+    font-size 18px
+    line-height 28px
+    font-weight 500
+    height 56px
+
+  &__reason-counter
+    font-size 32px
+    font-weight 800
+
+  &__text-list
+    display grid
+    grid-row-gap 12px
+    margin-top 48px
+
+    @media $bp.desktop
+      margin-top 80px
+      grid-column-gap 40px
+      grid-template-columns repeat(2, 1fr)
+
+  &__left-col
+    display grid
+    grid-row-gap 12px
+
+    @media $bp.desktop
+      grid-row-gap 20px
+
+  &__right-col
+    display grid
+    grid-row-gap 12px
+
+    @media $bp.desktop
+      grid-row-gap 16px
+
+  &__text-reason
+    font-size 18px
+    line-height 24px
+    font-weight bold
+    padding 24px
+    border-radius 20px
+    background-color rgba(0, 0, 0, .04)
+
+    @media $bp.desktop
+      font-size 21px
+      line-height 1.23
+      padding 24px 32px
+
+.apidocs-plans
+  padding-top 72px
+
+  @media $bp.desktop
+    padding-top 104px
+
+  &__title
+    text-align center
+    margin 0 auto 24px
+
+    @media $bp.desktop
+      margin-bottom 48px
+      max-width 702px
+
+  &__plan-wrap
+    height 100%
+
+  &__hint
+    margin-top -24px
+
+    @media $bp.desktop
+      margin-top -32px
+
+    a
+      text-decoration underline
+
+  &__sign-up
+    margin-bottom 16px
+    text-align center
+
+  &__list
+    .slick-slide
+      &
+      & > div
+        height 100%
+
+      @media $bp.mobile
+        width 284px
+        padding 0 10px
+        box-sizing border-box
+
+      @media $bp.desktop
+        width 320px
+        padding 0
+
+    .slick-track
+      display grid
+      min-width 100%
+      grid-template-columns repeat(3, 264px)
+      grid-column-gap 20px
+
+      &::before,
+      &::after
+        content none
+
+      @media $bp.desktop
+        grid-template-columns repeat(3, 320px)
+        grid-column-gap 40px
+        justify-content center
+
+  .plan
+    display flex
+    flex-direction column
+    position relative
+    color white
+    padding 24px 24px 32px
+    box-shadow blockShadow
+    border-radius 20px
+    box-sizing border-box
+    height 100%
+
+    @media $bp.desktop
+      padding 32px 32px 40px
+
+    &._primary
+      background-color primary
+
+      .apidocs-button
+        color black
+        background-color white
+        border-color white
+
+        &_disabled
+          opacity .3
+
+        &:not(&_disabled)
+          cursor pointer
+
+          &:hover
+            color white
+            border-color dark
+            background-color dark
+
+    &._white
+      background-color white
+      color black
+
+      .plan__benefit-icon
+        color rgba(0, 0, 0, .4)
+
+    &._black
+      border solid 1px rgba(255, 255, 255, .16);
+
+    .apidocs-button
+      margin-bottom 32px
+
+      @media $bp.desktop
+        margin-bottom 40px
+
+    &__title
+      margin-bottom 8px
+      font-size 24px
+      font-weight 800
+      line-height normal
+
+      @media $bp.desktop
+        font-size 32px
+
+    &__description
+      margin-bottom 16px
+
+      @media $bp.desktop
+        margin-bottom 24px
+
+    &__benefits
+      display grid
+      grid-row-gap 8px
+      font-size 14px
+      line-height 24px
+      list-style none
+      padding 0
+      margin 0
+
+      @media $bp.desktop
+        font-size 16px
+        grid-row-gap 12px
+        margin-bottom 32px
+
+    &__benefit
+      display flex
+
+    &__benefit-icon
+      margin-right 12px
+      min-width 12px
+
+    &__price
+      position absolute
+      background-color white
+      color black
+      top 20px
+      right -8px
+      display flex
+      justify-content center
+      align-items center
+      padding 0 16px
+      height 36px
+      border-radius 4px 0 0 4px
+      font-weight 800
+      font-size 16px
+
+      @media $bp.desktop
+        top 30px
+        font-size 18px
+        height 40px
+
+      &::after
+        position absolute
+        bottom -10px
+        right 0
+        content ''
+        width 0
+        height 0
+        border-style solid
+        border-width 10px 8px 0 0
+        border-color #b9b7b7 transparent transparent transparent
+
+.apidocs-partners
+  padding-top 72px
+
+  @media $bp.desktop
+    padding-top 104px
+
+  &__title
+    text-align center
+    margin 0 auto 24px
+    max-width 280px
+
+    @media $bp.desktop
+      margin-bottom 48px
+      max-width 702px
+
+  &__partner-wrap
+    height 100%
+
+  &__list
+    .slick-list
+      overflow inherit
+
+    .slick-slide
+      &
+      & > div
+        height 100%
+
+      @media $bp.mobile
+        width 284px
+        padding 0 10px
+        box-sizing border-box
+
+      @media $bp.desktop
+        width 420px
+        padding 0 24px
+
+    .slick-track
+      min-width 100%
+
+  .partner
+    display flex
+    flex-direction column
+    position relative
+    color white
+    padding 24px 24px 32px
+    border-radius 20px
+    box-sizing border-box
+    height 200px
+    align-items flex-end
+    box-shadow 0 20px 60px 0 rgba(255, 255, 255, 0.15)
+    transition transform 0.3s
+
+    @media $bp.desktop
+      padding 32px 32px 40px
+
+      &:hover
+        transform translateY(-16px)
+
+    &__text
+      margin 18px 0 0
+
+    &._telegram
+      background-color #198bbb
+    &._yandex
+      background-color #c43e42
+    &._reddit
+      background-color #c65a32
+    &._dtf
+      background-color #5d73c1
+    &._discord
+      background-color #88a6b2
+
+.apidocs-terms
+  padding-top 72px
+  padding-bottom 80px
+
+  @media $bp.desktop
+    padding-top 104px
+    padding-bottom 120px
+
+  &__title
+    text-align center
+    margin 0 auto 24px
+    text-decoration underline
+
+    @media $bp.desktop
+      margin-bottom 48px
+      max-width 702px
+
+  &__list
+    display grid
+    grid-row-gap 24px
+
+    @media $bp.desktop
+      grid-template-columns repeat(3, 1fr)
+      grid-column-gap 40px
+      grid-row-gap 48px
+
+  &__term
+    color white
+    padding 24px 24px 32px
+    border-radius 20px
+    box-sizing border-box
+    height 100%
+    background-color rgba(255, 255, 255, .04)
+    margin 0
+
+    @media $bp.desktop
+      padding 32px 32px 40px
+
+      &:nth-child(n + 4)
+        grid-column-start 1
+        grid-column-end 4
+
+.apidocs-updates
+  padding-top 72px
+  padding-bottom 80px
+
+  @media $bp.desktop
+    padding-top 104px
+    padding-bottom 120px
+
+  &__title
+    text-align center
+    margin 0 auto 32px
+
+    @media $bp.desktop
+      margin-bottom 40px
+      max-width 702px
+
+  &__list
+    list-style none
+    margin 0
+    padding 0
+    display grid
+    grid-row-gap 12px
+
+    @media $bp.desktop
+      grid-row-gap 16px
+
+  &__update
+    position relative
+    color black
+    background-color rgba(0, 0, 0, .04)
+    padding 24px 24px 24px 40px
+    border-radius 20px
+    margin 0
+    font-weight 500
+    word-break break-word
+
+    &::before
+      content ''
+      position absolute
+      background-color primary
+      width 4px
+      top 20px
+      bottom 20px
+      left 24px
+
+    @media $bp.desktop
+      padding 32px 32px 32px 52px
+
+      &::before
+        top 26px
+        bottom 26px
+        left 32px
+
+.apidocs-api-wrappers
+  &__title
+    text-align center
+    margin 0 auto 12px
+
+    @media $bp.desktop
+      margin-bottom 16px
+      max-width 702px
+
+  &__description
+    text-align center
+    margin 0 auto 24px
+
+    @media $bp.desktop
+      margin-bottom 40px
+      max-width 702px
+
+  &__slider
+    .slick-list
+      overflow inherit
+
+    .slick-slide
+      &
+      & > div
+        height 100%
+
+      @media $bp.mobile
+        width 284px
+        padding 0 10px
+        box-sizing border-box
+
+      @media $bp.desktop
+        width 320px
+        padding 0 20px
+
+    .slick-track
+      min-width 100%
+
+  .api-wrapper
+    display flex
+    align-items center
+    justify-content space-between
+    color black
+    background-color white
+    padding 26px 24px
+    border-radius 20px
+    box-sizing border-box
+    height 96px
+    box-shadow blockShadow
+    transition transform 0.3s
+
+    @media $bp.desktop
+      padding 36px 32px
+      height 120px
+
+      &:hover
+        transform translateY(-16px)
+
+    &__name
+      font-size 21px
+
+    &__text
+      display flex
+      flex-direction column
+      margin 0
+
+    &._dark
+      color white
+      background-color dark
+
+    &._android
+      color white
+      background-color #005ff9
+
+.apidocs-examples
+  padding-top 72px
+  padding-bottom 72px
+
+  @media $bp.desktop
+    margin-top 10px
+    padding-top 120px
+    padding-bottom 80px
+
+  &__title
+    text-align center
+    margin 0 auto 12px
+
+    @media $bp.desktop
+      margin-bottom 16px
+      max-width 702px
+
+  &__description
+    text-align center
+    margin 0 auto 24px
+
+    @media $bp.desktop
+      margin-bottom 40px
+      max-width 702px
+
+  &__list
+    list-style none
+    padding 0
+    display grid
+    grid-row-gap 12px
+
+    @media $bp.desktop
+      grid-row-gap 16px
+
+.apidocs-accordion
+  &__title
+    display flex
+    position relative
+    justify-content space-between
+    align-items center
+    padding 24px
+    font-weight 500
+    margin-bottom 0
+    border-radius 20px 20px 0 0
+    background-color rgb(224, 229, 233)
+    z-index 1
+    cursor pointer
+    transition border-radius .3s
+
+    @media $bp.desktop
+      padding 32px
+
+  & &__text
+    white-space pre-line
+    border-radius 0 0 20px 20px
+    overflow hidden
+    max-height 500px
+    transition max-height .2s, padding .3s
+
+  &__icon
+    display flex
+    fill rgba(0, 0, 0, .4)
+    transition transform .3s
+    margin-left 16px
+
+  &._hidden &
+    &__title
+      border-radius 20px
+
+    &__text
+      max-height 0
+      padding-top 0
+      padding-bottom 0
+
+    &__icon
+      transform rotate(180deg)
+
+.apidocs-footer
+  display flex
+  align-items center
+  justify-content space-between
+  line-height 20px
+
+  &__text
+    font-size 16px
+    font-weight 500
+
+    @media $bp.phone
+      display none
+
+.patreon-widget
+  display flex
+  align-items center
+
+  &,
+  & > div,
+  frame
+    // patreon wtf???
+    width 176px !important
+    height 34px !important

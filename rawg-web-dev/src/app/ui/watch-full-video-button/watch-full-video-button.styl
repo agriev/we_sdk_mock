@@ -1,0 +1,39 @@
+.watch-full-video-button
+  position absolute
+  right 10px
+  bottom 10px
+
+  padding 7px 8px
+  box-sizing border-box
+  border-radius 4px
+  background-color alpha(black, 40%)
+  font-size 12px
+  color white
+  cursor pointer
+  border-width 1px
+  border-style solid
+  border-color alpha(black, 20%)
+  transition opacity .3s, border-color .3s, background-color .3s
+  z-index 2
+
+  display flex
+  align-items center
+
+  opacity 0
+  pointer-events none
+  transform opacity 0.3s, border-color 0.3s
+
+  &:hover
+    border-color alpha(white, 40%)
+
+  &.visible
+    opacity 1
+    pointer-events auto
+
+  .SVGInline
+    display flex
+    margin-right 6px
+
+    &, > .SVGInline-svg
+      width 20px
+      height 15px

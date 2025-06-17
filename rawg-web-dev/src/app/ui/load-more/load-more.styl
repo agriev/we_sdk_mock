@@ -1,0 +1,23 @@
+.load-more__button
+  $more-button()
+  margin 32px auto 40px
+
+  @media $bp.phone
+    margin-top 24px
+
+.load-more__bottom
+  display flex
+  justify-content center
+
+.load-more__icon
+  margin 40px auto
+
+.load-more__icon svg
+  fill alpha($color-white, 0.1)
+
+.load-more__loader
+  &:hover, &:active
+    background-color rgba($color-white, 0.1) !important
+
+    .theme_light &
+      background-color rgba(#151515, 0.1) !important

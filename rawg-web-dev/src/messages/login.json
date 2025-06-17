@@ -1,0 +1,31 @@
+{
+  "ru": {
+    "title": "Вход",
+    "can_login_through_rawg_creds": "Можно использовать аккаунт, созданный на rawg.io.",
+    "info": "Можно войти через соцсети",
+    "additional": "Нет аккаунта? Создать.",
+    "forgot": "Забыл пароль",
+    "button": "Войти",
+    "email_input_placeholer": "Электронная почта",
+    "password_input_placeholer": "Пароль",
+    "continue_steam": "Войти через Steam",
+    "continue_twitter": "Войти через Твиттер",
+    "continue_facebook": "Войти через Фейсбук",
+    "continue_vk": "Войти через ВК"
+  },
+
+  "en": {
+    "title": "Log in",
+    "can_login_through_rawg_creds": "Можно использовать аккаунт, созданный на rawg.io",
+    "info": "You can use social accounts to log in",
+    "additional": "Don't have an account? Sign up.",
+    "forgot": "Forgot your password?",
+    "button": "Log in",
+    "email_input_placeholer": "Email",
+    "password_input_placeholer": "Password",
+    "continue_steam": "Continue with Steam",
+    "continue_twitter": "Continue with Twitter",
+    "continue_facebook": "Continue with Facebook",
+    "continue_vk": "Continue with VK"
+  }
+}

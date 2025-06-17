@@ -1,0 +1,89 @@
+{% extends "admin/change_list.html" %}
+
+{% load admin_urls staticfiles %}
+
+{% load utils %}
+
+{% block title %}Parent Achievements Without Games{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <h1>Parent Achievements Without Games</h1>
+
+    <div id="content-main">
+        <div id="changelist" class="module">
+            <div id="toolbar">
+                <form id="changelist-search" method="get">
+                    <div>
+                        <label for="searchbar"><img src="{% static 'admin/img/search.svg' %}" alt="Search"></label>
+                        <input size="40" name="search" value="{% if search_query %}{{ search_query }}{% else %}{% endif %}" id="searchbar" autofocus="" type="text">
+                        <input value="Search" type="submit">
+                        {% if show_results_count %}
+                            <span class="small quiet">
+                                {{ result_count }} results
+                                (<a href="?">{{ total_result_count }} total</a>)
+                            </span>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+
+            <div id="changelist-form">
+                <div class="results">
+                    <table id="result_list">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div class="text"><span>Game Title</span></div>
+                                    <div class="clear"></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="text"><span>Parent Achievements</span></div>
+                                    <div class="clear"></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="text"><span>User Achievements</span></div>
+                                    <div class="clear"></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="text"><span>Parent Achievements count</span></div>
+                                    <div class="clear"></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="text"><span>User Achievements count</span></div>
+                                    <div class="clear"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for game_name, count, user_achievemnt_count in achievement_without_games %}
+                                <tr class="{% cycle 'row1' 'row2' %}">
+                                    <td>{{ game_name }}</td>
+                                    <td><a href="{% url 'admin:achievements_parentachievement_changelist' %}?game_name={{ game_name }}">{{ game_name }}</a></td>
+                                    <td><a href="{% url 'admin:achievements_userachievement_changelist' %}?achievement__parent__game_name={{ game_name }}">{{ game_name }}</a></td>
+                                    <td>{{ count }} </td>
+                                    <td>{{ user_achievemnt_count }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="paginator">
+                    {% if page_range|length > 1 %}
+                        {% for page_number in page_range %}
+                            {% if page_number == current_page %}
+                                <span class="this-page">{{ page_number }}</span>
+                            {% else %}
+                                <a href="?page={{ page_number }}"{% if forloop.last %} class="end"{% endif %}>{{ page_number }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+
+                    {{ total_result_count }} Parent Achievements Without Games
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

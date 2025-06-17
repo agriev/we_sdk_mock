@@ -1,0 +1,65 @@
+.wishlist-btn
+  border-style solid
+  border-width 1px
+  border-color rgba(255, 255, 255, 0.6)
+
+  padding 9px 24px
+  display flex
+  align-items center
+  cursor pointer
+  border-radius 4px
+
+  transition border-color .3s
+
+  &:hover
+    border-color rgba(255, 255, 255, 1)
+
+  &.wishlist-btn_active
+    background-color transparent
+    border 1px solid $color-white
+    span
+      color $color-white
+
+    .game-menu__status-buttons__item-title
+      color white
+
+    &:hover
+      .game-menu__status-buttons__item-title
+        color black
+
+.wishlist-btn__icon
+  margin-right 8px
+  width 30px
+  height 30px
+  background-size contain
+  background-repeat no-repeat
+  position relative
+  background-image none
+
+  &:before
+  &:after
+    content ''
+    position absolute
+    width 100%
+    height 100%
+    left 0
+    top 0
+    background-size contain
+    background-repeat no-repeat
+    transition opacity .3s
+
+    .wishlist-btn_active &
+      display none
+
+  &:before
+    background-image url('~assets/icons/icon-game-wishlist-white.svg?external')
+
+  &:after
+    background-image url('~assets/icons/icon-game-wishlist.svg?external')
+    opacity 0
+    z-index 1
+    .wishlist-btn:hover &
+      opacity 1
+
+.wishlist-btn__icon-title
+  color white

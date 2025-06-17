@@ -1,0 +1,66 @@
+.tokens-header
+  display flex
+  position relative
+
+  margin-bottom 24px
+
+  @media $bp.phone
+    margin-bottom 16px
+    flex-direction column
+
+  .tokens-header__texts
+    padding-left 16px
+    z-index 1
+
+  .tokens-header__title
+    font-size 36px
+    @media $bp.phone
+      font-size 24px
+      font-weight normal
+      text-align center
+      margin-top 0
+      margin-bottom 0
+      padding 0 10px
+
+  .tokens-header__subtitle
+    font-size 16px
+    line-height 22px
+    opacity .6
+    margin-top 8px
+    @media $bp.phone
+      font-size 14px
+      font-weight normal
+      text-align center
+      margin-top 0
+      margin-bottom 0px
+
+.tokens-header__position
+  font-size 72px
+  font-weight bold
+  color alpha($color-white, 0.2)
+
+  @media $bp.desktop
+    position absolute
+    left -40px
+    top -12px
+
+  &.tokens-header__position_icon
+    @media $bp.desktop
+      margin-left -50px
+
+  .tokens-header_max-opacity &
+    @media $bp.desktop
+      color alpha($color-white, 1)
+
+  @media $bp.phone
+    position: absolute;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -40px;
+
+    &.tokens-header__position_icon
+      top: -10px;
+      color white

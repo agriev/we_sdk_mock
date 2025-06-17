@@ -1,0 +1,47 @@
+.toggle-button-wrapper
+  $font14-small()
+  display flex
+  align-items center
+  opacity .4
+  transition opacity .3s
+
+  @media $bp.phone
+    justify-content center
+
+  &.enabled
+    opacity 1
+
+.toggle-button__text
+  text-align right
+
+.toggle-button
+  display flex
+  justify-content flex-start
+  align-items center
+  flex-shrink 0
+  width 40px
+  height 24px
+  padding 2px 4px
+  box-sizing border-box
+  border-radius 12px
+  margin-left 8px
+
+  background-color $color-white
+  cursor pointer
+
+  .toggle-button-wrapper.enabled > &
+    justify-content flex-end
+
+  .theme_light &
+    border-color #979797
+    background-color alpha(#2c2c2c, 18%)
+
+.toggle-button__inner
+  width 19px
+  height 19px
+  border-radius 50%
+
+  background-color $color-black
+
+  .theme_light &
+    background-color #111

@@ -1,0 +1,30 @@
+.more-game-options__link,
+.more-game-options__button
+  display flex
+  flex 0 1 auto
+  justify-content center
+  align-items center
+  width 100%
+  padding 6px 0
+  color black
+  border-radius 4px
+  cursor pointer
+  transition all 0.3s
+
+  &.more-game-options__button_red
+    color #fc4b37
+
+  &:hover
+    color black
+    background-color #e5e5e5
+    transition all 0.3s
+
+.more-game-options__link
+  $remove-link-style()
+
+
+.more-game-options__bottom-item
+  padding 6px 0
+
+  &:not(:last-child)
+    border-bottom 1px solid rgba(#151515, 0.1)

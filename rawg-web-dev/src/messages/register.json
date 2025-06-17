@@ -1,0 +1,35 @@
+{
+  "ru": {
+    "title": "Регистрация",
+    "info": "Регистрация через соцсети",
+    "additional": "Есть аккаунт? Войти.",
+    "code": "Нет кода?",
+    "button": "Создать аккаунт",
+    "email_input_placeholer": "Электронная почта",
+    "username_input_placeholer": "Никнейм",
+    "password_input_placeholer": "Придумайте пароль",
+    "password_tip": "Как минимум 8 символов. Не может совпадать с почтой или никнеймом, и не может содержать только цифры.",
+    "terms": "условиями использования сервиса",
+    "privacyPolicy": "политикой конфиденциальности",
+    "agreement": "Регистрируясь, вы соглашаеетесь с {terms} и {privacyPolicy} AG.ru.",
+    "save_rating": "чтобы сохранить свои рейтинги",
+    "join_text": "Присоединяйтесь к растущему сообществу геймеров, которые играют на всех платформах - от старых Atari до консолей нового поколения, ПК и смартфонов"
+  },
+
+  "en": {
+    "title": "Sign up",
+    "info": "You can use social accounts to sign up",
+    "additional": "Already have an account? Log in.",
+    "code": "Don't have a code?",
+    "button": "Sign up",
+    "email_input_placeholer": "Email",
+    "username_input_placeholer": "Username",
+    "password_input_placeholer": "Create a password",
+    "password_tip": "min. 8 characters, can't match email or username, can't be numeric",
+    "terms": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "agreement": "By signing up, you agree to RAWG’s {terms} and {privacyPolicy}.",
+    "save_rating": "to save your ratings",
+    "join_text": "Join the growing community of gamers who play on all platforms — from old Ataris to current-gen consoles to PC and mobiles"
+  }
+}

@@ -1,0 +1,75 @@
+.tokens__reward
+  width 1024px
+  margin 0 auto
+  margin-top 48px
+  order 90
+  @media $bp.phone
+    margin-top 48px
+    width 100%
+
+  .tokens-header.tokens-header_coin
+    @media $bp.desktop
+      position relative
+      left -20px
+
+  &.tokens__reward_finished
+    order 31
+
+  .tokens-header__texts
+    @media $bp.desktop
+      padding-left 23px
+
+  .tokens-header__position
+    @media $bp.desktop
+      left -32px
+
+.tokens__reward-coin
+  width 66px
+  height 86px
+  background url('~app/pages/tokens/assets/coin2.png?external') no-repeat center / contain
+
+  @media $bp.phone
+    margin 0 auto
+    width 43px
+    height 56px
+    position relative
+    top 15px
+
+.tokens__reward-container
+  display flex
+  margin-left 23px
+  @media $bp.phone
+    margin 0 10px
+    flex-direction column
+    align-items center
+
+.tokens__reward-main_completed
+  background-image linear-gradient(to bottom, #1ad96b, #0d61a6)
+  position relative
+
+.tokens__reward-main_completed::after
+  content '\1F451'
+  position absolute
+  font-size 83px
+  top -63px
+  right -18px
+  transform rotateZ(20deg)
+  @media $bp.phone
+    font-size 60px
+    top -45px
+    right -14px
+
+.tokens__reward-main
+  padding 24px
+  padding-bottom 32px
+  border-radius 6px
+  background-color alpha($color-white, 0.06)
+  flex 0 0 608px
+  box-sizing border-box
+  @media $bp.phone
+    width 100%
+    margin-left 10px
+    margin-right 10px
+    box-sizing border-box
+    flex 1 1 auto
+    padding-bottom 24px

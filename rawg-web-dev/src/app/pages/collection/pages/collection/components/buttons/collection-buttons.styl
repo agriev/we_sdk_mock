@@ -1,0 +1,107 @@
+.collection-button__icon
+  position relative
+  top 1px
+  margin-left 6px
+
+.collection-button__icon svg
+  width 15px
+  height 10px
+
+.collection-buttons
+  margin-bottom 40px
+  display flex
+  align-items center
+  justify-content center
+
+  @media $bp.desktop
+    margin-left 16px
+
+  @media $bp.phone
+    margin-bottom 24px
+    flex-direction column
+    max-width 100vw
+    overflow-x auto
+
+.collection-buttons__controls
+  display flex
+  box-sizing border-box
+
+  a
+    $remove-link-style()
+
+  @media $bp.desktop
+    padding 0 12px
+
+  @media $bp.phone
+    margin-bottom 16px
+
+.collection-buttons__controls a
+  border none
+
+.button.collection-buttons__button
+  width auto
+  background alpha(white, 10%)
+  border-radius 4px
+  box-shadow none
+  color white
+  padding 0 24px
+  white-space nowrap
+  margin-right 8px
+
+  &:not([disabled]):hover
+    color black
+    background white
+    .button__additional
+      color black
+
+  .button__additional
+    transition color .3s
+    color white
+
+.collection-buttons__share-button
+  margin-left 8px
+  width 50px
+  padding 0
+
+.collection-buttons__follow-btn
+  margin-right 8px
+
+.collection-buttons__share-icon
+  display block
+  height 20px
+  line-height 0
+
+.collection-buttons__share-content
+  min-width 120px
+
+  @media $bp.desktop
+    padding 10px 0 0
+
+  @media $bp.phone
+    * + *
+      margin-top 10px
+
+.collection-buttons__share-title
+  margin-bottom 8px
+  padding 5px 10px
+  color alpha($color-black, 0.5)
+
+  @media $bp.phone
+    text-align center
+
+.collection-buttons__share-item
+  display block
+
+  border-radius 4px
+  white-space nowrap
+  cursor pointer
+  color $color-black
+
+  @media $bp.desktop
+    padding 5px 10px
+
+  @media $bp.phone
+    text-align center
+
+  &:not(.not-hover):hover
+    background-color alpha($color-black, 0.1)

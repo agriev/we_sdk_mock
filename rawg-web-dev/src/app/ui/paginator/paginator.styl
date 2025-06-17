@@ -1,0 +1,40 @@
+.paginator
+  display flex
+  flex-direction column
+
+.paginator__items
+  display flex
+  justify-content center
+  align-items center
+
+.paginator__item
+  display flex
+  justify-content center
+  align-items center
+  margin 0 10px
+
+  width 40px
+  height 40px
+  box-sizing border-box
+  border 2px solid alpha($color-white, 0.5)
+  border-radius 50%
+
+  font-size 18px
+  font-weight 500
+  color alpha($color-white, 0.5)
+  cursor pointer
+  transition all 0.3s
+
+  @media $bp.desktop
+    &:hover
+      border-color $color-white
+      color $color-white
+
+.paginator__item_empty
+  border none
+  opacity 0.5
+
+.paginator__item_active
+  cursor default
+  border-color $color-white
+  color $color-white

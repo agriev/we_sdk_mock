@@ -1,0 +1,163 @@
+.collection-form
+.collection-form__form-wrapper
+.collection-form__form
+  display block
+  width 100%
+
+.collection-form
+  box-sizing border-box
+  padding 40px
+  background-color #202020
+  border-radius 6px
+
+  @media $bp.phone
+    padding 20px
+    padding-top 0
+    background-color alpha(white, 0)
+
+.collection-form__add-games-wrapper
+  position absolute
+  top 0
+  left 0
+  z-index 3
+
+  width 100vw
+  height 100vh
+  overflow-y auto
+  background-color $main-bg-color
+
+.collection-form__title
+  font-size 44px
+  display block
+  padding-bottom 24px
+
+  @media $bp.phone
+    font-size 30px
+    text-align center
+    padding-bottom 16px
+
+.collection-form__filed-title
+  margin-bottom 8px
+  font-size 16px
+  color alpha($color-white, 0.2)
+
+  @media $bp.phone
+    padding-left 10px
+
+.collection-form__field-checkbox
+  margin-bottom 24px
+
+.collection-form__filed
+  position relative
+  margin-bottom 24px
+  border-radius 4px
+  background-color alpha($color-black, 0.8)
+
+  input::placeholder
+    color alpha($color-white, 0.2)
+
+.collection-form__filed_textarea
+  width 100%
+
+.collection-form__input
+  display block
+  width 100%
+  height 60px
+  padding 0 50px 0 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  background-color alpha($color-black, 0.3)
+  color $color-white
+
+  font-size 30px
+  font-weight 500
+
+  @media $bp.phone
+    height 50px
+    font-size 18px
+    padding 0 50px 0 16px
+
+
+.collection-form__textarea
+  display block
+  width 100%
+  min-width 100%
+  max-width 100%
+  height 200px
+  padding 20px
+  box-sizing border-box
+  border none
+  border-radius 4px
+
+  background alpha($color-black, 0.3)
+  color $color-white
+  font-family inherit
+  font-size 14px
+  line-height 1.4
+
+  &::placeholder
+    color alpha($color-white, 0.2)
+
+  @media $bp.phone
+    padding 16px
+
+.collection-form__counter
+  position absolute
+  opacity 0.4
+
+  font-size 10px
+  font-weight 500
+
+.collection-form__counter_warning
+  color $error-color
+
+.collection-form__counter_input
+  top 22px
+  right 20px
+
+.collection-form__counter_textarea
+  bottom 10px
+  right 15px
+
+.collection-form__button
+  display flex
+  align-items center
+  width 100%
+  flex-wrap wrap
+  justify-content center
+
+  button
+    width 100%
+
+.collection-form__remove-button
+  padding-top 14px
+  box-sizing border-box
+  font-size 16px
+  color #ff4325
+  cursor pointer
+  transition color 0.3s
+
+  @media $bp.phone
+    padding-top 24px
+
+  &:hover
+    color alpha(#ff4325, 0.5)
+
+  .confirm-content
+    width 240px
+    box-sizing border-box
+    margin-top -50px
+    padding 20px
+    padding-top 24px
+    background-color #fff
+    box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.5)
+    border-radius 4px
+    cursor auto
+
+  .confirm-content__button_n
+    color $color-white
+
+    &:not(:hover)
+      background-color alpha($color-white, 0.1)

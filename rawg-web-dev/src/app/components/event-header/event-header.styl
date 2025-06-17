@@ -1,0 +1,56 @@
+.event-header
+  display flex
+  width 100%
+  min-height 28px
+  font-size 12px
+  color alpha($color-white, 0.4)
+  align-items center
+
+.event-header__avatar-link
+  $remove-link-style()
+
+.event-header__info-wrap
+  margin-right 8px
+
+  a
+    $remove-link-style()
+
+.event-header__avatars
+  margin-right 9px
+  flex-shrink 0
+
+.event-header__link
+  border-bottom none
+  color $color-white
+
+.event-header__subtitle
+  color: $color-white
+
+.event-header__subtitle-wrap
+  margin-top 2px
+  color alpha($color-white, 0.4)
+
+.event-header__emoji-icon
+  cursor pointer
+  margin-left auto
+  background-color alpha(#e6e7e8, 0.4)
+  -webkit-mask url('~assets/icons/smile.svg?external') no-repeat center / cover
+  width 20px
+  height 20px
+  transition 0.3s
+  flex-shrink 0
+  &:hover
+    background-color #e6e7e8
+    transition 0.3s
+
+.event-header__avatars_wrap
+  @media $bp.phone
+    display flex
+    flex-wrap wrap
+    .event-header__avatars
+      margin-right 0
+      margin-left 4px
+      margin-bottom 8px
+      flex-basis: 100%
+    .event-header__info-wrap
+      flex-basis 85%

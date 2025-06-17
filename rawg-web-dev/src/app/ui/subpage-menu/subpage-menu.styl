@@ -1,0 +1,84 @@
+.subpage-menu
+  position sticky
+  top 90px
+  display flex
+  flex-direction column
+  align-items flex-start
+  flex 0 1 auto
+  padding-top 32px
+  padding-left 48px
+
+  @media $bp.phone
+    position static
+    display block
+    margin-bottom 16px
+    padding 16px 10px
+    text-align center
+    white-space nowrap
+    overflow-x auto
+    overflow-y hidden
+
+.subpage-menu__links
+  margin 0
+  padding 0
+
+.subpage-menu__link
+  display block
+  transition color 0.3s
+  color alpha(white, 40%)
+  a&
+    opacity 1
+    background-image: linear-gradient(0deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.24) 0,hsla(0,0%,100%,.24) 1px,hsla(0,0%,100%,0) 0);
+
+  @media $bp.phone
+    display inline
+    white-space nowrap
+
+  a&:hover
+    color $color-white
+    .theme_light &
+      color #5c4747
+
+.subpage-menu__link_disabled
+  color alpha(white, 20%) !important
+
+.subpage-menu__link
+.subpage-menu__link_active
+.subpage-menu__counter
+  font-size 16px
+
+.subpage-menu__link_active
+  color $color-white
+  font-weight bold
+  background none
+  cursor default
+
+  .theme_light &
+    color alpha(black, 70%)
+
+.subpage-menu__counter
+  opacity 0.2
+  font-weight normal
+  margin-left 6px
+
+  .theme_light &
+    color black
+
+.subpage-menu__counter-active
+  opacity 0.4
+
+.subpage-menu__link-wrap
+  display flex
+  white-space nowrap
+
+  @media $bp.phone
+    display inline-flex
+
+    a
+      background none
+
+  @media $bp.desktop
+    margin-bottom 16px
+
+  @media $bp.phone
+    margin-right 16px

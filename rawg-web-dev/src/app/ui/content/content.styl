@@ -1,0 +1,67 @@
+.content
+  display flex
+  justify-content space-between
+
+  @media $bp.desktop
+    margin-left auto
+    margin-right auto
+
+  // @media $bp.phone
+  //   overflow-x hidden
+
+.content > div
+  //overflow hidden
+
+.content_fullscreen
+  position absolute
+  left 0
+  width 100%
+
+.content_fullsize
+  flex-grow 1
+
+.content_position-center
+  justify-content center
+  align-items center
+
+.content_columns-1
+  flex-direction column
+
+.content_columns-1-1
+  @media $bp.desktop
+    > div
+      width $column-width-1-1-desktop
+      &:not(:last-child)
+        margin-right $column-offset-1-1-desktop
+
+.content_columns-1-1-1
+  @media $bp.desktop
+    > div
+      width $column-width-1-1-1-desktop
+      &:not(:last-child)
+        margin-right $column-offset-1-1-1-desktop
+
+.content_columns-1-1-1-1
+  @media $bp.desktop
+    > div
+      width $column-width-1-1-1-1-desktop
+      &:not(:last-child)
+        margin-right $column-offset-1-1-1-1-desktop
+
+.content_columns-1-2
+  @media $bp.desktop
+    > div
+      &:first-child
+        width $column-width-1-2-desktop
+        margin-right $column-offset-1-2-desktop
+      &:last-child
+        width $column-width-2-1-desktop
+
+.content_columns-2-1
+  @media $bp.desktop
+    > div
+      &:first-child
+        width $column-width-2-1-desktop
+        margin-right $column-offset-2-1-desktop
+      &:last-child
+        width $column-width-1-2-desktop

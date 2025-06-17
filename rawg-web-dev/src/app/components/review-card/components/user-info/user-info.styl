@@ -1,0 +1,44 @@
+.review-card__user
+  display flex
+  align-items center
+  margin-right 10px
+  flex-shrink 0
+
+.review-card__avatar-link
+  margin-right 10px
+  border none
+
+  &, .theme_light .page__content &
+    $remove-link-style()
+
+  .avatar
+    @media $bp.phone
+      width 30px
+      height 30px
+
+.review-card__user-info
+  display flex
+  flex-direction column
+  align-items flex-start
+  flex-shrink 0
+
+.review-card__user-link
+  $remove-link-style()
+  $font14-small()
+  margin-bottom 1px
+  color $color-white
+
+  .theme_light &
+    color #151515
+
+  @media $bp.phone
+    $font12-small()
+
+.review-card__date
+  $remove-link-style()
+  $font12-small()
+  color alpha($color-white, 0.2)
+
+  .theme_light .page__content &
+    color alpha(black, 20%)
+    $remove-link-style()

@@ -1,0 +1,90 @@
+.settings-info-form
+  margin 0 auto
+
+  display flex
+  flex-direction column
+
+  @media $bp.phone
+    padding 0 20px 75px 20px
+
+  .textarea
+    margin-bottom 24px !important
+
+  .button
+    @media $bp.phone
+      width 100%
+
+.settings-info-form__avatar-label
+  margin-bottom 10px
+  font-size 16px
+  color alpha($color-white, 0.2)
+
+.settings-info-form__avatar-field
+  display flex
+  align-items center
+  height 50px
+
+.settings-info-form__name-inputs
+  display flex
+
+  @media $bp.phone
+    flex-direction column
+
+  > .input
+    flex 0 0 calc(50% - 12px)
+    &:first-child
+      @media $bp.phone
+        margin-bottom 24px
+      @media $bp.desktop
+        margin-right 24px
+
+.settings-info-form__avatar-delete
+  margin-left 30px
+  font-size 16px
+  cursor pointer
+  color rgba(255, 255, 255, 0.5)
+  border-bottom 1px solid rgba(255, 255, 255, 0.5)
+  transition border-bottom .3s
+  &:hover
+    border-bottom 1px solid rgba(255, 255, 255, 0)
+
+.settings-info-form__avatar-file
+  margin-left 30px
+  font-size 16px
+  cursor pointer
+  position relative
+  overflow hidden
+  color rgba(255, 255, 255, 0.5)
+  border-bottom 1px solid rgba(255, 255, 255, 0.5)
+  transition border-bottom .3s
+  &:hover
+    border-bottom 1px solid rgba(255, 255, 255, 0)
+  input
+    position absolute
+    top 0
+    left 0
+    opacity 0
+    cursor pointer
+
+.settings-info-form__buttons
+  display flex
+
+.settings-info-form__buttons__delete-profile
+  border-bottom none
+  font-size 12px
+  color $color-white
+  transition opacity .3s
+  align-self flex-end
+
+  &:hover
+    opacity 0.5
+    color white
+
+  @media $bp.phone
+    margin-right 10px
+
+  &.non-visible
+    display none
+
+    @media $bp.phone
+      display none

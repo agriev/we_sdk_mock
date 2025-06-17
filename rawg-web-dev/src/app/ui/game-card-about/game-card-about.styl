@@ -1,0 +1,113 @@
+.game-card-about
+  $font14-small()
+  margin 4px 0 0
+  padding 0
+  list-style none
+
+  &.game-card-about_queue
+    &::before
+      content ''
+      display block
+      margin-top -8px
+
+.game-card-about__item
+  .game-card-about_normal &
+    $font12-small()
+
+  .game-card-about_large &
+    $font14-small()
+
+  .game-card-about_queue > &
+    display inline-flex
+    flex 0 1 auto
+    flex-wrap wrap
+    margin-top 8px
+    margin-right 24px
+
+  .game-card-about_table > &
+    display flex
+    flex 0 1 auto
+    justify-content space-between
+    align-items baseline
+    padding-top 12px
+
+    &_center
+      justify-content center
+
+    &_v-center
+      align-items center
+
+    &:not(:last-child)
+      padding-bottom 12px
+      border-bottom 1px solid rgba(white, 0.07)
+
+  .rating__text
+    .game-card-about_normal &
+      $font12-small()
+
+    .game-card-about_large &
+      $font16-medium()
+
+.game-card-about__term
+  margin-right 6px
+  color rgba(white, 0.7)
+  flex 0 0 auto
+  display flex
+  align-items center
+
+  @media $bp.phone
+    font-size 14px
+
+  .avatar
+    display inline-block
+    margin-right 4px
+    text-align center
+
+.game-card-about__desription
+  text-align right
+
+  &.game-card-about__desription_flex
+    display flex
+    .game-card-about_table &
+      align-items baseline
+    .game-card-about_queue &
+      align-items center
+
+  .avatar.user-list-line__avatar-image
+  .user-list-line__count
+  .game-card-about__desription__user
+    .game-card-about_table &
+      transform translateY(4px)
+
+  .avatar.game-card-about__desription__avatar
+    margin-right 8px
+    transform translateY(1px)
+
+.game-card-about__desription__users
+  .game-card-about_queue &
+    margin-left 6px
+
+.game-card-about__desription__user
+  display flex
+
+.game-card-about__more
+  $font12-small()
+  $add-link-style()
+
+.game-card-about__rating
+  display flex
+  flex 0 1 auto
+  flex-direction row
+  align-items baseline
+
+  .rating__icon
+    align-self center
+    width 16px
+    height 16px
+    margin-left 0
+    margin-right 4px
+
+  .rating__icon_exceptional
+    width 22px
+    height 22px
+    margin-top -7px

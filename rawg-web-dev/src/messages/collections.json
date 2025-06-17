@@ -1,0 +1,23 @@
+{
+  "ru": {
+    "title_popular": "Популярные коллекции игр",
+    "title_all": "Коллекции игр",
+    "meta_title_popular": "Лучшие коллекции игр – подборки популярных игр на всех известных платформах",
+    "meta_description_popular": "Откройте для себя самые лучшие и популярные коллекции компьютерных игр, сделанные другими геймерами. Подборки лучших и интересных игр по сеттингу, тематике, жанрам и другим параметрам.",
+    "meta_title_all": "Коллекции игр – подборки лучших игр на всех известных платформах",
+    "meta_description_all": "Откройте для себя самые новые коллекции компьютерных игр, сделанные другими геймерами. Подборки лучших и интересных игр по сеттингу, тематике, жанрам и другим параметрам.",
+    "popular": "Популярные",
+    "all": "Новые"
+  },
+
+  "en": {
+    "title_popular": "Popular collections",
+    "title_all": "New collections",
+    "meta_title_popular": "Popular collections of games",
+    "meta_description_popular": "Discover the best collections of video games made by other gamers",
+    "meta_title_all": "New collections of games",
+    "meta_description_all": "Discover the newest collections of video games made by other gamers",
+    "popular": "Popular",
+    "all": "New"
+  }
+}

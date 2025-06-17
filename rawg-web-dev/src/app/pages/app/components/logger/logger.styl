@@ -1,0 +1,27 @@
+.logger
+  position fixed
+  bottom 5px
+  left 5px
+  max-width calc(100% - 10px)
+  pointer-events none
+  display flex
+  flex-direction column
+  z-index 10
+  background alpha(black, 50%)
+  box-sizing border-box
+  border-radius 4px
+
+.logger__message
+  color #EEEE7C
+  text-shadow 0px 0px 2px black
+  font-size 14px
+  font-weight bold
+  padding 5px 10px
+
+  transition opacity 1s
+
+  & + &
+    padding-top 0px
+
+  &.logger__message_deleting
+    opacity 0

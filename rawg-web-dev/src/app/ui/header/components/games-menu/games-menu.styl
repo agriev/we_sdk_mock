@@ -1,0 +1,38 @@
+.games-menu__title
+  display flex
+  align-items center
+  .header-dropdown-content__games-menu-title
+    width auto
+    @media $bp.phone
+      margin-right 16px
+
+.games-menu
+  .header-menu-content__link
+    $font14-small()
+
+    @media $bp.phone
+      font-size 18px
+      padding 6px 0
+
+.header-dropdown-content__games-menu-title.header-menu-content__link
+  $font14-small()
+  font-weight 500
+  padding 4px 10px
+  color $color-black
+  text-transform uppercase
+  letter-spacing 1px
+
+  @media $bp.phone
+    padding 6px 0 8px
+    font-size 24px
+    font-weight bold
+    text-transform none
+
+.games-menu__rate
+  background-color #429321
+  transition 0.3s
+  color $color-white
+  &:hover
+    background-color #7cbd43
+    transition 0.3s
+    color $color-white

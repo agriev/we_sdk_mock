@@ -1,0 +1,47 @@
+.years-stats-games
+  margin-bottom 48px
+  display flex
+
+  @media $bp.phone
+    margin-bottom 32px
+    display block
+
+.years-stats-games__column
+  width 100%
+  min-width $column-width-1-1-1-desktop
+
+  &:not(:last-child)
+    margin-right $column-offset-1-1-1-desktop
+
+  @media $bp.phone
+    width 274px
+    padding-left 10px
+    margin-right 6px
+    box-sizing border-box
+    min-width 0
+
+    &:not(:last-child)
+      margin-right 6px
+
+  .game-card-compact
+    padding 16px 0
+    border-bottom 1px solid rgba(white, 0.1)
+
+    &:last-child
+      border-bottom none
+
+  .section-heading
+    margin-top 16px
+
+.years-stats-games__direction-column
+  flex-direction column
+  .years-stats-games__column
+    .game-card_inline
+      &:last-child
+        border-bottom none
+        padding-bottom 33px
+
+  .years-stats-games__column
+    @media $bp.phone
+      width 100%
+      padding-right 10px

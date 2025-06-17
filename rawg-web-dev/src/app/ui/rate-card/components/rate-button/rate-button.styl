@@ -1,0 +1,99 @@
+.rate-button
+  width 50%
+  height 50%
+  box-sizing border-box
+  display flex
+  flex-direction column
+  justify-content flex-end
+  align-items center
+  padding-bottom 16px
+  transition 0.3s
+  cursor pointer
+  background-color none
+
+  @media $bp.desktop
+    &_light:hover:not(.rate-button_disabled)
+      background-color $color-white
+      color $color-black
+      transition 0.3s
+
+    &_light:active:not(.rate-button_disabled)
+      background-color transparent
+      color $color-white
+      transition 0.3s
+
+    &_dark:hover:not(.rate-button_disabled)
+      background-color #f3f3f3
+      color $color-black
+      transition 0.3s
+
+    &_dark:active:not(.rate-button_disabled)
+      background-color transparent
+      color $color-black
+      transition 0.3s
+
+  @media $bp.phone
+    &_light:active
+      background-color $color-white
+      color $color-black
+      transition 0.3s
+
+    &_dark:active
+      background-color #f3f3f3
+      color $color-black
+      transition 0.3s
+
+  &_light
+    &:nth-child(even)
+      border-left 1px solid alpha($color-white, 0.1)
+
+    &:nth-child(-n+2)
+      border-bottom 1px solid alpha($color-white, 0.1)
+
+    &:nth-child(1)
+      border-top-left-radius 6px
+    &:nth-child(2)
+      border-top-right-radius 6px
+    &:nth-child(3)
+      border-bottom-left-radius 6px
+    &:nth-child(4)
+      border-bottom-right-radius 6px
+
+  &_dark
+    &:nth-child(even)
+      border-left 2px solid #e5e5e5
+
+    &:nth-child(-n+2)
+      border-bottom 2px solid #e5e5e5
+
+    &:nth-child(1)
+      border-top-left-radius 6px
+    &:nth-child(2)
+      border-top-right-radius 6px
+    &:nth-child(3)
+      border-bottom-left-radius 6px
+    &:nth-child(4)
+      border-bottom-right-radius 6px
+
+
+.rate-button_disabled
+  cursor default
+
+.rate-button_rated
+  background-color $color-white
+  color $color-black
+  transition 0.3s
+
+.rate-button__label
+  $font12-small()
+
+.rate-button__img
+  display block
+  width 40%
+  margin-bottom 4px
+
+.rate-button_exceptional
+  width 50%
+  margin-left 16px
+.rate-button_recommended
+  width 40%

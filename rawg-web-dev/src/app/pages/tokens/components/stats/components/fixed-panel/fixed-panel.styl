@@ -1,0 +1,178 @@
+.tokens__stats-fixed-container
+  position fixed
+  left 0
+  width 100%
+  z-index 10
+  padding 0 10px
+
+  &.tokens__stats-fixed-container_active
+    background linear-gradient(to bottom, #1ad96b, #0d61a6)
+
+  &.tokens__stats-fixed-container_completed
+    background linear-gradient(to bottom, #fad961, #f76b1c)
+
+  &.tokens__stats-fixed-container_failure
+    background linear-gradient(to bottom, #f5515f, #9f041b)
+
+  transition top .3s
+  height 40px
+  top -40px
+  &.tokens__stats-fixed_showed
+    top 0
+
+  display flex
+  justify-content center
+  align-items center
+
+  .tokens__stats-fixed
+    max-width 1080px
+    display flex
+    width 100%
+    align-items center
+    @media $bp.desktop
+      justify-content space-between
+
+    .tokens__stats-fixed__achievements
+      font-size 16px
+      display flex
+      align-items center
+      flex 0 0 auto
+
+      .round-progressbar
+        margin-right 8px
+
+        .round-progressbar__circle-background
+          stroke $color-white
+
+      @media $bp.phone
+        flex-grow 1
+
+    .tokens__stats-fixed__time-left
+      flex 0 1 auto
+      padding-left 29px
+      height 30px
+      background url('~app/pages/tokens/assets/timer.png') no-repeat left 1px / 25px
+      display flex
+      align-items center
+      margin-left 16px
+      flex 0 0 auto
+
+      @media $bp.phone
+        display none
+        margin-top 3px
+        font-size 14px
+        margin-left 4px
+        flex 0 0 auto
+
+    .tokens__stats-fixed__navigation
+      display flex
+      align-items center
+      justify-content center
+      margin-left 50px
+      margin-right 50px
+      font-size 16px
+      flex 1 0 auto
+
+      @media $bp.phone
+        display none
+
+      .tokens__stats-fixed__navigation-el
+        @media (max-width: 1100px)
+          display none
+        & + .tokens__stats-fixed__navigation-el
+          margin-left 24px
+
+        cursor pointer
+        color white
+        opacity .4
+        border-bottom 1px solid alpha(white, 0%)
+        transition border-bottom .3s, opacity .3s
+        &:hover
+          opacity .7
+          border-bottom 1px solid alpha(white, 70%)
+        &.active
+          opacity 1
+          border-bottom 1px solid alpha(white, 100%)
+
+    .tokens__stats-fixed__avatar
+      flex 0 0 auto
+      display flex
+      align-items center
+      @media $bp.phone
+        display none
+        margin-left 4px
+        flex 0 0 auto
+
+    .tokens__stats-fixed__place
+      flex 0 0 auto
+      display flex
+      align-items center
+      margin-left 16px
+      font-size 18px
+      @media $bp.phone
+        margin-right 20px
+        margin-left 8px
+        padding-left 8px
+        border-left 1px solid alpha(#d8d8d8, 15%)
+        flex 0 0 auto
+        order 10
+
+      .SVGInline
+        display flex
+        align-items center
+        margin-left 8px
+
+    .tokens__stats-fixed__user-achievements
+      flex 0 0 auto
+      display flex
+      align-items center
+      margin-left 16px
+      padding-left 16px
+      font-size 18px
+      border-left 1px solid alpha(#d8d8d8, 15%)
+      @media $bp.phone
+        border-left none
+        margin-left 4px
+        padding-left 4px
+        flex 0 0 auto
+
+    .tokens__stats-fixed__user-karma
+      flex 0 0 auto
+      display flex
+      align-items center
+      margin-left 16px
+      padding 0 16px 0 32px
+      font-size 18px
+      border-left 1px solid alpha(#d8d8d8, 15%)
+      text-align center
+      position relative
+      margin-right 20px
+      @media $bp.phone
+        margin-right 0px
+        margin-left 4px
+        padding 0 16px 0 26px
+        flex 0 0 auto
+
+      &::before
+      &::after
+        content ''
+        background url('~app/pages/tokens/assets/wreath.svg?external') no-repeat center / contain
+        top -2px
+        width 12px
+        height 24px
+        position absolute
+
+      &::before
+        @media $bp.desktop
+          left 16px
+        @media $bp.phone
+          left 8px
+
+      &::after
+        right 0
+        transform rotateY(180deg)
+
+    .tokens__stats-fixed__join-btn
+      @media $bp.phone
+        margin-right 20px
+        flex 0 0 auto

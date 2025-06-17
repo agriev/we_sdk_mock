@@ -1,0 +1,27 @@
+{% extends 'mailer/template_ru.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Привет, {{ user.username }}
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        Мы собрали список игр, которые могут быть вам по вкусу.
+        Вас также могут заинтересовать игры, которые сейчас особенно популярны в нашем сообществе.
+        Листайте письмо дальше и не забудьте добавить интересные игры в вишлист.
+    </div>
+{% endblock %}
+
+{% block button_url %}{{ protocol }}://{{ current_site }}/{% endblock %}
+
+{% block post_body %}
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        Не забывайте регулярно оценивать игры на AG.ru, чтобы получать более точные рекомендации.
+    </div>
+{% endblock %}
+
+{% block button %}Смотреть все игры{% endblock %}
+
+{% block unsubscribe_link %}https://{{ current_site }}/settings/notifications?user_id={{ user.id }}&slug={{ mail_slug }}&hash={{ user.security_hash }}&email={{ user.email }}{% endblock %}

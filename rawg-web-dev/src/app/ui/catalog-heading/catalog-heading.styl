@@ -1,0 +1,41 @@
+.catalog-heading
+  margin-bottom 24px
+
+  @media $bp.phone
+    margin-bottom 16px
+
+.catalog-heading__link
+  $remove-link-style()
+  font-size 0
+
+  & > *
+    display inline-block
+    vertical-align baseline
+
+    @media $bp.phone
+      vertical-align middle
+
+  &:hover .heading
+    color alpha($color-white, 0.4)
+    transition all 0.3s
+
+  .heading
+    $add-link-style()
+    display inline
+    margin-right 8px
+    font-weight bold
+    transition all 0.3s
+
+.catalog-heading__count-wrapper
+  white-space nowrap
+
+.catalog-heading__count
+  $font24-large()
+  margin-right 8px
+  color $color-gray
+
+  @media $bp.phone
+    $font18-large()
+
+.catalog-heading__icon
+  opacity 0.4

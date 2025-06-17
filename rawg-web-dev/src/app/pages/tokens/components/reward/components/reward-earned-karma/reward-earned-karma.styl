@@ -1,0 +1,127 @@
+.tokens__reward-earned-karma
+  font-size 20px
+  margin-top 25px
+  display flex
+  justify-content center
+  flex-wrap wrap
+  @media $bp.phone
+    flex-wrap wrap
+    margin-top 18px
+
+.tokens__reward-earned-karma__balance
+  font-size 16px
+  margin-top 12px
+  flex-basis 100%
+  text-align center
+  @media $bp.phone
+    font-size 12px
+    margin-top 8px
+    .tokens__reward-earned-karma__tokens-counter
+      background-size contain
+      padding-right 16px
+
+.tokens__reward-earned-karma__karma-wrap
+  display flex
+  flex-direction column
+  align-items center
+
+.tokens__reward-earned-karma__count
+  position relative
+  font-size 48px
+  font-weight bold
+  text-align center
+  margin 0 40px
+  @media $bp.phone
+    font-size 32px
+
+  &::before
+  &::after
+    content ''
+    background url('~app/pages/tokens/assets/wreath.svg?external') no-repeat center / contain
+    top 3px
+    width 28px
+    height 48px
+    position absolute
+    @media $bp.phone
+      width 20px
+      height 32px
+
+  &::before
+    left -34px
+    @media $bp.phone
+      left -21px
+
+  &::after
+    right -34px
+    transform rotateY(180deg)
+    @media $bp.phone
+      right -21px
+
+.tokens__reward-earned-karma__subtitle
+  margin 0 auto
+  font-size 14px
+  font-weight normal
+  opacity 0.4
+  margin-top -2px
+  @media $bp.phone
+    font-size 12px
+
+.tokens__reward-earned-karma__coins
+  font-size 48px
+  font-weight bold
+  align-self baseline
+  padding-right 47px
+  background url('~app/pages/tokens/assets/coin.png') no-repeat right center / contain
+  background-size 35px
+  @media $bp.phone
+    font-size 36px
+    padding-right 31px
+    background-size 25px
+
+.tokens__reward-earned-karma__coins_light
+  font-weight normal
+
+.tokens__reward-earned-karma__exchange-icon
+  position relative
+  width 41px
+  height 32px
+  align-self baseline
+  margin 0 12px
+  @media $bp.phone
+    flex-basis 100%
+    margin 12px 0
+    width 31px
+    height 24px
+
+  &::before
+    content ''
+    position absolute
+    width 100%
+    height 100%
+    background url('~assets/icons/exchange.svg?external') no-repeat center / contain
+    @media $bp.phone
+      transform rotate(90deg)
+
+.tokens__reward-earned-karma__button
+	width 100%
+	height 44px
+	border-radius 6px
+	background-color $color-white
+	font-size 16px
+	font-weight normal
+	margin-top 42px
+	position relative
+	&::before
+		content ''
+		height 1px
+		position absolute
+		top -19px
+		left 0
+		right 0
+		background-color alpha($color-white, 0.2)
+
+.tokens__reward-earned-karma__tokens-counter
+  align-self baseline
+  padding-right 19px
+  background url('~app/pages/tokens/assets/coin.png') no-repeat right center / contain
+  background-size 15px

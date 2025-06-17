@@ -1,0 +1,16 @@
+{
+  "ru": {
+    "seo_title": "Users Leaderboard",
+    "seo_description": ""
+  },
+
+  "en": {
+    "seo_title": "Editor Leaderboard",
+    "seo_description": "",
+    "heading": "Contribution leaders",
+    "per-month": "Total edits",
+    "per-day": "Edits per day",
+    "per-day-and-month": "Per day and total edits",
+    "name": "Name"
+  }
+}

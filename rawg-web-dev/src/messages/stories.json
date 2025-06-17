@@ -1,0 +1,23 @@
+{
+  "ru": {
+    "notif-bottom": "Новые и популярные игры",
+    "add-to-wishlist": "Добавить в вишлист",
+    "added-to-wishlist": "Добавлено в вишлист",
+    "added-to-another-list": "Добавлено в {status}",
+    "mute": "Убрать звук",
+    "unmute": "Вернуть звук",
+    "watch-full": "Посмотреть полное видео",
+    "signup": "Зарегистрируйтесь, чтобы увидеть больше"
+  },
+
+  "en": {
+    "notif-bottom": "New and trending games",
+    "add-to-wishlist": "Add to wishlist",
+    "added-to-wishlist": "Added to wishlist",
+    "added-to-another-list": "Added to {status}",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "watch-full": "Play full video",
+    "signup": "Sign up to see more"
+  }
+}

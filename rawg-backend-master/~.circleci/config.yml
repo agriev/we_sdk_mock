@@ -1,0 +1,82 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/buildpack-deps:curl
+
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Login on Docker Hub
+          command: bash .circleci/docker-login.sh
+      - run:
+          name: Check if there are newer base images on Docker Hub
+          command: bash .circleci/docker-caching-key.sh
+      - restore_cache:
+          keys:
+            - v3-docker-layers-{{ checksum "docker-caching-key.txt" }}
+            - v3-docker-layers-{{ checksum "docker-caching-key.txt" }}-{{ checksum "config/requirements.txt" }}
+      - run:
+          name: Load Docker layer cache
+          command: bash .circleci/docker-load-cache.sh
+      - run:
+          name: Building & pushing docker image
+          command: bash .circleci/docker-build.sh
+      - run:
+          name: Save Docker layer cache
+          command: bash .circleci/docker-save-cache.sh
+      - save_cache:
+          key: v3-docker-layers-{{ checksum "docker-caching-key.txt" }}
+          paths:
+            - /tmp/docker-caches
+      - save_cache:
+          key: v3-docker-layers-{{ checksum "docker-caching-key.txt" }}-{{ checksum "config/requirements.txt" }}
+          paths:
+            - /tmp/docker-caches
+  test:
+    docker:
+      - image: $DOCKERHUB_USERNAME/rawg-web:$CIRCLE_BRANCH$CIRCLE_WORKFLOW_ID
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+        environment:
+          POSTGRES_HOST: localhost
+          POSTGRES_USER: application
+          POSTGRES_PASSWORD: application
+          ELASTICSEARCH_URL: http://localhost:9200
+      - image: circleci/postgres:10.5-alpine-ram
+        environment:
+          POSTGRES_USER: application
+          POSTGRES_PASSWORD: application
+          POSTGRES_DB: application
+      - image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
+        environment:
+          - http.host=0.0.0.0
+          - transport.host=127.0.0.1
+          - xpack.security.enabled=false
+          - ES_JAVA_OPTS=-Xms256m -Xmx256m
+
+    working_directory: /app/project
+
+    steps:
+      - run:
+          name: Remove the current Docker image from Docker Hub
+          command: IMAGE=rawg-web bash /app/.circleci/docker-delete-tag.sh
+      - run:
+          name: Tests
+          command: bash /app/config/wait-for-postgres.sh localhost fab tests_deploy
+
+workflows:
+  version: 2
+
+  build-test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: production
+      - test:
+          requires:
+            - build

@@ -1,0 +1,31 @@
+.showcase__browse
+  margin-bottom 24px // 48 - 24(марджины карточек)
+
+  margin-left auto
+  margin-right auto
+
+  @media $bp.desktop
+    max-width $page-width-desktop
+
+    .heading_2
+      margin 36px 0 24px
+
+  @media $bp.phone
+    padding 0 10px
+    max-width $page-width-phone
+
+    .card-template
+      width 264px
+
+.showcase__browse-cards
+  font-size 0
+  text-align center
+
+  .showcase__browse-card
+    display inline-flex
+    vertical-align top
+    width 222px
+    margin-bottom 24px
+
+    &:not(:nth-child(4n))
+      margin-right 24px

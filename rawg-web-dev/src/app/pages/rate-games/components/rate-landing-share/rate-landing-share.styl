@@ -1,0 +1,79 @@
+$fb-color-link = #508aff
+$fb-color = #294c93
+$tw-color = #5babf4
+$tw-button-color = #294c93
+
+.rate-landing-share
+  display flex
+  flex 0 1 auto
+  align-items center
+
+  &_default
+    $font16-medium()
+
+    .rate-landing-share__icon
+      padding-right 8px
+
+      svg
+        fill white
+
+  &_button
+    $font16-paragraph()
+    justify-content center
+    box-sizing border-box
+    margin 40px auto 0
+
+    @media $bp.desktop
+      padding 20px 24px
+      border 2px solid rgba(white, 0.1)
+      border-radius 4px
+
+      .rate-landing-share__text
+        margin-right 12px
+
+    @media $bp.phone
+      flex-direction column
+      margin 24px 16px 0
+
+      .rate-landing-share__text
+        margin-bottom 8px
+
+    .rate-landing-share__text
+      $font18-large()
+
+    .rate-landing-share__buttons-list
+      display flex
+      flex 0 1 auto
+      justify-content center
+
+.rate-landing-share__button
+  transition all 0.3s
+  cursor pointer
+
+  &:hover
+    opacity 0.8
+
+  .rate-landing-share_default &
+    display inline
+
+  .rate-landing-share_default &_vk
+    $add-link-style(1, $fb-color-link)
+    color $fb-color-link
+
+  .rate-landing-share_default &_tw
+    $add-link-style(1, $tw-color)
+    color $tw-color
+
+  .rate-landing-share_button &
+    display block
+    padding 6px 24px
+    border-radius 4px
+
+    &:not(:last-child)
+      margin-right 8px
+
+  .rate-landing-share_button &_vk
+    background-color $vk-color
+
+  .rate-landing-share_button &_twitter
+    background-color $tw-color

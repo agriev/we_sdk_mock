@@ -1,0 +1,125 @@
+.stories__info__mobile-btns
+  position absolute
+
+  display flex
+  justify-content center
+  align-items flex-start
+
+  width 100%
+  left 0
+  top calc(55% - 24px)
+  opacity 0
+
+  transition opacity .3s
+
+  @media (min-width: $page-width-desktop)
+    left calc(50% - 480px)
+    width $page-width-desktop
+
+  @media $bp.desktop
+    display none
+
+    .stories__info-wrap.active &
+    .stories__content.paused &
+      opacity 1
+
+  @media $bp.phone
+    .stories__content.paused &
+      opacity 1
+
+.stories__info__mobile-btns-wrap
+  display flex
+  align-items center
+  > * + *
+    margin-left 24px
+
+.stories__info__mobile-btns__prev
+.stories__info__mobile-btns__next
+  background url('~assets/icons/arrow.svg?external') no-repeat center / contain
+  width 16px
+  height 30px
+  cursor pointer
+  position absolute
+
+  pointer-events none
+  opacity 0
+  transition opacity .3s
+  .stories__content.non-first-play.paused &
+    pointer-events auto
+    opacity 1
+
+.stories__info__mobile-btns__next
+  // transform translateX(50px)
+  right 40px
+
+.stories__info__mobile-btns__prev
+  transform rotateZ(180deg)
+  left 40px
+
+.stories__info__mobile-btns__wishlist
+  background url('~assets/icons/icon-game-wishlist-white.svg?external') no-repeat center / contain
+  width 32px
+  height 31px
+  cursor pointer
+  background-size 39px
+
+  pointer-events none
+  opacity 0
+  transition opacity .3s
+  .stories__content.non-first-play.paused &
+    pointer-events auto
+    opacity 1
+
+  &.added
+    background url('~assets/icons/icon-game-wishlist.svg?external') no-repeat center / contain
+    background-size 39px
+
+  &.disabled
+    opacity 0 !important
+    pointer-events none
+
+.stories__info__mobile-btns__pause
+  width 41px
+  height 48px
+  cursor pointer
+  position relative
+  pointer-events auto
+  transition transform .3s
+
+  background url('~assets/icons/play-white.svg?external') no-repeat center / contain
+  .stories__content.playing &
+    background url('~assets/icons/pause.svg?external') no-repeat center / contain
+
+  .stories__content.first-play &
+    transform translateX(30px)
+
+  .stories__content.non-first-play &
+    @media $bp.phone
+      width 35px
+      height 41px
+
+.stories__info__mobile-btns__mute
+  width 35px
+  height 41px
+  cursor pointer
+  opacity 0
+  transition opacity .3s
+  pointer-events none
+
+  svg
+    width 35px
+    height 41px
+
+  svg path, svg g
+    transition opacity .3s
+    opacity .4
+
+  .stories__content.non-first-play.paused &
+    pointer-events auto
+    opacity 1
+
+  &.muted
+    .stories__content.non-first-play.paused &
+      opacity 1
+      svg path, svg g
+        opacity 1

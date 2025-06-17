@@ -1,0 +1,30 @@
+.release-dates__content
+  & > .heading
+    margin 0 0 32px
+
+    @media $bp.phone
+      margin 0 0 16px
+      text-align center
+
+  .calendar__filters
+    flex-shrink 0
+
+  .calendar__only-popular
+    @media $bp.desktop
+      position relative
+      top -10px
+
+.release-dates__columns
+  @media $bp.desktop
+    display flex
+    margin-bottom 48px
+
+    .showcase-title
+      margin 0
+      text-align left
+
+    .showcase-title_subtitle
+      padding-top 12px
+
+  @media $bp.phone
+    margin-top 0px

@@ -1,0 +1,76 @@
+.section-heading
+  display flex
+  align-items baseline
+  width 100%
+  box-sizing border-box
+
+  &_big
+    $font24-large()
+    font-weight bold
+
+    @media $bp.phone
+      $font20-large()
+
+  &_medium
+    $font24-large-desktop()
+    font-weight bold
+
+    .section-heading__count
+      @media $bp.desktop
+        margin-left 4px
+
+  &_small
+    $font16-paragraph()
+    font-weight bold
+
+    @media $bp.phone
+      $font14-paragraph()
+      font-weight bold
+
+  &_center
+    align-items center
+
+  &_baseline
+    align-items baseline
+
+.section-heading__link
+  $remove-link-style()
+  display inline-flex
+  flex 1 1 auto
+  align-items center
+
+  .section-heading__text
+    font-size 24px
+    line-height 28px
+    font-weight bold
+    margin-top 0
+    margin-bottom 0
+    & > span
+      $add-link-style()
+
+.section-heading__text
+  margin-right 8px
+
+.section-heading__image
+  height 0.8em
+  margin-top 4px
+
+  @media $bp.phone
+    height 1em
+    margin-top 0
+
+.section-heading__count
+  $font14-paragraph()
+  margin-left auto
+  color alpha($color-white, 0.4)
+  white-space nowrap
+  flex 0 1 auto
+
+  @media $bp.phone
+    $font12-small()
+
+a.section-heading__count
+  $add-link-style(0.24)
+
+  &:hover
+    color $color-white

@@ -1,0 +1,39 @@
+.stories__notif-bottom-bar
+  $remove-link-style()
+
+  cursor pointer
+  position absolute
+  bottom -2px
+  width 100%
+  height 48px
+  background-color #044472
+  font-weight bold
+  z-index 4
+
+  display flex
+  justify-content center
+  align-items center
+
+  @media $bp.desktop
+    font-size 18px
+
+  @media $bp.phone
+    display none
+    font-size 16px
+    height 32px
+
+  &::before
+    content ''
+    width 18px
+    height 11px
+    background url(./assets/bottom-arrow.svg?external) no-repeat center / contain
+    transition opacity .3s
+
+    @media $bp.desktop
+      margin-right 8px
+
+    @media $bp.phone
+      margin-right 4px
+
+  &:hover::before
+    opacity .5

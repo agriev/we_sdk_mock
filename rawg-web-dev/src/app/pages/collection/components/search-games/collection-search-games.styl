@@ -1,0 +1,172 @@
+.collection-add-game
+  position relative
+  margin 0 auto
+  padding-top 100px
+  padding-bottom 100px
+
+  @media $bp.desktop
+    width $page-width-desktop
+
+  @media $bp.phone
+    padding-top 50px
+    padding-bottom 150px
+    flex-grow 1
+
+.collection-add-game__close-button
+  position absolute
+  right 0
+  top 25px
+
+  @media $bp.phone
+    top 10px
+    margin-right 10px
+
+.collection-add-game__search-input
+  margin 0 auto 40px
+
+  @media $bp.phone
+    max-width 90%
+
+.collection-add-game__games_available
+  margin-bottom 80px
+
+.collection-add-game__panel
+  position fixed
+  bottom 0
+  left 0
+  right 0
+
+  z-index 4
+
+  display flex
+  flex-direction column
+  align-items center
+  padding 20px 0
+  box-sizing border-box
+  background #282828
+
+  @media $bp,desktop
+    height 220px
+
+  @media $bp.phone
+    height auto
+    min-height 150px
+    max-height 100%
+
+.collection-add-game__panel-header
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  box-sizing border-box
+  margin 0 auto 25px
+
+  @media $bp.desktop
+    max-width $page-width-desktop
+
+  @media $bp.phone
+    padding 0 10px
+
+.collection-add-game__panel-title
+  font-size 30px
+  font-weight 500
+
+  @media $bp.phone
+    font-size 18px
+    font-weight normal
+
+.collection-add-game__games-selected
+  width 100%
+
+  @media $bp.desktop
+    height 120px
+    overflow-y hidden
+
+  @media $bp.phone
+    flex-shrink 1
+    max-height 500px
+    padding-bottom 16px
+    overflow-y auto
+
+.collection-add-game__games-selected-inner
+  display flex
+
+  @media $bp.desktop
+    flex-wrap nowrap
+    padding-bottom 50px
+    overflow-x scroll
+
+  @media $bp.phone
+    padding 0 10px
+    flex-direction column
+    align-items center
+
+.collection-add-game__panel button
+  flex-shrink 0
+
+.collection-add-game__button
+  position fixed
+  bottom 0
+  left 0
+
+  display none
+  justify-content center
+  align-items center
+  width 100%
+  height 120px
+
+  background linear-gradient(to bottom, alpha($main-bg-color, 0), $main-bg-color)
+
+.collection-add-game__loading
+  margin 0 auto
+  text-align center
+
+.collection-add-game__loading svg
+  fill alpha($color-white, 0.5)
+
+.collection-add-game__buttons
+  @media $bp.phone
+    position relative
+    width 100%
+    box-sizing border-box
+
+    &_opened
+      padding-top 8px
+
+      &::before
+        content ''
+        display block
+        position absolute
+        top -30px
+        left 0
+        right 0
+        width 100%
+        height 32px
+        background linear-gradient(to top, #272727, rgba(39, 39, 39, 0))
+        z-index 3
+
+.collection-add-game__buttons-wrapper
+  display flex
+  flex 0 0 auto
+  align-items center
+
+  @media $bp.desktop
+    justify-content flex-end
+
+  @media $bp.phone
+    flex-direction column-reverse
+    width 100%
+    box-sizing border-box
+
+.collection-add-game__cancel-button
+  cursor pointer
+  transition color 0.3s
+
+  &:hover
+    color alpha($color-white, 0.4)
+
+  @media $bp.desktop
+    margin-right 24px
+
+  @media $bp.phone
+    margin-top 16px

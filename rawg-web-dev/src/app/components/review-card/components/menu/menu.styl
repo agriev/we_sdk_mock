@@ -1,0 +1,36 @@
+.review-card__menu-button
+.review-card__menu-button.menu-button
+  $font14-small()
+  position relative
+  width auto
+  height auto
+  color alpha($color-white, 0.4)
+  transition color 0.3s
+
+  &:hover
+    color $color-white
+
+  .theme_light &
+    color alpha(#111, 0.4)
+
+.review-card__menu-content
+  min-width 120px
+
+.review-card__menu-content-item
+  display block
+  color black
+  white-space nowrap
+  border-radius 4px
+  cursor pointer
+
+  @media $bp.desktop
+    padding 5px 10px
+
+  @media $bp.phone
+    text-align center
+    & + .review-card__menu-content-item
+      margin-top 10px
+
+  &:not(.not-hover):hover
+    color black
+    background-color alpha($color-black, 0.1)

@@ -1,0 +1,180 @@
+.card-template
+  position relative
+  display flex
+  flex-direction column
+  flex 0 1 auto
+  justify-content space-between
+  box-sizing border-box
+  width 100%
+  padding 32px 24px
+  font-size 0
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  border-radius 6px
+  box-shadow 0 10px 20px 0 rgba($color-black, 0.2)
+  overflow hidden
+
+  @media $bp.phone
+    max-width calc(100vw - 20px)
+
+  &.card-template_fixed-height
+    &.card-template_big
+      $card-height-big()
+
+    &.card-template_medium
+      $card-height-medium()
+
+    &.card-template_small
+      $card-height-small()
+
+  &.card-template_small
+    padding 16px 24px 32px
+
+.card-template__image-wrapper
+  display flex
+  flex 0 1 auto
+  align-items center
+  justify-content center
+  max-width 100%
+  height 128px
+
+  @media $bp.phone
+    height 96px
+
+  a
+    $remove-link-style()
+
+  img
+    max-width 100%
+
+.card-template__first-part
+  flex 1 1 auto
+
+.card-template__heading-wrapper
+  margin-bottom 16px
+
+  .card-template_fixed-height &
+    margin-top 16px
+    flex 0 0 auto
+
+  .card-template_small &
+    flex-grow 2
+    margin-bottom 16px
+
+  .heading
+    font-weight bold
+
+  &_centered
+    display flex
+    flex 0 1 auto
+    flex-direction column
+    justify-content center
+    flex-grow 2
+
+  &_with-notice
+    .card-template_fixed-height &
+      margin-bottom 16px
+
+.card-template__heading-notice
+  $font12-small()
+  display block
+  width 100%
+  margin-top 8px
+  text-align center
+
+  .card-template_fixed-height &
+    min-height 30px
+
+.card-template__items-wrapper
+  width 100%
+
+.card-template__items-list
+  width 100%
+  box-sizing border-box
+  margin 8px 0 0
+  padding 8px 0 0
+  font-size 0
+  list-style none
+  border-top 1px solid alpha($color-white, 0.1)
+
+  .card-template_fixed-height &
+    min-height 68px
+
+  &_big
+    .card-template_fixed-height &
+      min-height 72px
+
+    @media $bp.desktop
+      .card-template__item
+        display inline-flex
+        width calc(50% - 8px)
+
+        &:nth-child(2n + 1)
+          margin-right 16px
+
+    @media $bp.phone
+      .card-template__item
+        &:nth-child(n + 4)
+          display none
+
+.card-template__item
+  $font14-small()
+  display flex
+  flex 0 1 auto
+  justify-content space-between
+  width 100%
+  margin-bottom 6px
+
+  a
+    max-width 80%
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+    text-align left
+
+  &:nth-child(3n)
+    margin-bottom 0
+
+.card-template__count
+  min-width 56px
+  text-align right
+  color $color-white
+  opacity 0.4
+
+  &_icon
+    padding-right 12px
+    background url('~assets/icons/user.svg?external') no-repeat right / 9px 16px
+
+.card-template__image
+  max-height 128px
+
+  @media $bp.phone
+    max-height 96px
+
+.card-template__avatar
+  max-width 128px
+  max-height 128px
+  margin-bottom 16px
+
+  @media $bp.phone
+    max-width 96px
+    max-height 96px
+
+.card-template__small-image
+  position absolute
+  top 24px
+  right 24px
+  width auto
+  height 24px
+
+  @media $bp.phone
+    top 16px
+    right 16px
+    height 16px
+
+  .card-template__image
+    height 100%
+
+.button-follow__wrapper.card-template__button-follow
+  margin-bottom 24px

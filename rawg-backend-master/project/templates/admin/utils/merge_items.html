@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="action" value="merge_elements">
+        <input type="submit" name="apply" value="Continue">
+    </form>
+{% endblock %}

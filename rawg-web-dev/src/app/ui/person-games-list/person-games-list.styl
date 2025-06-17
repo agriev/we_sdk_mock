@@ -1,0 +1,106 @@
+.person-games-list
+  display flex
+
+  &:not(:first-child)
+    margin-top 38px
+
+  @media $bp.phone
+    flex-direction column
+    margin 0 10px
+
+    &:not(:first-child)
+      margin-top 24px
+
+.person-game-list__profession
+  $font18-large()
+  width 250px
+  padding-right 32px
+  box-sizing border-box
+
+  @media $bp.phone
+    font-size 14px
+    width 150px
+
+.person-game-list__games-container
+  display flex
+  flex-direction column
+  flex 1
+
+  @media $bp.phone
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+
+.person-game-list__name
+  $font24-large()
+  margin 0
+  margin-bottom 8px
+  color $color-white
+  font-weight normal
+  transition all 0.3s
+  align-self flex-start
+
+  @media $bp.phone
+    margin-bottom 0
+    font-size 22px
+
+  &:hover
+    opacity 0.4
+    transition all 0.3s
+
+.person-game-list__game-counter
+  font-size 14px
+  opacity 0.4
+
+  @media $bp.phone
+    font-size 12px
+    align-self flex-end
+    padding-bottom 2px
+
+.person-game-list__games
+  margin-top 6px
+
+  > div > div:last-child
+    border-bottom none
+
+  @media $bp.phone
+    flex-basis 100%
+
+.person-games-list__button-wrap
+  position relative
+  border-bottom 1px solid rgba(255,255,255,0.1)
+  width 100%
+
+.person-games-list__button
+  cursor pointer
+  display inline
+  font-size 12px
+  line-height 1.4
+  letter-spacing 1px
+  position relative
+  bottom -8px
+  margin-left 56px
+  padding 0 12px
+  background-color #151515
+  border none
+  color $color-white
+  transition 0.3s
+  text-transform uppercase
+
+  &:hover
+    color alpha($color-white, 0.4)
+
+  .person-games-list__button-icon-svg > path
+    fill alpha($color-white, 0.4)
+    transition 0.3s
+
+.person-games-list__button-icon-svg > path
+  fill $color-white
+  transition 0.3s
+
+.game-card_inline-container
+  .game-card-compact
+    padding 16px 0
+
+    &:not(:last-child)
+      border-bottom 1px solid rgba(white, 0.1)

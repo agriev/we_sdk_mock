@@ -1,0 +1,13 @@
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+.idea
+*.log
+*.cache-loader
+build
+tmp
+node_modules
+docker/production/logs
+docker/develop/env
+package-lock.json
+yarn-error.log

@@ -1,0 +1,118 @@
+
+.profile-apikey
+  @media $bp.phone
+    padding 0 8px
+
+  &,
+  &__content
+    max-width: 100%;
+
+  &__title
+    display flex
+    align-items flex-end
+    margin-bottom 16px
+
+  &__field
+    margin-bottom 16px
+
+    &._plan
+      text-transform capitalize
+
+  &__label
+    margin-bottom 4px
+
+  &__field-value
+    font-size 16px
+
+  &__api-key-copy-subcontainer
+    max-width 100%
+    display flex
+    align-items center
+    cursor pointer
+    margin-bottom 16px
+    transition opacity .15s
+
+    &.copied
+      opacity .3
+
+    .SVGInline
+      margin-left 10px
+
+  &__api-key-field
+    display flex
+    align-items flex-start
+    flex-wrap wrap
+    min-height 68px
+
+    @media $bp.phone
+      flex-direction column
+
+  &__api-key-copy
+    font-size 18px
+    font-weight bold
+    padding-bottom 4px
+    border-bottom 1.5px solid alpha($color-white, 40%)
+    display inline-block
+    $line-clamp(1, 24px)
+
+  &__edit-button
+    background none
+    margin-left 16px
+    margin-bottom -2px
+
+    @media $bp.desktop
+      margin-bottom 4px
+
+    .button
+      min-width 56px
+
+  &__manage-button
+    margin-bottom 24px
+
+  &__refresh-button
+    display block
+    border-radius 4px
+    white-space nowrap
+    cursor pointer
+    color black
+    position relative
+
+    &:not(.not-hover):hover
+      background-color alpha(black, 0.1)
+
+    .confirm-content
+      width 100px
+      top -10px
+      padding 16px
+      background-color #fff
+      box-shadow 0 2px 5px 0 rgba(0,0,0,.5)
+      border-radius 4px
+      cursor auto
+      position absolute
+
+    @media $bp.desktop
+      padding 5px 10px
+      margin-top -4px
+      margin-left 16px
+
+      &:hover
+        color black
+
+    @media $bp.phone
+      text-align center
+
+      & + &__refresh-button
+        margin-top 10px
+
+  &__policy
+    margin-top 16px
+
+  &__inputs
+    @media $bp.desktop
+      display flex
+
+      .input:first-child
+        margin-right 16px
+
+  .input
+    margin-bottom 16px

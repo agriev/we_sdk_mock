@@ -1,0 +1,248 @@
+.stories__info__top
+  position absolute
+  pointer-events auto
+  box-sizing border-box
+
+  margin auto
+  max-width $header-width-desktop
+
+  display flex
+  align-items center
+
+  left 0
+  width 100%
+
+  transition top .3s
+
+  @media $bp.desktop
+    top 0px
+    .stories__info-wrap.active &
+      top 50px
+
+  @media $bp.desktop
+    top -10px
+    .stories__info-wrap.active &
+      top 60px
+
+  @media (min-width: $page-width-desktop)
+    padding 0 16px
+
+  @media (min-width: $header-width-desktop)
+    // left calc(50% - $header-width-desktop / 2)
+    padding 0 32px
+
+  @media $bp.phone
+    padding 0 16px
+    position relative
+    transition opacity .3s, top .3s
+    opacity 0
+    top 30px
+    .stories__content.non-first-play &
+      opacity 1
+      pointer-events none
+
+  > * + *
+    @media $bp.desktop
+      margin-left 12px
+    @media $bp.phone
+      margin-left 8px
+
+  > .platforms
+    opacity .4
+    pointer-events auto
+    position relative
+    z-index 4
+
+.stories__info__top__avatar
+  width 36px
+  height 36px
+  background-position center
+  background-size cover
+  background-repeat no-repeat
+  border-radius 2.6px
+  pointer-events auto
+  position relative
+  z-index 4
+
+  @media $bp.phone
+    width 24px
+    height 24px
+
+.stories__info__top__name-wrap
+  position relative
+  z-index 4
+
+.stories__info__top__name
+  font-size 18px
+  line-height 22px
+  letter-spacing 0
+  font-weight bold
+  flex 0 0 auto
+  pointer-events auto
+
+  @media $bp.phone
+    font-size 16px
+    line-height 22px
+
+.stories__info__top__wishlist-btn
+  height 36px
+  display flex
+  justify-content center
+  align-items center
+  border-radius 4px
+  font-size 14px
+  color white
+  border 1px solid alpha(white, 20%)
+  transition border-color .3s, background-color .3s, color .3s
+  position relative
+  background-image none
+  z-index 4
+
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+  @media $bp.desktop
+    background-color alpha(black, 40%)
+    padding 0 16px 0 16px
+
+  @media $bp.phone
+    border 1px solid transparent
+    padding 0 19px 0 19px
+    pointer-events auto
+
+  &.added
+    @media $bp.desktop
+      background-color white
+      color black
+
+  &.added-to-another
+    @media $bp.desktop
+      background-color transparent
+      border 1px solid transparent
+      color alpha(white, 50%)
+    @media $bp.phone
+      display none
+
+  &.not-added-to-another
+    cursor pointer
+
+    @media $bp.desktop
+      padding 0 16px 0 46px
+      &:hover
+        border-color alpha(white, 40%)
+
+    &:before
+      content ''
+      width 30px
+      height 30px
+      left 12px
+      top center
+      background-size contain
+      background-repeat no-repeat
+      transition opacity .3s
+      display block
+      position absolute
+      background-image url('~assets/icons/icon-game-wishlist-white.svg?external')
+
+    &.added
+      @media $bp.desktop
+        padding-left 38px
+      &:before
+        @media $bp.desktop
+          width 20px
+          height 16px
+          background-image url('~assets/icons/check-bold-black.svg?external')
+        @media $bp.phone
+          background-image url('~assets/icons/icon-game-wishlist.svg?external')
+
+.stories__info__top__watch-full-btn
+  position relative
+  pointer-events auto
+  z-index 4
+
+  padding 8px 16px
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  border-radius 4px
+  background-color alpha(black, 40%)
+  font-size 14px
+  color white
+  cursor pointer
+  border-width 1px
+  border-style solid
+  border-color alpha(white, 20%)
+  transition opacity .3s, border-color .3s, background-color .3s
+
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+  @media $bp.phone
+    display none
+
+  &:hover
+    border-color alpha(white, 40%)
+
+  .embedded-stories &
+    display none
+
+  .stories__content.first-play &
+    opacity 0
+    pointer-events none
+
+  .SVGInline
+    margin-right 6px
+    transform translateY(2px)
+
+.stories__info__top__muted-btn
+  width 111px
+  height 36px
+  padding 0 16px
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  border-radius 4px
+  background-color alpha(black, 40%)
+  font-size 14px
+  color white
+  cursor pointer
+  border-width 1px
+  border-style solid
+  border-color alpha(white, 20%)
+  transition border-color .3s, background-color .3s
+  position relative
+  z-index 4
+
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+  @media $bp.phone
+    display none
+
+  &.not-muted
+    &:hover
+      border-color alpha(white, 40%)
+
+  &.muted
+    background-color white
+    color black
+
+.stories__info__top__muted-btn__icon-mute
+.stories__info__top__muted-btn__icon-unmute
+  position relative
+  top 2px
+  margin-right 5px
+  display none
+
+.stories__info__top__muted-btn__icon-mute
+  .stories__info__top__muted-btn.not-muted > &
+    display block
+
+.stories__info__top__muted-btn__icon-unmute
+  .stories__info__top__muted-btn.muted > &
+    display block

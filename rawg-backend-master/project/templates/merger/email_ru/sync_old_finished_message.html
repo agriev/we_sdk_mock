@@ -1,0 +1,24 @@
+{% extends 'mailer/template_ru.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Привет!
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        {% with titles=services|join:', ' %}
+            Синхронизация успешно завершилась, и мы импортировали в ваш профиль на AG.ru новые игры из {{ titles }}.
+            Можете посмотреть свою библиотеку <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/@{{ user_slug }}">по этой ссылке</a>.
+        {% endwith %}
+    </div>
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Хотите изменить настройки получения писем? Можно сделать это
+        <a style="color: #f1951b !important; text-decoration: none !important;" href="https://ag.ru/settings/notifications">в настройках профиля</a>.
+    </div>
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Команда AG.ru
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+.game-persons
+  display grid
+  position relative
+  margin-top 48px
+
+  overflow hidden
+
+  @media $bp.phone
+    margin-top 32px
+    padding 0 10px
+    border-bottom none
+
+.game-persons__games-counter
+  color alpha($color-white, 0.4)
+  font-weight normal
+
+  @media $bp.phone
+    margin-left 0.3em
+
+  @media $bp.desktop
+    flex 1 0 auto
+    text-align right
+    font-size 14px
+    line-height 1.43

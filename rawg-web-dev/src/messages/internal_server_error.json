@@ -1,0 +1,11 @@
+{
+  "ru": {
+    "text": "Ой! Что-то пошло не так.<br/> Мы посмотрим и починим.",
+    "link": "Вернуться на главную"
+  },
+
+  "en": {
+    "text": "Whoops! Something went wrong.<br/> We are looking into it.",
+    "link": "Main page"
+  }
+}

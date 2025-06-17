@@ -1,0 +1,115 @@
+{% extends 'stat/index.html' %}
+
+{% load utils %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="input-daterange input-group" id="datepicker">
+                <input type="text" class="input-sm form-control" name="start" value="{{ start_date|date:'d/m/Y' }}">
+                <span class="input-group-addon">to</span>
+                <input type="text" class="input-sm form-control" name="end" value="{{ end_date|date:'d/m/Y' }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="period">Group by</label>
+            <select class="form-control" id="period" name="period">
+                <option value="day"{% if period == 'day' %} selected{% endif %}>Day</option>
+                <option value="week"{% if period == 'week' %} selected{% endif %}>Week</option>
+                <option value="month"{% if period == 'month' %} selected{% endif %}>Month</option>
+            </select>
+        </div>
+        {% block checkboxes %}{% endblock %}
+        {% block common_checkboxes %}
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="users"{% if is_users %} checked{% endif %}> Show users count
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="middle"{% if is_middle %} checked{% endif %}> Show middle
+                </label>
+            </div>
+        {% endblock %}
+        <button class="btn btn-primary">Show</button>
+        <div class="form-group earliest-date">
+            Earliest date: {{ min_date|date:'d/m/Y' }}
+        </div>
+    </form>
+
+    <br><br>
+
+    <canvas id="chart"></canvas>
+
+    <br><br>
+
+    {% block table %}
+        <table class="table table-striped">
+            <tr>
+                <th>{{ period|capfirst }}</th>
+                <th>Count</th>
+                {% if users_points %}<th>Users</th>{% endif %}
+                {% if middle_points %}<th>Middle</th>{% endif %}
+            </tr>
+            {% for label, point in points %}
+                <tr>
+                    <td>{{ label }}</td>
+                    <td>{{ point }}</td>
+                    {% if users_points %}<td>{{ users_points|get:forloop.counter0 }}</td>{% endif %}
+                    {% if middle_points %}<td>{{ middle_points|get:forloop.counter0 }}</td>{% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endblock %}
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: [{% for p, _ in points %}'{{ p }}'{% if not forloop.last %},{% endif %}{% endfor %}],
+                    datasets: [
+                        {
+                            label: 'Count',
+                            fill: false,
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            borderWidth: 3,
+                            data: [{% for _, p in points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% if users_points %}, {
+                            label: 'Users',
+                            fill: false,
+                            backgroundColor: 'rgb(75, 192, 192)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            borderWidth: 3,
+                            data: [{% for p in users_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% endif %}{% if middle_points %}, {
+                            label: 'Middle',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            borderWidth: 3,
+                            data: [{% for p in middle_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% endif %}
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+{% endblock %}

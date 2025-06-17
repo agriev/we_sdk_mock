@@ -1,0 +1,23 @@
+.discover-main__games-list
+  @media $bp.phone
+    overflow auto
+
+  .load-more
+    @media $bp.phone
+      display flex
+      flex-direction row
+      align-items flex-start
+
+  .load-more__bottom
+    flex 0 0 auto
+    align-self center
+    .load-more__button
+      padding 0 10px
+
+
+.discover-main__game-card-medium
+  @media $bp.phone
+    width 264px
+    flex 0 0 auto
+    & + &
+      margin-left 8px

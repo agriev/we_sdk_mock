@@ -1,0 +1,28 @@
+.section-wrapper
+  margin-bottom 40px
+
+  @media $bp.phone
+    overflow hidden
+
+.section-wrapper__items
+  box-sizing border-box
+
+  @media $bp.desktop
+    display grid
+    grid-gap 0 24px
+
+  @media $bp.phone
+    padding-bottom 16px
+    font-size 0
+    white-space nowrap
+    overflow auto
+
+.section-wrapper__card-wrapper
+  @media $bp.phone
+    display inline-block
+    vertical-align top
+    width 264px
+    margin-right 10px
+
+    .collection-card-new
+      margin 0

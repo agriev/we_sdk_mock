@@ -1,0 +1,48 @@
+.follow-button
+  position relative
+  min-width 66px
+  min-height 27px
+  $font12-small()
+  padding 5px 14px
+  border 1px solid alpha($color-white, 0.4)
+  border-radius 4px
+  box-sizing border-box
+  flex 0
+  color $color-white
+  cursor pointer
+  transition 0.3s
+
+  .loading_small svg
+    width 14px
+    height 14px
+
+  &:hover:not(.button_loading)
+    background-color $color-white
+    transition 0.3s
+    color $color-black
+    .follow-button__checked-icon
+      background-color $color-black
+      transition 0.3s
+
+.follow-button__checked
+  min-width 84px
+  color #55a26a
+  border 1px solid alpha(#55a26a, 0.4)
+  &:hover
+    border 1px solid $color-white
+
+.follow-button__checked-icon
+  background-color #55a26a
+  -webkit-mask url('~assets/icons/check.svg?external') no-repeat center / cover
+  width 7px
+  height 5px
+  top 5px !important
+  transition 0.3s
+
+.follow-button__sign
+  position absolute
+  top 0
+  left 3px
+  display inline-block
+  font-size 12px
+  line-height 1

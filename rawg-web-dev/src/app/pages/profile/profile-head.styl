@@ -1,0 +1,171 @@
+.profile-head
+  padding-top 32px
+
+  @media $bp.phone
+    padding-top 16px
+
+.profile-head__top
+  display flex
+
+  @media $bp.desktop
+    margin-bottom 32px
+    justify-content space-between
+
+  @media $bp.phone
+    margin-bottom 8px
+    flex-direction column
+
+.profile-head__name-wrapper
+  flex-grow 1
+
+.profile-head__name.heading
+  display flex
+  align-items baseline
+  flex-wrap wrap
+  flex-grow 1
+  margin 0
+
+  @media $bp.phone
+    flex-direction column-reverse
+    align-items center
+    flex-grow 1
+    margin-bottom 16px
+    padding 0 10px
+    text-align center
+
+.profile-head__name__word
+  display flex
+  padding-right 10px
+
+.profile-head__name__single-word
+  display flex
+  flex-wrap wrap
+
+  @media $bp.desktop
+    margin-left -24px
+    margin-top -24px
+
+  .profile-head__avatar
+    @media $bp.desktop
+      margin-top 24px
+      margin-bottom 0
+
+  @media $bp.phone
+    display flex
+    justify-content center
+    flex-wrap wrap
+    > div
+      margin-top 16px
+
+.profile-head__name__single-word__name
+  @media $bp.desktop
+    margin-top 24px
+    margin-left 24px
+
+.profile-head__name__last-word
+  white-space nowrap
+  display flex
+  @media $bp.phone
+    display flex
+    justify-content center
+    flex-wrap wrap
+    > div
+      margin-top 16px
+
+.profile-head__avatar
+  flex-shrink 0
+
+  @media $bp.desktop
+    margin: -8px 0 14px 24px;
+
+  @media $bp.phone
+    margin 0 auto
+
+.profile-head__controls
+  position relative
+  flex-shrink 0
+
+  @media $bp.desktop
+    padding-top 28px
+
+  @media $bp.phone
+    display flex
+    flex-wrap wrap
+    justify-content center
+    width 100%
+
+.profile-head__buttons
+  display flex
+  justify-content space-between
+
+  a
+    $remove-link-style()
+
+  @media $bp.phone
+    margin 0 16px 8px
+
+.profile-head__button
+  padding 0 16px
+  width auto
+  margin-right 8px
+
+.profile-head__share-button
+  width 50px
+  padding 0
+
+.profile-head__share-icon
+  display block
+  height 20px
+  line-height 0
+
+.profile-head__bio
+  $font16-paragraph()
+
+  @media $bp.desktop
+    margin-top 10px
+    margin-bottom 30px
+    max-width calc(100% - 248px)
+
+  @media $bp.phone
+    $font14-paragraph()
+    padding 0 10px
+    margin-top 15px
+    margin-bottom 24px
+
+.profile-head__tabs
+  display flex
+  justify-content flex-start
+  width 100%
+
+  .tab__counter
+    margin-right 6px
+
+.profile-head__tabs-inner.tabs
+  .tabs__list
+    flex-wrap nowrap
+
+.profile-head__button-icon
+  position relative
+  margin-left 4px
+
+.profile-head__share-content
+  padding 10px 0 0
+  min-width 120px
+
+.profile-head__share-title
+  margin-bottom 8px
+  padding 5px 10px
+  font-size 18px
+  color alpha($color-black, 0.5)
+
+.profile-head__share-item
+  display block
+  padding 5px 10px
+
+  border-radius 4px
+  white-space nowrap
+  cursor pointer
+  color $color-black
+
+  &:not(.not-hover):hover
+    background-color alpha($color-black, 0.1)

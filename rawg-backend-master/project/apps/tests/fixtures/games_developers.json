@@ -1,0 +1,74 @@
+[
+  {
+    "model": "games.developer",
+    "pk": 6,
+    "fields": {
+      "synonyms": "[\"sony interactive entertainment\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "sony-interactive-entertainment",
+      "name": "Sony Interactive Entertainment"
+    }
+  },
+  {
+    "model": "games.developer",
+    "pk": 10,
+    "fields": {
+      "synonyms": "[\"rockstar games\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "rockstar-games",
+      "name": "Rockstar Games"
+    }
+  },
+  {
+    "model": "games.developer",
+    "pk": 1638,
+    "fields": {
+      "synonyms": "[\"take-two interactive software\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "take-two-interactive-software",
+      "name": "Take-Two Interactive Software"
+    }
+  },
+  {
+    "model": "games.developer",
+    "pk": 3524,
+    "fields": {
+      "synonyms": "[\"rockstar north\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "rockstar-north",
+      "name": "Rockstar North"
+    }
+  },
+  {
+    "model": "games.developer",
+    "pk": 8796,
+    "fields": {
+      "synonyms": "[\"rockstar toronto\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "rockstar-toronto",
+      "name": "Rockstar Toronto"
+    }
+  },
+  {
+    "model": "games.developer",
+    "pk": 8798,
+    "fields": {
+      "synonyms": "[\"rockstar north / toronto\"]",
+      "merge_with": null,
+      "hidden": false,
+      "added": "2017-05-25T20:46:04.741Z",
+      "slug": "rockstar-north-toronto",
+      "name": "Rockstar North / Toronto"
+    }
+  }
+]

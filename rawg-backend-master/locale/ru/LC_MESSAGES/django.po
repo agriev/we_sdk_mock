@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-11 15:42+0000\n"
+"PO-Revision-Date: 2019-09-11 18:43+0300\n"
+"Last-Translator: Anton Shurashov <sinkler@sinkler.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Poedit 2.2\n"
+
+#: api/auth/serializers.py:42 api/feedback/serializers.py:48
+msgid "Don't forget to add your email."
+msgstr "Не забудь добавить электронную почту."
+
+#: api/auth/serializers.py:43
+msgid "That doesn't look like a valid email address."
+msgstr "Не похоже на настоящий адрес электронной почты."
+
+#: api/auth/serializers.py:82 api/auth/serializers.py:134
+msgid "You already connected this social provider."
+msgstr "Ты уже подключил такой социальный аккаунт."
+
+#: api/auth/serializers.py:131
+msgid "Steam user is not found."
+msgstr "Пользователь Steam не найден."
+
+#: api/auth/serializers.py:170
+msgid "Verify password does not equals to new password."
+msgstr "Повтор пароля не совпадает с новым паролем."
+
+#: api/auth/serializers.py:200
+msgid "Old password does not match."
+msgstr "Старый пароль не совпадает."
+
+#: api/auth/serializers.py:211
+msgid "Verify email does not match to new e-mail."
+msgstr "Повтор электронного адреса не совпадает с новым адресом."
+
+#: api/auth/serializers.py:218
+msgid "Your current e-mail is not confirmed."
+msgstr "Электронная почта не подтверждена."
+
+#: api/auth/serializers.py:241
+msgid "Password does not match."
+msgstr "Пароль не совпадает."
+
+#: api/auth/validators.py:17
+#, python-format
+msgid "Your password is too short. You need %(min_length)d+ character."
+msgid_plural "Your password is too short. You need %(min_length)d+ characters."
+msgstr[0] ""
+"Пароль слишком короткий. Должно быть минимум %(min_length)d+ символов."
+msgstr[1] ""
+"Ваш пароль слишком короткий. Должен быть минимум %(min_length)d+ символа."
+msgstr[2] ""
+"Ваш пароль слишком короткий. Должен быть минимум %(min_length)d+ символов."
+msgstr[3] ""
+"Ваш пароль слишком короткий. Должен быть минимум %(min_length)d+ символов."
+
+#: api/auth/validators.py:62
+msgid "This password is not safe. Please, create another."
+msgstr "Этот пароль небезопасен. Пожалуйста, выбери другой."
+
+#: api/auth/views.py:80
+msgid "This social account is not connected."
+msgstr "Этот аккаунт соцсети не подключен."
+
+#: api/auth/views.py:90
+msgid "This social account is already connected to another AG account."
+msgstr "Этот аккаунт соцсети уже подключен к другому аккаунту AG."
+
+#: api/common/views.py:186
+msgid "Related pages"
+msgstr "Связанные страницы"
+
+#: api/feedback/serializers.py:52
+msgid "Don't forget to add your name."
+msgstr "Не забудь добавить своё имя."
+
+#: api/users/serializers.py:66 apps/users/models.py:303
+msgid "A user with that username already exists."
+msgstr "Пользователь с таким никнеймом уже существует."
+
+#: api/users/serializers.py:73
+#, python-format
+msgid "Full name is too long. Must be %(length)d+ character."
+msgid_plural "Full name is too long. Must be %(length)d+ characters or less."
+msgstr[0] ""
+"Полное имя слишком длинное. Должно быть %(length)d+ символов или меньше."
+msgstr[1] ""
+"Полное имя слишком длинное. Должен быть %(length)d+ символа или меньше."
+msgstr[2] ""
+"Полное имя слишком длинное. Должен быть %(length)d+ символов или меньше."
+msgstr[3] ""
+"Полное имя слишком длинное. Должен быть %(length)d+ символов или меньше."
+
+#: apps/users/models.py:297
+#, python-format
+msgid "Required. %(length)d+ character. Letters, digits and -/_ only."
+msgid_plural ""
+"Required. %(length)d+ characters or fewer. Letters, digits and -/_ only."
+msgstr[0] ""
+"Это обязательное поле. %(length)d+ символов или меньше. Только буквы, цифры "
+"и знаки - или _."
+msgstr[1] ""
+"Обязательно. %(length)d+ символа или меньше. Только буквы, цифры и знаки «-/"
+"_»."
+msgstr[2] ""
+"Обязательно. %(length)d+ символов или меньше. Только буквы, цифры и знаки «-/"
+"_»."
+msgstr[3] ""
+"Обязательно. %(length)d+ символов или меньше. Только буквы, цифры и знаки «-/"
+"_»."
+
+#: apps/users/validators.py:10
+msgid ""
+"Enter a valid username. This value may contain only letters, numbers, and -/"
+"_ characters."
+msgstr "Введи никнейм. Он может включать только буквы, цифры и знаки - или _."
+
+#: settings.py:434
+msgid "English"
+msgstr "Английский"
+
+#: settings.py:435
+msgid "Russian"
+msgstr "Русский"
+
+#: templates/collections/share.html:128 templates/users/share.html:268
+#: templates/users/share.html:295
+msgid "game"
+msgid_plural "games"
+msgstr[0] "игра"
+msgstr[1] "игры"
+msgstr[2] "игр"
+msgstr[3] "игр"

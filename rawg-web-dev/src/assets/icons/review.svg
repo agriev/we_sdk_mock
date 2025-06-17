@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="map3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sidebar-browse-icons" transform="translate(-42.000000, -85.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-16-Copy-32" transform="translate(36.000000, 78.000000)">
+                <path d="M16.5,7 C10.7007692,7 6,10.6190818 6,15.0855269 C6,17.2750876 7.13238462,19.2657443 8.97069231,20.7211392 C8.86407692,22.2056419 8.50707692,24.0216512 7.47323077,25 C9.53123077,25 11.6344615,23.7095499 12.9639231,22.7004761 C14.0688462,23.004492 15.2577692,23.1710538 16.5,23.1710538 C22.2992308,23.1710538 27,19.5535891 27,15.0855269 C27,10.6190818 22.2992308,7 16.5,7 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

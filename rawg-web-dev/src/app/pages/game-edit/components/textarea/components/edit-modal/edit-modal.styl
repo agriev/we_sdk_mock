@@ -1,0 +1,49 @@
+.game-edit__textarea
+  .game-edit__modal-content
+    @media $bp.desktop
+      flex 1 0 auto
+
+.game-edit__textarea__modal__add-btn
+  flex 0 0 auto
+  padding 15px 57px
+  font-size 16px
+  background-color white
+  color #1a1a1a
+  box-sizing border-box
+  border-radius 4px
+  cursor pointer
+
+  transition background-color .3s, color .3s
+
+  &[disabled]
+    background-color alpha(white, 5%)
+    color alpha(white, 20%)
+    cursor not-allowed
+
+.game-edit__textarea__modal__items
+  display flex
+  flex-wrap wrap
+  margin-top -12px
+
+.game-edit__textarea__modal__textarea
+  flex 1 1 auto
+  position relative
+  padding 16px 20px
+  font-size 18px
+  line-height 24px
+  background alpha(black, 40%)
+  border none
+  border-radius 4px
+  width 100%
+  max-width 100%
+  min-width 100%
+  box-sizing border-box
+  font-family $font-family-system
+  background-color alpha(black, 40%)
+  color white
+
+  @media $bp.desktop
+    height 100px
+
+  @media $bp.phone
+    min-height 100%

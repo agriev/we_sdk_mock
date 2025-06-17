@@ -1,0 +1,66 @@
+.category-container__header
+  display flex
+  align-items center
+  padding 24px 0 20px 0
+  position sticky
+  top 48px
+  background-color rgba(black, 0)
+  z-index 5
+
+  .category-container.available &
+    cursor pointer
+    &:hover
+      .category-container__arrow-icon, .category-container__title
+        opacity 1
+        color $color-white
+        transition 0.3
+
+  @media $bp.phone
+    padding 10px 10px
+
+.category-container__title
+  $font20-large()
+  margin 0
+  color #727272
+  opacity 0.8
+  transition opacity .3s, color .3s
+
+.category-container__emoji
+  $font24-large()
+  margin-right 15px
+
+.category-container__arrow-icon
+  margin-left auto
+  width 30px
+  height 30px
+  border-radius 50%
+  background url('~assets/icons/arrow-dropdown.svg?external') no-repeat center / 12px, #282828
+  transform rotate(-90deg)
+  opacity 0.5
+  flex 0 0 auto
+
+  transition transform .3s, opacity .3s
+
+  .category-container.unavailable &
+    opacity 0.25
+
+  &_opened
+    transform rotate(0deg)
+
+.category-container__content
+  position static
+
+.category-container__icon
+  width 30px
+  height 30px
+
+.category-container__icon_yet
+  background url('~assets/icons/emoji/yet.png') no-repeat center / contain
+.category-container__icon_owned
+  background url('~assets/icons/emoji/owned.png') no-repeat center / contain
+.category-container__icon_dropped
+  background url('~assets/icons/emoji/dropped.png') no-repeat center / contain
+.category-container__icon_beaten
+  background url('~assets/icons/emoji/beaten.png') no-repeat center / contain
+.category-container__icon_playing
+  background url('~assets/icons/emoji/playing.png') no-repeat center / contain

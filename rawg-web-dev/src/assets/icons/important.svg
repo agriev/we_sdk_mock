@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>exclamation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ImportFocus2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-160.000000, -522.000000)">
+        <g id="exclamation" transform="translate(160.000000, 522.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M8,0 C3.57803125,0 0,3.57834375 0,8 C0,12.4219687 3.57834375,16 8,16 C12.4219687,16 16,12.4216562 16,8 C16,3.57803125 12.4216562,0 8,0 Z M8,14.75 C4.26896875,14.75 1.25,11.7307812 1.25,8 C1.25,4.26896875 4.26921875,1.25 8,1.25 C11.7310313,1.25 14.75,4.26921875 14.75,8 C14.75,11.7310312 11.7307812,14.75 8,14.75 Z" id="Shape"></path>
+            <path d="M8,4.02740625 C7.6548125,4.02740625 7.375,4.30721875 7.375,4.65240625 L7.375,8.6771875 C7.375,9.022375 7.6548125,9.3021875 8,9.3021875 C8.3451875,9.3021875 8.625,9.022375 8.625,8.6771875 L8.625,4.65240625 C8.625,4.30721875 8.3451875,4.02740625 8,4.02740625 Z" id="Shape"></path>
+            <circle id="Oval" cx="8" cy="10.91125" r="1"></circle>
+        </g>
+    </g>
+</svg>

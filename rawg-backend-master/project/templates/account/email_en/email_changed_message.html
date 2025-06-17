@@ -1,0 +1,17 @@
+{% extends 'mailer/template_en.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Hi,
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        Your AG account email has been changed. If you authorized this change, no further action is necessary.
+        If not please contact our support team: <a style="color: #f1951b !important; text-decoration: none !important;" href="mailto:feedback@kanobu.ru">feedback@kanobu.ru</a>.
+    </div>
+        <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Team AG
+    </div>
+{% endblock %}

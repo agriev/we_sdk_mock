@@ -1,0 +1,35 @@
+.paginator
+  display flex
+  justify-content center
+  flex-wrap wrap
+  margin 32px 0
+  &.hidden
+    display none
+
+
+.paginator__link
+  $remove-link-style()
+  border-radius 16px
+  border: solid 2px rgba(255, 255, 255, .2)
+  color white
+  justify-content: center
+  align-items center
+  display flex
+  padding 4px 9px
+  margin 4px
+  &:hover
+    color rgba(255, 255, 255, .8)
+  &.paginator__link_active
+    border-color white
+    background-color white
+    color #0f2433
+  &.paginator__link_disabled
+    cursor default
+    pointer-events none
+    border-color rgba(255, 255, 255, .1)
+    color #6f7a82
+
+.paginator__ellipsis
+  display flex
+  align-items center
+  margin 0 12px

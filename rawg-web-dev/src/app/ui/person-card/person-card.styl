@@ -1,0 +1,28 @@
+.person-card
+  display flex
+  align-items center
+  // border-bottom 1px solid alpha($color-white, 0.1)
+  padding 16px 0
+  width 100%
+  box-sizing border-box
+
+  @media $bp.phone
+    border-bottom none
+
+.person-card__meta
+  margin-left 13px
+
+.person-card__name
+  margin 0
+  $font16-medium()
+  font-weight bold
+  cursor pointer
+
+.person-card__positions
+  $font12-small()
+  opacity 0.4
+  margin-top 4px
+
+.person-card__link
+  display flex
+  color $color-white

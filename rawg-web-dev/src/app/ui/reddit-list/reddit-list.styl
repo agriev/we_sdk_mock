@@ -1,0 +1,65 @@
+.reddit-list
+  .view-all-link
+    margin-top 16px
+
+.reddit-list__content
+  @media $bp.desktop
+    display flex
+
+.reddit-list__item
+  margin-top 16px
+
+  @media $bp.desktop
+    width 284px
+
+    &:not(:first-child)
+      margin-left 48px
+
+  @media $bp.phone
+    &:not(:last-child)
+      padding-bottom 16px
+      border-bottom 1px solid alpha($color-white, 0.1)
+
+.reddit-list__icon
+  width 56px
+  height 20px
+  padding-bottom 5px
+
+.reddit-list__title-and-count
+  margin 0
+  display flex
+  justify-content space-between
+  align-items flex-end
+  color inherit
+
+  a
+    .reddit-list__title:hover > span
+      color alpha($color-white, 0.4)
+
+  .reddit-list__title
+    margin 0
+    display flex
+    align-items flex-end
+
+    > span
+      font-size 24px
+      line-height 1.17
+      font-style normal
+      font-weight bold
+      transition color 0.3s
+      color $color-white
+
+    & > *:not(:first-child)
+        margin-left 8px
+
+    @media $bp.phone
+      > span
+        font-weight normal
+
+.reddit-list__count
+  padding-bottom 2px
+  font-size 14px
+  color alpha($color-white, 0.4)
+  transition color 0.3s
+  &:hover
+    color $color-white

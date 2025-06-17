@@ -1,0 +1,201 @@
+.tokens__stats__user-info
+  padding 24px 41px
+  background-color alpha($color-black, 30%)
+  border-bottom-left-radius 16px
+  border-bottom-right-radius 16px
+
+  display flex
+
+  @media $bp.phone
+    flex-direction column
+    padding 22px 24px
+
+  .tokens__stats__user-info__main
+    display flex
+    flex 1 1 auto
+
+    .tokens__stats__user-info__avatar
+      display flex
+      align-items center
+
+    .tokens__stats__user-info__name-and-coins
+      margin-left 16px
+      display flex
+      flex-direction column
+      justify-content center
+
+      @media $bp.phone
+        order -1
+        margin-left 0
+        flex 1 1 auto
+
+      .tokens__stats__user-info__name
+        font-size 24px
+        font-weight bold
+        @media $bp.phone
+          font-size 18px
+          font-weight normal
+
+      .tokens__stats__user-info__footer
+        margin-top 5px
+        display flex
+        align-items center
+
+        .tokens__stats__user-info__coins
+          padding-right 16px
+          background url('~app/pages/tokens/assets/coin.png') no-repeat right center / contain
+          background-size 12px
+          font-weight bold
+          @media $bp.phone
+            font-size 13px
+
+        .tokens__stats__user-info__link
+          margin-left 8px
+          opacity .4
+          @media $bp.phone
+            font-size 13px
+
+  .tokens__stats__user-info__secondary
+    display flex
+
+    @media $bp.phone
+      margin-top 18px
+
+    .tokens__stats__user-info__achievements
+      display flex
+      flex-direction column
+      padding 8px 0
+      @media $bp.phone
+        padding 2px 0
+
+      .tokens__stats__user-info__achievements-data
+        margin-bottom 4px
+        display flex
+        align-items center
+        font-size 13px
+
+        .tokens__stats__user-info__achievements-data-overall
+          font-size 24px
+          margin-right 8px
+          display flex
+          align-items center
+
+          span[aria-label="Cup"]
+            margin-left 0.1em
+            font-size 19px
+            @media $bp.phone
+              font-size 11px
+
+          @media $bp.phone
+            font-size 16px
+            margin-right 0
+
+      .tokens__stats__user-info__achievements-data-gold
+      .tokens__stats__user-info__achievements-data-silver
+      .tokens__stats__user-info__achievements-data-bronze
+        padding-left 12px
+        position relative
+        margin-right 8px
+        @media $bp.phone
+          display none
+        &::before
+          content ''
+          position absolute
+          left 0
+          top 3px
+          width 8px
+          height 8px
+          border-radius 50%
+
+      .tokens__stats__user-info__achievements-data-gold::before
+        background-image linear-gradient(to bottom, #fad961, #f76b1c)
+
+      .tokens__stats__user-info__achievements-data-silver::before
+        background-image linear-gradient(to bottom, #ffffff, #747474)
+
+      .tokens__stats__user-info__achievements-data-bronze::before
+        background-image linear-gradient(to bottom, #fa9393, #fd4100)
+
+      .tokens__stats__user-info__achievements-subtitle
+        font-size 14px
+        opacity .4
+        @media $bp.phone
+          display none
+
+    .tokens__stats__user-info__karma
+      display flex
+      flex-direction column
+      align-items center
+      margin-left 18px
+      padding 8px 0 8px 24px
+      border-left 1px solid alpha(#d8d8d8, 15%)
+      @media $bp.phone
+        margin-left 16px
+        padding 2px 0 2px 16px
+
+      .tokens__stats__user-info__karma-data
+        margin-bottom 4px
+        font-size 24px
+        padding 0 16px
+        position relative
+        text-align center
+        @media $bp.phone
+          font-size 16px
+          padding 0 13px
+
+        &::before
+        &::after
+          content ''
+          background url('~app/pages/tokens/assets/wreath.svg?external') no-repeat center / contain
+          top 2px
+          width 12px
+          height 24px
+          position absolute
+          @media $bp.phone
+            width 10px
+            height 18px
+            top 0
+
+        &::before
+          left 0
+
+        &::after
+          right 0
+          transform rotateY(180deg)
+
+      .tokens__stats__user-info__karma-subtitle
+        font-size 14px
+        opacity .4
+        @media $bp.phone
+          display none
+
+    .tokens__stats__user-info__place
+      display flex
+      flex-direction column
+      margin-left 24px
+      padding 8px 0 8px 24px
+      border-left 1px solid alpha(#d8d8d8, 15%)
+      @media $bp.phone
+        margin-left 16px
+        padding 2px 0 2px 16px
+
+      .tokens__stats__user-info__place-data
+        margin-bottom 4px
+        font-size 24px
+        font-weight bold
+        position relative
+        display flex
+        align-items center
+        @media $bp.phone
+          font-size 16px
+
+        .SVGInline
+          display flex
+          align-items center
+          margin-left 8px
+
+      .tokens__stats__user-info__place-subtitle
+        font-size 14px
+        opacity .4
+        @media $bp.phone
+          display none

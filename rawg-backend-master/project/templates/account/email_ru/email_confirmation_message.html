@@ -1,0 +1,20 @@
+{% extends 'mailer/template_ru.html' %}
+
+{% block body %}
+    <div class="orange-title orange-title-padding-bottom"
+         style="padding-bottom: 4px; color: #f1951b; font-size: 18px; font-weight: bold; text-align: left;">
+        Привет, {{ user }}!
+    </div>
+    <div class="text"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left;">
+        Нажмите на ссылку ниже, чтобы подтвердить свою новую электронную почту:
+    </div>
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        <a style="color: #f1951b !important; text-decoration: none !important;" href="{{ activate_url }}">Подтвердить почту</a>.
+    </div>
+    <div class="text text-margin-top"
+         style="color: white !important; font-size: 24px; line-height: 28px; font-weight: normal; text-align: left; margin-top: 24px;">
+        Команда AG.ru
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+.reviews-list.reviews-list_list
+  .load-more
+    @media $bp.desktop
+      display flex
+      flex-direction column
+      align-items center
+
+  .review-card
+    width 100%
+    max-width 714px
+
+    & + .review-card
+      margin-top 16px

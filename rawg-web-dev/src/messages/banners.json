@@ -1,0 +1,15 @@
+{
+  "ru": {
+    "start-import-text": "Начните свою библиотеку играми со Steam, PlayStation, Xbox или GOG. Чем полнее ваш профиль, тем точнее он отражает ваши интересы.",
+    "start-import-btn": "Импортировать игры",
+    "rate-games-text": "Расскажите, что вам нравится, и получите рекомендации специально для вас. Чем больше игр вы оцените, тем точнее рекомендации.",
+    "rate-games-btn": "Оценить игры"
+  },
+
+  "en": {
+    "start-import-text": "Jump-start your library with games from Steam, PlayStation, Xbox or GOG. The more complete your profile is, the better it shows your interests.",
+    "start-import-btn": "Import games",
+    "rate-games-text": "Tell us what you like to get recommendations tailored for you. The more you rate, the more personalized your recommendations get.",
+    "rate-games-btn": "Rate your games"
+  }
+}

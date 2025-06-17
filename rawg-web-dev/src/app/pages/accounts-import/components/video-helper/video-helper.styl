@@ -1,0 +1,45 @@
+.video-helper
+  display grid
+  grid-template-columns 532px 1fr
+  grid-template-rows auto 1fr
+  grid-column-gap 32px
+  @media $bp.phone
+    grid-template-columns 1fr
+
+  h2
+    grid-row auto
+
+.video-helper__video
+  width 532px
+  height 299px
+  grid-column 1
+  grid-row span 2
+  @media $bp.phone
+    width 100%
+    grid-row 1
+    height auto
+      
+
+.video-helper__help-title
+  margin-top 24px
+  font-size 24px
+  font-weight bold
+  margin-bottom 8px
+  @media $bp.phone
+    font-size 16px
+    font-weight normal
+
+.video-helper__help-text
+  font-size 14px
+  line-height 1.43
+  letter-spacing 0.1px
+  @media $bp.phone
+    font-size 12px
+    line-height 1.33
+
+.video-helper__read-more
+  @media $bp.phone
+    font-size 12px
+
+    .truncate-block__button
+      height 20px

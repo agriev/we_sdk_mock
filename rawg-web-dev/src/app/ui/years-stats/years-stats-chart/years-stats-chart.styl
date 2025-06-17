@@ -1,0 +1,81 @@
+.years-stats-chart
+  margin-bottom 48px
+  padding-top 40px
+
+  @media $bp.phone
+    margin-bottom 32px
+    padding-top 50px
+    padding-bottom 25px
+    overflow-x auto
+
+.years-stats-chart__chart
+  margin-bottom 16px
+  display flex
+  justify-content space-between
+  align-items flex-end
+  height 160px
+  width 100%
+  // width $page-width-desktop
+
+  @media $bp.phone
+    height 150px
+    width 800px
+
+.years-stats-chart__bar
+  position relative
+
+  width 8px
+  min-height 10px
+  border-radius 4px
+  background-image linear-gradient(to bottom, #fbda61, #f76b1c)
+  border none
+
+  &::after
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index 0
+
+    background-image linear-gradient(to bottom, #649bff, #4354ba)
+    border-radius 4px
+    opacity 0
+    transition opacity 0.3s
+    content ''
+
+  &:hover
+    color $color-white
+
+    &::after
+      opacity 1.0
+
+    .years-stats-chart__bar-tooltip
+      opacity 1.0
+
+  .years-stats-chart__bar-tooltip-max-value
+      opacity 1.0
+
+.years-stats-chart__bar-max-value
+  &::after
+    opacity 1.0
+
+.years-stats-chart__bar-link
+  cursor pointer
+
+.years-stats-chart__bar-tooltip
+  z-index 1
+  padding 4px 12px
+  opacity 0
+  transition all 0.3s
+  white-space nowrap
+  color $color-white
+  font-weight normal
+
+.years-stats-chart__bar__year-text
+  position absolute
+  bottom -30px
+  left -16px
+  color white
+  font-size 18px
+  font-variant-numeric proportional-nums

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="32px" viewBox="0 0 27 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-stories-hover-2" transform="translate(-275.000000, -646.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-10" transform="translate(239.000000, 622.000000)">
+                <g id="Group-8" transform="translate(3.000000, 0.000000)">
+                    <g id="music-player-play" transform="translate(33.000000, 24.000000)">
+                        <path d="M25.5404592,13.7327599 L4.33455265,0.316245778 C3.70764387,-0.0585410585 2.92918982,0.00390044085 2.34126552,0.00390044085 C-0.0104316892,0.00390044085 7.75674257e-07,1.82710952 7.75674257e-07,2.28901121 L7.75674257e-07,29.7108917 C7.75674257e-07,30.1013923 -0.0102944199,31.9961404 2.34126552,31.9961404 C2.92918982,31.9961404 3.70778114,32.0583062 4.33455265,31.6836572 L25.5403219,18.2672809 C27.2808963,17.2272784 26.9801394,15.9999515 26.9801394,15.9999515 C26.9801394,15.9999515 27.2810336,14.7726245 25.5404592,13.7327599 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

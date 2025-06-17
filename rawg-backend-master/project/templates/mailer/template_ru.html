@@ -1,0 +1,18 @@
+{% extends 'mailer/template_en.html' %}
+
+{% block logo %}
+    <img style="width: 104px; height: 41px;" src="{{ protocol }}://{{ current_site }}/assets/emails/common/assets/logo.png">
+{% endblock %}
+
+{% block exceptional %}Шедевр{% endblock %}
+{% block recommended %}Советую{% endblock %}
+{% block meh %}Так себе{% endblock %}
+{% block skip %}Ужасно{% endblock %}
+
+{% block unsubscribe %}
+    <a class="small-text" style="color:#4d4d4d; font-size: 12px; font-weight: normal;" href="{% block unsubscribe_link %}{{ protocol }}://{{ current_site }}/settings/notifications{{ utm }}{% endblock %}">Отписаться</a>
+{% endblock %}
+
+{% block copyright %}
+    <span>{{ year }} © Absolute Games</span>
+{% endblock %}

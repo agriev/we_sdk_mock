@@ -1,0 +1,74 @@
+.subpage-heading
+  position relative
+  display flex
+  flex 0 1 auto
+  justify-content space-between
+
+  @media $bp.phone
+    max-width 80%
+    margin 0 auto
+    padding 0 10px
+
+.heading.subpage-heading__title
+  max-width 900px
+  margin 0
+  white-space pre-wrap
+
+  @media $bp.phone
+    font-size 24px
+    line-height 28px
+    text-align center
+
+  .theme_light &
+    color black
+
+a.subpage-heading__back
+  $remove-link-style()
+  position absolute
+  display block
+  color white
+  transform translateX(-125%)
+
+  .review_page.theme_light .page__content .content &
+  .post_page.theme_light .page__content .content &
+    @media $bp.desktop
+      transform translateX(calc(-125% - 60px))
+    @media $bp.phone
+      color black
+      path
+        fill black
+
+  @media $bp.desktop
+    top 22px
+    transition all 0.3s
+
+    &:hover
+      opacity 0.4
+
+  @media $bp.phone
+    top 7px
+
+.subpage-heading__link-text
+  @media $bp.desktop
+    $custom-underline(alpha($color-white, 0.4), 1, 7, false)
+
+  @media $bp.phone
+    $custom-underline(alpha($color-white, 0.4), 1, 2, false)
+
+.subpage-heading__back-arrow
+  font-weight bold
+
+  @media $bp.desktop
+    svg
+      width 46px
+      height 32px
+
+  @media $bp.phone
+    display none
+
+  @media $bp.phone
+    display block
+
+    svg
+      width 23px
+      height 16px

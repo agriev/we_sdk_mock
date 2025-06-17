@@ -1,0 +1,82 @@
+.game-accounts-verification-helpblocks
+    flex 1 1 auto
+    border-radius 4px
+    box-sizing border-box
+
+    @media $bp.desktop
+      max-width 420px
+      background-color rgba(0,0,0,.56)
+      display none
+      // clip-path inset(0% 100% 0% 0%)
+      // transition clip-path .3s cubic-bezier(0, 0.35, 0, 1.01)
+
+      &.game-accounts-verification-helpblocks_xbox
+        margin-top 260px
+
+      &.active
+        display block
+        // clip-path inset(0% 0% 0% 0%)
+
+    @media $bp.phone
+      background-color #151515
+      position fixed
+      top 0
+      left 0
+      height 100%
+      width 100%
+      display none
+
+      &.active
+        z-index 1
+        display block
+        overflow-y auto
+
+.game-accounts-verification-helpblocks__innercontent
+  margin 0 auto
+  box-sizing border-box
+  display flex
+  flex-direction column
+
+  @media $bp.desktop
+    padding 32px
+
+  @media $bp.phone
+    max-width 333px
+    padding 21px 25px
+
+  .video-card__preview
+    width 100%
+    height 150px
+
+  .close-button
+    align-self flex-end
+    margin-bottom 16px
+
+    @media $bp.desktop
+      display none
+
+  .game-accounts-verification-helpblocks__button-back
+    margin-top 24px
+    width 100%
+
+    @media $bp.desktop
+      display none
+
+  h2
+    $font16-medium()
+    margin-left 0
+    padding 0
+    text-align left
+    margin-top 10px
+    margin-bottom 5px
+
+    @media $bp.phone
+      margin-top 10px
+
+  .game-accounts-verification-helpblocks__text
+    $font12-small()
+    line-height 1.33
+    letter-spacing 0.1px
+
+    &:not(:last-child)
+      margin-bottom 24px

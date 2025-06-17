@@ -1,0 +1,27 @@
+.metascore-label
+  display inline-block
+  box-sizing border-box
+  padding 2px 0
+  font-weight bold
+  text-align center
+  border-radius 4px
+  border solid 1px
+
+  &
+  &&_green
+  &&_yellow
+  &&_red
+    // slider.styl min-width priority fix
+    min-width 32px
+
+  &.metascore-label_green
+    color #6dc849
+    border-color rgba(#6dc849, 0.4)
+
+  &.metascore-label_yellow
+    color #fdca52
+    border-color rgba(#fdca52, 0.4)
+
+  &.metascore-label_red
+    color #fc4b37
+    border-color rgba(#fc4b37, 0.4)

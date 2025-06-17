@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>We Platform SDK Test</title>
+  <script src="/frontend_sdk/index.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    button {
+      display: block;
+      margin: 6px 0;
+      padding: 8px 14px;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>We Platform SDK Test</h1>
+  <label>
+    Username: <input id="username" value="demo" />
+  </label><br />
+  <label>
+    Password: <input id="password" type="password" value="demo" />
+  </label><br />
+  <button id="btnLogin">wx.login</button>
+  <button id="btnList">wx.getGameList</button>
+  <button id="btnPay">wx.chooseWXPay</button>
+  <button id="btnLocation">wx.getLocation</button>
+  <button id="btnShare">wx.updateAppMessageShareData</button>
+
+  <h2>Output</h2>
+  <pre id="output"></pre>
+
+  <script>
+    function log(msg) {
+      const out = document.getElementById('output');
+      out.textContent += `\n${JSON.stringify(msg, null, 2)}`;
+    }
+
+    document.getElementById('btnLogin').onclick = function () {
+      wx.login({
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value,
+        success: (res) => log(res),
+        fail: (e) => log(e.message || e),
+      });
+    };
+
+    document.getElementById('btnList').onclick = function () {
+      wx.getGameList({
+        success: (res) => log(res),
+        fail: (e) => log(e.message || e),
+      });
+    };
+
+    document.getElementById('btnPay').onclick = function () {
+      wx.chooseWXPay({
+        gameId: 1,
+        amount: 100,
+        currency: 'USD',
+        success: (res) => log(res),
+        fail: (e) => log(e.message || e),
+      });
+    };
+
+    document.getElementById('btnLocation').onclick = function () {
+      wx.getLocation({
+        success: (res) => log(res),
+        fail: (e) => log(e.message || e),
+      });
+    };
+
+    document.getElementById('btnShare').onclick = function () {
+      wx.updateAppMessageShareData({
+        title: 'We Platform',
+        desc: 'Test share',
+        link: location.href,
+        success: (res) => log(res),
+        fail: (e) => log(e.message || e),
+      });
+    };
+  </script>
+</body>
+</html> 

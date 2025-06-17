@@ -1,0 +1,46 @@
+.mode-select
+  flex 1 1 auto
+  display flex
+  justify-content flex-end
+  align-items center
+
+  @media $bp.phone
+    display none
+
+.mode-select__title
+  display flex
+  align-items center
+  text-align right
+  margin-right 16px
+  font-size 14px
+  opacity .4
+
+.mode-select__items
+  display flex
+
+.mode-select__item
+  width 48px
+  height 48px
+  background-repeat no-repeat
+  background-size contain
+  cursor pointer
+
+  transition opacity .3s
+
+  opacity .4
+
+  &:hover
+    opacity .6
+
+  &.active
+    opacity 1
+    cursor default
+
+  & + &
+    margin-left 8px
+
+.mode-select__item_list
+  background-image url('~assets/icons/discover/mode-list.svg?external')
+
+.mode-select__item_columns
+  background-image url('~assets/icons/discover/mode-columns.svg?external')

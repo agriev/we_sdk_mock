@@ -1,0 +1,38 @@
+.rate-card
+  display flex
+  width 798px
+  border-radius 6px
+  background-color rgba($color-white, 0.06)
+
+  + &
+    margin-left 24px
+
+  @media $bp.phone
+    width 100%
+    max-width 273px
+    flex-wrap wrap
+    min-height 312px
+
+.rate-card__cover
+  border-top-left-radius 6px
+  border-bottom-left-radius 6px
+  min-width 525px
+  height 365px
+
+.rate-card__container
+  padding 24px
+  display flex
+  flex-direction column
+
+.rate-card__title
+  $font24-large()
+  font-weight bold
+  margin-bottom auto
+  @media $bp.phone
+    $font18-large()
+    font-weight bold
+    margin-bottom 8px
+
+.rate-card__removed
+  transition 0.2s
+  opacity 0

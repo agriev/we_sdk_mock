@@ -1,0 +1,50 @@
+.offer-details
+  position fixed
+  left -50px
+  right -50px
+  top -50px
+  bottom -50px
+  z-index 999
+  background-color alpha(#151515, 0.6)
+  display flex
+  overflow auto
+  @media $bp.phone
+    left 0
+    right 0
+    top -20px
+    bottom -20px
+
+.offer-details__container
+  display static
+  width $page-width-desktop
+  margin auto
+  padding 100px
+  position relative
+
+  @media $bp.phone
+    padding 20px 0
+
+  .slick-list
+    width 100%
+
+  .offer-details__close
+    width 50px
+    height 50px
+    border-radius 50%
+    display flex
+    justify-content center
+    align-items center
+    background-color $color-white
+    position absolute
+    right 80px
+    top 80px
+    z-index 999
+    cursor pointer
+
+    .SVGInline-svg
+      display block
+
+    @media $bp.phone
+      position fixed
+      top 20px
+      right 20px

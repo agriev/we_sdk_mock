@@ -1,0 +1,35 @@
+.rate-header
+  display flex
+  justify-content space-between
+  align-items center
+  margin 0 auto
+
+  @media $bp.desktop
+    width 880px
+    padding-left 80px
+
+  .rate-header__title.heading
+    margin-bottom 32px
+
+    @media $bp.phone
+      margin-bottom 16px
+
+.rate-header__wrap
+  @media $bp.phone
+    display flex
+    flex-direction column
+    align-items center
+    text-align center
+    padding 0 16px
+
+.rate-header__percent
+  margin-top 80px
+
+
+.rate-header__title.heading
+  margin-top 100px
+  margin-bottom 16px
+
+  @media $bp.phone
+    margin-top 80px
+    margin-bottom 0

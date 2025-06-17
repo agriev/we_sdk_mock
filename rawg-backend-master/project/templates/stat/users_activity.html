@@ -1,0 +1,105 @@
+{% extends 'stat/count.html' %}
+
+{% load utils %}
+
+{% block checkboxes %}
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="actions"{% if is_actions %} checked{% endif %}> Show actions count
+        </label>
+    </div>
+{% endblock %}
+
+{% block table %}
+    <table class="table table-striped">
+        <tr>
+            <th>{{ period|capfirst }}</th>
+            <th>Registrations</th>
+            <th>Users count</th>
+            <th>Active users count</th>
+            {% if actions_count_points %}<th>Actions count</th>{% endif %}
+            {% if users_points %}<th>Users</th>{% endif %}
+            {% if middle_points %}<th>Middle</th>{% endif %}
+        </tr>
+        {% for label, point in points %}
+            <tr>
+                <td>{{ label }}</td>
+                <td>{{ registrations_points|get:forloop.counter0 }}</td>
+                <td>{{ point }}</td>
+                <td>{{ active_users_points|get:forloop.counter0 }}</td>
+                {% if actions_count_points %}<td>{{ actions_count_points|get:forloop.counter0 }}</td>{% endif %}
+                {% if users_points %}<td>{{ users_points|get:forloop.counter0 }}</td>{% endif %}
+                {% if middle_points %}<td>{{ middle_points|get:forloop.counter0 }}</td>{% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(function() {
+            $('.input-daterange').datepicker({
+                format: 'dd/mm/yyyy',
+                startDate: '{{ min_date|date:'d/m/Y' }}',
+                endDate: '{{ max_date|date:'d/m/Y' }}',
+                weekStart: 1
+            });
+
+            new Chart(document.getElementById('chart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: [{% for p, _ in points %}'{{ p }}'{% if not forloop.last %},{% endif %}{% endfor %}],
+                    datasets: [
+                        {
+                            label: 'Registrations',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 159, 64)',
+                            borderColor: 'rgb(255, 159, 64)',
+                            borderWidth: 3,
+                            data: [{% for p in registrations_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Users count',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            borderWidth: 3,
+                            data: [{% for _, p in points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }, {
+                            label: 'Active users count',
+                            fill: false,
+                            backgroundColor: 'rgb(75, 192, 192)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            borderWidth: 3,
+                            data: [{% for p in active_users_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% if actions_count_points %}, {
+                            label: 'Actions count',
+                            fill: false,
+                            backgroundColor: 'rgb(54, 162, 235)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            borderWidth: 3,
+                            data: [{% for p in actions_count_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% endif %}{% if users_points %}, {
+                            label: 'Users',
+                            fill: false,
+                            backgroundColor: 'rgb(75, 192, 192)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            borderWidth: 3,
+                            data: [{% for p in users_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% endif %}{% if middle_points %}, {
+                            label: 'Middle',
+                            fill: false,
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            borderWidth: 3,
+                            data: [{% for p in middle_points %}{{ p }}{% if not forloop.last %},{% endif %}{% endfor %}]
+                        }{% endif %}
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,55 @@
+.game-edit__string-items__modal__input
+  display flex
+
+  @media $bp.phone
+    flex-direction column
+
+  input
+    flex 1 1 auto
+    padding 15px 20px
+    font-size 18px
+    background alpha(black, 40%)
+    border-radius 4px
+    box-sizing border-box
+    border none
+    color white
+
+    @media $bp.desktop
+      margin-right 24px
+
+    @media $bp.phone
+      margin-bottom 16px
+
+.game-edit__string-items__modal__add-btn
+  flex 0 0 auto
+  padding 15px 57px
+  font-size 16px
+  background-color white
+  color #1a1a1a
+  box-sizing border-box
+  border-radius 4px
+  cursor pointer
+
+  transition background-color .3s, color .3s
+
+  @media $bp.phone
+    text-align center
+
+  &[disabled]
+    background-color alpha(white, 5%)
+    color alpha(white, 20%)
+    cursor not-allowed
+
+.game-edit__string-items__modal__items-title
+  font-size 16px
+  color alpha(white, 40%)
+  margin-top 24px
+  margin-bottom 12px
+
+.game-edit__string-items__modal__items
+  display flex
+  flex-wrap wrap
+  margin-top -12px
+  align-items flex-start
+  align-content flex-start
+  flex 1 0 auto

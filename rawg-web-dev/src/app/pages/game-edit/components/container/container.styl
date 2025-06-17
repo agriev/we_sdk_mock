@@ -1,0 +1,41 @@
+mediaElementWidth = 154px
+
+.game-edit-subpage__list
+  display flex
+  flex-wrap wrap
+
+  @media $bp.phone
+    margin-left auto
+    margin-right auto
+    margin-top -8px
+
+    @media (min-width: mediaElementWidth * 1 + 1px) and (max-width: mediaElementWidth * 2 + 0px)
+      width mediaElementWidth * 1
+
+    @media (min-width: mediaElementWidth * 2 + 1px) and (max-width: mediaElementWidth * 3 + 0px)
+      width mediaElementWidth * 2
+
+    @media (min-width: mediaElementWidth * 3 + 1px) and (max-width: mediaElementWidth * 4 + 0px)
+      width mediaElementWidth * 3
+
+    &:not(.game-edit-subpage__list_blocks)
+      padding 0 10px
+
+  .game-edit-subpage__block-item
+    position relative
+
+    .game-edit-subpage__block-item__hover
+      $hover-overall-lighting()
+
+    &:hover
+      .game-edit-subpage__block-item__hover
+        $hover-overall-lighting-active()
+
+    @media $bp.desktop
+      margin 16px 0 0 0
+
+      &:not(:nth-child(3n + 3))
+        margin-right 16px
+
+    @media $bp.phone
+      margin 8px 4px 0 4px

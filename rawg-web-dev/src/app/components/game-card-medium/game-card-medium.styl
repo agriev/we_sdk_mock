@@ -1,0 +1,230 @@
+.game-card-medium
+  display flex
+  flex-direction column
+
+  &.game-card-medium_opened
+    position relative
+
+  @media $bp.desktop
+    height 100%
+    min-height 376px
+
+    &:not(.game-card-medium_opened):not(.game-card-medium_always-show-btns)
+      .game-card-button_wishlist,
+      .game-card-button_more
+        opacity 0
+
+.game-card-medium__wrapper
+  box-sizing border-box
+  background-color rgb(32, 32, 32)
+  border-radius 12px
+
+  height 100%
+  display flex
+  flex-direction column
+
+  @media $bp.desktop
+    transition all 0.3s
+    transform scale(1)
+
+  .game-card-medium_opened &
+    // width 100%
+    // position absolute
+    z-index 6
+    // left 0
+    // top 0
+
+  .heading
+    font-weight bold
+
+.game-card-medium__media
+  width 100%
+  overflow hidden
+  border-top-left-radius 12px
+  border-top-right-radius 12px
+
+  @media $bp.desktop
+    .screenshots-gallery
+      height 100%
+
+.game-card-medium__media-empty
+  width 100%
+  height 8px
+
+.game-card-medium__media-wrapper
+  $image-wrapper()
+
+.game-card-medium__body
+  display flex
+  flex-direction column
+  flex 1
+
+.game-card-medium__info
+  padding 16px 16px 20px 16px
+
+  display flex
+  flex-direction column
+  flex 1
+
+  &-footer
+    display flex
+    flex-direction column
+    flex 1
+    justify-content flex-end
+
+  .show-more-button
+  .show-more-button__link
+    margin-bottom 0
+
+  .heading
+    margin-bottom 8px
+    overflow hidden
+    text-overflow ellipsis
+    padding-bottom 2px
+
+    @media $bp.phone
+      margin-top 8px
+      font-size 24px
+
+  .game-card-about + .game-card__about-text
+    margin-top 16px
+
+  @media $bp.phone
+    padding 16px 16px 16px
+
+.game-card-medium__meta
+  display flex
+  flex 0 1 auto
+  margin-bottom 7px
+
+  align-items center
+  justify-content flex-start
+
+  .platforms
+    flex 1 1 auto
+    justify-content flex-start
+
+.game-card-medium__platforms
+  .platforms__platform
+    height 12px
+
+.game-card-medium__comments
+  border-top 1px solid alpha(#fff, 10%)
+  padding 16px 10px 24px 10px
+
+.game-card-medium__info__name
+  $remove-link-style()
+
+  display flex
+  max-width 300px
+
+  &:hover
+    .rating.game-card-medium__info__rating
+      @media $bp.desktop
+        opacity .4
+
+  .rating.game-card-medium__info__rating
+    display inline
+    width 30px
+    height 22px
+    padding-right 40px
+
+    &::before
+      content "\00a0";
+
+    .rating__icon
+      width 30px
+      height 22px
+      position absolute
+      left 4px
+      top 50%
+      transform translateY(-50%)
+      margin-top 1px
+      @media $bp.phone
+        margin-top 0
+
+      &.rating__icon_exceptional
+        margin-left 5px
+        width 30px
+        height 30px
+        @media $bp.phone
+          margin-top -2px
+
+      &.rating__icon_meh
+        margin-top 4px
+        @media $bp.phone
+          margin-top 2px
+
+      &.rating__icon_skip
+        margin-top 5px
+        @media $bp.phone
+          margin-top 2px
+
+.embed-previews.game-card-medium__info__embeds
+  margin-top 16px
+
+  .embed-previews__preview
+    width 51px
+    height 28px
+
+.game-card-medium_online
+  .game-card-medium__wrapper
+    background #1e2319
+
+.game-card-medium:hover .game-card-buttons_online a
+  color black
+  background #cdf500
+
+.game-card-medium:hover .game-card-medium__info__name
+  color #cdf500
+
+.game-card-medium__info__description
+  font-size 14px
+  line-height 20px
+  color rgba(#feffff, 0.6)
+  font-weight normal
+  margin-top 4px
+
+.game-card-medium__data
+  display none
+  position absolute
+  left 0
+  top 100%
+  width 100%
+  padding-top 4px
+
+  z-index 10
+
+.game-card-medium__data-body
+  flex-direction column
+  background-color rgba(#222, 0.8)
+
+  border-radius 12px
+
+  padding 16px
+  padding-top 0
+
+  box-sizing border-box
+  border 1px solid rgba(white, 0.05)
+  backdrop-filter blur(20px)
+
+.game-card-medium_opened .game-card-medium__data
+  display block
+
+.game-card-medium_online .game-card-medium__data-body
+  background-color rgba(#222419, 0.8)
+
+.game-card-medium .show-more-button
+  border-top 1px solid rgba(white, 0.07)
+  border-radius 0 !important
+  background none
+  padding 16px 0
+  margin-bottom -16px
+  color #cdf500
+
+  &:hover
+    color white
+
+  .show-more-button__icon
+    width 6px
+    height 10px

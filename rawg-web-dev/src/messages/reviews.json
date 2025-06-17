@@ -1,0 +1,15 @@
+{
+  "ru": {
+    "title": "Рецензии",
+    "best_title": "Самые полезные рецензии",
+    "all": "Новые",
+    "best": "Популярные"
+  },
+
+  "en": {
+    "title": "Reviews",
+    "best_title": "Most helpful reviews",
+    "all": "New",
+    "best": "Popular"
+  }
+}

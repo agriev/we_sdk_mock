@@ -1,0 +1,11 @@
+var fs = require('fs');
+var page = require('webpage').create();
+page.content = fs.read('{{ template }}');
+page.viewportSize = {
+    width: {{ size.0 | default:1200 }},
+    height: {{ size.1 | default:630 }}
+};
+page.onLoadFinished = function (status) {
+    page.render('{{ output }}', {format: '{{ format | default:'jpeg' }}', quality: '100'});
+    phantom.exit();
+};

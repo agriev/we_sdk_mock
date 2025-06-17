@@ -1,0 +1,105 @@
+.event-container
+  background-color alpha($color-white, 0.1)
+  border-radius 8px
+
+.event-container__platform-pc
+  background-image url('~assets/icons/platforms-bg-right/pc.svg?external'), linear-gradient(to bottom, alpha(#649bff, 0.8), alpha(#4354ba, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-playstation
+  background-image url('~assets/icons/platforms-bg-right/playstation.svg?external'), linear-gradient(to bottom, alpha(#434343, 0.8), alpha(#000, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-mac
+  background-image url('~assets/icons/platforms-bg-right/mac.svg?external')
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-xbox
+  background-image url('~assets/icons/platforms-bg-right/xbox.svg?external'), linear-gradient(to bottom, alpha(#b4ed50, 0.8), alpha(#429321, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-ios
+  background-image url('~assets/icons/platforms-bg-right/ios.svg?external'), linear-gradient(to bottom, alpha(#10b7d9, 0.8), alpha(#0072f6, 0.8))
+  background-position: bottom right 36px, center
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-android
+  background-image url('~assets/icons/platforms-bg-right/android.svg?external'), linear-gradient(to top, alpha(#708b02, 0.8), alpha(#aac051, 0.8))
+  background-position: bottom right 6px, center
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-nintendo
+  background-image url('~assets/icons/platforms-bg-right/nintendo.svg?external'), linear-gradient(to bottom,alpha(#ff5763, 0.8), alpha(#f11a2a, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 40%, 100%
+.event-container__platform-linux
+  background-image url('~assets/icons/platforms-bg-right/linux.svg?external'), linear-gradient(to bottom,alpha(#ffe412, 0.8), alpha(#e9810f, 0.8))
+  background-position: bottom right 25px, center
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-atari
+  background-image url('~assets/icons/platforms-bg-right/atari.svg?external'), linear-gradient(to bottom,alpha(#db3d38, 0.8), alpha(#0e3ebe, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-commodore-amiga
+  background-image url('~assets/icons/platforms-bg-right/commodore-amiga.svg?external'), linear-gradient(to bottom,alpha(#8dea1a, 0.8), alpha(#fd1627, 0.8))
+  background-position: bottom right
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-sega
+  background-image url('~assets/icons/platforms-bg-right/sega.svg?external'), linear-gradient(to bottom,alpha(#1ad96b, 0.8), alpha(#0d61a6, 0.8))
+  background-position: bottom right 16px, center
+  background-repeat no-repeat
+  background-size 33%, 100%
+.event-container__platform-3do
+  background-image url('~assets/icons/platforms-bg-right/3do.svg?external'), linear-gradient(to bottom, alpha(#ffe51c, 0.8) 0%, alpha(#fe700e, 0.8) 50%, alpha(#fe0000, 0.8) 100%)
+  background-position: bottom right 51px, center
+  background-repeat no-repeat
+  background-size 33%, 100%
+
+.event-container__head-wrap
+  padding 10px 16px
+  background-color alpha(#080d11, 0.3)
+  border-radius 8px
+  border-bottom-left-radius 0px
+  border-bottom-right-radius 0px
+  min-height 45px
+  box-sizing border-box
+  display flex
+  align-items center
+  justify-content space-between
+
+  &.event-container__head-wrap__rounded
+    border-bottom-left-radius 8px
+    border-bottom-right-radius 8px
+    background-color alpha($color-white, 10%)
+
+  @media $bp.phone
+    padding 10px
+
+.event-container__body-wrap
+  padding 24px
+
+  @media $bp.phone
+    padding 16px
+
+.event-container__comments-wrap
+  border-top 1px solid alpha($color-white, 0.1)
+  padding 16px
+  $font14-paragraph()
+
+  a
+    display inline
+
+.event-container.event-container__notification
+  .event-container__body-wrap
+    padding 10px
+
+    @media $bp.phone
+      padding 8px
